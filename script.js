@@ -3087,13 +3087,11 @@ async function askHomeAI() {
    AI API
    ============================================================ */
 
-async function askAI(
-    message
-) {
+async function askAI(message) {
 
     const response =
         await fetch(
-            "/api/chat",
+            "https://bharatbuddy-ai-36i4.onrender.com/api/chat",
             {
                 method: "POST",
 
@@ -3108,6 +3106,7 @@ async function askAI(
                     })
             }
         );
+
 
 
     let result = {};
