@@ -10940,3 +10940,2096 @@ initializeApp();
 
 
 })();
+/* ============================================================
+   BHARATBUDDY AI — SMART NCERT STUDY ADD-ON
+   DO NOT DELETE EXISTING CODE
+   Paste at the VERY END of script.js
+   ============================================================ */
+
+(function () {
+    "use strict";
+
+    const BB_STUDY_API =
+        "https://bharatbuddy-ai-36i4.onrender.com/api/chat";
+
+    /*
+       NCERT-ALIGNED CLASS + STREAM SUBJECT MAP
+    */
+
+    const BB_NCERT = {
+
+        "Class 9": {
+            "All": [
+                "Mathematics",
+                "Science",
+                "Social Science",
+                "English"
+            ]
+        },
+
+        "Class 10": {
+            "All": [
+                "Mathematics",
+                "Science",
+                "Social Science",
+                "English"
+            ]
+        },
+
+        "Class 11": {
+
+            "PCM": [
+                "Physics",
+                "Chemistry",
+                "Mathematics",
+                "English",
+                "Computer Science"
+            ],
+
+            "PCB": [
+                "Physics",
+                "Chemistry",
+                "Biology",
+                "English",
+                "Computer Science"
+            ],
+
+            "Commerce": [
+                "Accountancy",
+                "Business Studies",
+                "Economics",
+                "English",
+                "Mathematics"
+            ],
+
+            "Arts": [
+                "History",
+                "Political Science",
+                "Geography",
+                "Economics",
+                "English",
+                "Sociology"
+            ],
+
+            "Computer Science": [
+                "Computer Science",
+                "Mathematics",
+                "Physics",
+                "English"
+            ],
+
+            "Other": [
+                "English",
+                "Mathematics",
+                "Computer Science"
+            ]
+        },
+
+        "Class 12": {
+
+            "PCM": [
+                "Physics",
+                "Chemistry",
+                "Mathematics",
+                "English",
+                "Computer Science"
+            ],
+
+            "PCB": [
+                "Physics",
+                "Chemistry",
+                "Biology",
+                "English",
+                "Computer Science"
+            ],
+
+            "Commerce": [
+                "Accountancy",
+                "Business Studies",
+                "Economics",
+                "English",
+                "Mathematics"
+            ],
+
+            "Arts": [
+                "History",
+                "Political Science",
+                "Geography",
+                "Economics",
+                "English",
+                "Sociology"
+            ],
+
+            "Computer Science": [
+                "Computer Science",
+                "Mathematics",
+                "Physics",
+                "English"
+            ],
+
+            "Other": [
+                "English",
+                "Mathematics",
+                "Computer Science"
+            ]
+        }
+    };
+
+
+    /* ---------------------------------------------------------
+       GET CURRENT PROFILE
+    --------------------------------------------------------- */
+
+    function bbGetProfile() {
+
+        try {
+
+            return {
+                className:
+                    data?.profile?.className ||
+                    "Class 11",
+
+                stream:
+                    data?.profile?.stream ||
+                    "PCM"
+            };
+
+        } catch {
+
+            return {
+                className: "Class 11",
+                stream: "PCM"
+            };
+        }
+    }
+
+
+    /* ---------------------------------------------------------
+       GET ALLOWED SUBJECTS
+    --------------------------------------------------------- */
+
+    function bbGetSubjects() {
+
+        const profile =
+            bbGetProfile();
+
+        const className =
+            profile.className;
+
+        const stream =
+            profile.stream;
+
+        const classData =
+            BB_NCERT[className];
+
+        if (!classData) {
+
+            return [
+                "Physics",
+                "Chemistry",
+                "Mathematics"
+            ];
+        }
+
+        if (className === "Class 9" ||
+            className === "Class 10") {
+
+            return classData.All || [];
+        }
+
+        return classData[stream] ||
+               classData["Other"] ||
+               [];
+    }
+
+
+    /* ---------------------------------------------------------
+       CREATE REAL AI STUDY REQUEST
+    --------------------------------------------------------- */
+
+    async function bbGenerateStudy(
+        subject,
+        chapter
+    ) {
+
+        const profile =
+            bbGetProfile();
+
+        const prompt = `
+
+You are BharatBuddy AI Study Engine.
+
+Create ORIGINAL NCERT-ALIGNED study material.
+
+Student:
+Class: ${profile.className}
+Stream: ${profile.stream}
+Subject: ${subject}
+Chapter: ${chapter}
+
+IMPORTANT:
+
+1. Follow the NCERT syllabus/chapter structure as closely as possible.
+2. Do NOT copy NCERT textbook wording.
+3. Write completely original explanations.
+4. Do not invent a chapter that does not belong to the selected class and subject.
+5. Keep the level appropriate for the student's class.
+
+Return HTML only.
+
+Required structure:
+
+<h2>Chapter Overview</h2>
+
+<h3>1. Concept Explanation</h3>
+Detailed easy explanation.
+
+<h3>2. Important Definitions</h3>
+Use bullet points.
+
+<h3>3. Important Formulas</h3>
+Only where applicable.
+
+<h3>4. Derivations</h3>
+Explain important derivations step-by-step where applicable.
+
+<h3>5. Examples</h3>
+Give original examples.
+
+<h3>6. Solved Questions</h3>
+Give properly solved questions.
+
+<h3>7. Important Points</h3>
+Give revision points.
+
+<h3>8. MCQs</h3>
+Give 5 MCQs with answers.
+
+<h3>9. Very Short Questions</h3>
+Give 5 questions with answers.
+
+<h3>10. Short Answer Questions</h3>
+Give 5 questions with answers.
+
+<h3>11. Long Answer Questions</h3>
+Give 3 questions with answers.
+
+<h3>12. Numerical Questions</h3>
+For Physics/Maths/Chemistry where applicable,
+give solved numerical questions.
+
+<h3>13. Quick Revision</h3>
+Give a concise revision section.
+
+Use simple student-friendly language.
+Do not mention that this is a demo.
+`;
+
+        const response =
+            await fetch(
+                BB_STUDY_API,
+                {
+                    method: "POST",
+
+                    headers: {
+                        "Content-Type":
+                            "application/json"
+                    },
+
+                    body: JSON.stringify({
+                        message: prompt
+                    })
+                }
+            );
+
+        let result = {};
+
+        try {
+            result =
+                await response.json();
+        } catch {
+            result = {};
+        }
+
+        if (!response.ok) {
+
+            throw new Error(
+                result.error ||
+                "Study AI unavailable."
+            );
+        }
+
+        return (
+            result.reply ||
+            result.answer ||
+            result.output_text ||
+            ""
+        );
+    }
+
+
+    /* ---------------------------------------------------------
+       NCERT SUBJECT FILTER
+       Existing lessonData is NOT modified.
+    --------------------------------------------------------- */
+
+    function bbApplySubjectFilter() {
+
+        const allowed =
+            bbGetSubjects();
+
+        const profile =
+            bbGetProfile();
+
+        const studyContainer =
+            document.querySelector(
+                "#studyPage"
+            ) ||
+            document.querySelector(
+                "[data-page='study']"
+            );
+
+        /*
+          We don't delete existing lessonData.
+          We only hide subjects which don't belong
+          to the selected class/stream.
+        */
+
+        document
+            .querySelectorAll(
+                "[data-subject]"
+            )
+            .forEach(button => {
+
+                const subject =
+                    button.dataset.subject;
+
+                if (!subject) return;
+
+                const shouldShow =
+                    allowed.includes(subject);
+
+                button.style.display =
+                    shouldShow
+                        ? ""
+                        : "none";
+            });
+
+        console.log(
+            "BharatBuddy Study Profile:",
+            profile.className,
+            profile.stream
+        );
+
+        console.log(
+            "Allowed Subjects:",
+            allowed
+        );
+    }
+
+
+    /* ---------------------------------------------------------
+       ADD CLASS / STREAM INFORMATION
+    --------------------------------------------------------- */
+
+    function bbShowStudyProfile() {
+
+        const profile =
+            bbGetProfile();
+
+        const subjects =
+            bbGetSubjects();
+
+        const existing =
+            document.getElementById(
+                "bbStudyProfileInfo"
+            );
+
+        if (existing) {
+
+            existing.innerHTML = `
+                <strong>
+                    ${profile.className}
+                </strong>
+                ${
+                    profile.className === "Class 9" ||
+                    profile.className === "Class 10"
+                        ? ""
+                        : ` • ${profile.stream}`
+                }
+                <br>
+                <small>
+                    Subjects: ${subjects.join(", ")}
+                </small>
+            `;
+
+            return;
+        }
+
+        const studyHeading =
+            document.querySelector(
+                "#studyPage h1"
+            );
+
+        if (!studyHeading) return;
+
+        const box =
+            document.createElement("div");
+
+        box.id =
+            "bbStudyProfileInfo";
+
+        box.style.cssText = `
+            margin:12px 0 18px;
+            padding:14px 16px;
+            border-radius:14px;
+            background:rgba(99,102,241,.10);
+            border:1px solid rgba(99,102,241,.20);
+            line-height:1.6;
+        `;
+
+        box.innerHTML = `
+            <strong>
+                ${profile.className}
+            </strong>
+            ${
+                profile.className === "Class 9" ||
+                profile.className === "Class 10"
+                    ? ""
+                    : ` • ${profile.stream}`
+            }
+            <br>
+
+            <small>
+                Subjects:
+                ${subjects.join(", ")}
+            </small>
+        `;
+
+        studyHeading
+            .parentNode
+            .insertBefore(
+                box,
+                studyHeading.nextSibling
+            );
+    }
+
+
+    /* ---------------------------------------------------------
+       AI CHAPTER CONTENT BUTTON
+    --------------------------------------------------------- */
+
+    window.BharatBuddyStudyAI = {
+
+        generate: async function (
+            subject,
+            chapter
+        ) {
+
+            return await bbGenerateStudy(
+                subject,
+                chapter
+            );
+        },
+
+        subjects: function () {
+
+            return bbGetSubjects();
+        },
+
+        profile: function () {
+
+            return bbGetProfile();
+        }
+    };
+
+
+    /* ---------------------------------------------------------
+       CREATE AI STUDY BUTTON
+    --------------------------------------------------------- */
+
+    function bbAddAIStudyButton() {
+
+        if (
+            document.getElementById(
+                "bbAIStudyButton"
+            )
+        ) return;
+
+        const area =
+            document.getElementById(
+                "currentLessonArea"
+            );
+
+        if (!area) return;
+
+        const button =
+            document.createElement(
+                "button"
+            );
+
+        button.id =
+            "bbAIStudyButton";
+
+        button.className =
+            "btn btn-primary";
+
+        button.style.cssText = `
+            margin-top:15px;
+            width:100%;
+        `;
+
+        button.innerHTML =
+            "🤖 Generate Complete AI Study";
+
+        button.onclick = async function () {
+
+            const profile =
+                bbGetProfile();
+
+            const subject =
+                window.studyState?.subject ||
+                document.querySelector(
+                    "[data-subject].active"
+                )?.dataset.subject;
+
+            const chapter =
+                window.studyState?.chapter ||
+                document.getElementById(
+                    "studyChapter"
+                )?.value;
+
+            if (!subject || !chapter) {
+
+                alert(
+                    "Pehle Subject aur Chapter select karo."
+                );
+
+                return;
+            }
+
+            button.disabled = true;
+
+            button.innerHTML =
+                "⏳ Study material generate ho raha hai...";
+
+            try {
+
+                const html =
+                    await bbGenerateStudy(
+                        subject,
+                        chapter
+                    );
+
+                if (!html) {
+
+                    throw new Error(
+                        "AI ne content nahi diya."
+                    );
+                }
+
+                area.insertAdjacentHTML(
+                    "beforeend",
+                    `
+                    <div
+                        class="card"
+                        id="bbAIStudyContent"
+                        style="
+                            margin-top:20px;
+                            line-height:1.8;
+                        "
+                    >
+                        <div
+                            style="
+                                display:flex;
+                                justify-content:space-between;
+                                gap:10px;
+                                align-items:center;
+                                flex-wrap:wrap;
+                            "
+                        >
+                            <h2>
+                                📚 ${subject}
+                            </h2>
+
+                            <span>
+                                ${profile.className}
+                            </span>
+                        </div>
+
+                        <hr style="margin:15px 0;">
+
+                        <div class="lesson-content">
+                            ${html}
+                        </div>
+                    </div>
+                    `
+                );
+
+                document
+                    .getElementById(
+                        "bbAIStudyContent"
+                    )
+                    ?.scrollIntoView({
+                        behavior: "smooth"
+                    });
+
+            } catch (error) {
+
+                console.error(
+                    "BharatBuddy Study Error:",
+                    error
+                );
+
+                alert(
+                    error.message ||
+                    "Study content generate nahi ho paya."
+                );
+
+            } finally {
+
+                button.disabled = false;
+
+                button.innerHTML =
+                    "🤖 Generate Complete AI Study";
+            }
+        };
+
+        area.appendChild(button);
+    }
+
+
+    /* ---------------------------------------------------------
+       REFRESH STUDY UI
+    --------------------------------------------------------- */
+
+    function bbRefreshStudy() {
+
+        setTimeout(() => {
+
+            bbApplySubjectFilter();
+
+            bbShowStudyProfile();
+
+            bbAddAIStudyButton();
+
+        }, 150);
+    }
+
+
+    /* ---------------------------------------------------------
+       WATCH PROFILE / PAGE CHANGES
+    --------------------------------------------------------- */
+
+    const originalRenderStudy =
+        window.renderStudy;
+
+    if (
+        typeof originalRenderStudy ===
+        "function"
+    ) {
+
+        window.renderStudy =
+            function () {
+
+                originalRenderStudy.apply(
+                    this,
+                    arguments
+                );
+
+                bbRefreshStudy();
+            };
+    }
+
+
+    /* ---------------------------------------------------------
+       PROFILE CHANGE DETECTOR
+    --------------------------------------------------------- */
+
+    let lastProfile =
+        JSON.stringify(
+            bbGetProfile()
+        );
+
+    setInterval(() => {
+
+        const current =
+            JSON.stringify(
+                bbGetProfile()
+            );
+
+        if (current !== lastProfile) {
+
+            lastProfile =
+                current;
+
+            console.log(
+                "BharatBuddy profile changed."
+            );
+
+            bbRefreshStudy();
+
+            if (
+                typeof window.renderStudy ===
+                "function"
+            ) {
+
+                try {
+
+                    window.renderStudy();
+
+                } catch (error) {
+
+                    console.warn(
+                        "Study refresh warning:",
+                        error
+                    );
+                }
+            }
+        }
+
+    }, 700);
+
+
+    /* ---------------------------------------------------------
+       INITIAL LOAD
+    --------------------------------------------------------- */
+
+    document.addEventListener(
+        "DOMContentLoaded",
+        function () {
+
+            setTimeout(
+                bbRefreshStudy,
+                500
+            );
+
+        }
+    );
+
+
+})();
+/* =========================================================
+   BHARATBUDDY AI — PROFILE BASED NCERT STUDY SYSTEM
+   ADD-ON ONLY — EXISTING CODE KO MODIFY NAHI KARTA
+========================================================= */
+
+(function () {
+
+    "use strict";
+
+    /* =====================================================
+       CLASS 9
+    ===================================================== */
+
+    const BB_CLASS_9 = {
+
+        Science: [
+            "Matter in Our Surroundings",
+            "Is Matter Around Us Pure?",
+            "Atoms and Molecules",
+            "Structure of the Atom",
+            "The Fundamental Unit of Life",
+            "Tissues",
+            "Motion",
+            "Force and Laws of Motion",
+            "Gravitation",
+            "Work and Energy",
+            "Sound",
+            "Why Do We Fall Ill?",
+            "Natural Resources",
+            "Improvement in Food Resources"
+        ],
+
+        Mathematics: [
+            "Number Systems",
+            "Polynomials",
+            "Coordinate Geometry",
+            "Linear Equations in Two Variables",
+            "Introduction to Euclid's Geometry",
+            "Lines and Angles",
+            "Triangles",
+            "Quadrilaterals",
+            "Circles",
+            "Heron's Formula",
+            "Surface Areas and Volumes",
+            "Statistics",
+            "Probability"
+        ],
+
+        English: [
+            "The Fun They Had",
+            "The Sound of Music",
+            "The Little Girl",
+            "A Truly Beautiful Mind",
+            "The Snake and the Mirror",
+            "My Childhood",
+            "Reach for the Top",
+            "Kathmandu",
+            "If I Were You"
+        ],
+
+        "Social Science": [
+            "The French Revolution",
+            "Socialism in Europe and the Russian Revolution",
+            "Nazism and the Rise of Hitler",
+            "Forest Society and Colonialism",
+            "Pastoralists in the Modern World",
+            "India – Size and Location",
+            "Physical Features of India",
+            "Drainage",
+            "Climate",
+            "Natural Vegetation and Wildlife",
+            "Population",
+            "What is Democracy? Why Democracy?",
+            "Constitutional Design",
+            "Electoral Politics",
+            "Working of Institutions",
+            "Democratic Rights",
+            "The Story of Village Palampur",
+            "People as Resource",
+            "Poverty as a Challenge",
+            "Food Security in India"
+        ]
+
+    };
+
+
+    /* =====================================================
+       CLASS 10
+    ===================================================== */
+
+    const BB_CLASS_10 = {
+
+        Science: [
+            "Chemical Reactions and Equations",
+            "Acids, Bases and Salts",
+            "Metals and Non-metals",
+            "Carbon and Its Compounds",
+            "Life Processes",
+            "Control and Coordination",
+            "How do Organisms Reproduce?",
+            "Heredity",
+            "Light – Reflection and Refraction",
+            "The Human Eye and the Colourful World",
+            "Electricity",
+            "Magnetic Effects of Electric Current",
+            "Our Environment"
+        ],
+
+        Mathematics: [
+            "Real Numbers",
+            "Polynomials",
+            "Pair of Linear Equations in Two Variables",
+            "Quadratic Equations",
+            "Arithmetic Progressions",
+            "Triangles",
+            "Coordinate Geometry",
+            "Introduction to Trigonometry",
+            "Some Applications of Trigonometry",
+            "Circles",
+            "Areas Related to Circles",
+            "Surface Areas and Volumes",
+            "Statistics",
+            "Probability"
+        ],
+
+        English: [
+            "A Letter to God",
+            "Nelson Mandela – Long Walk to Freedom",
+            "Two Stories about Flying",
+            "From the Diary of Anne Frank",
+            "Glimpses of India",
+            "Mijbil the Otter",
+            "Madam Rides the Bus",
+            "The Sermon at Benares",
+            "The Proposal"
+        ],
+
+        "Social Science": [
+            "The Rise of Nationalism in Europe",
+            "Nationalism in India",
+            "The Making of a Global World",
+            "Print Culture and the Modern World",
+            "Resources and Development",
+            "Forest and Wildlife Resources",
+            "Water Resources",
+            "Agriculture",
+            "Manufacturing Industries",
+            "Lifelines of National Economy",
+            "Power Sharing",
+            "Federalism",
+            "Gender, Religion and Caste",
+            "Political Parties",
+            "Outcomes of Democracy",
+            "Development",
+            "Sectors of the Indian Economy",
+            "Money and Credit",
+            "Globalisation and the Indian Economy",
+            "Consumer Rights"
+        ]
+
+    };
+
+
+    /* =====================================================
+       CLASS 11 — PCM
+    ===================================================== */
+
+    const BB_CLASS_11_PCM = {
+
+        Physics: [
+            "Units and Measurements",
+            "Motion in a Straight Line",
+            "Motion in a Plane",
+            "Laws of Motion",
+            "Work, Energy and Power",
+            "System of Particles and Rotational Motion",
+            "Gravitation",
+            "Mechanical Properties of Solids",
+            "Mechanical Properties of Fluids",
+            "Thermal Properties of Matter",
+            "Thermodynamics",
+            "Kinetic Theory",
+            "Oscillations",
+            "Waves"
+        ],
+
+        Chemistry: [
+            "Some Basic Concepts of Chemistry",
+            "Structure of Atom",
+            "Classification of Elements and Periodicity in Properties",
+            "Chemical Bonding and Molecular Structure",
+            "Thermodynamics",
+            "Equilibrium",
+            "Redox Reactions",
+            "Organic Chemistry – Some Basic Principles and Techniques",
+            "Hydrocarbons"
+        ],
+
+        Mathematics: [
+            "Sets",
+            "Relations and Functions",
+            "Trigonometric Functions",
+            "Principle of Mathematical Induction",
+            "Complex Numbers and Quadratic Equations",
+            "Linear Inequalities",
+            "Permutations and Combinations",
+            "Binomial Theorem",
+            "Sequences and Series",
+            "Straight Lines",
+            "Conic Sections",
+            "Introduction to Three Dimensional Geometry",
+            "Limits and Derivatives",
+            "Statistics",
+            "Probability"
+        ],
+
+        "Computer Science": [
+            "Computer Systems",
+            "Encoding Schemes and Number System",
+            "Emerging Trends",
+            "Introduction to Python",
+            "Getting Started with Python",
+            "Python Programming Fundamentals",
+            "Conditional Statements",
+            "Loops",
+            "Strings",
+            "Lists",
+            "Tuples",
+            "Dictionaries",
+            "Computer Networks",
+            "Societal Impact"
+        ],
+
+        English: [
+            "The Portrait of a Lady",
+            "We're Not Afraid to Die",
+            "Discovering Tut",
+            "Landscape of the Soul",
+            "The Ailing Planet",
+            "The Browning Version",
+            "The Adventure",
+            "Silk Road"
+        ]
+
+    };
+
+
+    /* =====================================================
+       CLASS 11 — PCB
+    ===================================================== */
+
+    const BB_CLASS_11_PCB = {
+
+        Biology: [
+            "The Living World",
+            "Biological Classification",
+            "Plant Kingdom",
+            "Animal Kingdom",
+            "Morphology of Flowering Plants",
+            "Anatomy of Flowering Plants",
+            "Structural Organisation in Animals",
+            "Cell: The Unit of Life",
+            "Biomolecules",
+            "Cell Cycle and Cell Division",
+            "Transport in Plants",
+            "Mineral Nutrition",
+            "Photosynthesis in Higher Plants",
+            "Respiration in Plants",
+            "Plant Growth and Development",
+            "Digestion and Absorption",
+            "Breathing and Exchange of Gases",
+            "Body Fluids and Circulation",
+            "Excretory Products and their Elimination",
+            "Locomotion and Movement",
+            "Neural Control and Coordination",
+            "Chemical Coordination and Integration"
+        ],
+
+        Physics: BB_CLASS_11_PCM.Physics,
+
+        Chemistry: BB_CLASS_11_PCM.Chemistry,
+
+        English: BB_CLASS_11_PCM.English
+
+    };
+
+
+    /* =====================================================
+       CLASS 11 — COMMERCE
+    ===================================================== */
+
+    const BB_CLASS_11_COMMERCE = {
+
+        Accountancy: [
+            "Introduction to Accounting",
+            "Theory Base of Accounting",
+            "Recording of Transactions",
+            "Bank Reconciliation Statement",
+            "Trial Balance and Rectification of Errors",
+            "Depreciation",
+            "Bills of Exchange",
+            "Financial Statements",
+            "Accounts from Incomplete Records"
+        ],
+
+        Economics: [
+            "Introduction to Micro Economics",
+            "Consumer Behaviour",
+            "Production and Costs",
+            "Theory of Firm",
+            "Market",
+            "Statistics for Economics",
+            "Collection of Data",
+            "Organisation of Data",
+            "Presentation of Data",
+            "Measures of Central Tendency",
+            "Measures of Dispersion"
+        ],
+
+        "Business Studies": [
+            "Nature and Purpose of Business",
+            "Forms of Business Organisation",
+            "Private, Public and Global Enterprises",
+            "Business Services",
+            "Emerging Modes of Business",
+            "Social Responsibility of Business",
+            "Formation of a Company",
+            "Sources of Business Finance",
+            "Small Business",
+            "Internal Trade",
+            "International Business"
+        ],
+
+        Mathematics: BB_CLASS_11_PCM.Mathematics,
+
+        English: BB_CLASS_11_PCM.English
+
+    };
+
+
+    /* =====================================================
+       CLASS 11 — ARTS
+    ===================================================== */
+
+    const BB_CLASS_11_ARTS = {
+
+        History: [
+            "From the Beginning of Time",
+            "Writing and City Life",
+            "An Empire Across Three Continents",
+            "Nomadic Empires",
+            "The Three Orders",
+            "Changing Cultural Traditions",
+            "Displacing Indigenous Peoples",
+            "Paths to Modernisation"
+        ],
+
+        Geography: [
+            "Geography as a Discipline",
+            "The Origin and Evolution of the Earth",
+            "Interior of the Earth",
+            "Distribution of Oceans and Continents",
+            "Minerals and Rocks",
+            "Geomorphic Processes",
+            "Landforms and their Evolution",
+            "Composition and Structure of Atmosphere",
+            "Solar Radiation",
+            "Water in the Atmosphere",
+            "World Climate and Climate Change",
+            "Water Resources",
+            "Natural Hazards and Disasters"
+        ],
+
+        PoliticalScience: [
+            "Constitution: Why and How?",
+            "Rights in the Indian Constitution",
+            "Election and Representation",
+            "Executive",
+            "Legislature",
+            "Judiciary",
+            "Federalism",
+            "Local Governments",
+            "Political Theory",
+            "Freedom",
+            "Equality",
+            "Social Justice",
+            "Rights",
+            "Citizenship",
+            "Nationalism",
+            "Secularism"
+        ],
+
+        Sociology: [
+            "Sociology and Society",
+            "Terms, Concepts and their Use in Sociology",
+            "Understanding Social Institutions",
+            "Culture and Socialisation",
+            "Social Structure, Stratification and Social Processes",
+            "Social Change and Social Order",
+            "Introducing Western Sociologists",
+            "Indian Sociologists"
+        ],
+
+        English: BB_CLASS_11_PCM.English
+
+    };
+
+
+    /* =====================================================
+       CLASS 12
+    ===================================================== */
+
+    const BB_CLASS_12 = {
+
+        Physics: [
+            "Electric Charges and Fields",
+            "Electrostatic Potential and Capacitance",
+            "Current Electricity",
+            "Moving Charges and Magnetism",
+            "Magnetism and Matter",
+            "Electromagnetic Induction",
+            "Alternating Current",
+            "Electromagnetic Waves",
+            "Ray Optics and Optical Instruments",
+            "Wave Optics",
+            "Dual Nature of Radiation and Matter",
+            "Atoms",
+            "Nuclei",
+            "Semiconductor Electronics"
+        ],
+
+        Chemistry: [
+            "Solutions",
+            "Electrochemistry",
+            "Chemical Kinetics",
+            "d and f Block Elements",
+            "Coordination Compounds",
+            "Haloalkanes and Haloarenes",
+            "Alcohols, Phenols and Ethers",
+            "Aldehydes, Ketones and Carboxylic Acids",
+            "Amines",
+            "Biomolecules"
+        ],
+
+        Mathematics: [
+            "Relations and Functions",
+            "Inverse Trigonometric Functions",
+            "Matrices",
+            "Determinants",
+            "Continuity and Differentiability",
+            "Application of Derivatives",
+            "Integrals",
+            "Application of Integrals",
+            "Differential Equations",
+            "Vector Algebra",
+            "Three Dimensional Geometry",
+            "Linear Programming",
+            "Probability"
+        ],
+
+        Biology: [
+            "Sexual Reproduction in Flowering Plants",
+            "Human Reproduction",
+            "Reproductive Health",
+            "Principles of Inheritance and Variation",
+            "Molecular Basis of Inheritance",
+            "Evolution",
+            "Human Health and Disease",
+            "Microbes in Human Welfare",
+            "Biotechnology",
+            "Organisms and Populations",
+            "Ecosystem",
+            "Biodiversity and Conservation"
+        ],
+
+        "Computer Science": [
+            "Computer Networking",
+            "Data Communication",
+            "Database Concepts",
+            "Introduction to Python",
+            "Functions",
+            "File Handling",
+            "Data Structures",
+            "Computer Networks",
+            "Cyber Safety"
+        ],
+
+        Economics: [
+            "Introduction to Macroeconomics",
+            "National Income Accounting",
+            "Money and Banking",
+            "Determination of Income and Employment",
+            "Government Budget",
+            "Balance of Payments",
+            "Indian Economy on the Eve of Independence",
+            "Indian Economy 1950–1990",
+            "Liberalisation, Privatisation and Globalisation",
+            "Human Capital Formation",
+            "Rural Development",
+            "Employment",
+            "Environment and Sustainable Development"
+        ],
+
+        "Business Studies": [
+            "Nature and Significance of Management",
+            "Principles of Management",
+            "Business Environment",
+            "Planning",
+            "Organising",
+            "Staffing",
+            "Directing",
+            "Controlling",
+            "Financial Management",
+            "Marketing Management",
+            "Consumer Protection"
+        ],
+
+        English: [
+            "The Last Lesson",
+            "Lost Spring",
+            "Deep Water",
+            "The Rattrap",
+            "Indigo",
+            "Poets and Pancakes",
+            "The Interview",
+            "Going Places"
+        ]
+
+    };
+
+
+    /* =====================================================
+       COMPLETE PROFILE → STUDY CATALOG
+    ===================================================== */
+
+    const BB_NCERT = {
+
+        "Class 9": BB_CLASS_9,
+
+        "Class 10": BB_CLASS_10,
+
+        "Class 11": {
+
+            PCM: BB_CLASS_11_PCM,
+            PCB: BB_CLASS_11_PCB,
+            Commerce: BB_CLASS_11_COMMERCE,
+            Arts: BB_CLASS_11_ARTS,
+            "Computer Science": {
+                ...BB_CLASS_11_PCM
+            }
+
+        },
+
+        "Class 12": BB_CLASS_12
+
+    };
+
+
+    /* =====================================================
+       GET CURRENT PROFILE
+    ===================================================== */
+
+    function bbGetProfile() {
+
+        const profile =
+            (typeof data !== "undefined" &&
+             data.profile)
+                ? data.profile
+                : {};
+
+        return {
+
+            className:
+                profile.className ||
+                localStorage.getItem("bb_class") ||
+                "Class 11",
+
+            stream:
+                profile.stream ||
+                localStorage.getItem("bb_stream") ||
+                "PCM"
+
+        };
+
+    }
+
+
+    /* =====================================================
+       GET SUBJECTS
+    ===================================================== */
+
+    function bbGetSubjects() {
+
+        const profile = bbGetProfile();
+
+        if (
+            profile.className === "Class 11"
+        ) {
+
+            const stream =
+                BB_NCERT["Class 11"]
+                    [profile.stream];
+
+            if (stream) {
+                return stream;
+            }
+
+            return BB_CLASS_11_PCM;
+
+        }
+
+        if (
+            BB_NCERT[profile.className]
+        ) {
+
+            return BB_NCERT[
+                profile.className
+            ];
+
+        }
+
+        return BB_CLASS_11_PCM;
+
+    }
+
+
+    /* =====================================================
+       CHECK SUBJECT
+    ===================================================== */
+
+    function bbSubjectAllowed(subject) {
+
+        const subjects =
+            bbGetSubjects();
+
+        return Boolean(
+            subjects &&
+            subjects[subject]
+        );
+
+    }
+
+
+    /* =====================================================
+       GET CHAPTERS
+    ===================================================== */
+
+    function bbGetChapters(subject) {
+
+        const subjects =
+            bbGetSubjects();
+
+        return subjects[subject] || [];
+
+    }
+
+
+    /* =====================================================
+       SAVE PROFILE
+    ===================================================== */
+
+    function bbSaveProfileCache() {
+
+        const profile =
+            bbGetProfile();
+
+        localStorage.setItem(
+            "bb_class",
+            profile.className
+        );
+
+        localStorage.setItem(
+            "bb_stream",
+            profile.stream
+        );
+
+    }
+
+
+    /* =====================================================
+       BUILD CHAPTER DROPDOWN
+    ===================================================== */
+
+    function bbUpdateChapterDropdown(
+        subject
+    ) {
+
+        const dropdown =
+            document.getElementById(
+                "studyChapter"
+            );
+
+        if (!dropdown) return;
+
+        const chapters =
+            bbGetChapters(subject);
+
+        dropdown.innerHTML = "";
+
+        chapters.forEach(
+            (chapter, index) => {
+
+                const option =
+                    document.createElement(
+                        "option"
+                    );
+
+                option.value = chapter;
+
+                option.textContent =
+                    `${index + 1}. ${chapter}`;
+
+                dropdown.appendChild(
+                    option
+                );
+
+            }
+        );
+
+        if (chapters.length) {
+
+            dropdown.value =
+                chapters[0];
+
+        }
+
+    }
+
+
+    /* =====================================================
+       UPDATE SUBJECT BUTTONS
+    ===================================================== */
+
+    function bbUpdateSubjects() {
+
+        const subjects =
+            bbGetSubjects();
+
+        document
+            .querySelectorAll(
+                "[data-subject]"
+            )
+            .forEach(button => {
+
+                const subject =
+                    button.dataset.subject;
+
+                if (
+                    Object.prototype
+                        .hasOwnProperty
+                        .call(
+                            subjects,
+                            subject
+                        )
+                ) {
+
+                    button.style.display =
+                        "";
+
+                    button.disabled =
+                        false;
+
+                } else {
+
+                    button.style.display =
+                        "none";
+
+                    button.disabled =
+                        true;
+
+                }
+
+            });
+
+    }
+
+
+    /* =====================================================
+       ADD PROFILE INFORMATION
+    ===================================================== */
+
+    function bbAddProfileInfo() {
+
+        const study =
+            document.querySelector(
+                "#studySection"
+            ) ||
+            document.querySelector(
+                ".study-section"
+            ) ||
+            document.querySelector(
+                "[data-section='study']"
+            );
+
+        if (!study) return;
+
+        if (
+            document.getElementById(
+                "bbStudyProfileInfo"
+            )
+        ) return;
+
+        const profile =
+            bbGetProfile();
+
+        const box =
+            document.createElement(
+                "div"
+            );
+
+        box.id =
+            "bbStudyProfileInfo";
+
+        box.style.cssText = `
+            padding:14px 16px;
+            margin:12px 0;
+            border-radius:14px;
+            background:rgba(0,120,255,.08);
+            border:1px solid rgba(0,120,255,.18);
+            font-size:14px;
+        `;
+
+        box.innerHTML = `
+            <strong>📚 BharatBuddy Study</strong>
+            <br>
+            Class:
+            <strong>${profile.className}</strong>
+            <br>
+            Stream:
+            <strong>${profile.stream}</strong>
+            <br>
+            <small>
+                NCERT-aligned chapters are shown according
+                to your selected profile.
+            </small>
+        `;
+
+        study.prepend(box);
+
+    }
+
+
+    /* =====================================================
+       AI COMPLETE LESSON GENERATOR
+    ===================================================== */
+
+    async function bbGenerateLesson(
+        subject,
+        chapter
+    ) {
+
+        const profile =
+            bbGetProfile();
+
+        const prompt = `
+
+You are BharatBuddy AI, an Indian education tutor.
+
+Student Profile:
+Class: ${profile.className}
+Stream: ${profile.stream}
+Subject: ${subject}
+Chapter: ${chapter}
+
+Create ORIGINAL NCERT-aligned study material.
+
+Do NOT copy textbook wording.
+
+Create:
+
+1. Chapter introduction
+2. Learning objectives
+3. Important definitions
+4. Detailed concepts
+5. Important formulas
+6. Step-by-step derivations where applicable
+7. Simple examples
+8. Solved numerical problems where applicable
+9. Important points
+10. Common mistakes
+11. Quick revision
+12. 10 MCQs with answers
+13. 5 very short questions
+14. 5 short-answer questions
+15. 5 long-answer questions
+16. 5 practice problems
+17. Chapter test
+
+Use simple student-friendly language.
+
+Do not invent unrelated topics.
+
+Stay focused on the requested chapter.
+
+`;
+
+        const response =
+            await fetch(
+                "https://bharatbuddy-ai-36i4.onrender.com/api/chat",
+                {
+
+                    method: "POST",
+
+                    headers: {
+                        "Content-Type":
+                            "application/json"
+                    },
+
+                    body:
+                        JSON.stringify({
+                            message: prompt
+                        })
+
+                }
+            );
+
+        let result = {};
+
+        try {
+
+            result =
+                await response.json();
+
+        } catch {
+
+            result = {};
+
+        }
+
+        if (!response.ok) {
+
+            throw new Error(
+                result.error ||
+                "AI lesson generation failed."
+            );
+
+        }
+
+        return (
+            result.reply ||
+            result.answer ||
+            result.output_text ||
+            "AI ne response nahi diya."
+        );
+
+    }
+
+
+    /* =====================================================
+       GLOBAL STUDY API
+    ===================================================== */
+
+    window.BharatBuddyStudy = {
+
+        getProfile:
+            bbGetProfile,
+
+        getSubjects:
+            bbGetSubjects,
+
+        getChapters:
+            bbGetChapters,
+
+        isSubjectAllowed:
+            bbSubjectAllowed,
+
+        updateSubjects:
+            bbUpdateSubjects,
+
+        updateChapters:
+            bbUpdateChapterDropdown,
+
+        generateLesson:
+            bbGenerateLesson
+
+    };
+
+
+    /* =====================================================
+       REFRESH STUDY
+    ===================================================== */
+
+    function bbRefreshStudy() {
+
+        bbSaveProfileCache();
+
+        bbUpdateSubjects();
+
+        bbAddProfileInfo();
+
+        const subjects =
+            bbGetSubjects();
+
+        const firstSubject =
+            Object.keys(subjects)[0];
+
+        if (firstSubject) {
+
+            bbUpdateChapterDropdown(
+                firstSubject
+            );
+
+        }
+
+    }
+
+
+    /* =====================================================
+       PROFILE SAVE HOOK
+    ===================================================== */
+
+    const oldSaveProfile =
+        window.saveProfile;
+
+    if (
+        typeof oldSaveProfile ===
+        "function"
+    ) {
+
+        window.saveProfile =
+            function () {
+
+                const result =
+                    oldSaveProfile.apply(
+                        this,
+                        arguments
+                    );
+
+                setTimeout(
+                    bbRefreshStudy,
+                    100
+                );
+
+                return result;
+
+            };
+
+    }
+
+
+    /* =====================================================
+       SUBJECT CLICK
+    ===================================================== */
+
+    document.addEventListener(
+        "click",
+        function (event) {
+
+            const button =
+                event.target.closest(
+                    "[data-subject]"
+                );
+
+            if (!button) return;
+
+            const subject =
+                button.dataset.subject;
+
+            if (
+                !bbSubjectAllowed(
+                    subject
+                )
+            ) {
+
+                event.preventDefault();
+                event.stopPropagation();
+
+                alert(
+                    "⚠️ Ye subject aapke selected class/stream ke liye available nahi hai."
+                );
+
+                return;
+
+            }
+
+            setTimeout(
+                function () {
+
+                    bbUpdateChapterDropdown(
+                        subject
+                    );
+
+                },
+                50
+            );
+
+        },
+        true
+    );
+
+
+    /* =====================================================
+       CHAPTER CHANGE
+    ===================================================== */
+
+    document.addEventListener(
+        "change",
+        function (event) {
+
+            if (
+                event.target.id !==
+                "studyChapter"
+            ) return;
+
+            const subject =
+                event.target
+                    .dataset
+                    .subject ||
+                document
+                    .querySelector(
+                        "[data-subject].active"
+                    )
+                    ?.dataset
+                    .subject;
+
+            if (subject) {
+
+                bbUpdateChapterDropdown(
+                    subject
+                );
+
+            }
+
+        }
+    );
+
+
+    /* =====================================================
+       GENERATE BUTTON
+    ===================================================== */
+
+    function bbAddGenerateButton() {
+
+        if (
+            document.getElementById(
+                "bbGenerateStudyButton"
+            )
+        ) return;
+
+        const dropdown =
+            document.getElementById(
+                "studyChapter"
+            );
+
+        if (!dropdown) return;
+
+        const button =
+            document.createElement(
+                "button"
+            );
+
+        button.id =
+            "bbGenerateStudyButton";
+
+        button.type =
+            "button";
+
+        button.textContent =
+            "🤖 Generate Complete AI Study";
+
+        button.style.cssText = `
+            margin:12px 0;
+            padding:12px 18px;
+            border:0;
+            border-radius:12px;
+            cursor:pointer;
+            font-weight:600;
+            font-size:14px;
+        `;
+
+        dropdown.parentNode.insertBefore(
+            button,
+            dropdown.nextSibling
+        );
+
+        button.addEventListener(
+            "click",
+            async function () {
+
+                const chapter =
+                    dropdown.value;
+
+                const activeSubject =
+                    document
+                        .querySelector(
+                            "[data-subject].active"
+                        )
+                        ?.dataset
+                        .subject;
+
+                if (
+                    !activeSubject
+                ) {
+
+                    alert(
+                        "Pehle subject select karo."
+                    );
+
+                    return;
+
+                }
+
+                button.disabled =
+                    true;
+
+                button.textContent =
+                    "⏳ AI Study bana raha hai...";
+
+                try {
+
+                    const answer =
+                        await bbGenerateLesson(
+                            activeSubject,
+                            chapter
+                        );
+
+                    let container =
+                        document.getElementById(
+                            "bbAIStudyResult"
+                        );
+
+                    if (!container) {
+
+                        container =
+                            document.createElement(
+                                "div"
+                            );
+
+                        container.id =
+                            "bbAIStudyResult";
+
+                        container.style.cssText = `
+                            margin-top:16px;
+                            padding:18px;
+                            border-radius:16px;
+                            background:rgba(0,0,0,.04);
+                            line-height:1.7;
+                            white-space:pre-wrap;
+                        `;
+
+                        button.parentNode
+                            .appendChild(
+                                container
+                            );
+
+                    }
+
+                    container.textContent =
+                        answer;
+
+                    container.scrollIntoView({
+                        behavior:
+                            "smooth",
+                        block:
+                            "start"
+                    });
+
+                } catch (error) {
+
+                    alert(
+                        "❌ " +
+                        error.message
+                    );
+
+                }
+
+                button.disabled =
+                    false;
+
+                button.textContent =
+                    "🤖 Generate Complete AI Study";
+
+            }
+
+        );
+
+    }
+
+
+    /* =====================================================
+       INITIALIZE
+    ===================================================== */
+
+    function bbInitializeStudy() {
+
+        bbSaveProfileCache();
+
+        bbUpdateSubjects();
+
+        bbAddProfileInfo();
+
+        bbAddGenerateButton();
+
+    }
+
+
+    if (
+        document.readyState ===
+        "loading"
+    ) {
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+                setTimeout(
+                    bbInitializeStudy,
+                    300
+                );
+
+            }
+        );
+
+    } else {
+
+        setTimeout(
+            bbInitializeStudy,
+            300
+        );
+
+    }
+
+
+})();
