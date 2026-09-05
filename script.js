@@ -4609,72 +4609,86 @@ function getChapterQuestions() {
     const key =
         `${studyState.subject}|${studyState.chapter}`;
 
+    /* Existing chapter questions */
 
-    if (
-        chapterQuestions[key]
-    ) {
-
+    if (chapterQuestions[key]) {
         return chapterQuestions[key];
-
     }
 
+    /* Curriculum chapter ke liye fallback */
+
+    const chapter =
+        studyState.chapter;
+
+    const subject =
+        studyState.subject;
 
     return [
 
         {
             type: "MCQ",
+
             question:
-                `What is the main idea of ${studyState.chapter}?`,
+                `Which of the following is an important concept in "${chapter}"?`,
+
             options: [
-                "Understanding the chapter concepts",
-                "Ignoring definitions",
-                "Only memorising answers",
-                "Skipping practice"
+                `Understanding the concepts of ${chapter}`,
+                "Ignoring the chapter",
+                "Skipping all examples",
+                "Memorising without understanding"
             ],
+
             answer: 0
         },
 
         {
             type: "MCQ",
+
             question:
-                "Which is the best way to learn a difficult concept?",
+                `What should a student focus on while studying "${chapter}"?`,
+
             options: [
-                "Understand it step by step",
-                "Skip it",
-                "Only memorise the title",
-                "Never practise"
+                "Concepts, definitions and examples",
+                "Only the chapter name",
+                "Skipping practice",
+                "Only memorising random answers"
             ],
+
             answer: 0
         },
 
         {
             type: "SHORT",
+
             question:
-                "Write one important concept from this chapter.",
+                `Write one important concept that you learned from "${chapter}".`,
+
             answer:
-                "Students should identify and explain a relevant concept from the chapter."
+                `The student should identify and explain an important concept related to ${chapter}.`
         },
 
         {
             type: "SHORT",
+
             question:
-                "Why is practice important?",
+                `Why is "${chapter}" important in ${subject}?`,
+
             answer:
-                "Practice helps strengthen understanding and reveals areas that need revision."
+                `${chapter} is important because it develops understanding of important concepts in ${subject}.`
         },
 
         {
             type: "LONG",
+
             question:
-                "Summarise what you learned from this chapter.",
+                `Explain the main concepts of "${chapter}" in your own words.`,
+
             answer:
-                "A good summary should mention the key definitions, concepts, examples and important relationships covered in the chapter."
+                `A good answer should explain the important concepts, definitions, examples and applications related to ${chapter}.`
         }
 
     ];
-
 }
-
 
 function startChapterTest() {
 
@@ -5117,7 +5131,11 @@ function finishChapterTest() {
             );
 
         const chapterIndex =
-            getCurrentCurriculumChapterIndex();
+    getCurriculumChapters(
+        test.subject
+    ).indexOf(
+        test.chapter
+    );
 
         if (
             !Array.isArray(
