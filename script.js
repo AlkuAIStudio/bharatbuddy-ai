@@ -1,3 +1,4 @@
+
 "use strict";
 
 /* ============================================================
@@ -2063,13 +2064,12 @@ const QUIZ_TIME = 60;
 let currentCodeTab = "html";
 
 let studyState = {
-
+    board: "CBSE",
+    className: "Class 11",
+    stream: "PCM",
     subject: "Physics",
-
-    chapter: "Units & Measurements",
-
+    chapter: "",
     lessonIndex: 0
-
 };
 
 let activeChapterTest = null;
@@ -3108,7 +3108,6 @@ async function askAI(message) {
         );
 
 
-
     let result = {};
 
 
@@ -3484,39 +3483,29 @@ async function sendTutorMessage() {
    STUDY HELPERS
    ============================================================ */
 
-function getAllLessons(
-    subject
-) {
+function getAllLessons(subject) {
 
-    const chapters =
-        lessonData[subject] || {};
-
+    const curriculumChapters =
+        getCurriculumChapters(subject);
 
     const lessons = [];
 
+    curriculumChapters.forEach(
+        (chapter, chapterIndex) => {
 
-    Object.entries(
-        chapters
-    )
-    .forEach(
-        (
-            [
-                chapter,
-                chapterLessons
-            ],
-            chapterIndex
-        ) => {
+            const chapterLessons =
+                getChapterLessons(
+                    subject,
+                    chapter
+                );
 
             chapterLessons.forEach(
-                (
-                    lesson,
-                    lessonIndex
-                ) => {
+                (lesson, lessonIndex) => {
 
                     lessons.push({
 
                         id:
-                            `${subject}-${chapterIndex}-${lessonIndex}`,
+                            `${studyState.board}-${studyState.className}-${studyState.stream}-${subject}-${chapterIndex}-${lessonIndex}`,
 
                         subject,
 
@@ -3540,63 +3529,84 @@ function getAllLessons(
         }
     );
 
-
     return lessons;
-
 }
-
-
 function getChapterLessons(
     subject,
     chapter
 ) {
 
-    return (
-        lessonData[subject]?.[chapter] ||
-        []
-    );
+    // Existing lessonData me chapter hai
+    // to uska original content use karo.
+    if (
+        lessonData[subject]?.[chapter]
+    ) {
 
-}
-
-
-function calculateLessonProgress(
-    subject,
-    sourceData = data
-) {
-
-    const lessons =
-        getAllLessons(
+        return lessonData[
             subject
-        );
-
-
-    if (!lessons.length) {
-
-        return 0;
+        ][
+            chapter
+        ];
 
     }
 
-
-    const completed =
-        Array.isArray(
-            sourceData.lessonProgress?.[subject]
+    // Curriculum me chapter hai,
+    // lekin lessonData me content nahi hai.
+    // Filhaal chapter ko ek lesson ke roop me show karo.
+    if (
+        getCurriculumChapters(
+            subject
+        ).includes(
+            chapter
         )
-            ? sourceData.lessonProgress[subject]
-            : [];
+    ) {
+
+        return [
+            {
+                title: chapter,
+
+                content: `
+                    <h3>
+                        📚 ${escapeHTML(chapter)}
+                    </h3>
+
+                    <p>
+                        Ye chapter
+                        <strong>
+                            ${escapeHTML(
+                                studyState.board
+                            )}
+                        </strong>
+                        curriculum ke according hai.
+                    </p>
+
+                    <p>
+                        🎓 ${escapeHTML(
+                            studyState.className
+                        )}
+                        ${
+                            studyState.stream
+                                ? `• ${escapeHTML(
+                                    studyState.stream
+                                )}`
+                                : ""
+                        }
+                    </p>
+
+                    <p>
+                        🤖 BharatBuddy is chapter ke
+                        detailed learning content ko
+                        prepare karega.
+                    </p>
+                `
+            }
+        ];
+
+    }
+
+    return [];
 
 
-    return Math.round(
-        (
-            completed.filter(
-                id =>
-                    lessons.some(
-                        lesson =>
-                            lesson.id === id
-                    )
-            ).length /
-            lessons.length
-        ) * 100
-    );
 
 }
 
@@ -3654,23 +3664,44 @@ function ensureStudyProgress() {
 
 /* ============================================================
    STUDY PAGE
+   CBSE + BSEB CURRICULUM
    ============================================================ */
 
 function renderStudy() {
 
     ensureStudyProgress();
 
+    /* --------------------------------------------------------
+       CURRICULUM DATA
+    -------------------------------------------------------- */
 
     const subjects =
-        Object.keys(
-            lessonData
-        );
+        getCurriculumSubjects();
 
+
+    if (!subjects.length) {
+
+        pageContent.innerHTML = `
+            <div class="card">
+                <h2>📚 Curriculum Not Found</h2>
+                <p style="margin-top:10px;">
+                    Please select a valid Board, Class and Stream.
+                </p>
+            </div>
+        `;
+
+        return;
+    }
+
+
+    /* --------------------------------------------------------
+       DEFAULT SUBJECT
+    -------------------------------------------------------- */
 
     if (
-        !lessonData[
+        !subjects.includes(
             studyState.subject
-        ]
+        )
     ) {
 
         studyState.subject =
@@ -3679,13 +3710,34 @@ function renderStudy() {
     }
 
 
+    /* --------------------------------------------------------
+       CURRICULUM CHAPTERS
+    -------------------------------------------------------- */
+
     const chapters =
-        Object.keys(
-            lessonData[
-                studyState.subject
-            ] || {}
+        getCurriculumChapters(
+            studyState.subject
         );
 
+
+    if (!chapters.length) {
+
+        pageContent.innerHTML = `
+            <div class="card">
+                <h2>📖 Chapters Not Found</h2>
+                <p style="margin-top:10px;">
+                    Is subject ke chapters curriculum me available nahi hain.
+                </p>
+            </div>
+        `;
+
+        return;
+    }
+
+
+    /* --------------------------------------------------------
+       DEFAULT CHAPTER
+    -------------------------------------------------------- */
 
     if (
         !chapters.includes(
@@ -3698,6 +3750,10 @@ function renderStudy() {
 
     }
 
+
+    /* --------------------------------------------------------
+       CHAPTER LESSONS
+    -------------------------------------------------------- */
 
     const chapterLessons =
         getChapterLessons(
@@ -3715,6 +3771,10 @@ function renderStudy() {
 
     }
 
+
+    /* --------------------------------------------------------
+       ALL LESSONS
+    -------------------------------------------------------- */
 
     const allLessons =
         getAllLessons(
@@ -3734,6 +3794,68 @@ function renderStudy() {
         );
 
 
+    /* --------------------------------------------------------
+       SUBJECT ICON
+    -------------------------------------------------------- */
+
+    function getSubjectIcon(subject) {
+
+        if (subject === "Physics")
+            return "⚡";
+
+        if (subject === "Mathematics")
+            return "📐";
+
+        if (subject === "Chemistry")
+            return "🧪";
+
+        if (subject === "Biology")
+            return "🧬";
+
+        if (subject === "Computer Science")
+            return "💻";
+
+        if (subject === "Accountancy")
+            return "📊";
+
+        if (subject === "Economics")
+            return "💰";
+
+        if (subject === "Business Studies")
+            return "💼";
+
+        if (subject === "History")
+            return "🏛️";
+
+        if (subject === "Geography")
+            return "🌍";
+
+        if (subject === "Political Science")
+            return "⚖️";
+
+        if (subject === "Sociology")
+            return "👥";
+
+        if (subject === "Science")
+            return "🔬";
+
+        if (subject === "English")
+            return "🇬🇧";
+
+        if (subject === "Hindi")
+            return "🇮🇳";
+
+        if (subject === "Social Science")
+            return "🌏";
+
+        return "📚";
+    }
+
+
+    /* ========================================================
+       PAGE
+       ======================================================== */
+
     pageContent.innerHTML = `
 
         <div class="page-header">
@@ -3743,15 +3865,176 @@ function renderStudy() {
             </h1>
 
             <p>
-                Textbook-style learning for your subjects.
+                ${escapeHTML(
+                    studyState.board
+                )}
+                •
+                ${escapeHTML(
+                    studyState.className
+                )}
+                ${
+                    studyState.stream
+                        ? `• ${escapeHTML(
+                            studyState.stream
+                        )}`
+                        : ""
+                }
             </p>
 
         </div>
 
 
+        <!-- ==================================================
+             CURRICULUM SELECTOR
+        ================================================== -->
+
+        <div class="card">
+
+            <h3>
+                🎓 Curriculum
+            </h3>
+
+            <div
+                class="grid-3"
+                style="margin-top:15px;"
+            >
+
+                <div class="form-group">
+
+                    <label class="form-label">
+                        Board
+                    </label>
+
+                    <select
+                        id="studyBoard"
+                        class="form-select">
+
+                        <option
+                            value="CBSE"
+                            ${
+                                studyState.board === "CBSE"
+                                    ? "selected"
+                                    : ""
+                            }>
+                            CBSE
+                        </option>
+
+                        <option
+                            value="BSEB"
+                            ${
+                                studyState.board === "BSEB"
+                                    ? "selected"
+                                    : ""
+                            }>
+                            BSEB
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label class="form-label">
+                        Class
+                    </label>
+
+                    <select
+                        id="studyClass"
+                        class="form-select">
+
+                        ${
+                            Object.keys(
+                                boardCurriculum[
+                                    studyState.board
+                                ] || {}
+                            )
+                            .map(
+                                className => `
+                                    <option
+                                        value="${escapeHTML(
+                                            className
+                                        )}"
+                                        ${
+                                            className ===
+                                            studyState.className
+                                                ? "selected"
+                                                : ""
+                                        }>
+                                        ${escapeHTML(
+                                            className
+                                        )}
+                                    </option>
+                                `
+                            )
+                            .join("")
+                        }
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label class="form-label">
+                        Stream
+                    </label>
+
+                    <select
+                        id="studyStream"
+                        class="form-select">
+
+                        ${
+                            Object.keys(
+                                boardCurriculum[
+                                    studyState.board
+                                ]?.[
+                                    studyState.className
+                                ]?.streams || {}
+                            )
+                            .map(
+                                stream => `
+                                    <option
+                                        value="${escapeHTML(
+                                            stream
+                                        )}"
+                                        ${
+                                            stream ===
+                                            studyState.stream
+                                                ? "selected"
+                                                : ""
+                                        }>
+                                        ${escapeHTML(
+                                            stream
+                                        )}
+                                    </option>
+                                `
+                            )
+                            .join("")
+                        }
+
+                    </select>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <br>
+
+
+        <!-- ==================================================
+             SUBJECTS
+        ================================================== -->
+
         <div class="grid-3">
 
-            ${subjects
+            ${
+                subjects
                 .map(
                     subject => {
 
@@ -3759,7 +4042,6 @@ function renderStudy() {
                             calculateLessonProgress(
                                 subject
                             );
-
 
                         return `
 
@@ -3776,17 +4058,9 @@ function renderStudy() {
                                         margin-bottom:10px;
                                     ">
 
-                                    ${
-                                        subject === "Physics"
-                                            ? "⚡"
-                                            : subject === "Mathematics"
-                                                ? "📐"
-                                                : subject === "Chemistry"
-                                                    ? "🧪"
-                                                    : subject === "Computer Science"
-                                                        ? "💻"
-                                                        : "🇬🇧"
-                                    }
+                                    ${getSubjectIcon(
+                                        subject
+                                    )}
 
                                 </div>
 
@@ -3806,13 +4080,18 @@ function renderStudy() {
 
                     }
                 )
-                .join("")}
+                .join("")
+            }
 
         </div>
 
 
         <br>
 
+
+        <!-- ==================================================
+             COURSE PROGRESS
+        ================================================== -->
 
         <div class="card">
 
@@ -3843,7 +4122,9 @@ function renderStudy() {
 
                 <div
                     class="progress-bar"
-                    style="width:${subjectProgress}%">
+                    style="
+                        width:${subjectProgress}%
+                    ">
                 </div>
 
             </div>
@@ -3854,21 +4135,26 @@ function renderStudy() {
         <br>
 
 
+        <!-- ==================================================
+             CHAPTER
+        ================================================== -->
+
         <div class="card">
 
             <div class="form-group">
 
                 <label class="form-label">
-                    Select Chapter
+                    📖 Select Chapter
                 </label>
 
                 <select
                     id="studyChapter"
                     class="form-select">
 
-                    ${chapters
+                    ${
+                        chapters
                         .map(
-                            chapter => `
+                            (chapter, index) => `
 
                                 <option
                                     value="${escapeHTML(
@@ -3881,6 +4167,9 @@ function renderStudy() {
                                             : ""
                                     }>
 
+                                    Chapter ${
+                                        index + 1
+                                    } — 
                                     ${escapeHTML(
                                         chapter
                                     )}
@@ -3889,7 +4178,8 @@ function renderStudy() {
 
                             `
                         )
-                        .join("")}
+                        .join("")
+                    }
 
                 </select>
 
@@ -3897,6 +4187,8 @@ function renderStudy() {
 
 
             <div class="grid-2">
+
+                <!-- CHAPTER TOPICS -->
 
                 <div>
 
@@ -3910,70 +4202,81 @@ function renderStudy() {
                             display:flex;
                             flex-direction:column;
                             gap:8px;
-                        ">
+                        "
+                    >
 
-                        ${chapterLessons
-                            .map(
-                                (
-                                    lesson,
-                                    index
-                                ) => {
+                        ${
+                            chapterLessons.length
+                                ? chapterLessons
+                                    .map(
+                                        (
+                                            lesson,
+                                            index
+                                        ) => {
 
-                                    const allLesson =
-                                        allLessons.find(
-                                            item =>
-                                                item.subject ===
-                                                    studyState.subject &&
-                                                item.chapter ===
-                                                    studyState.chapter &&
-                                                item.lessonIndex ===
-                                                    index
-                                        );
-
-
-                                    const done =
-                                        allLesson &&
-                                        completed.includes(
-                                            allLesson.id
-                                        );
+                                            const allLesson =
+                                                allLessons.find(
+                                                    item =>
+                                                        item.subject ===
+                                                            studyState.subject &&
+                                                        item.chapter ===
+                                                            studyState.chapter &&
+                                                        item.lessonIndex ===
+                                                            index
+                                                );
 
 
-                                    return `
+                                            const done =
+                                                allLesson &&
+                                                completed.includes(
+                                                    allLesson.id
+                                                );
 
-                                        <button
-                                            type="button"
-                                            class="btn ${
-                                                index ===
-                                                studyState.lessonIndex
-                                                    ? "btn-primary"
-                                                    : "btn-secondary"
-                                            } study-lesson-btn"
-                                            data-lesson-index="${index}"
-                                            style="text-align:left;">
 
-                                            ${
-                                                done
-                                                    ? "✅"
-                                                    : "📖"
-                                            }
+                                            return `
 
-                                            ${index + 1}.
-                                            ${escapeHTML(
-                                                lesson.title
-                                            )}
+                                                <button
+                                                    type="button"
+                                                    class="btn ${
+                                                        index ===
+                                                        studyState.lessonIndex
+                                                            ? "btn-primary"
+                                                            : "btn-secondary"
+                                                    } study-lesson-btn"
+                                                    data-lesson-index="${index}"
+                                                    style="text-align:left;">
 
-                                        </button>
+                                                    ${
+                                                        done
+                                                            ? "✅"
+                                                            : "📖"
+                                                    }
 
-                                    `;
+                                                    ${index + 1}.
+                                                    ${escapeHTML(
+                                                        lesson.title
+                                                    )}
 
-                                }
-                            )
-                            .join("")}
+                                                </button>
+
+                                            `;
+
+                                        }
+                                    )
+                                    .join("")
+                                : `
+                                    <p>
+                                        Is chapter ka lesson abhi available nahi hai.
+                                    </p>
+                                `
+                        }
 
                     </div>
 
                 </div>
 
+
+                <!-- CHAPTER TEST -->
 
                 <div>
 
@@ -3985,12 +4288,14 @@ function renderStudy() {
                         style="
                             margin-top:10px;
                             opacity:.75;
-                        ">
+                        "
+                    >
 
                         Chapter ke lessons complete karne ke
-                        baad textbook-style questions attempt karo.
+                        baad isi chapter ke questions attempt karo.
 
                     </p>
+
 
                     <button
                         class="btn btn-primary"
@@ -4016,58 +4321,218 @@ function renderStudy() {
     `;
 
 
+    /* ========================================================
+       EVENTS
+    ======================================================== */
+
     attachStudyEvents();
 
     renderCurrentLesson();
 
 }
 
+/* ============================================================
+   STUDY EVENTS
+   CBSE + BSEB CURRICULUM
+   ============================================================ */
 
 function attachStudyEvents() {
 
-    document
-        .querySelectorAll(
-            "[data-subject]"
-        )
-        .forEach(
-            button => {
+    /* --------------------------------------------------------
+       BOARD
+    -------------------------------------------------------- */
 
-                button.addEventListener(
-                    "click",
-                    () => {
+    const board =
+        document.getElementById("studyBoard");
 
-                        studyState.subject =
-                            button.dataset.subject;
+    if (board) {
 
-                        const chapters =
-                            Object.keys(
-                                lessonData[
-                                    studyState.subject
-                                ]
-                            );
+        board.addEventListener(
+            "change",
+            () => {
 
+                studyState.board =
+                    board.value;
 
-                        studyState.chapter =
-                            chapters[0];
+                const classes =
+                    Object.keys(
+                        boardCurriculum[
+                            studyState.board
+                        ] || {}
+                    );
 
-                        studyState.lessonIndex =
-                            0;
+                studyState.className =
+                    classes[0] || "Class 11";
 
+                const streams =
+                    Object.keys(
+                        boardCurriculum[
+                            studyState.board
+                        ]?.[
+                            studyState.className
+                        ]?.streams || {}
+                    );
 
-                        renderStudy();
+                studyState.stream =
+                    streams[0] || "";
 
-                    }
-                );
+                const subjects =
+                    getCurriculumSubjects();
+
+                studyState.subject =
+                    subjects[0] || "";
+
+                const chapters =
+                    getCurriculumChapters(
+                        studyState.subject
+                    );
+
+                studyState.chapter =
+                    chapters[0] || "";
+
+                studyState.lessonIndex = 0;
+
+                renderStudy();
 
             }
         );
 
+    }
+
+
+    /* --------------------------------------------------------
+       CLASS
+    -------------------------------------------------------- */
+
+    const classSelect =
+        document.getElementById("studyClass");
+
+    if (classSelect) {
+
+        classSelect.addEventListener(
+            "change",
+            () => {
+
+                studyState.className =
+                    classSelect.value;
+
+                const streams =
+                    Object.keys(
+                        boardCurriculum[
+                            studyState.board
+                        ]?.[
+                            studyState.className
+                        ]?.streams || {}
+                    );
+
+                studyState.stream =
+                    streams[0] || "";
+
+                const subjects =
+                    getCurriculumSubjects();
+
+                studyState.subject =
+                    subjects[0] || "";
+
+                const chapters =
+                    getCurriculumChapters(
+                        studyState.subject
+                    );
+
+                studyState.chapter =
+                    chapters[0] || "";
+
+                studyState.lessonIndex = 0;
+
+                renderStudy();
+
+            }
+        );
+
+    }
+
+
+    /* --------------------------------------------------------
+       STREAM
+    -------------------------------------------------------- */
+
+    const stream =
+        document.getElementById("studyStream");
+
+    if (stream) {
+
+        stream.addEventListener(
+            "change",
+            () => {
+
+                studyState.stream =
+                    stream.value;
+
+                const subjects =
+                    getCurriculumSubjects();
+
+                studyState.subject =
+                    subjects[0] || "";
+
+                const chapters =
+                    getCurriculumChapters(
+                        studyState.subject
+                    );
+
+                studyState.chapter =
+                    chapters[0] || "";
+
+                studyState.lessonIndex = 0;
+
+                renderStudy();
+
+            }
+        );
+
+    }
+
+
+    /* --------------------------------------------------------
+       SUBJECT
+    -------------------------------------------------------- */
+
+    document
+        .querySelectorAll("[data-subject]")
+        .forEach(button => {
+
+            button.addEventListener(
+                "click",
+                () => {
+
+                    studyState.subject =
+                        button.dataset.subject;
+
+                    const chapters =
+                        getCurriculumChapters(
+                            studyState.subject
+                        );
+
+                    studyState.chapter =
+                        chapters[0] || "";
+
+                    studyState.lessonIndex = 0;
+
+                    renderStudy();
+
+                }
+            );
+
+        });
+
+
+    /* --------------------------------------------------------
+       CHAPTER
+    -------------------------------------------------------- */
 
     const chapter =
         document.getElementById(
             "studyChapter"
         );
-
 
     if (chapter) {
 
@@ -4078,8 +4543,7 @@ function attachStudyEvents() {
                 studyState.chapter =
                     chapter.value;
 
-                studyState.lessonIndex =
-                    0;
+                studyState.lessonIndex = 0;
 
                 renderStudy();
 
@@ -4089,38 +4553,41 @@ function attachStudyEvents() {
     }
 
 
+    /* --------------------------------------------------------
+       LESSON
+    -------------------------------------------------------- */
+
     document
-        .querySelectorAll(
-            ".study-lesson-btn"
-        )
-        .forEach(
-            button => {
+        .querySelectorAll(".study-lesson-btn")
+        .forEach(button => {
 
-                button.addEventListener(
-                    "click",
-                    () => {
+            button.addEventListener(
+                "click",
+                () => {
 
-                        studyState.lessonIndex =
-                            Number(
-                                button.dataset.lessonIndex
-                            );
+                    studyState.lessonIndex =
+                        Number(
+                            button.dataset.lessonIndex
+                        );
 
-                        renderCurrentLesson();
+                    renderCurrentLesson();
 
-                        scrollToCurrentLesson();
+                    scrollToCurrentLesson();
 
-                    }
-                );
+                }
+            );
 
-            }
-        );
+        });
 
+
+    /* --------------------------------------------------------
+       CHAPTER TEST
+    -------------------------------------------------------- */
 
     const testButton =
         document.getElementById(
             "chapterTestButton"
         );
-
 
     if (testButton) {
 
@@ -4132,449 +4599,6 @@ function attachStudyEvents() {
     }
 
 }
-
-
-function renderCurrentLesson() {
-
-    const area =
-        document.getElementById(
-            "currentLessonArea"
-        );
-
-
-    if (!area) return;
-
-
-    const lessons =
-        getChapterLessons(
-            studyState.subject,
-            studyState.chapter
-        );
-
-
-    const lesson =
-        lessons[
-            studyState.lessonIndex
-        ];
-
-
-    if (!lesson) {
-
-        return;
-
-    }
-
-
-    const allLessons =
-        getAllLessons(
-            studyState.subject
-        );
-
-
-    const currentGlobalIndex =
-        allLessons.findIndex(
-            item =>
-                item.subject ===
-                    studyState.subject &&
-                item.chapter ===
-                    studyState.chapter &&
-                item.lessonIndex ===
-                    studyState.lessonIndex
-        );
-
-
-    const progress =
-        allLessons.length
-            ? Math.round(
-                (
-                    (currentGlobalIndex + 1) /
-                    allLessons.length
-                ) * 100
-            )
-            : 0;
-
-
-    const lessonId =
-        `${studyState.subject}-${Object.keys(
-            lessonData[
-                studyState.subject
-            ]
-        ).indexOf(
-            studyState.chapter
-        )}-${studyState.lessonIndex}`;
-
-
-    const isCompleted =
-        data.lessonProgress[
-            studyState.subject
-        ]?.includes(
-            lessonId
-        );
-
-
-    const isLast =
-        studyState.lessonIndex >=
-        lessons.length - 1;
-
-
-    area.innerHTML = `
-
-        <div class="card">
-
-            <div class="course-top">
-
-                <div>
-
-                    <small>
-                        ${escapeHTML(
-                            studyState.chapter
-                        )}
-                    </small>
-
-                    <h2
-                        style="margin-top:6px;">
-
-                        ${escapeHTML(
-                            lesson.title
-                        )}
-
-                    </h2>
-
-                </div>
-
-                <strong>
-                    ${studyState.lessonIndex + 1}
-                    /
-                    ${lessons.length}
-                </strong>
-
-            </div>
-
-
-            <div
-                class="progress"
-                style="margin:16px 0;">
-
-                <div
-                    class="progress-bar"
-                    style="width:${progress}%">
-                </div>
-
-            </div>
-
-
-            <article
-                class="lesson-content"
-                style="
-                    line-height:1.8;
-                    font-size:16px;
-                ">
-
-                ${lesson.content}
-
-            </article>
-
-
-            <div
-                class="card"
-                style="margin-top:22px;">
-
-                <h3>
-                    💡 Important Points
-                </h3>
-
-                <ul
-                    style="
-                        margin-top:10px;
-                        line-height:1.8;
-                    ">
-
-                    <li>
-                        Concept ko examples ke saath samjho.
-                    </li>
-
-                    <li>
-                        Important definitions aur formulas revise karo.
-                    </li>
-
-                    <li>
-                        Chapter exercise attempt karo.
-                    </li>
-
-                </ul>
-
-            </div>
-
-
-            <div
-                style="
-                    display:flex;
-                    justify-content:space-between;
-                    gap:10px;
-                    margin-top:20px;
-                    flex-wrap:wrap;
-                ">
-
-                <button
-                    class="btn btn-secondary"
-                    id="previousLesson"
-                    ${
-                        studyState.lessonIndex === 0
-                            ? "disabled"
-                            : ""
-                    }>
-
-                    ← Previous
-
-                </button>
-
-
-                <button
-                    class="btn btn-primary"
-                    id="completeLesson">
-
-                    ${
-                        isCompleted
-                            ? "✅ Completed"
-                            : "✅ Mark Lesson Complete"
-                    }
-
-                </button>
-
-
-                <button
-                    class="btn btn-primary"
-                    id="nextLesson">
-
-                    ${
-                        isLast
-                            ? "Chapter Exercise →"
-                            : "Next Topic →"
-                    }
-
-                </button>
-
-            </div>
-
-        </div>
-
-    `;
-
-
-    const previous =
-        document.getElementById(
-            "previousLesson"
-        );
-
-
-    const complete =
-        document.getElementById(
-            "completeLesson"
-        );
-
-
-    const next =
-        document.getElementById(
-            "nextLesson"
-        );
-
-
-    if (previous) {
-
-        previous.addEventListener(
-            "click",
-            () => {
-
-                if (
-                    studyState.lessonIndex >
-                    0
-                ) {
-
-                    studyState.lessonIndex--;
-
-                    renderStudy();
-
-                    scrollToCurrentLesson();
-
-                }
-
-            }
-        );
-
-    }
-
-
-    if (complete) {
-
-        complete.addEventListener(
-            "click",
-            () => {
-
-                completeCurrentLesson();
-
-            }
-        );
-
-    }
-
-
-    if (next) {
-
-        next.addEventListener(
-            "click",
-            () => {
-
-                if (isLast) {
-
-                    startChapterTest();
-
-                } else {
-
-                    completeCurrentLesson(
-                        false,
-                        true
-                    );
-
-                }
-
-            }
-        );
-
-    }
-
-}
-
-
-function completeCurrentLesson(
-    finishCourse = false,
-    goNext = false
-) {
-
-    const subject =
-        studyState.subject;
-
-
-    const lessons =
-        getChapterLessons(
-            subject,
-            studyState.chapter
-        );
-
-
-    const chapterIndex =
-        Object.keys(
-            lessonData[
-                subject
-            ]
-        ).indexOf(
-            studyState.chapter
-        );
-
-
-    const lessonId =
-        `${subject}-${chapterIndex}-${studyState.lessonIndex}`;
-
-
-    if (
-        !data.lessonProgress[
-            subject
-        ].includes(
-            lessonId
-        )
-    ) {
-
-        data.lessonProgress[
-            subject
-        ].push(
-            lessonId
-        );
-
-
-        data.stats.lessons++;
-
-
-        data.dailyGoal =
-            Math.min(
-                data.dailyGoalTarget,
-                data.dailyGoal + 1
-            );
-
-
-        showToast(
-            "Lesson complete! 🎉"
-        );
-
-    }
-
-
-    const progress =
-        calculateLessonProgress(
-            subject
-        );
-
-
-    const progressSubject =
-        normalizeProgressSubject(
-            subject
-        );
-
-
-    if (
-        progressSubject in
-        data.progress
-    ) {
-
-        data.progress[
-            progressSubject
-        ] = progress;
-
-    }
-
-
-    saveData();
-
-
-    if (
-        goNext &&
-        studyState.lessonIndex <
-            lessons.length - 1
-    ) {
-
-        studyState.lessonIndex++;
-
-    }
-
-
-    renderStudy();
-
-
-    setTimeout(
-        scrollToCurrentLesson,
-        100
-    );
-
-}
-
-
-function scrollToCurrentLesson() {
-
-    const area =
-        document.getElementById(
-            "currentLessonArea"
-        );
-
-
-    if (area) {
-
-        area.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-        });
-
-    }
-
-}
-
 
 /* ============================================================
    CHAPTER TEST
@@ -5044,19 +5068,14 @@ function evaluateTextAnswer(
 function finishChapterTest() {
 
     if (!activeChapterTest) {
-
         return;
-
     }
-
 
     const test =
         activeChapterTest;
 
-
     const total =
         test.questions.length;
-
 
     const percentage =
         Math.round(
@@ -5066,10 +5085,8 @@ function finishChapterTest() {
             ) * 100
         );
 
-
     const key =
         `${test.subject}|${test.chapter}`;
-
 
     data.chapterTests[key] = {
 
@@ -5085,11 +5102,13 @@ function finishChapterTest() {
 
     };
 
+    /*
+     * ========================================================
+     * CHAPTER PASS
+     * ========================================================
+     */
 
-    if (
-        percentage >=
-        60
-    ) {
+    if (percentage >= 60) {
 
         const allLessons =
             getChapterLessons(
@@ -5097,16 +5116,27 @@ function finishChapterTest() {
                 test.chapter
             );
 
-
         const chapterIndex =
-            Object.keys(
-                lessonData[
+            getCurrentCurriculumChapterIndex();
+
+        if (
+            !Array.isArray(
+                data.lessonProgress[
                     test.subject
                 ]
-            ).indexOf(
-                test.chapter
-            );
+            )
+        ) {
 
+            data.lessonProgress[
+                test.subject
+            ] = [];
+
+        }
+
+        /*
+         * Mark all lessons of this chapter
+         * as completed
+         */
 
         allLessons.forEach(
             (
@@ -5115,28 +5145,22 @@ function finishChapterTest() {
             ) => {
 
                 const id =
-                    `${test.subject}-${chapterIndex}-${index}`;
-
+                    `${studyState.board}-${studyState.className}-${studyState.stream}-${test.subject}-${chapterIndex}-${index}`;
 
                 if (
                     !data.lessonProgress[
                         test.subject
-                    ].includes(
-                        id
-                    )
+                    ].includes(id)
                 ) {
 
                     data.lessonProgress[
                         test.subject
-                    ].push(
-                        id
-                    );
+                    ].push(id);
 
                 }
 
             }
         );
-
 
         data.progress[
             normalizeProgressSubject(
@@ -5149,17 +5173,17 @@ function finishChapterTest() {
 
     }
 
-
     saveData();
-
 
     const area =
         document.getElementById(
             "currentLessonArea"
         );
 
-
     if (area) {
+
+        const nextChapter =
+            getNextCurriculumChapter();
 
         area.innerHTML = `
 
@@ -5173,21 +5197,17 @@ function finishChapterTest() {
                     }
                 </div>
 
-
                 <h2>
                     Chapter Test Complete
                 </h2>
-
 
                 <div class="quiz-score-number">
                     ${test.score}/${total}
                 </div>
 
-
                 <h3>
                     ${percentage}%
                 </h3>
-
 
                 <p>
                     ${
@@ -5197,28 +5217,200 @@ function finishChapterTest() {
                     }
                 </p>
 
-
                 <br>
 
+                ${
+                    percentage >= 60 &&
+                    nextChapter
+                        ? `
+                            <button
+                                class="btn btn-primary"
+                                id="nextChapterAfterTest">
 
-                <button
-                    class="btn btn-primary"
-                    id="backToStudy">
+                                📖 Next Chapter →
 
-                    ← Back to Study
+                            </button>
+                        `
+                        : `
+                            <button
+                                class="btn btn-secondary"
+                                id="backToStudy">
 
-                </button>
+                                ← Back to Study
+
+                            </button>
+                        `
+                }
 
             </div>
 
         `;
 
+        const nextButton =
+            document.getElementById(
+                "nextChapterAfterTest"
+            );
 
-        document
-            .getElementById(
+        if (nextButton) {
+
+            nextButton.addEventListener(
+                "click",
+                () => {
+
+                    studyState.chapter =
+                        nextChapter;
+
+                    studyState.lessonIndex =
+                        0;
+
+                    activeChapterTest =
+                        null;
+
+                    renderStudy();
+
+                    setTimeout(
+                        scrollToCurrentLesson,
+                        100
+                    );
+
+                }
+            );
+
+        }
+       function completeCurrentLesson() {
+
+    const subject =
+        studyState.subject;
+
+    const lessons =
+        getChapterLessons(
+            subject,
+            studyState.chapter
+        );
+
+    if (!lessons.length) {
+        return;
+    }
+
+    const chapterIndex =
+        getCurrentCurriculumChapterIndex();
+
+    const lessonId =
+        `${studyState.board}-${studyState.className}-${studyState.stream}-${subject}-${chapterIndex}-${studyState.lessonIndex}`;
+
+    if (
+        !Array.isArray(
+            data.lessonProgress[subject]
+        )
+    ) {
+        data.lessonProgress[subject] = [];
+    }
+
+    /* Mark current lesson complete */
+
+    if (
+        !data.lessonProgress[subject].includes(
+            lessonId
+        )
+    ) {
+
+        data.lessonProgress[subject].push(
+            lessonId
+        );
+
+        if (
+            typeof showToast === "function"
+        ) {
+            showToast(
+                "✅ Lesson completed!"
+            );
+        }
+    }
+
+    /* Update progress */
+
+    const progress =
+        calculateLessonProgress(
+            subject
+        );
+
+    const progressSubject =
+        normalizeProgressSubject(
+            subject
+        );
+
+    if (
+        progressSubject in data.progress
+    ) {
+        data.progress[
+            progressSubject
+        ] = progress;
+    }
+
+    saveData();
+
+    /* ========================================================
+       MORE LESSONS → NEXT LESSON
+       ======================================================== */
+
+    if (
+        studyState.lessonIndex <
+        lessons.length - 1
+    ) {
+
+        studyState.lessonIndex++;
+
+        renderStudy();
+
+        setTimeout(
+            scrollToCurrentLesson,
+            100
+        );
+
+        return;
+    }
+
+    /* ========================================================
+       LAST LESSON → CHAPTER TEST
+       ======================================================== */
+
+    showToast(
+        "🎯 Chapter ke lessons complete! Ab Chapter Test do."
+    );
+
+    setTimeout(
+        () => {
+            startChapterTest();
+        },
+        300
+    );
+
+    /* ========================================================
+       COURSE COMPLETE
+       ======================================================== */
+
+    renderStudy();
+
+    if (
+        typeof showToast === "function"
+    ) {
+
+        showToast(
+            "🏆 Course completed!"
+        );
+
+    }
+
+}
+
+        const backButton =
+            document.getElementById(
                 "backToStudy"
-            )
-            ?.addEventListener(
+            );
+
+        if (backButton) {
+
+            backButton.addEventListener(
                 "click",
                 () => {
 
@@ -5230,14 +5422,14 @@ function finishChapterTest() {
                 }
             );
 
-    }
+        }
 
+    }
 
     activeChapterTest =
         null;
 
 }
-
 
 /* ============================================================
    AI QUIZ
@@ -14454,6 +14646,7 @@ Do not mention that this is a demo.
     }
 
 })();
+   
 /* =========================================================
    BHARATBUDDY BOARD CURRICULUM SYSTEM
    SAFE ADD-ON
@@ -16078,7 +16271,7 @@ Do not mention that this is a demo.
        AI STUDY NOTES
     ===================================================== */
 
-   async function generateStudyNotes() {
+    async function generateStudyNotes() {
 
     if (
         !curriculumState.board ||
@@ -16221,6 +16414,8 @@ FORMATTING RULES:
         btn.innerHTML = originalText;
     }
 }
+
+    
     /* =====================================================
        CHAPTER TEST
     ===================================================== */
@@ -16313,7 +16508,7 @@ Return clean readable text.
        AI RESULT DISPLAY
     ===================================================== */
 
-   function showBoardAIResult(text, title) {
+    function showBoardAIResult(text, title) {
 
     const pageContent =
         document.getElementById("pageContent");
@@ -17512,5 +17707,1354 @@ Return clean readable text.
         }
     );
 
+/* =========================================================
+   BHARATBUDDY - XP + DAILY STREAK
+   SAFE ADD-ON
+========================================================= */
+
+(function () {
+
+    "use strict";
+
+    const XP_KEY = "bharatbuddy_xp_system";
+
+    function getXPData() {
+
+        let data = null;
+
+        try {
+            data = JSON.parse(
+                localStorage.getItem(XP_KEY)
+            );
+        } catch (error) {
+            data = null;
+        }
+
+        if (!data) {
+
+            data = {
+                xp: 0,
+                streak: 0,
+                lastActiveDate: ""
+            };
+
+            localStorage.setItem(
+                XP_KEY,
+                JSON.stringify(data)
+            );
+        }
+
+        return data;
+    }
+
+    function saveXPData(data) {
+
+        localStorage.setItem(
+            XP_KEY,
+            JSON.stringify(data)
+        );
+    }
+
+    function today() {
+
+        const d = new Date();
+
+        return (
+            d.getFullYear() +
+            "-" +
+            String(d.getMonth() + 1).padStart(2, "0") +
+            "-" +
+            String(d.getDate()).padStart(2, "0")
+        );
+    }
+
+    function yesterday() {
+
+        const d = new Date();
+
+        d.setDate(
+            d.getDate() - 1
+        );
+
+        return (
+            d.getFullYear() +
+            "-" +
+            String(d.getMonth() + 1).padStart(2, "0") +
+            "-" +
+            String(d.getDate()).padStart(2, "0")
+        );
+    }
+
+    function updateStreak() {
+
+        const data = getXPData();
+
+        const current =
+            today();
+
+        if (
+            data.lastActiveDate === current
+        ) {
+            return data;
+        }
+
+        if (
+            data.lastActiveDate === yesterday()
+        ) {
+
+            data.streak =
+                Math.max(
+                    1,
+                    data.streak + 1
+                );
+
+        } else {
+
+            data.streak = 1;
+        }
+
+        data.lastActiveDate =
+            current;
+
+        saveXPData(data);
+
+        return data;
+    }
+
+    function addXP(amount) {
+
+        const data =
+            updateStreak();
+
+        data.xp += Number(amount) || 0;
+
+        saveXPData(data);
+
+        return data;
+    }
+
+    function createXPCard() {
+
+        const home =
+            document.getElementById(
+                "pageContent"
+            );
+
+        if (!home) return;
+
+        const old =
+            document.getElementById(
+                "bbXPCard"
+            );
+
+        if (old) old.remove();
+
+        const data =
+            updateStreak();
+
+        const card =
+            document.createElement("div");
+
+        card.id =
+            "bbXPCard";
+
+        card.innerHTML = `
+
+            <div class="bb-xp-main">
+
+                <div class="bb-xp-icon">
+                    ⚡
+                </div>
+
+                <div>
+
+                    <div class="bb-xp-label">
+                        YOUR LEARNING XP
+                    </div>
+
+                    <div class="bb-xp-number">
+                        ${data.xp} XP
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="bb-streak-box">
+
+                <div class="bb-fire">
+                    🔥
+                </div>
+
+                <div>
+
+                    <strong>
+                        ${data.streak}
+                    </strong>
+
+                    <span>
+                        Day Streak
+                    </span>
+
+                </div>
+
+            </div>
+        `;
+
+        home.prepend(card);
+    }
+
+    function addXPStyle() {
+
+        if (
+            document.getElementById(
+                "bbXPStyle"
+            )
+        ) return;
+
+        const style =
+            document.createElement("style");
+
+        style.id =
+            "bbXPStyle";
+
+        style.textContent = `
+
+            #bbXPCard {
+                display:flex;
+                justify-content:space-between;
+                align-items:center;
+                gap:20px;
+                padding:20px;
+                margin-bottom:18px;
+                border-radius:22px;
+                background:
+                    linear-gradient(
+                        135deg,
+                        #fff7e6,
+                        #ffffff
+                    );
+                border:1px solid #f0dfb8;
+                box-shadow:
+                    0 8px 28px rgba(0,0,0,.06);
+            }
+
+            .bb-xp-main {
+                display:flex;
+                align-items:center;
+                gap:14px;
+            }
+
+            .bb-xp-icon {
+                width:52px;
+                height:52px;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                border-radius:16px;
+                background:#fff0c7;
+                font-size:25px;
+            }
+
+            .bb-xp-label {
+                font-size:11px;
+                font-weight:800;
+                letter-spacing:1px;
+                opacity:.55;
+            }
+
+            .bb-xp-number {
+                font-size:24px;
+                font-weight:900;
+                margin-top:3px;
+            }
+
+            .bb-streak-box {
+                display:flex;
+                align-items:center;
+                gap:10px;
+                padding:10px 16px;
+                border-radius:16px;
+                background:#fff;
+                border:1px solid #eee4d0;
+            }
+
+            .bb-fire {
+                font-size:25px;
+            }
+
+            .bb-streak-box strong {
+                display:block;
+                font-size:20px;
+            }
+
+            .bb-streak-box span {
+                display:block;
+                font-size:11px;
+                opacity:.6;
+                font-weight:700;
+            }
+
+            @media (max-width:600px) {
+
+                #bbXPCard {
+                    padding:16px;
+                }
+
+                .bb-xp-number {
+                    font-size:20px;
+                }
+
+                .bb-streak-box {
+                    padding:8px 10px;
+                }
+
+            }
+
+        `;
+
+        document.head.appendChild(style);
+    }
+
+    function initXPSystem() {
+
+        addXPStyle();
+
+        setTimeout(
+            createXPCard,
+            500
+        );
+    }
+
+    document.addEventListener(
+        "DOMContentLoaded",
+        initXPSystem
+    );
+
+    document.addEventListener(
+        "click",
+        function (event) {
+
+            const homeButton =
+                event.target.closest(
+                    '[data-page="home"]'
+                );
+
+            if (homeButton) {
+
+                setTimeout(
+                    createXPCard,
+                    400
+                );
+            }
+
+        }
+    );
+
+    window.BharatBuddyXP = {
+        getData: getXPData,
+        addXP: addXP,
+        updateStreak: updateStreak
+    };
+
+})();
+/* =========================================================
+   BHARATBUDDY CLASS 9-10 CURRICULUM ENGINE
+   CBSE + BSEB
+   Science / Social Science
+========================================================= */
+
+(function () {
+    "use strict";
+
+    const BB_CLASS9_10_CURRICULUM = {
+
+        CBSE: {
+
+            "9": {
+
+                "Science": {
+
+                    "Physics": {
+                        chapters: [
+                            "Motion",
+                            "Force and Laws of Motion",
+                            "Gravitation",
+                            "Work and Energy",
+                            "Sound"
+                        ]
+                    },
+
+                    "Chemistry": {
+                        chapters: [
+                            "Matter in Our Surroundings",
+                            "Is Matter Around Us Pure",
+                            "Atoms and Molecules",
+                            "Structure of the Atom"
+                        ]
+                    },
+
+                    "Biology": {
+                        chapters: [
+                            "The Fundamental Unit of Life",
+                            "Tissues",
+                            "Diversity in Living Organisms",
+                            "Why Do We Fall Ill",
+                            "Natural Resources",
+                            "Improvement in Food Resources"
+                        ]
+                    }
+
+                },
+
+                "Social Science": {
+
+                    "History": {
+                        chapters: [
+                            "The French Revolution",
+                            "Socialism in Europe and the Russian Revolution",
+                            "Nazism and the Rise of Hitler",
+                            "Forest Society and Colonialism",
+                            "Pastoralists in the Modern World"
+                        ]
+                    },
+
+                    "Geography": {
+                        chapters: [
+                            "India – Size and Location",
+                            "Physical Features of India",
+                            "Drainage",
+                            "Climate",
+                            "Natural Vegetation and Wildlife",
+                            "Population"
+                        ]
+                    },
+
+                    "Political Science": {
+                        chapters: [
+                            "What is Democracy? Why Democracy?",
+                            "Constitutional Design",
+                            "Electoral Politics",
+                            "Working of Institutions",
+                            "Democratic Rights"
+                        ]
+                    },
+
+                    "Economics": {
+                        chapters: [
+                            "The Story of Village Palampur",
+                            "People as Resource",
+                            "Poverty as a Challenge",
+                            "Food Security in India"
+                        ]
+                    }
+
+                }
+
+            },
+
+            "10": {
+
+                "Science": {
+
+                    "Physics": {
+                        chapters: [
+                            "Light – Reflection and Refraction",
+                            "The Human Eye and the Colourful World",
+                            "Electricity",
+                            "Magnetic Effects of Electric Current",
+                            "Sources of Energy"
+                        ]
+                    },
+
+                    "Chemistry": {
+                        chapters: [
+                            "Chemical Reactions and Equations",
+                            "Acids, Bases and Salts",
+                            "Metals and Non-metals",
+                            "Carbon and Its Compounds",
+                            "Periodic Classification of Elements"
+                        ]
+                    },
+
+                    "Biology": {
+                        chapters: [
+                            "Life Processes",
+                            "Control and Coordination",
+                            "How Do Organisms Reproduce?",
+                            "Heredity",
+                            "Our Environment",
+                            "Sustainable Management of Natural Resources"
+                        ]
+                    }
+
+                },
+
+                "Social Science": {
+
+                    "History": {
+                        chapters: [
+                            "The Rise of Nationalism in Europe",
+                            "Nationalism in India",
+                            "The Making of a Global World",
+                            "The Age of Industrialisation",
+                            "Print Culture and the Modern World"
+                        ]
+                    },
+
+                    "Geography": {
+                        chapters: [
+                            "Resources and Development",
+                            "Forest and Wildlife Resources",
+                            "Water Resources",
+                            "Agriculture",
+                            "Minerals and Energy Resources",
+                            "Manufacturing Industries",
+                            "Lifelines of National Economy"
+                        ]
+                    },
+
+                    "Political Science": {
+                        chapters: [
+                            "Power Sharing",
+                            "Federalism",
+                            "Gender, Religion and Caste",
+                            "Political Parties",
+                            "Outcomes of Democracy",
+                            "Challenges to Democracy"
+                        ]
+                    },
+
+                    "Economics": {
+                        chapters: [
+                            "Development",
+                            "Sectors of the Indian Economy",
+                            "Money and Credit",
+                            "Globalisation and the Indian Economy",
+                            "Consumer Rights"
+                        ]
+                    }
+
+                }
+
+            }
+
+        },
+
+        /*
+         * BSEB
+         * Official BSEB curriculum availability currently needs
+         * board-year verification before we lock every chapter.
+         * The structure is ready so chapters can be inserted safely.
+         */
+
+        BSEB: {
+
+            "9": {
+                "Science": {
+                    "Physics": { chapters: [] },
+                    "Chemistry": { chapters: [] },
+                    "Biology": { chapters: [] }
+                },
+
+                "Social Science": {
+                    "History": { chapters: [] },
+                    "Geography": { chapters: [] },
+                    "Political Science": { chapters: [] },
+                    "Economics": { chapters: [] }
+                }
+            },
+
+            "10": {
+                "Science": {
+                    "Physics": { chapters: [] },
+                    "Chemistry": { chapters: [] },
+                    "Biology": { chapters: [] }
+                },
+
+                "Social Science": {
+                    "History": { chapters: [] },
+                    "Geography": { chapters: [] },
+                    "Political Science": { chapters: [] },
+                    "Economics": { chapters: [] }
+                }
+            }
+
+        }
+
+    };
 
 
+    /* =========================================================
+       GET CURRICULUM
+    ========================================================= */
+
+    window.BharatBuddyClass9_10 = {
+
+        data: BB_CLASS9_10_CURRICULUM,
+
+        getSubjects: function (board, className) {
+
+            const data =
+                BB_CLASS9_10_CURRICULUM?.[board]?.[className];
+
+            if (!data) return [];
+
+            return Object.keys(data);
+        },
+
+        getBooks: function (board, className, subject) {
+
+            const data =
+                BB_CLASS9_10_CURRICULUM?.[board]?.[className]?.[subject];
+
+            if (!data) return [];
+
+            return Object.keys(data);
+        },
+
+        getChapters: function (
+            board,
+            className,
+            subject,
+            book
+        ) {
+
+            return (
+                BB_CLASS9_10_CURRICULUM
+                    ?.[board]
+                    ?.[className]
+                    ?.[subject]
+                    ?.[book]
+                    ?.chapters || []
+            );
+        }
+
+    };
+
+
+    console.log(
+        "BharatBuddy Class 9-10 Curriculum Engine Loaded"
+    );
+
+})();
+/* =========================================================
+   BHARATBUDDY 9-10 STUDY SELECTOR
+   Board → Class → Subject → Book → Chapter
+========================================================= */
+
+(function () {
+    "use strict";
+
+    function initClass9_10StudySelector() {
+
+        const pageContent = document.getElementById("pageContent");
+
+        if (!pageContent) return;
+
+        const currentClass =
+            window.BharatBuddyBoardSystem?.getState?.()?.className ||
+            window.bharatBuddyData?.profile?.className ||
+            "";
+
+        // Sirf Class 9 aur 10 ke liye
+        if (
+            !String(currentClass).includes("9") &&
+            !String(currentClass).includes("10")
+        ) {
+            return;
+        }
+
+        renderClass9_10Selector(pageContent);
+    }
+
+
+    function renderClass9_10Selector(container) {
+
+        container.innerHTML = `
+            <div class="bb-910-study-box">
+
+                <div class="bb-910-header">
+                    <div>
+                        <span class="bb-910-badge">CLASS 9–10</span>
+                        <h2>📚 Study Center</h2>
+                        <p>
+                            Board, class, subject aur chapter select karke
+                            directly padhna start karo.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bb-910-select-grid">
+
+                    <div class="bb-910-field">
+                        <label>Board</label>
+                        <select id="bb910Board">
+                            <option value="">Select Board</option>
+                            <option value="CBSE">CBSE</option>
+                            <option value="BSEB">BSEB</option>
+                        </select>
+                    </div>
+
+                    <div class="bb-910-field">
+                        <label>Class</label>
+                        <select id="bb910Class">
+                            <option value="">Select Class</option>
+                            <option value="9">Class 9</option>
+                            <option value="10">Class 10</option>
+                        </select>
+                    </div>
+
+                    <div class="bb-910-field">
+                        <label>Subject</label>
+                        <select id="bb910Subject" disabled>
+                            <option value="">Select Subject</option>
+                        </select>
+                    </div>
+
+                    <div class="bb-910-field">
+                        <label>Book / Section</label>
+                        <select id="bb910Book" disabled>
+                            <option value="">Select Book / Section</option>
+                        </select>
+                    </div>
+
+                    <div class="bb-910-field bb-910-full">
+                        <label>Chapter</label>
+                        <select id="bb910Chapter" disabled>
+                            <option value="">Select Chapter</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div id="bb910ChapterArea"></div>
+
+            </div>
+        `;
+
+        addClass910Styles();
+
+        setupClass910Events();
+    }
+
+
+    function setupClass910Events() {
+
+        const board =
+            document.getElementById("bb910Board");
+
+        const classSelect =
+            document.getElementById("bb910Class");
+
+        const subject =
+            document.getElementById("bb910Subject");
+
+        const book =
+            document.getElementById("bb910Book");
+
+        const chapter =
+            document.getElementById("bb910Chapter");
+
+        const chapterArea =
+            document.getElementById("bb910ChapterArea");
+
+
+        function loadSubjects() {
+
+            subject.innerHTML =
+                `<option value="">Select Subject</option>`;
+
+            book.innerHTML =
+                `<option value="">Select Book / Section</option>`;
+
+            chapter.innerHTML =
+                `<option value="">Select Chapter</option>`;
+
+            subject.disabled = true;
+            book.disabled = true;
+            chapter.disabled = true;
+
+            chapterArea.innerHTML = "";
+
+            if (!board.value || !classSelect.value) return;
+
+            const subjects =
+                window.BharatBuddyClass9_10
+                    ?.getSubjects(
+                        board.value,
+                        classSelect.value
+                    ) || [];
+
+            subjects.forEach(function (item) {
+
+                const option =
+                    document.createElement("option");
+
+                option.value = item;
+                option.textContent = item;
+
+                subject.appendChild(option);
+            });
+
+            subject.disabled = subjects.length === 0;
+        }
+
+
+        function loadBooks() {
+
+            book.innerHTML =
+                `<option value="">Select Book / Section</option>`;
+
+            chapter.innerHTML =
+                `<option value="">Select Chapter</option>`;
+
+            book.disabled = true;
+            chapter.disabled = true;
+
+            chapterArea.innerHTML = "";
+
+            if (!board.value ||
+                !classSelect.value ||
+                !subject.value) return;
+
+            const books =
+                window.BharatBuddyClass9_10
+                    ?.getBooks(
+                        board.value,
+                        classSelect.value,
+                        subject.value
+                    ) || [];
+
+            books.forEach(function (item) {
+
+                const option =
+                    document.createElement("option");
+
+                option.value = item;
+                option.textContent = item;
+
+                book.appendChild(option);
+            });
+
+            book.disabled = books.length === 0;
+        }
+
+
+        function loadChapters() {
+
+            chapter.innerHTML =
+                `<option value="">Select Chapter</option>`;
+
+            chapter.disabled = true;
+
+            chapterArea.innerHTML = "";
+
+            if (!board.value ||
+                !classSelect.value ||
+                !subject.value ||
+                !book.value) return;
+
+            const chapters =
+                window.BharatBuddyClass9_10
+                    ?.getChapters(
+                        board.value,
+                        classSelect.value,
+                        subject.value,
+                        book.value
+                    ) || [];
+
+            chapters.forEach(function (item, index) {
+
+                const option =
+                    document.createElement("option");
+
+                option.value = item;
+                option.textContent =
+                    `Chapter ${index + 1}: ${item}`;
+
+                chapter.appendChild(option);
+            });
+
+            chapter.disabled = chapters.length === 0;
+
+            if (chapters.length === 0) {
+
+                chapterArea.innerHTML = `
+                    <div class="bb910-empty">
+                        📚 Is board/class ke chapters abhi
+                        curriculum data mein add nahi hue hain.
+                    </div>
+                `;
+            }
+        }
+
+
+        function showChapter() {
+
+            if (!chapter.value) {
+
+                chapterArea.innerHTML = "";
+
+                return;
+            }
+
+            const chapterName = chapter.value;
+
+            chapterArea.innerHTML = `
+
+                <div class="bb910-chapter-card">
+
+                    <div class="bb910-chapter-icon">
+                        📖
+                    </div>
+
+                    <div class="bb910-chapter-info">
+
+                        <span>
+                            ${board.value} • Class ${classSelect.value}
+                        </span>
+
+                        <h3>${chapterName}</h3>
+
+                        <p>
+                            ${book.value} • ${subject.value}
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="bb910-action-grid">
+
+                    <button
+                        class="bb910-action"
+                        id="bb910StudyBtn"
+                    >
+                        📚 Study Chapter
+                    </button>
+
+                    <button
+                        class="bb910-action"
+                        id="bb910QuestionBtn"
+                    >
+                        📝 Chapter Questions
+                    </button>
+
+                </div>
+            `;
+
+
+            document.getElementById("bb910StudyBtn")
+                ?.addEventListener("click", function () {
+
+                    open910AIStudy(
+                        board.value,
+                        classSelect.value,
+                        subject.value,
+                        book.value,
+                        chapterName
+                    );
+
+                });
+
+
+            document.getElementById("bb910QuestionBtn")
+                ?.addEventListener("click", function () {
+
+                    open910Questions(
+                        board.value,
+                        classSelect.value,
+                        subject.value,
+                        book.value,
+                        chapterName
+                    );
+
+                });
+        }
+
+
+        board.addEventListener("change", loadSubjects);
+
+        classSelect.addEventListener("change", loadSubjects);
+
+        subject.addEventListener("change", loadBooks);
+
+        book.addEventListener("change", loadChapters);
+
+        chapter.addEventListener("change", showChapter);
+    }
+
+
+    async function open910AIStudy(
+        board,
+        className,
+        subject,
+        book,
+        chapter
+    ) {
+
+        const area =
+            document.getElementById("bb910ChapterArea");
+
+        if (!area) return;
+
+        area.innerHTML = `
+            <div class="bb910-loading">
+                🤖 Chapter study material prepare ho raha hai...
+            </div>
+        `;
+
+
+        try {
+
+            const prompt = `
+You are BharatBuddy AI Learning Tutor.
+
+Board: ${board}
+Class: ${className}
+Subject: ${subject}
+Book/Section: ${book}
+Chapter: ${chapter}
+
+Create study material ONLY for this exact chapter.
+
+Include:
+
+1. Chapter Overview
+2. Important Concepts
+3. Important Definitions
+4. Easy Explanation
+5. Examples
+6. Important Points
+7. Exam Focus
+8. Quick Revision
+
+Do not discuss another chapter.
+Do not change the class or subject.
+Use simple student-friendly language.
+`;
+
+
+            const response =
+                await window.askAI?.(prompt);
+
+
+            if (!response) {
+
+                throw new Error(
+                    "AI response unavailable"
+                );
+            }
+
+
+            if (
+                window.BharatBuddyPremiumNotes
+            ) {
+
+                area.innerHTML =
+                    window.BharatBuddyPremiumNotes(
+                        response,
+                        subject,
+                        chapter
+                    );
+
+            } else {
+
+                area.innerHTML = `
+                    <div class="bb910-ai-result">
+                        ${String(response)
+                            .replace(/\n/g, "<br>")}
+                    </div>
+                `;
+            }
+
+        } catch (error) {
+
+            console.error(
+                "Class 9-10 Study Error:",
+                error
+            );
+
+            area.innerHTML = `
+                <div class="bb910-empty">
+                    ⚠️ Study material load nahi ho paya.
+                    Please try again.
+                </div>
+            `;
+        }
+
+    }
+
+
+    async function open910Questions(
+        board,
+        className,
+        subject,
+        book,
+        chapter
+    ) {
+
+        const area =
+            document.getElementById("bb910ChapterArea");
+
+        if (!area) return;
+
+
+        area.innerHTML = `
+            <div class="bb910-loading">
+                📝 ${chapter} ke questions prepare ho rahe hain...
+            </div>
+        `;
+
+
+        try {
+
+            const prompt = `
+You are BharatBuddy AI Question Generator.
+
+Board: ${board}
+Class: ${className}
+Subject: ${subject}
+Book/Section: ${book}
+Chapter: ${chapter}
+
+Generate questions ONLY from this exact chapter.
+
+Create:
+- 5 MCQs
+- 3 Short Answer Questions
+- 2 Long Answer Questions
+
+Questions must match the selected class and chapter.
+Do not use questions from another chapter.
+Do not change the subject.
+Give answers after the questions.
+`;
+
+
+            const response =
+                await window.askAI?.(prompt);
+
+
+            if (!response) {
+
+                throw new Error(
+                    "Question response unavailable"
+                );
+            }
+
+
+            area.innerHTML = `
+                <div class="bb910-question-result">
+
+                    <div class="bb910-question-title">
+                        📝 ${chapter} — Questions
+                    </div>
+
+                    <div class="bb910-question-content">
+                        ${String(response)
+                            .replace(/\n/g, "<br>")}
+                    </div>
+
+                </div>
+            `;
+
+        } catch (error) {
+
+            console.error(
+                "Class 9-10 Question Error:",
+                error
+            );
+
+            area.innerHTML = `
+                <div class="bb910-empty">
+                    ⚠️ Questions load nahi ho paye.
+                    Please try again.
+                </div>
+            `;
+        }
+
+    }
+
+
+    function addClass910Styles() {
+
+        if (document.getElementById("bb910Styles")) return;
+
+        const style =
+            document.createElement("style");
+
+        style.id = "bb910Styles";
+
+        style.textContent = `
+
+            .bb-910-study-box {
+                padding: 24px;
+                border-radius: 22px;
+                background: var(--card-bg, #ffffff);
+                border: 1px solid rgba(0,0,0,.08);
+                margin-bottom: 25px;
+            }
+
+            .bb-910-badge {
+                font-size: 12px;
+                font-weight: 700;
+                letter-spacing: 1px;
+                opacity: .7;
+            }
+
+            .bb-910-header h2 {
+                margin: 7px 0;
+                font-size: 27px;
+            }
+
+            .bb-910-header p {
+                opacity: .7;
+                margin-bottom: 22px;
+            }
+
+            .bb-910-select-grid {
+                display: grid;
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+                gap: 16px;
+            }
+
+            .bb-910-field {
+                display: flex;
+                flex-direction: column;
+                gap: 7px;
+            }
+
+            .bb-910-field label {
+                font-size: 13px;
+                font-weight: 700;
+            }
+
+            .bb-910-field select {
+                padding: 13px 14px;
+                border-radius: 12px;
+                border: 1px solid rgba(0,0,0,.12);
+                background: var(--bg, #fff);
+                color: inherit;
+                font-size: 14px;
+                outline: none;
+            }
+
+            .bb-910-full {
+                grid-column: 1 / -1;
+            }
+
+            .bb910-chapter-card {
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                margin-top: 22px;
+                padding: 20px;
+                border-radius: 18px;
+                background: rgba(80,120,255,.08);
+            }
+
+            .bb910-chapter-icon {
+                font-size: 34px;
+            }
+
+            .bb910-chapter-info span {
+                font-size: 12px;
+                opacity: .65;
+            }
+
+            .bb910-chapter-info h3 {
+                margin: 5px 0;
+            }
+
+            .bb910-chapter-info p {
+                margin: 0;
+                opacity: .7;
+                font-size: 13px;
+            }
+
+            .bb910-action-grid {
+                display: grid;
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+                gap: 12px;
+                margin-top: 14px;
+            }
+
+            .bb910-action {
+                border: 0;
+                border-radius: 13px;
+                padding: 14px;
+                cursor: pointer;
+                font-weight: 700;
+                font-size: 14px;
+            }
+
+            .bb910-loading,
+            .bb910-empty,
+            .bb910-ai-result,
+            .bb910-question-result {
+                margin-top: 18px;
+                padding: 20px;
+                border-radius: 16px;
+                background: rgba(0,0,0,.04);
+            }
+
+            .bb910-question-title {
+                font-size: 20px;
+                font-weight: 800;
+                margin-bottom: 15px;
+            }
+
+            @media (max-width: 700px) {
+
+                .bb-910-study-box {
+                    padding: 16px;
+                }
+
+                .bb-910-select-grid,
+                .bb910-action-grid {
+                    grid-template-columns: 1fr;
+                }
+
+                .bb-910-full {
+                    grid-column: auto;
+                }
+
+                .bb910-chapter-card {
+                    align-items: flex-start;
+                }
+            }
+
+        `;
+
+        document.head.appendChild(style);
+    }
+
+
+    // Study button click
+    document.addEventListener("click", function (event) {
+
+        const studyButton =
+            event.target.closest(
+                '[data-page="study"]'
+            );
+
+        if (!studyButton) return;
+
+        setTimeout(
+            initClass9_10StudySelector,
+            350
+        );
+
+    });
+
+
+    console.log(
+        "BharatBuddy Class 9-10 Study Selector Loaded"
+    );
+
+})();
