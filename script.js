@@ -19074,5 +19074,5 @@ Give answers after the questions.
     console.log(
         "BharatBuddy Class 9-10 Study Selector Loaded"
     );
-
+z
 })();
