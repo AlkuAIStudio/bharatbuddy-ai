@@ -16313,66 +16313,144 @@ Return clean readable text.
        AI RESULT DISPLAY
     ===================================================== */
 
-    function showBoardAIResult(text, title) {
+   function showBoardAIResult(text, title) {
 
-        const pageContent =
-            document.getElementById("pageContent");
+    const pageContent =
+        document.getElementById("pageContent");
 
-        if (!pageContent) return;
+    if (!pageContent) return;
 
-        const old =
-            document.getElementById(
-                "bbBoardAIResult"
+    const old =
+        document.getElementById("bbBoardAIResult");
+
+    if (old) old.remove();
+
+    const result =
+        document.createElement("div");
+
+    result.id = "bbBoardAIResult";
+
+    result.style.cssText = `
+        margin-top:20px;
+        padding:24px;
+        border-radius:20px;
+        background:var(--card-bg, #ffffff);
+        border:1px solid var(--border-color, #e1e7f0);
+        box-shadow:0 10px 35px rgba(0,0,0,.08);
+        line-height:1.75;
+        overflow:hidden;
+    `;
+
+    let formattedContent = String(
+        text || "No response"
+    );
+
+    /* Agar Premium Notes formatter available hai */
+    if (
+        typeof window.BharatBuddyPremiumNotes ===
+        "function"
+    ) {
+
+        formattedContent =
+            window.BharatBuddyPremiumNotes(
+                formattedContent,
+                curriculumState?.subject || "",
+                curriculumState?.chapter || ""
             );
 
-        if (old) old.remove();
+    } else {
 
-        const result =
-            document.createElement("div");
+        /* Basic Markdown fallback */
 
-        result.id =
-            "bbBoardAIResult";
+        formattedContent =
+            formattedContent
+                .replace(
+                    /&/g,
+                    "&amp;"
+                )
+                .replace(
+                    /</g,
+                    "&lt;"
+                )
+                .replace(
+                    />/g,
+                    "&gt;"
+                );
 
-        result.style.cssText = `
-            margin-top:20px;
-            padding:22px;
-            border-radius:18px;
-            background:#ffffff;
-            border:1px solid #e1e7f0;
-            box-shadow:0 8px 30px rgba(0,0,0,.06);
-            line-height:1.7;
-            white-space:pre-wrap;
-        `;
+        formattedContent =
+            formattedContent
+                .replace(
+                    /^### (.*)$/gm,
+                    "<h4>$1</h4>"
+                )
+                .replace(
+                    /^## (.*)$/gm,
+                    "<h3>$1</h3>"
+                )
+                .replace(
+                    /^# (.*)$/gm,
+                    "<h2>$1</h2>"
+                )
+                .replace(
+                    /\*\*(.*?)\*\*/g,
+                    "<strong>$1</strong>"
+                )
+                .replace(
+                    /`([^`]+)`/g,
+                    "<code>$1</code>"
+                )
+                .replace(
+                    /^\s*[-•]\s+(.*)$/gm,
+                    "<li>$1</li>"
+                )
+                .replace(
+                    /\n{2,}/g,
+                    "<br><br>"
+                )
+                .replace(
+                    /\n/g,
+                    "<br>"
+                );
+    }
 
-        result.innerHTML = `
-            <h2 style="margin-top:0;">
-                ${title}
+    result.innerHTML = `
+
+        <div style="
+            margin-bottom:22px;
+            padding-bottom:16px;
+            border-bottom:1px solid var(--border-color, #e5e7eb);
+        ">
+
+            <div style="
+                font-size:13px;
+                font-weight:700;
+                opacity:.65;
+                margin-bottom:5px;
+            ">
+                BHARATBUDDY AI
+            </div>
+
+            <h2 style="
+                margin:0;
+                font-size:26px;
+            ">
+                ${escapeHTML(String(title || "AI Result"))}
             </h2>
 
-            <div>
-                ${escapeHTML(String(text || "No response"))}
-            </div>
-        `;
+        </div>
 
-        pageContent.appendChild(result);
+        <div class="bb-ai-result-content">
+            ${formattedContent}
+        </div>
+    `;
 
-        result.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-        });
-    }
+    pageContent.appendChild(result);
 
-
-    function escapeHTML(text) {
-
-        return text
-            .replace(/&/g, "&amp;")
-            .replace(/</g, "&lt;")
-            .replace(/>/g, "&gt;")
-            .replace(/"/g, "&quot;")
-            .replace(/'/g, "&#039;");
-    }
-
+    result.scrollIntoView({
+        behavior:"smooth",
+        block:"start"
+    });
+}
 
     /* =====================================================
        SAFE STUDY PAGE INTEGRATION
