@@ -16985,4 +16985,532 @@ Return clean readable text.
     console.log("BharatBuddy Premium Study Notes UI loaded");
 
 })();
+/* =========================================================
+   BHARATBUDDY - TODAY'S MISSION
+   SAFE ADD-ON
+========================================================= */
+
+(function () {
+
+    "use strict";
+
+    function getTodayKey() {
+        const d = new Date();
+        return (
+            d.getFullYear() +
+            "-" +
+            String(d.getMonth() + 1).padStart(2, "0") +
+            "-" +
+            String(d.getDate()).padStart(2, "0")
+        );
+    }
+
+    function getMissionData() {
+
+        const key = "bharatbuddy_today_mission";
+
+        let data;
+
+        try {
+            data = JSON.parse(
+                localStorage.getItem(key)
+            );
+        } catch (e) {
+            data = null;
+        }
+
+        if (
+            !data ||
+            data.date !== getTodayKey()
+        ) {
+
+            data = {
+                date: getTodayKey(),
+                completed: [],
+                xp: 0
+            };
+
+            localStorage.setItem(
+                key,
+                JSON.stringify(data)
+            );
+        }
+
+        return data;
+    }
+
+    function saveMissionData(data) {
+
+        localStorage.setItem(
+            "bharatbuddy_today_mission",
+            JSON.stringify(data)
+        );
+    }
+
+    function completeMission(id, xp) {
+
+        const data = getMissionData();
+
+        if (data.completed.includes(id)) {
+            return;
+        }
+
+        data.completed.push(id);
+        data.xp += xp;
+
+        saveMissionData(data);
+
+        renderMission();
+
+        if (
+            typeof showToast === "function"
+        ) {
+            showToast(
+                `🎉 Mission complete! +${xp} XP`
+            );
+        }
+    }
+
+    function renderMission() {
+
+        const pageContent =
+            document.getElementById(
+                "pageContent"
+            );
+
+        if (!pageContent) return;
+
+        const data = getMissionData();
+
+        const missions = [
+
+            {
+                id: "learn",
+                icon: "📚",
+                title: "Learn Something",
+                description:
+                    "Study one lesson for 10 minutes.",
+                xp: 20
+            },
+
+            {
+                id: "quiz",
+                icon: "🧠",
+                title: "Quick Quiz",
+                description:
+                    "Answer 5 practice questions.",
+                xp: 30
+            },
+
+            {
+                id: "explore",
+                icon: "💡",
+                title: "Explore",
+                description:
+                    "Ask BharatBuddy one useful doubt.",
+                xp: 20
+            }
+
+        ];
+
+        const completedCount =
+            data.completed.length;
+
+        const progress =
+            Math.round(
+                (completedCount / missions.length) *
+                100
+            );
+
+        const cards =
+            missions.map(function (mission) {
+
+                const completed =
+                    data.completed.includes(
+                        mission.id
+                    );
+
+                return `
+
+                    <div
+                        class="bb-mission-card
+                        ${completed ? "completed" : ""}"
+                        data-mission-id="${mission.id}"
+                        data-mission-xp="${mission.xp}"
+                    >
+
+                        <div class="bb-mission-icon">
+                            ${mission.icon}
+                        </div>
+
+                        <div class="bb-mission-info">
+
+                            <div class="bb-mission-title">
+                                ${mission.title}
+                            </div>
+
+                            <div class="bb-mission-description">
+                                ${mission.description}
+                            </div>
+
+                        </div>
+
+                        <div class="bb-mission-xp">
+                            ${completed
+                                ? "✓ Done"
+                                : "+" + mission.xp + " XP"}
+                        </div>
+
+                    </div>
+                `;
+            }).join("");
+
+        const existing =
+            document.getElementById(
+                "bbTodayMission"
+            );
+
+        if (existing) {
+            existing.remove();
+        }
+
+        const section =
+            document.createElement("div");
+
+        section.id =
+            "bbTodayMission";
+
+        section.innerHTML = `
+
+            <div class="bb-mission-header">
+
+                <div>
+
+                    <div class="bb-mission-label">
+                        🎯 TODAY'S MISSION
+                    </div>
+
+                    <h2>
+                        Aaj kya seekhenge?
+                    </h2>
+
+                    <p>
+                        Chhote steps. Better learning. 🚀
+                    </p>
+
+                </div>
+
+                <div class="bb-xp-box">
+
+                    <strong>
+                        ${data.xp}
+                    </strong>
+
+                    <span>XP</span>
+
+                </div>
+
+            </div>
+
+            <div class="bb-mission-progress">
+
+                <div class="bb-progress-top">
+
+                    <span>
+                        Daily Progress
+                    </span>
+
+                    <strong>
+                        ${progress}%
+                    </strong>
+
+                </div>
+
+                <div class="bb-progress-bar">
+
+                    <div
+                        style="width:${progress}%"
+                    ></div>
+
+                </div>
+
+            </div>
+
+            <div class="bb-mission-list">
+
+                ${cards}
+
+            </div>
+
+            ${
+                completedCount === missions.length
+                    ? `
+                        <div class="bb-mission-complete">
+                            🏆 Amazing! Aaj ke saare missions complete!
+                        </div>
+                    `
+                    : ""
+            }
+
+        `;
+
+        pageContent.prepend(section);
+
+        section
+            .querySelectorAll(
+                ".bb-mission-card"
+            )
+            .forEach(function (card) {
+
+                card.addEventListener(
+                    "click",
+                    function () {
+
+                        const id =
+                            this.dataset.missionId;
+
+                        const xp =
+                            Number(
+                                this.dataset.missionXp
+                            );
+
+                        completeMission(
+                            id,
+                            xp
+                        );
+
+                    }
+                );
+
+            });
+    }
+
+    function addMissionCSS() {
+
+        if (
+            document.getElementById(
+                "bbMissionCSS"
+            )
+        ) return;
+
+        const style =
+            document.createElement("style");
+
+        style.id =
+            "bbMissionCSS";
+
+        style.textContent = `
+
+            #bbTodayMission {
+                margin-bottom:24px;
+            }
+
+            .bb-mission-header {
+                display:flex;
+                justify-content:space-between;
+                align-items:center;
+                gap:20px;
+                padding:26px;
+                border-radius:24px;
+                background:
+                    linear-gradient(
+                        135deg,
+                        #eef4ff,
+                        #f8fbff
+                    );
+                border:1px solid #dce6f5;
+                margin-bottom:16px;
+            }
+
+            .bb-mission-label {
+                font-size:12px;
+                font-weight:800;
+                letter-spacing:1px;
+                color:#4169e1;
+                margin-bottom:7px;
+            }
+
+            .bb-mission-header h2 {
+                margin:0;
+                font-size:28px;
+            }
+
+            .bb-mission-header p {
+                margin:6px 0 0;
+                opacity:.7;
+            }
+
+            .bb-xp-box {
+                min-width:75px;
+                text-align:center;
+                padding:14px;
+                border-radius:18px;
+                background:#ffffff;
+                box-shadow:0 8px 25px rgba(0,0,0,.07);
+            }
+
+            .bb-xp-box strong {
+                display:block;
+                font-size:26px;
+            }
+
+            .bb-xp-box span {
+                font-size:12px;
+                font-weight:700;
+                opacity:.6;
+            }
+
+            .bb-mission-progress {
+                padding:18px;
+                border-radius:18px;
+                background:#ffffff;
+                border:1px solid #e4e9f1;
+                margin-bottom:16px;
+            }
+
+            .bb-progress-top {
+                display:flex;
+                justify-content:space-between;
+                margin-bottom:10px;
+                font-size:14px;
+            }
+
+            .bb-progress-bar {
+                height:10px;
+                background:#e9edf3;
+                border-radius:20px;
+                overflow:hidden;
+            }
+
+            .bb-progress-bar div {
+                height:100%;
+                background:linear-gradient(
+                    90deg,
+                    #4169e1,
+                    #7c5cff
+                );
+                border-radius:20px;
+                transition:width .4s ease;
+            }
+
+            .bb-mission-list {
+                display:grid;
+                gap:12px;
+            }
+
+            .bb-mission-card {
+                display:flex;
+                align-items:center;
+                gap:15px;
+                padding:18px;
+                border-radius:18px;
+                background:#ffffff;
+                border:1px solid #e3e8f0;
+                cursor:pointer;
+                transition:
+                    transform .2s ease,
+                    box-shadow .2s ease;
+            }
+
+            .bb-mission-card:hover {
+                transform:translateY(-2px);
+                box-shadow:
+                    0 10px 25px rgba(0,0,0,.08);
+            }
+
+            .bb-mission-card.completed {
+                opacity:.65;
+                cursor:default;
+            }
+
+            .bb-mission-icon {
+                width:48px;
+                height:48px;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                border-radius:15px;
+                background:#f0f4ff;
+                font-size:23px;
+                flex-shrink:0;
+            }
+
+            .bb-mission-info {
+                flex:1;
+            }
+
+            .bb-mission-title {
+                font-weight:800;
+                margin-bottom:3px;
+            }
+
+            .bb-mission-description {
+                font-size:13px;
+                opacity:.65;
+            }
+
+            .bb-mission-xp {
+                font-size:13px;
+                font-weight:800;
+                white-space:nowrap;
+            }
+
+            .bb-mission-complete {
+                margin-top:16px;
+                padding:18px;
+                text-align:center;
+                border-radius:18px;
+                background:#eefaf1;
+                border:1px solid #ccebd3;
+                font-weight:800;
+            }
+
+            @media (max-width:600px) {
+
+                .bb-mission-header {
+                    padding:20px;
+                }
+
+                .bb-mission-header h2 {
+                    font-size:22px;
+                }
+
+                .bb-mission-card {
+                    padding:14px;
+                }
+
+                .bb-mission-xp {
+                    font-size:11px;
+                }
+
+            }
+
+        `;
+
+        document.head.appendChild(style);
+    }
+
+    function initMission() {
+
+    addMissionCSS();
+
+    setTimeout(function () {
+
+        const pageContent =
+            document.getElementById("pageContent");
+
+        if (
+            pageContent &&
+            typeof renderMission === "function"
+        ) {
+            renderMission();
+        }
+
+    }, 300);
+}
+
+        }
+    );
+
+
 
