@@ -13033,3 +13033,1424 @@ Stay focused on the requested chapter.
 
 
 })();
+/* ============================================================
+   BHARATBUDDY — COMPLETE CLASS 9/10/11/12 STUDY ENGINE
+   CLASS-SAFE VERSION
+   ============================================================ */
+
+(function () {
+    "use strict";
+
+    /* =========================================================
+       1. CURRENT PROFILE
+    ========================================================= */
+
+    function BB_getProfile() {
+        try {
+            return {
+                className: data?.profile?.className || "Class 11",
+                stream: data?.profile?.stream || "PCM"
+            };
+        } catch {
+            return {
+                className: "Class 11",
+                stream: "PCM"
+            };
+        }
+    }
+
+
+    /* =========================================================
+       2. COMPLETE SUBJECT MAP
+    ========================================================= */
+
+    const BB_SUBJECTS = {
+
+        "Class 9": [
+            "Mathematics",
+            "Science",
+            "Social Science",
+            "English"
+        ],
+
+        "Class 10": [
+            "Mathematics",
+            "Science",
+            "Social Science",
+            "English"
+        ],
+
+        "Class 11": {
+            PCM: [
+                "Physics",
+                "Chemistry",
+                "Mathematics",
+                "English",
+                "Computer Science"
+            ],
+
+            PCB: [
+                "Physics",
+                "Chemistry",
+                "Biology",
+                "English",
+                "Computer Science"
+            ],
+
+            Commerce: [
+                "Accountancy",
+                "Business Studies",
+                "Economics",
+                "English",
+                "Mathematics"
+            ],
+
+            Arts: [
+                "History",
+                "Political Science",
+                "Geography",
+                "Economics",
+                "English",
+                "Sociology"
+            ]
+        },
+
+        "Class 12": {
+            PCM: [
+                "Physics",
+                "Chemistry",
+                "Mathematics",
+                "English",
+                "Computer Science"
+            ],
+
+            PCB: [
+                "Physics",
+                "Chemistry",
+                "Biology",
+                "English",
+                "Computer Science"
+            ],
+
+            Commerce: [
+                "Accountancy",
+                "Business Studies",
+                "Economics",
+                "English",
+                "Mathematics"
+            ],
+
+            Arts: [
+                "History",
+                "Political Science",
+                "Geography",
+                "Economics",
+                "English",
+                "Sociology"
+            ]
+        }
+    };
+
+
+    function BB_getSubjects() {
+
+        const profile = BB_getProfile();
+
+        if (
+            profile.className === "Class 9" ||
+            profile.className === "Class 10"
+        ) {
+            return BB_SUBJECTS[profile.className] || [];
+        }
+
+        return (
+            BB_SUBJECTS[profile.className]?.[profile.stream] ||
+            []
+        );
+    }
+
+
+    /* =========================================================
+       3. CLASS 9 CHAPTERS
+    ========================================================= */
+
+    const BB_CLASS_9 = {
+
+        Mathematics: [
+            "Number Systems",
+            "Polynomials",
+            "Coordinate Geometry",
+            "Linear Equations in Two Variables",
+            "Introduction to Euclid's Geometry",
+            "Lines and Angles",
+            "Triangles",
+            "Quadrilaterals",
+            "Circles",
+            "Heron's Formula",
+            "Surface Areas and Volumes",
+            "Statistics",
+            "Probability"
+        ],
+
+        Science: [
+            "Matter in Our Surroundings",
+            "Is Matter Around Us Pure?",
+            "Atoms and Molecules",
+            "Structure of the Atom",
+            "The Fundamental Unit of Life",
+            "Tissues",
+            "Motion",
+            "Force and Laws of Motion",
+            "Gravitation",
+            "Work and Energy",
+            "Sound",
+            "Why Do We Fall Ill?",
+            "Natural Resources",
+            "Improvement in Food Resources"
+        ],
+
+        "Social Science": [
+            "The French Revolution",
+            "Socialism in Europe and the Russian Revolution",
+            "Nazism and the Rise of Hitler",
+            "Forest Society and Colonialism",
+            "Pastoralists in the Modern World",
+            "India — Size and Location",
+            "Physical Features of India",
+            "Drainage",
+            "Climate",
+            "Natural Vegetation and Wildlife",
+            "Population",
+            "What is Democracy? Why Democracy?",
+            "Constitutional Design",
+            "Electoral Politics",
+            "Working of Institutions",
+            "Democratic Rights",
+            "The Story of Village Palampur",
+            "People as Resource",
+            "Poverty as a Challenge",
+            "Food Security in India"
+        ],
+
+        English: [
+            "Reading Skills",
+            "Writing Skills",
+            "Grammar",
+            "Beehive",
+            "Moments"
+        ]
+    };
+
+
+    /* =========================================================
+       4. CLASS 10 CHAPTERS
+    ========================================================= */
+
+    const BB_CLASS_10 = {
+
+        Mathematics: [
+            "Real Numbers",
+            "Polynomials",
+            "Pair of Linear Equations in Two Variables",
+            "Quadratic Equations",
+            "Arithmetic Progressions",
+            "Triangles",
+            "Coordinate Geometry",
+            "Introduction to Trigonometry",
+            "Some Applications of Trigonometry",
+            "Circles",
+            "Areas Related to Circles",
+            "Surface Areas and Volumes",
+            "Statistics",
+            "Probability"
+        ],
+
+        Science: [
+            "Chemical Reactions and Equations",
+            "Acids, Bases and Salts",
+            "Metals and Non-metals",
+            "Carbon and Its Compounds",
+            "Life Processes",
+            "Control and Coordination",
+            "How do Organisms Reproduce?",
+            "Heredity",
+            "Light — Reflection and Refraction",
+            "The Human Eye and the Colourful World",
+            "Electricity",
+            "Magnetic Effects of Electric Current",
+            "Our Environment"
+        ],
+
+        "Social Science": [
+            "The Rise of Nationalism in Europe",
+            "Nationalism in India",
+            "The Making of a Global World",
+            "The Age of Industrialisation",
+            "Print Culture and the Modern World",
+            "Resources and Development",
+            "Forest and Wildlife Resources",
+            "Water Resources",
+            "Agriculture",
+            "Minerals and Energy Resources",
+            "Manufacturing Industries",
+            "Lifelines of National Economy",
+            "Power Sharing",
+            "Federalism",
+            "Gender, Religion and Caste",
+            "Political Parties",
+            "Outcomes of Democracy",
+            "Development",
+            "Sectors of the Indian Economy",
+            "Money and Credit",
+            "Globalisation and the Indian Economy",
+            "Consumer Rights"
+        ],
+
+        English: [
+            "Reading Skills",
+            "Writing Skills",
+            "Grammar",
+            "First Flight",
+            "Footprints Without Feet"
+        ]
+    };
+
+
+    /* =========================================================
+       5. CLASS 11 CHAPTERS
+    ========================================================= */
+
+    const BB_CLASS_11 = {
+
+        Physics: [
+            "Units & Measurements",
+            "Motion in a Straight Line",
+            "Motion in a Plane",
+            "Laws of Motion",
+            "Work, Energy and Power",
+            "System of Particles and Rotational Motion",
+            "Gravitation",
+            "Mechanical Properties of Solids",
+            "Mechanical Properties of Fluids",
+            "Thermal Properties of Matter",
+            "Thermodynamics",
+            "Kinetic Theory",
+            "Oscillations",
+            "Waves"
+        ],
+
+        Chemistry: [
+            "Some Basic Concepts of Chemistry",
+            "Structure of Atom",
+            "Classification of Elements and Periodicity in Properties",
+            "Chemical Bonding and Molecular Structure",
+            "Thermodynamics",
+            "Equilibrium",
+            "Redox Reactions",
+            "Organic Chemistry — Some Basic Principles and Techniques",
+            "Hydrocarbons"
+        ],
+
+        Mathematics: [
+            "Sets",
+            "Relations and Functions",
+            "Trigonometric Functions",
+            "Principle of Mathematical Induction",
+            "Complex Numbers and Quadratic Equations",
+            "Linear Inequalities",
+            "Permutations and Combinations",
+            "Binomial Theorem",
+            "Sequences and Series",
+            "Straight Lines",
+            "Conic Sections",
+            "Introduction to Three Dimensional Geometry",
+            "Limits and Derivatives",
+            "Statistics",
+            "Probability"
+        ],
+
+        "Computer Science": [
+            "Computer Fundamentals",
+            "Computer System Organisation",
+            "Data Representation",
+            "Boolean Logic",
+            "Programming Basics",
+            "Python Programming",
+            "Data Types",
+            "Operators",
+            "Conditional Statements",
+            "Loops",
+            "Strings",
+            "Lists",
+            "Tuples",
+            "Dictionaries"
+        ],
+
+        English: [
+            "Reading Comprehension",
+            "Writing Skills",
+            "Grammar",
+            "Hornbill",
+            "Snapshots"
+        ],
+
+        Biology: [
+            "The Living World",
+            "Biological Classification",
+            "Plant Kingdom",
+            "Animal Kingdom",
+            "Morphology of Flowering Plants",
+            "Anatomy of Flowering Plants",
+            "Structural Organisation in Animals",
+            "Cell — The Unit of Life",
+            "Biomolecules",
+            "Cell Cycle and Cell Division",
+            "Photosynthesis in Plants",
+            "Respiration in Plants",
+            "Plant Growth and Development",
+            "Breathing and Exchange of Gases",
+            "Body Fluids and Circulation",
+            "Excretory Products and their Elimination",
+            "Locomotion and Movement",
+            "Neural Control and Coordination",
+            "Chemical Coordination and Integration"
+        ],
+
+        Accountancy: [
+            "Introduction to Accounting",
+            "Theory Base of Accounting",
+            "Recording of Transactions",
+            "Bank Reconciliation Statement",
+            "Trial Balance and Rectification of Errors",
+            "Depreciation",
+            "Bills of Exchange",
+            "Financial Statements",
+            "Accounts from Incomplete Records"
+        ],
+
+        "Business Studies": [
+            "Nature and Purpose of Business",
+            "Forms of Business Organisation",
+            "Private, Public and Global Enterprises",
+            "Business Services",
+            "Emerging Modes of Business",
+            "Social Responsibility of Business",
+            "Formation of a Company",
+            "Sources of Business Finance",
+            "Small Business",
+            "Internal Trade",
+            "International Business"
+        ],
+
+        Economics: [
+            "Introduction to Economics",
+            "Collection of Data",
+            "Organisation of Data",
+            "Presentation of Data",
+            "Statistical Tools and Interpretation",
+            "Introduction to Microeconomics",
+            "Theory of Consumer Behaviour",
+            "Production and Costs",
+            "The Theory of the Firm",
+            "Market",
+            "Non-Competitive Markets"
+        ],
+
+        History: [
+            "From the Beginning of Time",
+            "Writing and City Life",
+            "An Empire Across Three Continents",
+            "The Central Islamic Lands",
+            "Nomadic Empires",
+            "The Three Orders",
+            "Changing Cultural Traditions",
+            "Confrontation of Cultures",
+            "Displacing Indigenous Peoples",
+            "Paths to Modernisation"
+        ],
+
+        Geography: [
+            "Geography as a Discipline",
+            "The Origin and Evolution of the Earth",
+            "Interior of the Earth",
+            "Distribution of Oceans and Continents",
+            "Minerals and Rocks",
+            "Geomorphic Processes",
+            "Landforms and their Evolution",
+            "Composition and Structure of Atmosphere",
+            "Solar Radiation, Heat Balance and Temperature",
+            "Atmospheric Circulation and Weather Systems",
+            "Water in the Atmosphere",
+            "World Climate and Climate Change",
+            "Water",
+            "Life on the Earth",
+            "Biodiversity and Conservation"
+        ],
+
+        "Political Science": [
+            "Constitution — Why and How?",
+            "Rights in the Indian Constitution",
+            "Election and Representation",
+            "Executive",
+            "Legislature",
+            "Judiciary",
+            "Federalism",
+            "Local Governments",
+            "Constitution as a Living Document",
+            "The Philosophy of the Constitution"
+        ],
+
+        Sociology: [
+            "Sociology and Society",
+            "Terms, Concepts and their Use in Sociology",
+            "Understanding Social Institutions",
+            "Culture and Socialisation",
+            "Social Change and Social Order",
+            "Introducing Western Sociologists",
+            "Indian Sociologists"
+        ]
+    };
+
+
+    /* =========================================================
+       6. CLASS 12 CHAPTERS
+    ========================================================= */
+
+    const BB_CLASS_12 = {
+
+        Physics: [
+            "Electric Charges and Fields",
+            "Electrostatic Potential and Capacitance",
+            "Current Electricity",
+            "Moving Charges and Magnetism",
+            "Magnetism and Matter",
+            "Electromagnetic Induction",
+            "Alternating Current",
+            "Electromagnetic Waves",
+            "Ray Optics and Optical Instruments",
+            "Wave Optics",
+            "Dual Nature of Radiation and Matter",
+            "Atoms",
+            "Nuclei",
+            "Semiconductor Electronics"
+        ],
+
+        Chemistry: [
+            "Solutions",
+            "Electrochemistry",
+            "Chemical Kinetics",
+            "d and f Block Elements",
+            "Coordination Compounds",
+            "Haloalkanes and Haloarenes",
+            "Alcohols, Phenols and Ethers",
+            "Aldehydes, Ketones and Carboxylic Acids",
+            "Amines",
+            "Biomolecules"
+        ],
+
+        Mathematics: [
+            "Relations and Functions",
+            "Inverse Trigonometric Functions",
+            "Matrices",
+            "Determinants",
+            "Continuity and Differentiability",
+            "Applications of Derivatives",
+            "Integrals",
+            "Applications of Integrals",
+            "Differential Equations",
+            "Vector Algebra",
+            "Three Dimensional Geometry",
+            "Linear Programming",
+            "Probability"
+        ],
+
+        "Computer Science": [
+            "Computer Networks",
+            "Database Concepts",
+            "Introduction to Python",
+            "Functions",
+            "File Handling",
+            "Data Structures",
+            "Computer Security",
+            "Societal Impacts"
+        ],
+
+        Biology: [
+            "Sexual Reproduction in Flowering Plants",
+            "Human Reproduction",
+            "Reproductive Health",
+            "Principles of Inheritance and Variation",
+            "Molecular Basis of Inheritance",
+            "Evolution",
+            "Human Health and Disease",
+            "Microbes in Human Welfare",
+            "Biotechnology — Principles and Processes",
+            "Biotechnology and its Applications",
+            "Organisms and Populations",
+            "Ecosystem",
+            "Biodiversity and Conservation"
+        ],
+
+        Accountancy: [
+            "Accounting for Partnership Firms",
+            "Accounting for Companies",
+            "Analysis of Financial Statements",
+            "Cash Flow Statement"
+        ],
+
+        "Business Studies": [
+            "Nature and Significance of Management",
+            "Principles of Management",
+            "Business Environment",
+            "Planning",
+            "Organising",
+            "Staffing",
+            "Directing",
+            "Controlling",
+            "Financial Management",
+            "Financial Markets",
+            "Marketing Management",
+            "Consumer Protection"
+        ],
+
+        Economics: [
+            "National Income Accounting",
+            "Money and Banking",
+            "Determination of Income and Employment",
+            "Government Budget and the Economy",
+            "Balance of Payments",
+            "Development Experience",
+            "Current Challenges Facing Indian Economy",
+            "Development Experience of India"
+        ],
+
+        History: [
+            "Bricks, Beads and Bones",
+            "Kings, Farmers and Towns",
+            "Kinship, Caste and Class",
+            "Thinkers, Beliefs and Buildings",
+            "Through the Eyes of Travellers",
+            "Bhakti-Sufi Traditions",
+            "An Imperial Capital — Vijayanagara",
+            "Peasants, Zamindars and the State",
+            "Kings and Chronicles",
+            "Colonialism and the Countryside",
+            "Rebels and the Raj",
+            "Mahatma Gandhi and the Nationalist Movement",
+            "Framing the Constitution"
+        ],
+
+        Geography: [
+            "Human Geography",
+            "The World Population",
+            "Human Development",
+            "Primary Activities",
+            "Secondary Activities",
+            "Tertiary and Quaternary Activities",
+            "Transport and Communication",
+            "International Trade",
+            "Population Distribution",
+            "Human Settlements",
+            "Land Resources and Agriculture",
+            "Water Resources",
+            "Mineral and Energy Resources",
+            "Manufacturing Industries",
+            "Planning and Sustainable Development",
+            "Transport and Communication",
+            "International Trade"
+        ],
+
+        "Political Science": [
+            "The End of Bipolarity",
+            "Contemporary Centres of Power",
+            "Contemporary South Asia",
+            "International Organizations",
+            "Security in the Contemporary World",
+            "Environment and Natural Resources",
+            "Globalisation",
+            "Challenges of Nation-Building",
+            "Era of One-Party Dominance",
+            "Politics of Planned Development",
+            "India's External Relations",
+            "Challenges to and Restoration of the Congress System",
+            "The Crisis of Democratic Order",
+            "Regional Aspirations",
+            "Recent Developments in Indian Politics"
+        ],
+
+        Sociology: [
+            "Introducing Indian Society",
+            "The Demographic Structure of Indian Society",
+            "Social Institutions — Continuity and Change",
+            "Patterns of Social Inequality and Exclusion",
+            "Cultural Diversity of India",
+            "Structural Change",
+            "Cultural Change",
+            "Change and Development in Rural Society",
+            "Change and Development in Industrial Society",
+            "Social Movements"
+        ],
+
+        English: [
+            "Reading Comprehension",
+            "Writing Skills",
+            "Grammar",
+            "Flamingo",
+            "Vistas"
+        ]
+    };
+
+
+    /* =========================================================
+       7. MASTER CURRICULUM
+    ========================================================= */
+
+    const BB_CURRICULUM = {
+        "Class 9": BB_CLASS_9,
+        "Class 10": BB_CLASS_10,
+        "Class 11": BB_CLASS_11,
+        "Class 12": BB_CLASS_12
+    };
+
+
+    /* =========================================================
+       8. GET CLASS-SPECIFIC CHAPTERS
+    ========================================================= */
+
+    function BB_getChapters(subject) {
+
+        const profile = BB_getProfile();
+
+        const classData =
+            BB_CURRICULUM[profile.className];
+
+        if (!classData) return [];
+
+        return classData[subject] || [];
+    }
+
+
+    /* =========================================================
+       9. CHECK SUBJECT
+    ========================================================= */
+
+    function BB_isValidSubject(subject) {
+        return BB_getSubjects().includes(subject);
+    }
+
+
+    /* =========================================================
+       10. CHECK CHAPTER
+    ========================================================= */
+
+    function BB_isValidChapter(subject, chapter) {
+        return BB_getChapters(subject).includes(chapter);
+    }
+
+
+    /* =========================================================
+       11. CLASS-SAFE KEY
+    ========================================================= */
+
+    function BB_makeKey(subject, chapter) {
+
+        const profile = BB_getProfile();
+
+        return [
+            profile.className,
+            profile.stream,
+            subject,
+            chapter
+        ].join("|");
+    }
+
+
+    /* =========================================================
+       12. CLASS-SAFE QUESTIONS
+    ========================================================= */
+
+    function BB_getQuestions(subject, chapter) {
+
+        const profile = BB_getProfile();
+
+        if (!BB_isValidSubject(subject)) {
+            return [];
+        }
+
+        if (!BB_isValidChapter(subject, chapter)) {
+            return [];
+        }
+
+        /*
+           Existing old questions are used ONLY when they
+           exactly match the selected class/subject/chapter.
+        */
+
+        const oldKey =
+            `${subject}|${chapter}`;
+
+        if (
+            typeof chapterQuestions !== "undefined" &&
+            chapterQuestions[oldKey] &&
+            profile.className === "Class 11"
+        ) {
+            return chapterQuestions[oldKey];
+        }
+
+        /*
+           For other classes, generate class-specific
+           questions using the AI engine.
+        */
+
+        return [
+            {
+                type: "MCQ",
+                question:
+                    `Which class does this chapter belong to?`,
+                options: [
+                    profile.className,
+                    "Class 6",
+                    "Class 7",
+                    "Class 8"
+                ],
+                answer: 0
+            },
+
+            {
+                type: "MCQ",
+                question:
+                    `Which subject is this chapter from?`,
+                options: [
+                    subject,
+                    "Computer Science",
+                    "General Knowledge",
+                    "Art"
+                ],
+                answer: 0
+            },
+
+            {
+                type: "SHORT",
+                question:
+                    `Write one important concept you learned from "${chapter}".`,
+                answer:
+                    `The answer should correctly explain an important concept from ${chapter}.`
+            },
+
+            {
+                type: "SHORT",
+                question:
+                    `Why is "${chapter}" important?`,
+                answer:
+                    `The student should explain the educational importance of ${chapter}.`
+            },
+
+            {
+                type: "LONG",
+                question:
+                    `Explain the major concepts of "${chapter}" in your own words.`,
+                answer:
+                    `A good answer should explain the major concepts, definitions, examples and important points related to ${chapter}.`
+            }
+        ];
+    }
+
+
+    /* =========================================================
+       13. CLASS-SAFE STUDY STATE
+    ========================================================= */
+
+    if (typeof studyState === "object") {
+
+        const profile = BB_getProfile();
+
+        studyState.className =
+            profile.className;
+
+        studyState.stream =
+            profile.stream;
+
+        const subjects =
+            BB_getSubjects();
+
+        if (
+            !subjects.includes(
+                studyState.subject
+            )
+        ) {
+            studyState.subject =
+                subjects[0] || null;
+        }
+
+        const chapters =
+            BB_getChapters(
+                studyState.subject
+            );
+
+        if (
+            !chapters.includes(
+                studyState.chapter
+            )
+        ) {
+            studyState.chapter =
+                chapters[0] || null;
+            studyState.lessonIndex = 0;
+        }
+    }
+
+
+    /* =========================================================
+       14. CLASS CHANGE
+    ========================================================= */
+
+    let BB_lastProfile =
+        JSON.stringify(
+            BB_getProfile()
+        );
+
+
+    function BB_handleProfileChange() {
+
+        const profile =
+            BB_getProfile();
+
+        const subjects =
+            BB_getSubjects();
+
+        if (
+            !subjects.length
+        ) {
+            return;
+        }
+
+        if (
+            !subjects.includes(
+                studyState.subject
+            )
+        ) {
+
+            studyState.subject =
+                subjects[0];
+
+            studyState.lessonIndex =
+                0;
+        }
+
+        const chapters =
+            BB_getChapters(
+                studyState.subject
+            );
+
+        if (
+            !chapters.includes(
+                studyState.chapter
+            )
+        ) {
+
+            studyState.chapter =
+                chapters[0] || null;
+
+            studyState.lessonIndex =
+                0;
+        }
+
+        studyState.className =
+            profile.className;
+
+        studyState.stream =
+            profile.stream;
+
+
+        /* Update chapter dropdown */
+
+        const dropdown =
+            document.getElementById(
+                "studyChapter"
+            );
+
+        if (dropdown) {
+
+            dropdown.innerHTML = "";
+
+            chapters.forEach(
+                (chapter, index) => {
+
+                    const option =
+                        document.createElement(
+                            "option"
+                        );
+
+                    option.value =
+                        chapter;
+
+                    option.textContent =
+                        `${index + 1}. ${chapter}`;
+
+                    dropdown.appendChild(
+                        option
+                    );
+                }
+            );
+
+            if (
+                studyState.chapter &&
+                chapters.includes(
+                    studyState.chapter
+                )
+            ) {
+                dropdown.value =
+                    studyState.chapter;
+            }
+        }
+
+
+        /* Update subject buttons */
+
+        document
+            .querySelectorAll(
+                "[data-subject]"
+            )
+            .forEach(button => {
+
+                const subject =
+                    button.dataset.subject;
+
+                button.style.display =
+                    subjects.includes(subject)
+                        ? ""
+                        : "none";
+            });
+
+
+        console.log(
+            "BharatBuddy Study:",
+            profile.className,
+            profile.stream,
+            studyState.subject,
+            studyState.chapter
+        );
+    }
+
+
+    /* =========================================================
+       15. CLASS-SAFE CHAPTER TEST
+    ========================================================= */
+
+    function BB_startChapterTest() {
+
+        const subject =
+            studyState.subject;
+
+        const chapter =
+            studyState.chapter;
+
+        if (!subject || !chapter) {
+
+            alert(
+                "Pehle Subject aur Chapter select karo."
+            );
+
+            return;
+        }
+
+        const questions =
+            BB_getQuestions(
+                subject,
+                chapter
+            );
+
+        if (!questions.length) {
+
+            alert(
+                "Is chapter ke questions abhi available nahi hain."
+            );
+
+            return;
+        }
+
+        activeChapterTest = {
+
+            className:
+                BB_getProfile().className,
+
+            stream:
+                BB_getProfile().stream,
+
+            subject,
+
+            chapter,
+
+            questions,
+
+            current: 0,
+
+            score: 0,
+
+            answers: [],
+
+            finished: false
+        };
+
+
+        if (
+            typeof renderChapterTest ===
+            "function"
+        ) {
+            renderChapterTest();
+        }
+    }
+
+
+    /* =========================================================
+       16. SAVE CLASS-SAFE TEST RESULT
+    ========================================================= */
+
+    function BB_saveTestResult(
+        test
+    ) {
+
+        if (
+            typeof data === "undefined" ||
+            !data
+        ) {
+            return;
+        }
+
+        if (!data.chapterTests) {
+            data.chapterTests = {};
+        }
+
+        const key =
+            [
+                test.className,
+                test.stream,
+                test.subject,
+                test.chapter
+            ].join("|");
+
+        const total =
+            test.questions.length;
+
+        const percentage =
+            total
+                ? Math.round(
+                    (
+                        test.score /
+                        total
+                    ) * 100
+                )
+                : 0;
+
+        data.chapterTests[key] = {
+
+            className:
+                test.className,
+
+            stream:
+                test.stream,
+
+            subject:
+                test.subject,
+
+            chapter:
+                test.chapter,
+
+            score:
+                test.score,
+
+            total,
+
+            percentage,
+
+            date:
+                new Date().toISOString()
+        };
+
+
+        try {
+
+            localStorage.setItem(
+                STORAGE_KEY,
+                JSON.stringify(data)
+            );
+
+        } catch (error) {
+
+            console.warn(
+                "Could not save test result.",
+                error
+            );
+        }
+    }
+
+
+    /* =========================================================
+       17. AI CLASS-SPECIFIC STUDY
+    ========================================================= */
+
+    async function BB_generateStudy(
+        subject,
+        chapter
+    ) {
+
+        const profile =
+            BB_getProfile();
+
+        if (
+            !BB_isValidSubject(subject)
+        ) {
+            throw new Error(
+                "Selected subject is not available for this class."
+            );
+        }
+
+        if (
+            !BB_isValidChapter(
+                subject,
+                chapter
+            )
+        ) {
+            throw new Error(
+                "Selected chapter is not available for this subject/class."
+            );
+        }
+
+
+        const prompt = `
+
+You are BharatBuddy AI Study Engine.
+
+STUDENT PROFILE
+Class: ${profile.className}
+Stream: ${profile.stream}
+Subject: ${subject}
+Chapter: ${chapter}
+
+STRICT RULES:
+
+1. Create ORIGINAL educational content.
+2. Do NOT copy textbook wording.
+3. Follow the selected class level.
+4. Follow the requested subject.
+5. Follow ONLY the requested chapter.
+6. Never use content from another class.
+7. Never mix Class 9, Class 10, Class 11 or Class 12.
+8. Do not create unrelated chapters.
+9. Keep explanations student-friendly.
+10. For numerical subjects, include solved examples.
+11. For theory subjects, include important concepts and examples.
+
+Return HTML only.
+
+STRUCTURE:
+
+<h2>Chapter Overview</h2>
+
+<h3>Concept Explanation</h3>
+
+<h3>Important Definitions</h3>
+
+<h3>Important Concepts</h3>
+
+<h3>Important Formulas</h3>
+
+<h3>Step-by-Step Examples</h3>
+
+<h3>Solved Questions</h3>
+
+<h3>Important Points</h3>
+
+<h3>Common Mistakes</h3>
+
+<h3>Quick Revision</h3>
+
+<h3>MCQs</h3>
+Create 10 MCQs with answers.
+
+<h3>Very Short Questions</h3>
+Create 5.
+
+<h3>Short Answer Questions</h3>
+Create 5.
+
+<h3>Long Answer Questions</h3>
+Create 5.
+
+<h3>Practice Questions</h3>
+Create 5.
+
+Make the material appropriate for:
+${profile.className}
+
+Do not mention that this is a demo.
+`;
+
+
+        const response =
+            await fetch(
+                "https://bharatbuddy-ai-36i4.onrender.com/api/chat",
+                {
+                    method: "POST",
+
+                    headers: {
+                        "Content-Type":
+                            "application/json"
+                    },
+
+                    body:
+                        JSON.stringify({
+                            message:
+                                prompt
+                        })
+                }
+            );
+
+
+        let result = {};
+
+        try {
+
+            result =
+                await response.json();
+
+        } catch {
+
+            result = {};
+        }
+
+
+        if (!response.ok) {
+
+            throw new Error(
+                result.error ||
+                "AI Study generation failed."
+            );
+        }
+
+
+        return (
+            result.reply ||
+            result.answer ||
+            result.output_text ||
+            ""
+        );
+    }
+
+
+    /* =========================================================
+       18. PUBLIC API
+    ========================================================= */
+
+    window.BharatBuddyCompleteStudy = {
+
+        profile:
+            BB_getProfile,
+
+        subjects:
+            BB_getSubjects,
+
+        chapters:
+            BB_getChapters,
+
+        questions:
+            BB_getQuestions,
+
+        generate:
+            BB_generateStudy,
+
+        startTest:
+            BB_startChapterTest,
+
+        saveTest:
+            BB_saveTestResult,
+
+        key:
+            BB_makeKey
+    };
+
+
+    /* =========================================================
+       19. PROFILE WATCHER
+    ========================================================= */
+
+    setInterval(
+        function () {
+
+            const current =
+                JSON.stringify(
+                    BB_getProfile()
+                );
+
+            if (
+                current !==
+                BB_lastProfile
+            ) {
+
+                BB_lastProfile =
+                    current;
+
+                console.log(
+                    "BharatBuddy class changed."
+                );
+
+                BB_handleProfileChange();
+
+                try {
+
+                    if (
+                        typeof window.renderStudy ===
+                        "function"
+                    ) {
+                        window.renderStudy();
+                    }
+
+                } catch (error) {
+
+                    console.warn(
+                        "Study refresh warning:",
+                        error
+                    );
+                }
+            }
+
+        },
+        500
+    );
+
+
+    /* =========================================================
+       20. INITIALIZE
+    ========================================================= */
+
+    function BB_init() {
+
+        try {
+
+            BB_handleProfileChange();
+
+        } catch (error) {
+
+            console.warn(
+                "BharatBuddy Study initialization error:",
+                error
+            );
+        }
+    }
+
+
+    if (
+        document.readyState ===
+        "loading"
+    ) {
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            BB_init
+        );
+
+    } else {
+
+        BB_init();
+    }
+
+})();
