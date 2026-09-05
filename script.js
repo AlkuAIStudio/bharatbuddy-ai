@@ -16078,37 +16078,35 @@ Do not mention that this is a demo.
        AI STUDY NOTES
     ===================================================== */
 
-    async function generateStudyNotes() {
+   async function generateStudyNotes() {
 
-        if (
-            !curriculumState.board ||
-            !curriculumState.className ||
-            !curriculumState.subject ||
-            !curriculumState.chapter
-        ) {
+    if (
+        !curriculumState.board ||
+        !curriculumState.className ||
+        !curriculumState.subject ||
+        !curriculumState.chapter
+    ) {
+        alert(
+            "Pehle Board, Class, Stream, Subject aur Chapter select karo."
+        );
+        return;
+    }
 
-            alert(
-                "Pehle Board, Class, Stream, Subject aur Chapter select karo."
-            );
+    const btn = document.getElementById("bbStudyBtn");
 
-            return;
-        }
+    if (!btn) return;
 
-        const btn =
-            document.getElementById("bbStudyBtn");
+    const originalText = btn.innerHTML;
 
-        const originalText =
-            btn.innerHTML;
+    btn.disabled = true;
+    btn.innerHTML = "⏳ BharatBuddy notes bana raha hai...";
 
-        btn.disabled = true;
-        btn.innerHTML = "⏳ AI Notes bana raha hai...";
+    try {
 
-        try {
+        const prompt = `
+You are BharatBuddy AI, a premium student learning assistant.
 
-            const prompt = `
-You are BharatBuddy AI, an educational tutor.
-
-Create ORIGINAL educational study notes for exactly:
+Create ORIGINAL, accurate and student-friendly study notes for EXACTLY this selection:
 
 Board: ${curriculumState.board}
 Class: ${curriculumState.className}
@@ -16116,57 +16114,113 @@ Stream: ${curriculumState.stream || "General"}
 Subject: ${curriculumState.subject}
 Chapter: ${curriculumState.chapter}
 
-STRICT RULES:
-1. Do not mix another class.
-2. Do not mix another board.
-3. Do not mix another chapter.
-4. Do not reproduce textbook paragraphs.
-5. Explain in simple student-friendly language.
-6. Include important concepts.
-7. Include definitions where useful.
-8. Include formulas only where relevant.
-9. Include examples.
-10. End with 5 quick revision points.
+IMPORTANT:
+- Follow ONLY the selected Board, Class, Subject and Chapter.
+- Do not mix another class, board or chapter.
+- Do not reproduce textbook paragraphs.
+- Create original explanations.
+- Use simple language suitable for students.
+- If Hindi terms are useful, include them naturally.
+- Do not invent syllabus-specific facts.
+- If a formula is not relevant, do not force one.
 
-Use clear headings and bullet points.
+STRUCTURE YOUR RESPONSE EXACTLY LIKE THIS:
+
+# 📚 ${curriculumState.chapter}
+
+## 🎯 Chapter Overview
+Give a short and easy introduction.
+
+## 💡 Core Concepts
+Explain the most important concepts one by one.
+
+## 📖 Important Definitions
+Give important definitions in simple language.
+
+## 🧮 Important Formulas
+Give only relevant formulas.
+For every formula, explain what the symbols mean.
+
+## 🔍 Easy Examples
+Give 2-4 simple examples related to the chapter.
+
+## ⚠️ Common Mistakes
+Give common mistakes students should avoid.
+
+## 📝 Exam Focus
+Give important points that students should remember for board exams.
+
+## ⚡ Quick Revision
+Give exactly 5 short revision points.
+
+## 🎯 Final Tip
+Give one useful study tip for this chapter.
+
+FORMATTING RULES:
+- Use Markdown headings with # and ##.
+- Use bullet points with -.
+- Use **bold** for important words.
+- Put mathematical formulas inside $$formula$$.
+- Keep paragraphs short.
+- Do not write unnecessary greetings or long introductions.
+- Do not mention that you are an AI.
 `;
 
-            if (typeof askAI === "function") {
-
-                const response =
-                    await askAI(prompt);
-
-                showBoardAIResult(
-                    response,
-                    "📚 AI Study Notes"
-                );
-
-            } else {
-
-                alert(
-                    "AI function available nahi hai. Existing askAI() function check karo."
-                );
-            }
-
-        } catch (error) {
-
-            console.error(
-                "Board AI Error:",
-                error
-            );
-
+        if (typeof askAI !== "function") {
             alert(
-                "AI Notes generate nahi ho paaye. Internet/API check karo."
+                "AI function available nahi hai. Existing askAI() function check karo."
+            );
+            return;
+        }
+
+        const response = await askAI(prompt);
+
+        /*
+         * Premium Study Notes Renderer
+         */
+
+        if (
+            typeof window.BharatBuddyPremiumNotes === "function"
+        ) {
+
+            const formattedHTML =
+                window.BharatBuddyPremiumNotes(
+                    response,
+                    curriculumState.subject,
+                    curriculumState.chapter
+                );
+
+            showBoardAIResult(
+                formattedHTML,
+                "📚 AI Study Notes"
             );
 
-        } finally {
+        } else {
 
-            btn.disabled = false;
-            btn.innerHTML = originalText;
+            showBoardAIResult(
+                response,
+                "📚 AI Study Notes"
+            );
+
         }
+
+    } catch (error) {
+
+        console.error(
+            "Board AI Error:",
+            error
+        );
+
+        alert(
+            "AI Notes generate nahi ho paaye. Internet/API check karo."
+        );
+
+    } finally {
+
+        btn.disabled = false;
+        btn.innerHTML = originalText;
     }
-
-
+}
     /* =====================================================
        CHAPTER TEST
     ===================================================== */
