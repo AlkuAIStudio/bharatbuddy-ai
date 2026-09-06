@@ -1,9 +1,8 @@
-
 "use strict";
 
 /* ============================================================
    BHARATBUDDY AI
-   COMPLETE FRONTEND SCRIPT
+   CLEAN + FIXED COMPLETE FRONTEND SCRIPT
    ============================================================ */
 
 
@@ -30,95 +29,78 @@ const lessonData = {
                     <h3>Introduction</h3>
 
                     <p>
-                        Physics deals with physical quantities such as length,
-                        mass, time, velocity, force and energy. To compare these
-                        quantities properly, we need standard units.
+                        Physics deals with physical quantities that can be
+                        measured. Measurement means comparing an unknown
+                        quantity with a standard quantity.
                     </p>
 
                     <h3>Physical Quantity</h3>
 
                     <p>
-                        A physical quantity is a quantity that can be measured
-                        and expressed using a numerical value and a unit.
+                        A physical quantity has a numerical value and a unit.
                     </p>
 
-                    <p><strong>Example:</strong> 5 metre, 10 kilogram, 20 second.</p>
+                    <div class="study-box">
+                        <strong>Example:</strong>
+                        5 metre = numerical value 5 + unit metre
+                    </div>
 
                     <h3>SI System</h3>
 
                     <p>
                         The International System of Units is called SI.
-                        It provides standard units used throughout science.
                     </p>
 
                     <ul>
                         <li>Length → metre (m)</li>
                         <li>Mass → kilogram (kg)</li>
                         <li>Time → second (s)</li>
-                        <li>Electric current → ampere (A)</li>
                         <li>Temperature → kelvin (K)</li>
+                        <li>Electric current → ampere (A)</li>
                         <li>Amount of substance → mole (mol)</li>
                         <li>Luminous intensity → candela (cd)</li>
                     </ul>
 
-                    <h3>Important Idea</h3>
+                    <h3>Quick Revision</h3>
 
-                    <p>
-                        A measurement always contains uncertainty because no
-                        physical instrument can measure a quantity with
-                        absolutely unlimited precision.
-                    </p>
-
-                    <h3>Quick Example</h3>
-
-                    <p>
-                        If a ruler measures a length as 12.5 cm, then
-                        <strong>12.5</strong> is the numerical value and
-                        <strong>cm</strong> is the unit.
-                    </p>
+                    <ul>
+                        <li>Measurement requires a standard unit.</li>
+                        <li>SI is the internationally accepted system.</li>
+                        <li>Every physical quantity has a numerical value and unit.</li>
+                    </ul>
                 `
             },
 
             {
                 title: "Significant Figures",
                 content: `
-                    <h3>What are Significant Figures?</h3>
+                    <h3>Significant Figures</h3>
 
                     <p>
                         Significant figures are the meaningful digits in a
-                        measured quantity. They indicate the precision of a
-                        measurement.
+                        measured quantity.
                     </p>
 
-                    <h3>Basic Rules</h3>
+                    <h3>Important Rules</h3>
 
                     <ul>
                         <li>All non-zero digits are significant.</li>
                         <li>Zeros between non-zero digits are significant.</li>
                         <li>Leading zeros are generally not significant.</li>
-                        <li>Zeros after a decimal can be significant depending on notation.</li>
+                        <li>Trailing zeros after a decimal can be significant.</li>
                     </ul>
 
-                    <h3>Example</h3>
-
-                    <p>
-                        2.35 has three significant figures.
-                    </p>
-
-                    <p>
-                        0.0045 has two significant figures.
-                    </p>
-
-                    <p>
-                        105 has three significant figures because the zero
-                        lies between non-zero digits.
-                    </p>
+                    <div class="study-box">
+                        <strong>Example:</strong>
+                        2.50 has 3 significant figures.
+                    </div>
 
                     <h3>Why are they important?</h3>
 
                     <p>
-                        Significant figures help us report experimental
-                        measurements without suggesting false precision.
+                        They show the precision of a measurement and prevent
+                        us from reporting more accuracy than the instrument
+                        actually provides.
                     </p>
                 `
             },
@@ -129,8 +111,9 @@ const lessonData = {
                     <h3>Measurement Error</h3>
 
                     <p>
-                        The difference between a measured value and the
-                        accepted or true value is called measurement error.
+                        No physical measurement is perfectly exact. The
+                        difference between measured value and true value is
+                        associated with measurement error.
                     </p>
 
                     <h3>Types of Errors</h3>
@@ -138,83 +121,73 @@ const lessonData = {
                     <ul>
                         <li>Systematic errors</li>
                         <li>Random errors</li>
-                        <li>Instrumental errors</li>
-                        <li>Personal or observational errors</li>
+                        <li>Gross errors</li>
                     </ul>
-
-                    <h3>Absolute Error</h3>
-
-                    <p>
-                        Absolute error represents the magnitude of the
-                        difference between a measured value and the accepted
-                        value.
-                    </p>
 
                     <h3>Percentage Error</h3>
 
-                    <p>
-                        Percentage error gives the error relative to the
-                        measured quantity and expresses it as a percentage.
-                    </p>
-
-                    <h3>Important</h3>
+                    <div class="study-box">
+                        Percentage Error =
+                        (Absolute Error / Measured Value) × 100
+                    </div>
 
                     <p>
-                        Good experimental practice attempts to reduce errors,
-                        but measurement uncertainty can never be completely
-                        eliminated.
+                        Careful experimental technique can reduce many
+                        measurement errors.
                     </p>
                 `
             }
 
         ],
 
-
         "Motion in a Straight Line": [
 
             {
                 title: "Introduction to Motion",
                 content: `
-                    <h3>What is Motion?</h3>
+                    <h3>Motion</h3>
 
                     <p>
-                        An object is said to be in motion if its position
-                        changes with time relative to a reference point.
+                        An object is said to be in motion when its position
+                        changes with respect to a reference point with time.
                     </p>
 
-                    <h3>Rest and Motion</h3>
+                    <h3>Reference Point</h3>
 
                     <p>
-                        Rest and motion are relative concepts. An object can
-                        be at rest relative to one observer and moving relative
-                        to another.
+                        Motion is always described relative to some reference
+                        point or frame.
                     </p>
 
-                    <h3>Position</h3>
+                    <div class="study-box">
+                        Example: A passenger sitting inside a moving bus is
+                        at rest relative to another passenger but moving
+                        relative to a person standing on the road.
+                    </div>
+                `
+            },
 
-                    <p>
-                        Position tells us where an object is located relative
-                        to a chosen reference point.
-                    </p>
-
+            {
+                title: "Distance and Displacement",
+                content: `
                     <h3>Distance</h3>
 
                     <p>
-                        Distance is the total path length travelled by an
-                        object. It is a scalar quantity.
+                        Distance is the total path travelled by an object.
+                        It is a scalar quantity.
                     </p>
 
                     <h3>Displacement</h3>
 
                     <p>
-                        Displacement is the change in position of an object.
-                        It is a vector quantity.
+                        Displacement is the shortest directed distance from
+                        initial position to final position.
                     </p>
 
-                    <p>
-                        Magnitude of displacement can never be greater than
-                        distance travelled.
-                    </p>
+                    <ul>
+                        <li>Distance → scalar</li>
+                        <li>Displacement → vector</li>
+                    </ul>
                 `
             },
 
@@ -223,190 +196,111 @@ const lessonData = {
                 content: `
                     <h3>Speed</h3>
 
-                    <p>
-                        Speed is the distance travelled per unit time.
-                    </p>
-
-                    <p><strong>Average Speed = Total Distance / Total Time</strong></p>
+                    <div class="study-box">
+                        Speed = Distance / Time
+                    </div>
 
                     <h3>Velocity</h3>
 
-                    <p>
-                        Velocity is displacement per unit time.
-                        Since displacement has direction, velocity is a vector.
-                    </p>
-
-                    <p><strong>Average Velocity = Total Displacement / Total Time</strong></p>
-
-                    <h3>Difference</h3>
-
-                    <ul>
-                        <li>Speed is scalar.</li>
-                        <li>Velocity is vector.</li>
-                        <li>Speed depends on distance.</li>
-                        <li>Velocity depends on displacement.</li>
-                    </ul>
-
-                    <h3>Example</h3>
+                    <div class="study-box">
+                        Velocity = Displacement / Time
+                    </div>
 
                     <p>
-                        If a student walks 100 m east in 20 s, average speed
-                        is 5 m/s and average velocity is also 5 m/s east.
+                        Speed tells how fast an object moves, while velocity
+                        also includes direction.
                     </p>
                 `
             },
 
             {
-                title: "Acceleration and Equations of Motion",
+                title: "Acceleration",
                 content: `
                     <h3>Acceleration</h3>
 
                     <p>
-                        Acceleration is the rate of change of velocity with time.
+                        Acceleration is the rate of change of velocity with
+                        time.
                     </p>
 
-                    <p>
-                        <strong>a = (v - u) / t</strong>
-                    </p>
+                    <div class="study-box">
+                        a = (v - u) / t
+                    </div>
 
                     <p>
                         Here u is initial velocity, v is final velocity and
                         t is time.
                     </p>
 
-                    <h3>Equations of Uniformly Accelerated Motion</h3>
-
-                    <p><strong>v = u + at</strong></p>
-
-                    <p><strong>s = ut + 1/2 at²</strong></p>
-
-                    <p><strong>v² = u² + 2as</strong></p>
-
-                    <h3>Example</h3>
+                    <h3>SI Unit</h3>
 
                     <p>
-                        If a body starts from rest and accelerates uniformly,
-                        then u = 0. Therefore the equations become simpler.
-                    </p>
-
-                    <h3>Important</h3>
-
-                    <p>
-                        Always choose a positive direction before solving
-                        one-dimensional motion problems.
+                        The SI unit of acceleration is m/s².
                     </p>
                 `
             }
 
         ],
-
 
         "Laws of Motion": [
 
             {
-                title: "Force and Inertia",
+                title: "Newton's First Law",
                 content: `
-                    <h3>Force</h3>
+                    <h3>Newton's First Law</h3>
 
                     <p>
-                        Force is an interaction that can change the state of
-                        motion of an object or deform it.
+                        An object remains at rest or continues in uniform
+                        motion in a straight line unless acted upon by an
+                        external unbalanced force.
                     </p>
 
-                    <h3>Inertia</h3>
-
-                    <p>
-                        Inertia is the tendency of an object to resist changes
-                        in its state of rest or motion.
-                    </p>
-
-                    <p>
-                        Greater mass means greater inertia.
-                    </p>
-
-                    <h3>Types of Inertia</h3>
-
-                    <ul>
-                        <li>Inertia of rest</li>
-                        <li>Inertia of motion</li>
-                        <li>Inertia of direction</li>
-                    </ul>
+                    <div class="study-box">
+                        This law is also called the law of inertia.
+                    </div>
                 `
             },
 
             {
-                title: "Newton's Laws of Motion",
+                title: "Newton's Second Law",
                 content: `
-                    <h3>First Law</h3>
+                    <h3>Newton's Second Law</h3>
 
                     <p>
-                        An object remains at rest or continues moving with
-                        uniform velocity unless an external unbalanced force
-                        acts on it.
+                        The net force acting on an object is related to the
+                        rate of change of its momentum.
                     </p>
 
-                    <h3>Second Law</h3>
+                    <div class="study-box">
+                        F = ma
+                    </div>
 
                     <p>
-                        The net force acting on an object is related to its
-                        rate of change of momentum. For constant mass:
-                    </p>
-
-                    <p><strong>F = ma</strong></p>
-
-                    <h3>Third Law</h3>
-
-                    <p>
-                        Forces occur in pairs. When one body exerts a force on
-                        another, the second body exerts an equal-magnitude,
-                        opposite-direction force on the first.
-                    </p>
-
-                    <h3>Example</h3>
-
-                    <p>
-                        When you push a wall, the wall exerts a force back on
-                        you.
+                        Force is measured in newtons (N).
                     </p>
                 `
             },
 
             {
-                title: "Friction",
+                title: "Newton's Third Law",
                 content: `
-                    <h3>What is Friction?</h3>
+                    <h3>Newton's Third Law</h3>
 
                     <p>
-                        Friction is a force that opposes relative motion or
-                        the tendency of relative motion between surfaces.
+                        Forces always occur in pairs. When one body exerts a
+                        force on another body, the second body exerts an equal
+                        and opposite force on the first.
                     </p>
 
-                    <h3>Types</h3>
-
-                    <ul>
-                        <li>Static friction</li>
-                        <li>Kinetic friction</li>
-                        <li>Rolling friction</li>
-                    </ul>
-
-                    <h3>Advantages</h3>
-
-                    <p>
-                        Friction allows us to walk, write and grip objects.
-                    </p>
-
-                    <h3>Disadvantages</h3>
-
-                    <p>
-                        Friction causes energy loss and wear of machine parts.
-                    </p>
+                    <div class="study-box">
+                        Action and reaction act on different bodies.
+                    </div>
                 `
             }
 
         ],
 
-
-        "Work, Energy and Power": [
+        "Work Energy Power": [
 
             {
                 title: "Work",
@@ -414,61 +308,50 @@ const lessonData = {
                     <h3>Work</h3>
 
                     <p>
-                        In physics, work is done when a force causes
-                        displacement of an object.
+                        Work is done when a force causes displacement of an
+                        object in the direction of the force.
                     </p>
+
+                    <div class="study-box">
+                        W = F s cos θ
+                    </div>
 
                     <p>
-                        For a constant force:
+                        The SI unit of work is joule (J).
                     </p>
-
-                    <p><strong>W = F s cos θ</strong></p>
-
-                    <p>
-                        where θ is the angle between force and displacement.
-                    </p>
-
-                    <h3>Special Cases</h3>
-
-                    <ul>
-                        <li>θ = 0° → maximum positive work</li>
-                        <li>θ = 90° → zero work</li>
-                        <li>θ = 180° → negative work</li>
-                    </ul>
                 `
             },
 
             {
-                title: "Kinetic and Potential Energy",
+                title: "Kinetic Energy",
                 content: `
                     <h3>Kinetic Energy</h3>
 
                     <p>
-                        Energy possessed by an object due to its motion is
-                        kinetic energy.
+                        Kinetic energy is the energy possessed by an object
+                        because of its motion.
                     </p>
 
-                    <p><strong>K.E. = 1/2 mv²</strong></p>
+                    <div class="study-box">
+                        KE = 1/2 mv²
+                    </div>
+                `
+            },
 
+            {
+                title: "Potential Energy",
+                content: `
                     <h3>Potential Energy</h3>
 
                     <p>
-                        Energy associated with position or configuration is
-                        potential energy.
+                        Potential energy is energy stored due to the position
+                        or configuration of an object.
                     </p>
 
-                    <p>
+                    <div class="study-box">
                         Near Earth's surface:
-                    </p>
-
-                    <p><strong>P.E. = mgh</strong></p>
-
-                    <h3>Conservation of Energy</h3>
-
-                    <p>
-                        Energy can change from one form to another, but the
-                        total energy of an isolated system remains conserved.
-                    </p>
+                        PE = mgh
+                    </div>
                 `
             },
 
@@ -478,22 +361,15 @@ const lessonData = {
                     <h3>Power</h3>
 
                     <p>
-                        Power measures how quickly work is done or energy is
-                        transferred.
+                        Power is the rate at which work is done.
                     </p>
 
-                    <p><strong>Power = Work / Time</strong></p>
+                    <div class="study-box">
+                        Power = Work / Time
+                    </div>
 
                     <p>
-                        SI unit of power is watt.
-                    </p>
-
-                    <h3>Example</h3>
-
-                    <p>
-                        Two machines may perform the same amount of work, but
-                        the machine that completes it in less time has greater
-                        power.
+                        SI unit of power is watt (W).
                     </p>
                 `
             }
@@ -502,7 +378,6 @@ const lessonData = {
 
     },
 
-
     Mathematics: {
 
         "Sets": [
@@ -510,30 +385,36 @@ const lessonData = {
             {
                 title: "Introduction to Sets",
                 content: `
-                    <h3>What is a Set?</h3>
+                    <h3>Set</h3>
 
                     <p>
-                        A set is a well-defined collection of distinct objects.
-                        The objects are called elements or members.
+                        A set is a well-defined collection of objects.
                     </p>
+
+                    <div class="study-box">
+                        Example:
+                        A = {1, 2, 3, 4}
+                    </div>
+
+                    <h3>Elements</h3>
 
                     <p>
-                        Example: A = {1, 2, 3, 4}
+                        Objects belonging to a set are called its elements.
                     </p>
+                `
+            },
 
-                    <h3>Representation</h3>
-
-                    <p>
-                        Sets can be represented using roster form or
-                        set-builder form.
-                    </p>
-
-                    <h3>Important Terms</h3>
+            {
+                title: "Types of Sets",
+                content: `
+                    <h3>Important Types</h3>
 
                     <ul>
                         <li>Empty set</li>
                         <li>Finite set</li>
                         <li>Infinite set</li>
+                        <li>Singleton set</li>
+                        <li>Equal sets</li>
                         <li>Subset</li>
                         <li>Universal set</li>
                     </ul>
@@ -541,7 +422,7 @@ const lessonData = {
             },
 
             {
-                title: "Operations on Sets",
+                title: "Set Operations",
                 content: `
                     <h3>Union</h3>
 
@@ -552,50 +433,45 @@ const lessonData = {
                     <h3>Intersection</h3>
 
                     <p>
-                        A ∩ B contains elements common to A and B.
+                        A ∩ B contains common elements of A and B.
                     </p>
 
                     <h3>Difference</h3>
 
                     <p>
-                        A - B contains elements belonging to A but not B.
-                    </p>
-
-                    <h3>Complement</h3>
-
-                    <p>
-                        Complement of A contains elements in the universal
-                        set that are not in A.
+                        A - B contains elements of A that are not in B.
                     </p>
                 `
             }
 
         ],
 
-
         "Relations and Functions": [
 
             {
-                title: "Introduction to Relations",
+                title: "Ordered Pairs",
                 content: `
                     <h3>Ordered Pair</h3>
 
                     <p>
-                        An ordered pair is written as (a,b). The order of
-                        elements is important.
+                        An ordered pair is written as (a,b), where order
+                        matters.
                     </p>
 
-                    <h3>Cartesian Product</h3>
+                    <div class="study-box">
+                        (a,b) = (c,d) only when a = c and b = d.
+                    </div>
+                `
+            },
 
-                    <p>
-                        The Cartesian product A × B is the set of all ordered
-                        pairs (a,b), where a belongs to A and b belongs to B.
-                    </p>
-
+            {
+                title: "Relations",
+                content: `
                     <h3>Relation</h3>
 
                     <p>
-                        A relation from A to B is a subset of A × B.
+                        A relation connects elements of two sets according to
+                        a specified rule.
                     </p>
                 `
             },
@@ -606,154 +482,101 @@ const lessonData = {
                     <h3>Function</h3>
 
                     <p>
-                        A function from A to B assigns every element of A to
-                        exactly one element of B.
+                        A function is a relation in which every element of the
+                        domain has exactly one image.
                     </p>
 
-                    <h3>Domain</h3>
-
-                    <p>
-                        The set of input values is called the domain.
-                    </p>
-
-                    <h3>Range</h3>
-
-                    <p>
-                        The actual output values are called the range.
-                    </p>
-
-                    <h3>Example</h3>
-
-                    <p>
-                        If f(x) = x², then every allowed input x gets one
-                        output x².
-                    </p>
+                    <div class="study-box">
+                        f : A → B
+                    </div>
                 `
             }
 
         ],
-
 
         "Trigonometric Functions": [
 
             {
-                title: "Angles and Trigonometric Ratios",
+                title: "Angles and Measurement",
                 content: `
-                    <h3>Trigonometry</h3>
+                    <h3>Angle Measurement</h3>
 
                     <p>
-                        Trigonometry studies relationships between angles and
-                        sides of triangles.
+                        Angles can be measured in degrees and radians.
                     </p>
 
-                    <h3>Basic Ratios</h3>
-
-                    <p><strong>sin θ = Perpendicular / Hypotenuse</strong></p>
-                    <p><strong>cos θ = Base / Hypotenuse</strong></p>
-                    <p><strong>tan θ = Perpendicular / Base</strong></p>
-
-                    <h3>Important Identity</h3>
-
-                    <p><strong>sin²θ + cos²θ = 1</strong></p>
-
-                    <p>
-                        Trigonometric ratios are also defined for angles beyond
-                        a right triangle using the coordinate system.
-                    </p>
+                    <div class="study-box">
+                        180° = π radians
+                    </div>
                 `
             },
 
             {
-                title: "Trigonometric Identities",
+                title: "Trigonometric Ratios",
+                content: `
+                    <h3>Basic Ratios</h3>
+
+                    <ul>
+                        <li>sin θ = perpendicular / hypotenuse</li>
+                        <li>cos θ = base / hypotenuse</li>
+                        <li>tan θ = perpendicular / base</li>
+                    </ul>
+                `
+            },
+
+            {
+                title: "Basic Identities",
                 content: `
                     <h3>Important Identities</h3>
 
-                    <p><strong>sin²θ + cos²θ = 1</strong></p>
+                    <div class="study-box">
+                        sin²θ + cos²θ = 1
+                    </div>
 
-                    <p><strong>1 + tan²θ = sec²θ</strong></p>
+                    <div class="study-box">
+                        1 + tan²θ = sec²θ
+                    </div>
 
-                    <p><strong>1 + cot²θ = cosec²θ</strong></p>
-
-                    <h3>Use</h3>
-
-                    <p>
-                        Identities are used to simplify expressions and solve
-                        trigonometric equations.
-                    </p>
-
-                    <h3>Study Tip</h3>
-
-                    <p>
-                        Learn identities conceptually and practice converting
-                        everything into sine and cosine when necessary.
-                    </p>
+                    <div class="study-box">
+                        1 + cot²θ = cosec²θ
+                    </div>
                 `
             }
 
         ],
 
-
         "Complex Numbers": [
 
             {
-                title: "Introduction to Complex Numbers",
+                title: "Imaginary Unit",
                 content: `
-                    <h3>Why Complex Numbers?</h3>
-
-                    <p>
-                        Some algebraic equations do not have solutions among
-                        real numbers. Complex numbers extend the number system
-                        so such equations can be handled.
-                    </p>
-
                     <h3>Imaginary Unit</h3>
 
                     <p>
-                        The imaginary unit i is defined by:
+                        The imaginary unit is represented by i.
                     </p>
 
-                    <p><strong>i² = -1</strong></p>
-
-                    <h3>General Form</h3>
-
-                    <p>
-                        A complex number is written as:
-                    </p>
-
-                    <p><strong>z = a + ib</strong></p>
-
-                    <p>
-                        where a and b are real numbers.
-                    </p>
+                    <div class="study-box">
+                        i² = -1
+                    </div>
                 `
             },
 
             {
-                title: "Algebra of Complex Numbers",
+                title: "Complex Number",
                 content: `
-                    <h3>Addition</h3>
+                    <h3>Complex Number</h3>
 
                     <p>
-                        Add real parts separately and imaginary parts
-                        separately.
+                        A complex number is generally written as:
                     </p>
 
-                    <h3>Multiplication</h3>
+                    <div class="study-box">
+                        z = a + ib
+                    </div>
 
                     <p>
-                        Multiply using algebraic expansion and use i² = -1.
-                    </p>
-
-                    <h3>Conjugate</h3>
-
-                    <p>
-                        The conjugate of a + ib is a - ib.
-                    </p>
-
-                    <h3>Modulus</h3>
-
-                    <p>
-                        The modulus of a + ib is √(a² + b²).
+                        Here a and b are real numbers.
                     </p>
                 `
             }
@@ -762,10 +585,9 @@ const lessonData = {
 
     },
 
-
     Chemistry: {
 
-        "Some Basic Concepts of Chemistry": [
+        "Some Basic Concepts": [
 
             {
                 title: "Matter and Its Classification",
@@ -776,26 +598,13 @@ const lessonData = {
                         Matter is anything that has mass and occupies space.
                     </p>
 
-                    <h3>States of Matter</h3>
-
-                    <ul>
-                        <li>Solid</li>
-                        <li>Liquid</li>
-                        <li>Gas</li>
-                    </ul>
-
                     <h3>Classification</h3>
 
-                    <p>
-                        Matter can be classified as pure substances and
-                        mixtures.
-                    </p>
-
-                    <p>
-                        Elements and compounds are pure substances, while
-                        mixtures contain two or more substances physically
-                        combined.
-                    </p>
+                    <ul>
+                        <li>Elements</li>
+                        <li>Compounds</li>
+                        <li>Mixtures</li>
+                    </ul>
                 `
             },
 
@@ -805,65 +614,27 @@ const lessonData = {
                     <h3>Mole</h3>
 
                     <p>
-                        A mole is a counting unit used for very large numbers
-                        of particles.
+                        A mole represents a fixed number of particles.
                     </p>
 
-                    <p>
-                        One mole contains approximately
-                        6.022 × 10²³ particles.
-                    </p>
-
-                    <h3>Important Relation</h3>
+                    <div class="study-box">
+                        1 mole = 6.022 × 10²³ particles
+                    </div>
 
                     <p>
-                        Number of moles = Given mass / Molar mass
-                    </p>
-
-                    <h3>Example</h3>
-
-                    <p>
-                        If a substance has molar mass M and mass m, then its
-                        amount in moles is m/M.
-                    </p>
-                `
-            },
-
-            {
-                title: "Atomic and Molecular Mass",
-                content: `
-                    <h3>Atomic Mass</h3>
-
-                    <p>
-                        Atomic mass represents the relative mass of an atom
-                        compared with a standard reference.
-                    </p>
-
-                    <h3>Molecular Mass</h3>
-
-                    <p>
-                        Molecular mass is obtained by adding the atomic masses
-                        of all atoms present in a molecule.
-                    </p>
-
-                    <h3>Example</h3>
-
-                    <p>
-                        For water, H₂O, molecular mass is obtained from two
-                        hydrogen atoms and one oxygen atom.
+                        This number is called Avogadro's constant.
                     </p>
                 `
             }
 
         ],
 
-
         "Structure of Atom": [
 
             {
-                title: "Fundamental Particles",
+                title: "Subatomic Particles",
                 content: `
-                    <h3>Subatomic Particles</h3>
+                    <h3>Basic Particles</h3>
 
                     <ul>
                         <li>Electron</li>
@@ -872,73 +643,37 @@ const lessonData = {
                     </ul>
 
                     <p>
-                        Electrons carry negative charge, protons carry positive
-                        charge and neutrons have no net electric charge.
-                    </p>
-
-                    <h3>Atomic Nucleus</h3>
-
-                    <p>
-                        The nucleus contains protons and neutrons and carries
-                        most of the mass of an atom.
+                        Protons have positive charge, electrons have negative
+                        charge and neutrons have no electric charge.
                     </p>
                 `
             },
 
             {
-                title: "Bohr Model and Atomic Structure",
+                title: "Atomic Models",
                 content: `
-                    <h3>Bohr Model</h3>
+                    <h3>Atomic Models</h3>
 
                     <p>
-                        Bohr proposed that electrons occupy certain allowed
-                        energy levels around the nucleus.
-                    </p>
-
-                    <h3>Energy Levels</h3>
-
-                    <p>
-                        Electrons can absorb or release energy when they move
-                        between allowed energy states.
-                    </p>
-
-                    <h3>Limitation</h3>
-
-                    <p>
-                        The simple Bohr model is useful for introductory
-                        understanding but cannot completely describe complex
-                        multi-electron atoms.
+                        Different models were proposed to explain the
+                        structure of the atom, including models associated
+                        with Thomson, Rutherford and Bohr.
                     </p>
                 `
             }
 
         ],
 
-
         "Chemical Bonding": [
 
             {
-                title: "Why Chemical Bonds Form",
+                title: "Chemical Bond",
                 content: `
                     <h3>Chemical Bond</h3>
 
                     <p>
-                        A chemical bond is an attractive interaction that holds
+                        A chemical bond is an attractive force that holds
                         atoms or ions together.
-                    </p>
-
-                    <h3>Valence Electrons</h3>
-
-                    <p>
-                        Electrons in the outermost shell play an important role
-                        in chemical bonding.
-                    </p>
-
-                    <h3>Stability</h3>
-
-                    <p>
-                        Atoms often form bonds to reach a more stable electronic
-                        arrangement.
                     </p>
                 `
             },
@@ -949,23 +684,15 @@ const lessonData = {
                     <h3>Ionic Bond</h3>
 
                     <p>
-                        An ionic bond forms through electrostatic attraction
-                        between oppositely charged ions, commonly after electron
-                        transfer.
+                        Ionic bonding involves electrostatic attraction
+                        between oppositely charged ions.
                     </p>
 
                     <h3>Covalent Bond</h3>
 
                     <p>
-                        A covalent bond involves sharing of electron pairs
+                        Covalent bonding involves sharing of electron pairs
                         between atoms.
-                    </p>
-
-                    <h3>Example</h3>
-
-                    <p>
-                        In a simple covalent molecule, atoms share electrons
-                        to form stable bonding arrangements.
                     </p>
                 `
             }
@@ -974,37 +701,25 @@ const lessonData = {
 
     },
 
-
     "Computer Science": {
 
         "Computer Fundamentals": [
 
             {
-                title: "What is a Computer?",
+                title: "Introduction to Computers",
                 content: `
                     <h3>Computer</h3>
 
                     <p>
-                        A computer is an electronic programmable machine that
-                        accepts data, processes it according to instructions
-                        and produces information.
+                        A computer is an electronic machine that accepts
+                        input, processes data and produces output.
                     </p>
 
                     <h3>Basic Cycle</h3>
 
-                    <p>
+                    <div class="study-box">
                         Input → Processing → Output
-                    </p>
-
-                    <h3>Characteristics</h3>
-
-                    <ul>
-                        <li>Speed</li>
-                        <li>Accuracy</li>
-                        <li>Storage</li>
-                        <li>Automation</li>
-                        <li>Consistency</li>
-                    </ul>
+                    </div>
                 `
             },
 
@@ -1014,129 +729,51 @@ const lessonData = {
                     <h3>Hardware</h3>
 
                     <p>
-                        Hardware means the physical components of a computer.
-                    </p>
-
-                    <p>
-                        Examples include keyboard, monitor, processor and
-                        storage devices.
+                        Physical components of a computer are called hardware.
                     </p>
 
                     <h3>Software</h3>
 
                     <p>
-                        Software is a collection of instructions that tells
-                        hardware what to do.
+                        Programs and instructions that control a computer are
+                        called software.
                     </p>
-
-                    <h3>Types</h3>
-
-                    <ul>
-                        <li>System software</li>
-                        <li>Application software</li>
-                    </ul>
                 `
             }
 
         ],
-
 
         "Programming Basics": [
 
             {
-                title: "Introduction to Programming",
+                title: "What is Programming?",
                 content: `
                     <h3>Programming</h3>
 
                     <p>
-                        Programming is the process of creating instructions
+                        Programming is the process of writing instructions
                         that a computer can execute.
                     </p>
-
-                    <h3>Algorithm</h3>
-
-                    <p>
-                        An algorithm is a step-by-step procedure for solving a
-                        problem.
-                    </p>
-
-                    <h3>Example</h3>
-
-                    <p>
-                        To calculate the average of two numbers:
-                    </p>
-
-                    <ol>
-                        <li>Take the first number.</li>
-                        <li>Take the second number.</li>
-                        <li>Add them.</li>
-                        <li>Divide by two.</li>
-                        <li>Display the result.</li>
-                    </ol>
                 `
             },
 
             {
-                title: "Variables and Data Types",
+                title: "Variables and Data",
                 content: `
-                    <h3>Variable</h3>
+                    <h3>Variables</h3>
 
                     <p>
-                        A variable is a named location used to store a value.
+                        A variable is a named location used to store data.
                     </p>
 
-                    <h3>Common Data Types</h3>
-
-                    <ul>
-                        <li>Integer</li>
-                        <li>Floating-point number</li>
-                        <li>String</li>
-                        <li>Boolean</li>
-                    </ul>
-
-                    <h3>Example in JavaScript</h3>
-
-                    <p>
-                        A variable can store a student's name, marks or a
-                        true/false value.
-                    </p>
-                `
-            },
-
-            {
-                title: "Conditional Statements",
-                content: `
-                    <h3>Decision Making</h3>
-
-                    <p>
-                        Programs often need to make decisions based on
-                        conditions.
-                    </p>
-
-                    <h3>if Statement</h3>
-
-                    <p>
-                        An if statement executes code when a condition is true.
-                    </p>
-
-                    <h3>else</h3>
-
-                    <p>
-                        else provides an alternative block when the condition
-                        is false.
-                    </p>
-
-                    <h3>Example</h3>
-
-                    <p>
-                        A program can check whether marks are greater than or
-                        equal to a passing threshold.
-                    </p>
+                    <div class="study-box">
+                        Example:
+                        let marks = 95;
+                    </div>
                 `
             }
 
         ],
-
 
         "Web Development": [
 
@@ -1146,26 +783,12 @@ const lessonData = {
                     <h3>HTML</h3>
 
                     <p>
-                        HTML stands for HyperText Markup Language. It provides
-                        the structure of a web page.
+                        HTML is used to structure content on web pages.
                     </p>
 
-                    <h3>Common Elements</h3>
-
-                    <ul>
-                        <li>h1 for headings</li>
-                        <li>p for paragraphs</li>
-                        <li>a for links</li>
-                        <li>img for images</li>
-                        <li>button for buttons</li>
-                    </ul>
-
-                    <h3>Basic Structure</h3>
-
-                    <p>
-                        A normal HTML document contains html, head and body
-                        sections.
-                    </p>
+                    <div class="study-box">
+                        HTML → Structure
+                    </div>
                 `
             },
 
@@ -1175,19 +798,13 @@ const lessonData = {
                     <h3>CSS</h3>
 
                     <p>
-                        CSS stands for Cascading Style Sheets. It controls the
-                        appearance and layout of web pages.
+                        CSS is used to control the appearance and layout of
+                        web pages.
                     </p>
 
-                    <h3>CSS Can Control</h3>
-
-                    <ul>
-                        <li>Colors</li>
-                        <li>Spacing</li>
-                        <li>Fonts</li>
-                        <li>Layout</li>
-                        <li>Responsive design</li>
-                    </ul>
+                    <div class="study-box">
+                        CSS → Styling
+                    </div>
                 `
             },
 
@@ -1197,29 +814,18 @@ const lessonData = {
                     <h3>JavaScript</h3>
 
                     <p>
-                        JavaScript adds logic and interactivity to websites.
+                        JavaScript adds logic and interactivity to web pages.
                     </p>
 
-                    <h3>Examples</h3>
-
-                    <ul>
-                        <li>Button click handling</li>
-                        <li>Form validation</li>
-                        <li>Dynamic content</li>
-                        <li>API requests</li>
-                    </ul>
-
-                    <p>
-                        BharatBuddy's Coding Lab uses HTML, CSS and JavaScript
-                        together to create interactive projects.
-                    </p>
+                    <div class="study-box">
+                        JavaScript → Behaviour & Interactivity
+                    </div>
                 `
             }
 
         ]
 
     },
-
 
     English: {
 
@@ -1228,12 +834,7 @@ const lessonData = {
             {
                 title: "Parts of Speech",
                 content: `
-                    <h3>What are Parts of Speech?</h3>
-
-                    <p>
-                        Parts of speech classify words according to the role
-                        they play in a sentence.
-                    </p>
+                    <h3>Parts of Speech</h3>
 
                     <ul>
                         <li>Noun</li>
@@ -1245,99 +846,29 @@ const lessonData = {
                         <li>Conjunction</li>
                         <li>Interjection</li>
                     </ul>
-
-                    <h3>Example</h3>
-
-                    <p>
-                        In the sentence "Rahul runs quickly", Rahul is a noun,
-                        runs is a verb and quickly is an adverb.
-                    </p>
                 `
             },
 
             {
                 title: "Tenses",
                 content: `
-                    <h3>What is Tense?</h3>
+                    <h3>Tenses</h3>
 
                     <p>
                         Tense shows the time of an action or state.
                     </p>
-
-                    <h3>Three Basic Tenses</h3>
 
                     <ul>
                         <li>Present</li>
                         <li>Past</li>
                         <li>Future</li>
                     </ul>
-
-                    <h3>Example</h3>
-
-                    <p>
-                        Present: I study.
-                    </p>
-
-                    <p>
-                        Past: I studied.
-                    </p>
-
-                    <p>
-                        Future: I will study.
-                    </p>
-                `
-            },
-
-            {
-                title: "Sentence Formation",
-                content: `
-                    <h3>Basic Sentence Structure</h3>
-
-                    <p>
-                        A simple English sentence often follows:
-                    </p>
-
-                    <p><strong>Subject + Verb + Object</strong></p>
-
-                    <p>
-                        Example: "The student reads a book."
-                    </p>
-
-                    <h3>Good Writing</h3>
-
-                    <p>
-                        A clear sentence should communicate one understandable
-                        idea and use appropriate grammar and punctuation.
-                    </p>
                 `
             }
 
         ],
 
-
         "Vocabulary": [
-
-            {
-                title: "Everyday Vocabulary",
-                content: `
-                    <h3>Useful Words</h3>
-
-                    <ul>
-                        <li>Improve → become better</li>
-                        <li>Accurate → correct</li>
-                        <li>Explore → learn about something</li>
-                        <li>Achieve → successfully reach a goal</li>
-                        <li>Confident → sure about yourself</li>
-                    </ul>
-
-                    <h3>Practice</h3>
-
-                    <p>
-                        Try using each new word in your own sentence. Creating
-                        personal examples makes vocabulary easier to remember.
-                    </p>
-                `
-            },
 
             {
                 title: "Synonyms and Antonyms",
@@ -1348,18 +879,10 @@ const lessonData = {
                         Synonyms are words with similar meanings.
                     </p>
 
-                    <p>
-                        Example: happy and joyful.
-                    </p>
-
                     <h3>Antonyms</h3>
 
                     <p>
-                        Antonyms have opposite meanings.
-                    </p>
-
-                    <p>
-                        Example: hot and cold.
+                        Antonyms are words with opposite meanings.
                     </p>
                 `
             }
@@ -1372,7 +895,7 @@ const lessonData = {
 
 
 /* ============================================================
-   CHAPTER EXERCISES
+   CHAPTER QUESTIONS
    ============================================================ */
 
 const chapterQuestions = {
@@ -1382,436 +905,733 @@ const chapterQuestions = {
         {
             type: "MCQ",
             question: "Which is the SI unit of length?",
-            options: ["Kilometre", "Metre", "Centimetre", "Millimetre"],
-            answer: 1
+            options: [
+                "Metre",
+                "Kilogram",
+                "Second",
+                "Newton"
+            ],
+            answer: 0
         },
 
         {
             type: "MCQ",
-            question: "Which quantity is measured in seconds?",
-            options: ["Mass", "Length", "Time", "Force"],
-            answer: 2
+            question: "Which quantity is measured in kilograms?",
+            options: [
+                "Length",
+                "Mass",
+                "Time",
+                "Temperature"
+            ],
+            answer: 1
         },
 
         {
             type: "SHORT",
-            question: "What is a physical quantity?",
-            answer:
-                "A physical quantity is a measurable quantity that can be expressed using a numerical value and a unit."
+            question: "What is measurement?",
+            answer: "Measurement is the comparison of an unknown physical quantity with a standard unit."
         },
 
         {
             type: "SHORT",
-            question: "Why are standard units important?",
-            answer:
-                "Standard units allow measurements to be compared consistently by different people and instruments."
+            question: "What are significant figures?",
+            answer: "Significant figures are the meaningful digits in a measured quantity."
         },
 
         {
             type: "LONG",
-            question: "Explain significant figures and their importance.",
-            answer:
-                "Significant figures are meaningful digits in a measurement. They communicate the precision of the measurement and prevent reporting more precision than the measuring process supports."
+            question: "Explain the importance of SI units and significant figures.",
+            answer: "SI units provide a common measurement system, while significant figures indicate the precision of measured values."
         }
 
     ],
-
 
     "Physics|Motion in a Straight Line": [
 
         {
             type: "MCQ",
             question: "Which quantity is a vector?",
-            options: ["Distance", "Speed", "Time", "Displacement"],
-            answer: 3
-        },
-
-        {
-            type: "MCQ",
-            question: "Average speed is calculated using:",
             options: [
-                "Displacement / time",
-                "Distance / time",
-                "Force / time",
-                "Velocity / distance"
-            ],
-            answer: 1
-        },
-
-        {
-            type: "SHORT",
-            question: "Define acceleration.",
-            answer:
-                "Acceleration is the rate of change of velocity with time."
-        },
-
-        {
-            type: "SHORT",
-            question: "Write the first equation of uniformly accelerated motion.",
-            answer:
-                "v = u + at"
-        },
-
-        {
-            type: "LONG",
-            question: "Differentiate between distance and displacement.",
-            answer:
-                "Distance is the total path travelled and is a scalar quantity. Displacement is the change in position and is a vector quantity with direction."
-        }
-
-    ],
-
-
-    "Physics|Laws of Motion": [
-
-        {
-            type: "MCQ",
-            question: "Newton's second law is commonly written as:",
-            options: ["F = ma", "P = VI", "W = Fs", "v = u + at"],
-            answer: 0
-        },
-
-        {
-            type: "MCQ",
-            question: "Inertia depends mainly on:",
-            options: ["Mass", "Colour", "Temperature only", "Shape only"],
-            answer: 0
-        },
-
-        {
-            type: "SHORT",
-            question: "What is inertia?",
-            answer:
-                "Inertia is the tendency of an object to resist changes in its state of rest or motion."
-        },
-
-        {
-            type: "SHORT",
-            question: "State Newton's third law in your own words.",
-            answer:
-                "When one body exerts a force on another body, the second body exerts an equal-magnitude force in the opposite direction on the first."
-        },
-
-        {
-            type: "LONG",
-            question: "Explain Newton's three laws of motion.",
-            answer:
-                "Newton's first law describes inertia, the second relates net force to acceleration, and the third describes force pairs between interacting bodies."
-        }
-
-    ],
-
-
-    "Mathematics|Sets": [
-
-        {
-            type: "MCQ",
-            question: "A set is a collection of:",
-            options: [
-                "Undefined objects",
-                "Well-defined objects",
-                "Only numbers",
-                "Only symbols"
-            ],
-            answer: 1
-        },
-
-        {
-            type: "MCQ",
-            question: "A ∩ B represents:",
-            options: [
-                "Union",
-                "Difference",
-                "Intersection",
-                "Complement"
+                "Distance",
+                "Speed",
+                "Displacement",
+                "Time"
             ],
             answer: 2
         },
 
         {
-            type: "SHORT",
-            question: "Define a subset.",
-            answer:
-                "A is a subset of B if every element of A is also an element of B."
+            type: "MCQ",
+            question: "The SI unit of acceleration is:",
+            options: [
+                "m/s",
+                "m/s²",
+                "km/h",
+                "N"
+            ],
+            answer: 1
         },
 
         {
             type: "SHORT",
-            question: "What is an empty set?",
-            answer:
-                "An empty set is a set containing no elements."
+            question: "Define velocity.",
+            answer: "Velocity is displacement per unit time."
+        },
+
+        {
+            type: "SHORT",
+            question: "Define acceleration.",
+            answer: "Acceleration is the rate of change of velocity with time."
         },
 
         {
             type: "LONG",
-            question: "Explain union and intersection of two sets.",
-            answer:
-                "Union contains elements belonging to either set or both, while intersection contains only elements common to both sets."
+            question: "Differentiate between distance and displacement.",
+            answer: "Distance is the total path travelled and is scalar, whereas displacement is the shortest directed distance between initial and final positions and is vector."
         }
 
     ],
 
-
-    "Mathematics|Relations and Functions": [
+    "Physics|Laws of Motion": [
 
         {
             type: "MCQ",
-            question: "A function assigns every input to:",
+            question: "Newton's first law is also known as:",
             options: [
-                "Exactly one output",
-                "At least two outputs",
-                "No output",
-                "Any number of outputs"
+                "Law of inertia",
+                "Law of acceleration",
+                "Law of gravitation",
+                "Law of energy"
             ],
             answer: 0
         },
 
         {
             type: "MCQ",
-            question: "The set of input values is called:",
-            options: ["Range", "Domain", "Codomain", "Image"],
+            question: "Newton's second law gives:",
+            options: [
+                "F = ma",
+                "E = mc²",
+                "P = VI",
+                "V = IR"
+            ],
+            answer: 0
+        },
+
+        {
+            type: "SHORT",
+            question: "State Newton's first law.",
+            answer: "An object remains at rest or in uniform motion unless acted upon by an external unbalanced force."
+        },
+
+        {
+            type: "SHORT",
+            question: "Write Newton's second law equation.",
+            answer: "F = ma."
+        },
+
+        {
+            type: "LONG",
+            question: "Explain Newton's three laws of motion.",
+            answer: "Newton's laws describe inertia, the relation between force and acceleration, and action-reaction force pairs."
+        }
+
+    ],
+
+    "Physics|Work Energy Power": [
+
+        {
+            type: "MCQ",
+            question: "The SI unit of work is:",
+            options: [
+                "Watt",
+                "Joule",
+                "Newton",
+                "Pascal"
+            ],
+            answer: 1
+        },
+
+        {
+            type: "MCQ",
+            question: "Kinetic energy depends on:",
+            options: [
+                "Mass and velocity",
+                "Only mass",
+                "Only time",
+                "Only distance"
+            ],
+            answer: 0
+        },
+
+        {
+            type: "SHORT",
+            question: "Write the formula for kinetic energy.",
+            answer: "KE = 1/2 mv²."
+        },
+
+        {
+            type: "SHORT",
+            question: "Define power.",
+            answer: "Power is the rate at which work is done."
+        },
+
+        {
+            type: "LONG",
+            question: "Explain work, kinetic energy, potential energy and power.",
+            answer: "Work is energy transferred by force through displacement, kinetic energy is energy of motion, potential energy is stored energy, and power is the rate of doing work."
+        }
+
+    ],
+
+    "Mathematics|Sets": [
+
+        {
+            type: "MCQ",
+            question: "A well-defined collection of objects is called:",
+            options: [
+                "Set",
+                "Function",
+                "Equation",
+                "Matrix"
+            ],
+            answer: 0
+        },
+
+        {
+            type: "MCQ",
+            question: "Which symbol represents union?",
+            options: [
+                "∩",
+                "∪",
+                "⊂",
+                "∈"
+            ],
             answer: 1
         },
 
         {
             type: "SHORT",
-            question: "What is a Cartesian product?",
-            answer:
-                "The Cartesian product A × B is the set of all ordered pairs (a,b) where a belongs to A and b belongs to B."
+            question: "Define a set.",
+            answer: "A set is a well-defined collection of objects."
         },
 
         {
             type: "SHORT",
-            question: "Define a function.",
-            answer:
-                "A function from A to B assigns every element of A to exactly one element of B."
+            question: "What is intersection of two sets?",
+            answer: "Intersection contains the elements common to both sets."
         },
 
         {
             type: "LONG",
-            question: "Explain domain and range with an example.",
-            answer:
-                "The domain contains allowed input values and the range contains actual output values produced by the function."
+            question: "Explain union, intersection and difference of sets.",
+            answer: "Union combines elements of both sets, intersection contains common elements, and difference contains elements belonging to one set but not the other."
         }
 
     ],
 
+    "Mathematics|Relations and Functions": [
 
-    "Chemistry|Some Basic Concepts of Chemistry": [
+        {
+            type: "MCQ",
+            question: "A function assigns each domain element:",
+            options: [
+                "Exactly one image",
+                "No image",
+                "At least two images",
+                "Only itself"
+            ],
+            answer: 0
+        },
+
+        {
+            type: "MCQ",
+            question: "An ordered pair is written as:",
+            options: [
+                "[a,b]",
+                "(a,b)",
+                "{a,b}",
+                "<a,b>"
+            ],
+            answer: 1
+        },
+
+        {
+            type: "SHORT",
+            question: "What is a relation?",
+            answer: "A relation is a connection between elements of two sets according to a rule."
+        },
+
+        {
+            type: "SHORT",
+            question: "Define function.",
+            answer: "A function is a relation in which every domain element has exactly one image."
+        },
+
+        {
+            type: "LONG",
+            question: "Explain the concept of relation and function.",
+            answer: "A relation associates elements of sets, while a function is a special relation where each domain element maps to exactly one element in the codomain."
+        }
+
+    ],
+
+    "Mathematics|Trigonometric Functions": [
+
+        {
+            type: "MCQ",
+            question: "180 degrees equals:",
+            options: [
+                "π radians",
+                "2π radians",
+                "π/2 radians",
+                "1 radian"
+            ],
+            answer: 0
+        },
+
+        {
+            type: "MCQ",
+            question: "sin²θ + cos²θ equals:",
+            options: [
+                "0",
+                "1",
+                "2",
+                "θ"
+            ],
+            answer: 1
+        },
+
+        {
+            type: "SHORT",
+            question: "Write the relation between degrees and radians.",
+            answer: "180 degrees equals π radians."
+        },
+
+        {
+            type: "SHORT",
+            question: "Write one basic trigonometric identity.",
+            answer: "sin²θ + cos²θ = 1."
+        },
+
+        {
+            type: "LONG",
+            question: "Explain the basic trigonometric ratios and identities.",
+            answer: "The basic ratios are sine, cosine and tangent, with related reciprocal ratios. Important identities include sin²θ + cos²θ = 1."
+        }
+
+    ],
+
+    "Mathematics|Complex Numbers": [
+
+        {
+            type: "MCQ",
+            question: "The value of i² is:",
+            options: [
+                "1",
+                "-1",
+                "0",
+                "i"
+            ],
+            answer: 1
+        },
+
+        {
+            type: "MCQ",
+            question: "A complex number is generally written as:",
+            options: [
+                "a + ib",
+                "a/b",
+                "ab",
+                "a - b only"
+            ],
+            answer: 0
+        },
+
+        {
+            type: "SHORT",
+            question: "What is the imaginary unit?",
+            answer: "The imaginary unit is i, where i² = -1."
+        },
+
+        {
+            type: "SHORT",
+            question: "Write the general form of a complex number.",
+            answer: "z = a + ib."
+        },
+
+        {
+            type: "LONG",
+            question: "Explain complex numbers.",
+            answer: "A complex number consists of a real part and an imaginary part and is generally written as z = a + ib."
+        }
+
+    ],
+
+    "Chemistry|Some Basic Concepts": [
 
         {
             type: "MCQ",
             question: "One mole contains approximately:",
             options: [
                 "6.022 × 10²³ particles",
-                "10³ particles",
+                "10 particles",
                 "100 particles",
-                "6.022 × 10⁶ particles"
+                "1 particle"
             ],
             answer: 0
         },
 
         {
             type: "MCQ",
-            question: "Matter has:",
+            question: "Matter occupies:",
             options: [
-                "Only mass",
-                "Only volume",
-                "Mass and occupies space",
-                "Neither"
+                "Only time",
+                "Space and has mass",
+                "Only energy",
+                "Nothing"
             ],
-            answer: 2
+            answer: 1
         },
 
         {
             type: "SHORT",
             question: "What is a mole?",
-            answer:
-                "A mole is a counting unit containing approximately 6.022 × 10²³ entities."
+            answer: "A mole is an amount of substance containing approximately 6.022 × 10²³ particles."
         },
 
         {
             type: "SHORT",
-            question: "What is molar mass?",
-            answer:
-                "Molar mass is the mass of one mole of a substance."
+            question: "What is matter?",
+            answer: "Matter is anything that has mass and occupies space."
         },
 
         {
             type: "LONG",
-            question: "Explain the mole concept and its importance.",
-            answer:
-                "The mole connects microscopic particles with measurable laboratory quantities. It allows chemists to calculate amounts of atoms, molecules and ions using mass and molar mass."
+            question: "Explain the mole concept.",
+            answer: "The mole is a counting unit used in chemistry and represents approximately 6.022 × 10²³ particles."
         }
 
     ],
-
 
     "Chemistry|Structure of Atom": [
 
         {
             type: "MCQ",
             question: "Which particle has negative charge?",
-            options: ["Proton", "Neutron", "Electron", "Nucleus"],
+            options: [
+                "Proton",
+                "Neutron",
+                "Electron",
+                "Nucleus"
+            ],
             answer: 2
         },
 
         {
             type: "MCQ",
-            question: "The nucleus contains:",
+            question: "Which particle has no electric charge?",
             options: [
-                "Only electrons",
-                "Protons and neutrons",
-                "Only neutrons",
-                "Only protons"
+                "Electron",
+                "Proton",
+                "Neutron",
+                "Ion"
             ],
-            answer: 1
+            answer: 2
         },
 
         {
             type: "SHORT",
             question: "Name the three basic subatomic particles.",
-            answer:
-                "Electron, proton and neutron."
+            answer: "Electron, proton and neutron."
         },
 
         {
             type: "SHORT",
-            question: "What is the role of the nucleus?",
-            answer:
-                "The nucleus contains protons and neutrons and contains most of the atom's mass."
+            question: "What is the charge of an electron?",
+            answer: "An electron has negative electric charge."
         },
 
         {
             type: "LONG",
-            question: "Explain the basic idea of the Bohr model.",
-            answer:
-                "The Bohr model proposes that electrons occupy certain allowed energy levels and can change levels by absorbing or releasing energy."
+            question: "Describe the basic structure of an atom.",
+            answer: "An atom contains a nucleus with protons and neutrons, while electrons occupy regions around the nucleus."
         }
 
     ],
 
-
-    "Computer Science|Computer Fundamentals": [
+    "Chemistry|Chemical Bonding": [
 
         {
             type: "MCQ",
-            question: "Which is hardware?",
-            options: ["Keyboard", "Browser code", "Algorithm", "Variable"],
+            question: "Covalent bonding mainly involves:",
+            options: [
+                "Sharing electrons",
+                "Destroying atoms",
+                "Removing nuclei",
+                "Changing mass"
+            ],
             answer: 0
         },
 
         {
             type: "MCQ",
-            question: "Which sequence represents the basic computer cycle?",
+            question: "Ionic bonding involves attraction between:",
             options: [
-                "Output → Input → Processing",
-                "Input → Processing → Output",
-                "Processing → Input → Output",
-                "Input → Output → Processing"
+                "Neutral particles only",
+                "Oppositely charged ions",
+                "Two neutrons",
+                "Two nuclei only"
             ],
             answer: 1
         },
 
         {
             type: "SHORT",
+            question: "What is a chemical bond?",
+            answer: "A chemical bond is an attractive force that holds atoms or ions together."
+        },
+
+        {
+            type: "SHORT",
+            question: "What is a covalent bond?",
+            answer: "A covalent bond involves sharing of electron pairs between atoms."
+        },
+
+        {
+            type: "LONG",
+            question: "Differentiate between ionic and covalent bonding.",
+            answer: "Ionic bonding involves electrostatic attraction between oppositely charged ions, while covalent bonding involves sharing electron pairs."
+        }
+
+    ],
+
+    "Computer Science|Computer Fundamentals": [
+
+        {
+            type: "MCQ",
+            question: "The physical parts of a computer are called:",
+            options: [
+                "Software",
+                "Hardware",
+                "Data",
+                "Algorithm"
+            ],
+            answer: 1
+        },
+
+        {
+            type: "MCQ",
+            question: "A computer generally follows:",
+            options: [
+                "Input → Processing → Output",
+                "Output → Input → Processing",
+                "Processing only",
+                "Input only"
+            ],
+            answer: 0
+        },
+
+        {
+            type: "SHORT",
             question: "What is hardware?",
-            answer:
-                "Hardware refers to the physical components of a computer system."
+            answer: "Hardware refers to the physical components of a computer."
         },
 
         {
             type: "SHORT",
             question: "What is software?",
-            answer:
-                "Software is a collection of instructions that tells computer hardware what to do."
+            answer: "Software consists of programs and instructions used by a computer."
         },
 
         {
             type: "LONG",
-            question: "Differentiate between hardware and software.",
-            answer:
-                "Hardware consists of physical components while software consists of programs and instructions executed by the computer."
+            question: "Explain the basic working cycle of a computer.",
+            answer: "A computer accepts input, processes the information using instructions and produces output."
         }
 
     ],
-
 
     "Computer Science|Programming Basics": [
 
         {
             type: "MCQ",
-            question: "A step-by-step problem-solving procedure is called:",
-            options: ["Algorithm", "Monitor", "Compiler only", "Keyboard"],
+            question: "Programming means:",
+            options: [
+                "Writing computer instructions",
+                "Only drawing",
+                "Only typing",
+                "Repairing hardware"
+            ],
             answer: 0
         },
 
         {
             type: "MCQ",
-            question: "Which can store a value in a program?",
-            options: ["Variable", "Monitor", "Mouse", "Speaker"],
+            question: "A variable is commonly used to:",
+            options: [
+                "Store data",
+                "Delete hardware",
+                "Turn off electricity",
+                "Print paper only"
+            ],
             answer: 0
         },
 
         {
             type: "SHORT",
             question: "What is programming?",
-            answer:
-                "Programming is the process of creating instructions that a computer can execute."
+            answer: "Programming is the process of writing instructions that a computer can execute."
         },
 
         {
             type: "SHORT",
-            question: "What is an algorithm?",
-            answer:
-                "An algorithm is a finite step-by-step procedure used to solve a problem."
+            question: "What is a variable?",
+            answer: "A variable is a named storage location used to hold data."
         },
 
         {
             type: "LONG",
-            question: "Explain variables and data types.",
-            answer:
-                "Variables are named storage locations for values. Data types describe the kind of value being stored, such as integer, number, string or boolean."
+            question: "Explain why variables are important in programming.",
+            answer: "Variables allow programs to store, update and use data while the program is running."
         }
 
     ],
 
+    "Computer Science|Web Development": [
+
+        {
+            type: "MCQ",
+            question: "HTML is mainly used for:",
+            options: [
+                "Web page structure",
+                "Database storage",
+                "Operating systems",
+                "Video editing"
+            ],
+            answer: 0
+        },
+
+        {
+            type: "MCQ",
+            question: "CSS is mainly used for:",
+            options: [
+                "Styling",
+                "Database queries",
+                "Hardware repair",
+                "Audio recording"
+            ],
+            answer: 0
+        },
+
+        {
+            type: "SHORT",
+            question: "What is HTML?",
+            answer: "HTML is a markup language used to structure content on web pages."
+        },
+
+        {
+            type: "SHORT",
+            question: "What is CSS?",
+            answer: "CSS is used to style and layout web pages."
+        },
+
+        {
+            type: "LONG",
+            question: "Explain the role of HTML, CSS and JavaScript.",
+            answer: "HTML provides structure, CSS controls presentation and JavaScript adds logic and interactivity."
+        }
+
+    ],
 
     "English|Grammar": [
 
         {
             type: "MCQ",
-            question: "Which word is a verb?",
-            options: ["Quickly", "Run", "Beautiful", "Student"],
-            answer: 1
+            question: "Which one is a noun?",
+            options: [
+                "Run",
+                "Beautiful",
+                "Teacher",
+                "Quickly"
+            ],
+            answer: 2
         },
 
         {
             type: "MCQ",
-            question: "Which tense refers to an action happening now or generally?",
-            options: ["Present", "Past", "Future", "None"],
+            question: "Which word is a verb?",
+            options: [
+                "Run",
+                "Blue",
+                "School",
+                "Quickly"
+            ],
             answer: 0
         },
 
         {
             type: "SHORT",
             question: "What is a noun?",
-            answer:
-                "A noun is a word used to name a person, place, thing or idea."
+            answer: "A noun is a word used to name a person, place, thing or idea."
         },
 
         {
             type: "SHORT",
             question: "What is a verb?",
-            answer:
-                "A verb generally expresses an action, occurrence or state."
+            answer: "A verb expresses an action, occurrence or state."
         },
 
         {
             type: "LONG",
-            question: "Explain the basic parts of speech.",
-            answer:
-                "Parts of speech classify words by their grammatical role, including nouns, pronouns, verbs, adjectives, adverbs, prepositions, conjunctions and interjections."
+            question: "Explain the main parts of speech.",
+            answer: "The major parts of speech include nouns, pronouns, verbs, adjectives, adverbs, prepositions, conjunctions and interjections."
+        }
+
+    ],
+
+    "English|Vocabulary": [
+
+        {
+            type: "MCQ",
+            question: "A synonym has:",
+            options: [
+                "A similar meaning",
+                "An opposite meaning",
+                "No meaning",
+                "Only a number"
+            ],
+            answer: 0
+        },
+
+        {
+            type: "MCQ",
+            question: "An antonym has:",
+            options: [
+                "A similar meaning",
+                "An opposite meaning",
+                "The same spelling",
+                "No meaning"
+            ],
+            answer: 1
+        },
+
+        {
+            type: "SHORT",
+            question: "What is a synonym?",
+            answer: "A synonym is a word having a similar meaning to another word."
+        },
+
+        {
+            type: "SHORT",
+            question: "What is an antonym?",
+            answer: "An antonym is a word having an opposite meaning."
+        },
+
+        {
+            type: "LONG",
+            question: "Explain why vocabulary is important.",
+            answer: "A strong vocabulary improves understanding, communication, reading and writing."
         }
 
     ]
@@ -1820,7 +1640,7 @@ const chapterQuestions = {
 
 
 /* ============================================================
-   DEFAULT DATA
+   DEFAULT APP DATA
    ============================================================ */
 
 const defaultData = {
@@ -1829,180 +1649,173 @@ const defaultData = {
         name: "Student",
         className: "Class 11",
         stream: "PCM",
-        goal: "Learn, build and grow"
+        careerGoal: "Software Developer"
     },
 
     stats: {
         questions: 0,
         quizzes: 0,
         lessons: 0,
-        codingProjects: 0,
-        englishSessions: 0
+        coding: 0,
+        english: 0
     },
 
     progress: {
         Physics: 0,
         Mathematics: 0,
         Chemistry: 0,
-        Coding: 0,
+        "Computer Science": 0,
         English: 0
     },
 
-    lessonProgress: {
-        Physics: [],
-        Mathematics: [],
-        Chemistry: [],
-        "Computer Science": [],
-        English: []
-    },
-
-    chapterTests: {},
-
-    dailyGoal: 3,
-    dailyGoalTarget: 5,
-
-    streak: 7,
-
-    chatHistory: [],
+    lessonProgress: {},
 
     quizHistory: [],
 
-    coding: {
-        html:
-            "<h1>Hello BharatBuddy 🚀</h1>\n<p>Start building your website.</p>",
+    chatHistory: [],
 
-        css:
-            "body {\n    font-family: Arial;\n    padding: 30px;\n}\n\nh1 {\n    color: #2563eb;\n}",
+    dailyGoal: 0,
 
-        js:
-            "console.log('BharatBuddy Coding Lab');"
-    },
+    dailyGoalTarget: 5,
 
     settings: {
         darkMode: false,
         compactMode: false
-    }
+    },
+
+    chapterTests: {}
 
 };
 
 
 /* ============================================================
-   LOAD DATA
+   LOAD / SAVE DATA
    ============================================================ */
-
-let data;
-
 
 function loadData() {
 
     try {
 
         const saved =
-            JSON.parse(
-                localStorage.getItem(
-                    STORAGE_KEY
-                ) || "null"
+            localStorage.getItem(
+                STORAGE_KEY
             );
 
+        if (!saved) {
 
-        data = {
+            return JSON.parse(
+                JSON.stringify(
+                    defaultData
+                )
+            );
 
-            ...structuredClone(defaultData),
+        }
 
-            ...(saved || {}),
+        const parsed =
+            JSON.parse(saved);
+
+        return {
+
+            ...JSON.parse(
+                JSON.stringify(
+                    defaultData
+                )
+            ),
+
+            ...parsed,
 
             profile: {
                 ...defaultData.profile,
-                ...(saved?.profile || {})
+                ...(parsed.profile || {})
             },
 
             stats: {
                 ...defaultData.stats,
-                ...(saved?.stats || {})
+                ...(parsed.stats || {})
             },
 
             progress: {
                 ...defaultData.progress,
-                ...(saved?.progress || {})
-            },
-
-            lessonProgress: {
-                ...defaultData.lessonProgress,
-                ...(saved?.lessonProgress || {})
+                ...(parsed.progress || {})
             },
 
             settings: {
                 ...defaultData.settings,
-                ...(saved?.settings || {})
+                ...(parsed.settings || {})
             },
 
-            coding: {
-                ...defaultData.coding,
-                ...(saved?.coding || {})
-            },
-
-            chapterTests:
-                saved?.chapterTests || {},
-
-            chatHistory:
-                Array.isArray(saved?.chatHistory)
-                    ? saved.chatHistory
-                    : [],
+            lessonProgress:
+                parsed.lessonProgress &&
+                typeof parsed.lessonProgress === "object"
+                    ? parsed.lessonProgress
+                    : {},
 
             quizHistory:
-                Array.isArray(saved?.quizHistory)
-                    ? saved.quizHistory
-                    : []
+                Array.isArray(
+                    parsed.quizHistory
+                )
+                    ? parsed.quizHistory
+                    : [],
+
+            chatHistory:
+                Array.isArray(
+                    parsed.chatHistory
+                )
+                    ? parsed.chatHistory
+                    : [],
+
+            chapterTests:
+                parsed.chapterTests &&
+                typeof parsed.chapterTests === "object"
+                    ? parsed.chapterTests
+                    : {}
 
         };
 
-    } catch {
+    } catch (error) {
 
-        data =
-            structuredClone(
+        console.warn(
+            "BharatBuddy data could not be loaded.",
+            error
+        );
+
+        return JSON.parse(
+            JSON.stringify(
                 defaultData
-            );
+            )
+        );
 
     }
 
-
-    Object.keys(lessonData).forEach(
-        subject => {
-
-            if (
-                !Array.isArray(
-                    data.lessonProgress[subject]
-                )
-            ) {
-
-                data.lessonProgress[subject] = [];
-
-            }
-
-        }
-    );
-
-
-    ensureStudyProgress();
-
 }
+
+
+let data = loadData();
 
 
 function saveData() {
 
-    localStorage.setItem(
-        STORAGE_KEY,
-        JSON.stringify(data)
-    );
+    try {
+
+        localStorage.setItem(
+            STORAGE_KEY,
+            JSON.stringify(data)
+        );
+
+    } catch (error) {
+
+        console.warn(
+            "BharatBuddy data could not be saved.",
+            error
+        );
+
+    }
 
 }
 
 
-loadData();
-
-
 /* ============================================================
-   DOM
+   DOM REFERENCES
    ============================================================ */
 
 const pageContent =
@@ -2013,11 +1826,6 @@ const pageContent =
 const pageTitle =
     document.getElementById(
         "pageTitle"
-    );
-
-const sidebar =
-    document.getElementById(
-        "sidebar"
     );
 
 const menuBtn =
@@ -2040,53 +1848,88 @@ const notificationModal =
         "notificationModal"
     );
 
-const closeNotification =
-    document.getElementById(
-        "closeNotification"
-    );
-
 const toast =
     document.getElementById(
         "toast"
     );
 
+const profileName =
+    document.getElementById(
+        "profileName"
+    );
+
+const profileAvatar =
+    document.getElementById(
+        "profileAvatar"
+    );
+
 
 /* ============================================================
-   GLOBALS
+   GLOBAL STATE
    ============================================================ */
 
 let activeQuiz = null;
 
 let quizTimer = null;
 
-const QUIZ_TIME = 60;
+const QUIZ_TIME = 300;
 
 let currentCodeTab = "html";
 
 let studyState = {
+
     board: "CBSE",
-    className: "Class 11",
-    stream: "PCM",
+
+    className:
+        data.profile.className ||
+        "Class 11",
+
+    stream:
+        data.profile.stream ||
+        "PCM",
+
     subject: "Physics",
-    chapter: "",
+
+    chapter: "Units & Measurements",
+
     lessonIndex: 0
+
 };
 
 let activeChapterTest = null;
 
 
 /* ============================================================
-   HELPERS
+   SAFE HELPERS
    ============================================================ */
 
 function escapeHTML(value) {
 
-    return String(value ?? "")
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#039;");
+    return String(
+        value == null
+            ? ""
+            : value
+    )
+        .replaceAll(
+            "&",
+            "&amp;"
+        )
+        .replaceAll(
+            "<",
+            "&lt;"
+        )
+        .replaceAll(
+            ">",
+            "&gt;"
+        )
+        .replaceAll(
+            '"',
+            "&quot;"
+        )
+        .replaceAll(
+            "'",
+            "&#039;"
+        );
 
 }
 
@@ -2095,72 +1938,115 @@ function showToast(message) {
 
     if (!toast) return;
 
-    toast.textContent =
-        message;
+    toast.textContent = message;
 
     toast.classList.add(
         "show"
     );
 
-    setTimeout(
-        () => {
-
-            toast.classList.remove(
-                "show"
-            );
-
-        },
-        2500
+    clearTimeout(
+        showToast.timer
     );
+
+    showToast.timer =
+        setTimeout(
+            () => {
+
+                toast.classList.remove(
+                    "show"
+                );
+
+            },
+            2800
+        );
 
 }
 
 
 function formatAIText(text) {
 
-    return escapeHTML(
-        text
-    )
-        .replace(
+    if (!text) return "";
+
+    let safe =
+        escapeHTML(text);
+
+    safe =
+        safe.replace(
             /\*\*(.*?)\*\*/g,
             "<strong>$1</strong>"
-        )
-        .replace(
-            /\n/g,
-            "<br>"
         );
+
+    safe =
+        safe.replace(
+            /\*(.*?)\*/g,
+            "<em>$1</em>"
+        );
+
+    safe =
+        safe.replace(
+            /^### (.*)$/gm,
+            "<h3>$1</h3>"
+        );
+
+    safe =
+        safe.replace(
+            /^## (.*)$/gm,
+            "<h2>$1</h2>"
+        );
+
+    safe =
+        safe.replace(
+            /^# (.*)$/gm,
+            "<h1>$1</h1>"
+        );
+
+    safe =
+        safe.replace(
+            /^\- (.*)$/gm,
+            "<li>$1</li>"
+        );
+
+    safe =
+        safe.replace(
+            /(<li>.*<\/li>)/gs,
+            "<ul>$1</ul>"
+        );
+
+    safe =
+        safe.replace(
+            /\n{2,}/g,
+            "</p><p>"
+        );
+
+    safe =
+        "<p>" +
+        safe +
+        "</p>";
+
+    return safe;
 
 }
 
 
+/* ============================================================
+   PROFILE UI
+   ============================================================ */
+
 function updateProfileUI() {
-
-    const name =
-        data.profile.name ||
-        "Student";
-
-
-    const profileName =
-        document.getElementById(
-            "profileNameTop"
-        );
-
-
-    const profileAvatar =
-        document.getElementById(
-            "profileAvatar"
-        );
-
 
     if (profileName) {
 
         profileName.textContent =
-            name;
+            data.profile.name ||
+            "Student";
 
     }
 
-
     if (profileAvatar) {
+
+        const name =
+            data.profile.name ||
+            "Student";
 
         profileAvatar.textContent =
             name
@@ -2172,46 +2058,309 @@ function updateProfileUI() {
 }
 
 
-function updateStats(
-    statName,
-    amount = 1
-) {
+function updateStats(type) {
 
     if (
-        typeof data.stats[statName] !==
-        "number"
+        !data.stats ||
+        typeof data.stats !== "object"
     ) {
 
-        data.stats[statName] = 0;
+        data.stats = {
+            ...defaultData.stats
+        };
 
     }
 
+    if (
+        typeof data.stats[type] !==
+        "number"
+    ) {
 
-    data.stats[statName] += amount;
+        data.stats[type] = 0;
 
+    }
+
+    data.stats[type]++;
 
     saveData();
 
 }
 
 
+/* ============================================================
+   PROGRESS HELPERS
+   ============================================================ */
+
 function normalizeProgressSubject(
     subject
 ) {
 
-    if (
-        subject ===
-        "Computer Science"
-    ) {
-
-        return "Coding";
-
-    }
-
-
     return subject;
 
 }
+
+
+function getCurriculumSubjects() {
+
+    return Object.keys(
+        lessonData
+    );
+
+}
+
+
+function getCurriculumChapters(
+    subject
+) {
+
+    if (
+        !lessonData[subject]
+    ) {
+
+        return [];
+
+    }
+
+    return Object.keys(
+        lessonData[subject]
+    );
+
+}
+
+
+function calculateLessonProgress(
+    subject
+) {
+
+    const chapters =
+        getCurriculumChapters(
+            subject
+        );
+
+    if (!chapters.length) {
+
+        return 0;
+
+    }
+
+    let total = 0;
+
+    let completed = 0;
+
+    chapters.forEach(
+        (chapter, chapterIndex) => {
+
+            const lessons =
+                getChapterLessons(
+                    subject,
+                    chapter
+                );
+
+            total +=
+                lessons.length;
+
+            const progress =
+                data.lessonProgress[
+                    subject
+                ] || [];
+
+            lessons.forEach(
+                (_, lessonIndex) => {
+
+                    const id =
+                        `${subject}-${chapterIndex}-${lessonIndex}`;
+
+                    if (
+                        progress.includes(id)
+                    ) {
+
+                        completed++;
+
+                    }
+
+                }
+            );
+
+        }
+    );
+
+    if (!total) return 0;
+
+    return Math.round(
+        (completed / total) * 100
+    );
+
+}
+
+
+function getAllLessons(
+    subject
+) {
+
+    const chapters =
+        getCurriculumChapters(
+            subject
+        );
+
+    const result = [];
+
+    chapters.forEach(
+        chapter => {
+
+            const lessons =
+                getChapterLessons(
+                    subject,
+                    chapter
+                );
+
+            lessons.forEach(
+                lesson => {
+
+                    result.push({
+                        ...lesson,
+                        chapter
+                    });
+
+                }
+
+            );
+
+        }
+    );
+
+    return result;
+
+}
+
+
+function getChapterLessons(
+    subject,
+    chapter
+) {
+
+    if (
+        lessonData[subject] &&
+        Array.isArray(
+            lessonData[subject][chapter]
+        )
+    ) {
+
+        return lessonData[
+            subject
+        ][chapter];
+
+    }
+
+    return [
+
+        {
+            title: chapter,
+
+            content: `
+                <h3>${escapeHTML(
+                    chapter
+                )}</h3>
+
+                <p>
+                    This chapter is ready for AI-powered
+                    study generation.
+                </p>
+            `
+        }
+
+    ];
+
+}
+
+
+function ensureStudyProgress() {
+
+    if (
+        !data.lessonProgress ||
+        typeof data.lessonProgress !==
+        "object"
+    ) {
+
+        data.lessonProgress = {};
+
+    }
+
+    Object.keys(
+        lessonData
+    ).forEach(
+        subject => {
+
+            if (
+                !Array.isArray(
+                    data.lessonProgress[
+                        subject
+                    ]
+                )
+            ) {
+
+                data.lessonProgress[
+                    subject
+                ] = [];
+
+            }
+
+            const progress =
+                calculateLessonProgress(
+                    subject
+                );
+
+            const progressSubject =
+                normalizeProgressSubject(
+                    subject
+                );
+
+            if (
+                data.progress
+            ) {
+
+                data.progress[
+                    progressSubject
+                ] = progress;
+
+            }
+
+        }
+    );
+
+    saveData();
+
+}
+
+
+/* ============================================================
+   SIDEBAR / NAVIGATION
+   ============================================================ */
+
+const pageNames = {
+
+    home: "Home",
+
+    tutor: "AI Tutor",
+
+    study: "Study",
+
+    practice: "Practice",
+
+    coding: "Coding Lab",
+
+    career: "Career",
+
+    english: "English",
+
+    progress: "Progress",
+
+    achievements: "Achievements",
+
+    profile: "Profile",
+
+    settings: "Settings"
+
+};
 
 
 function setActiveNav(
@@ -2238,13 +2387,9 @@ function setActiveNav(
 
 function closeSidebar() {
 
-    if (sidebar) {
-
-        sidebar.classList.remove(
-            "open"
-        );
-
-    }
+    document.body.classList.remove(
+        "sidebar-open"
+    );
 
     if (overlay) {
 
@@ -2259,13 +2404,9 @@ function closeSidebar() {
 
 function openSidebar() {
 
-    if (sidebar) {
-
-        sidebar.classList.add(
-            "open"
-        );
-
-    }
+    document.body.classList.add(
+        "sidebar-open"
+    );
 
     if (overlay) {
 
@@ -2278,46 +2419,21 @@ function openSidebar() {
 }
 
 
-/* ============================================================
-   NAVIGATION
-   ============================================================ */
+function openPage(
+    page
+) {
 
-const pageNames = {
+    if (
+        !pageContent
+    ) {
 
-    home: "Home",
+        return;
 
-    tutor: "AI Tutor",
-
-    study: "Study",
-
-    practice: "Practice",
-
-    coding: "Coding Lab",
-
-    career: "Career",
-
-    english: "English Practice",
-
-    progress: "Progress",
-
-    achievements: "Achievements",
-
-    profile: "Profile",
-
-    settings: "Settings"
-
-};
-
-
-function openPage(page) {
+    }
 
     setActiveNav(
         page
     );
-
-
-    closeSidebar();
-
 
     if (pageTitle) {
 
@@ -2327,6 +2443,7 @@ function openPage(page) {
 
     }
 
+    closeSidebar();
 
     switch (page) {
 
@@ -2386,40 +2503,51 @@ function openPage(page) {
    NAV EVENTS
    ============================================================ */
 
-document.addEventListener(
-    "click",
-    event => {
+document
+    .querySelectorAll(
+        "[data-page]"
+    )
+    .forEach(
+        item => {
 
-        const target =
-            event.target.closest(
-                "[data-page]"
-            );
+            item.addEventListener(
+                "click",
+                event => {
 
+                    event.preventDefault();
 
-        if (!target) return;
+                    openPage(
+                        item.dataset.page
+                    );
 
-
-        const page =
-            target.dataset.page;
-
-
-        if (page) {
-
-            openPage(
-                page
+                }
             );
 
         }
-
-    }
-);
+    );
 
 
 if (menuBtn) {
 
     menuBtn.addEventListener(
         "click",
-        openSidebar
+        () => {
+
+            if (
+                document.body.classList.contains(
+                    "sidebar-open"
+                )
+            ) {
+
+                closeSidebar();
+
+            } else {
+
+                openSidebar();
+
+            }
+
+        }
     );
 
 }
@@ -2455,15 +2583,22 @@ if (notificationBtn) {
 }
 
 
-if (closeNotification) {
+if (notificationModal) {
 
-    closeNotification.addEventListener(
+    notificationModal.addEventListener(
         "click",
-        () => {
+        event => {
 
-            notificationModal?.classList.remove(
-                "show"
-            );
+            if (
+                event.target ===
+                notificationModal
+            ) {
+
+                notificationModal.classList.remove(
+                    "show"
+                );
+
+            }
 
         }
     );
@@ -2477,49 +2612,76 @@ if (closeNotification) {
 
 function renderHome() {
 
-    const physics =
-        data.progress.Physics || 0;
-
-    const math =
-        data.progress.Mathematics || 0;
-
-    const chemistry =
-        data.progress.Chemistry || 0;
-
+    const progress =
+        Math.round(
+            Object.values(
+                data.progress
+            ).reduce(
+                (sum, value) =>
+                    sum + Number(value || 0),
+                0
+            ) /
+            Math.max(
+                1,
+                Object.keys(
+                    data.progress
+                ).length
+            )
+        );
 
     pageContent.innerHTML = `
 
-        <section class="hero">
+        <section class="page-header">
+
+            <h1>
+                👋 Welcome back,
+                ${escapeHTML(
+                    data.profile.name ||
+                    "Student"
+                )}
+            </h1>
+
+            <p>
+                Learn smarter with BharatBuddy AI.
+            </p>
+
+        </section>
+
+
+        <section class="hero-card">
 
             <div>
 
-                <h1>
-                    Namaste,
-                    ${escapeHTML(
-                        data.profile.name
-                    )} 👋
-                </h1>
+                <span class="hero-badge">
+                    🇮🇳 BharatBuddy AI
+                </span>
+
+                <h2>
+                    Your AI Study Companion
+                </h2>
 
                 <p>
-                    Learn smarter with BharatBuddy AI.
-                    Study, practice, code and build your future.
+                    Study chapters, practise questions,
+                    learn coding and build your future.
                 </p>
 
                 <div class="hero-actions">
 
                     <button
-                        class="hero-btn"
-                        data-page="study">
+                        class="btn btn-primary"
+                        id="homeStudyBtn"
+                        type="button">
 
                         📚 Start Studying
 
                     </button>
 
                     <button
-                        class="hero-btn"
-                        data-page="tutor">
+                        class="btn btn-secondary"
+                        id="homeTutorBtn"
+                        type="button">
 
-                        🤖 Ask AI Tutor
+                        🤖 Ask AI
 
                     </button>
 
@@ -2530,382 +2692,236 @@ function renderHome() {
         </section>
 
 
-        <div class="ai-box">
+        <section class="stats-grid">
 
-            <div class="ai-box-header">
+            <div class="stat-card">
 
-                <div class="ai-icon">
-                    🤖
-                </div>
+                <span>📚</span>
+
+                <strong>
+                    ${data.stats.lessons || 0}
+                </strong>
+
+                <small>
+                    Lessons
+                </small>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span>🧠</span>
+
+                <strong>
+                    ${data.stats.questions || 0}
+                </strong>
+
+                <small>
+                    AI Questions
+                </small>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span>🎯</span>
+
+                <strong>
+                    ${data.stats.quizzes || 0}
+                </strong>
+
+                <small>
+                    Quizzes
+                </small>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span>📈</span>
+
+                <strong>
+                    ${progress}%
+                </strong>
+
+                <small>
+                    Overall Progress
+                </small>
+
+            </div>
+
+        </section>
+
+
+        <section class="card">
+
+            <div class="section-heading">
 
                 <div>
 
-                    <h3>
-                        Ask BharatBuddy AI
-                    </h3>
-
-                    <small>
-                        Ask doubts, concepts or study questions.
-                    </small>
-
-                </div>
-
-            </div>
-
-
-            <div class="ai-input-row">
-
-                <input
-                    id="homeAIInput"
-                    class="ai-input"
-                    placeholder="Ask anything about your studies..."
-                >
-
-                <button
-                    class="btn btn-primary"
-                    id="homeAISend">
-
-                    Ask
-
-                </button>
-
-            </div>
-
-
-            <div class="quick-prompts">
-
-                <button
-                    class="quick-prompt"
-                    data-prompt="Explain Newton's second law simply.">
-
-                    Newton's Law
-
-                </button>
-
-                <button
-                    class="quick-prompt"
-                    data-prompt="Explain the mole concept with an example.">
-
-                    Mole Concept
-
-                </button>
-
-                <button
-                    class="quick-prompt"
-                    data-prompt="Teach me JavaScript from beginner level.">
-
-                    JavaScript
-
-                </button>
-
-                <button
-                    class="quick-prompt"
-                    data-prompt="How can I improve my English speaking?">
-
-                    English
-
-                </button>
-
-            </div>
-
-        </div>
-
-
-        <div class="feature-grid">
-
-            <div
-                class="feature-card"
-                data-page="study">
-
-                <div class="feature-icon">
-                    📚
-                </div>
-
-                <h3>
-                    Study
-                </h3>
-
-                <p>
-                    Textbook-style chapters,
-                    lessons and exercises.
-                </p>
-
-            </div>
-
-
-            <div
-                class="feature-card"
-                data-page="practice">
-
-                <div class="feature-icon">
-                    📝
-                </div>
-
-                <h3>
-                    AI Quiz
-                </h3>
-
-                <p>
-                    Generate questions and test yourself.
-                </p>
-
-            </div>
-
-
-            <div
-                class="feature-card"
-                data-page="coding">
-
-                <div class="feature-icon">
-                    💻
-                </div>
-
-                <h3>
-                    Coding Lab
-                </h3>
-
-                <p>
-                    Build and run HTML, CSS and JavaScript.
-                </p>
-
-            </div>
-
-
-            <div
-                class="feature-card"
-                data-page="career">
-
-                <div class="feature-icon">
-                    🎯
-                </div>
-
-                <h3>
-                    Career
-                </h3>
-
-                <p>
-                    Create an AI-powered career roadmap.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="lower-grid">
-
-            <div class="card">
-
-                <div class="course-top">
-
-                    <div>
-
-                        <h3>
-                            📚 Course Progress
-                        </h3>
-
-                        <p>
-                            Your subject progress
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                ${courseProgress(
-                    "Physics",
-                    physics
-                )}
-
-                ${courseProgress(
-                    "Mathematics",
-                    math
-                )}
-
-                ${courseProgress(
-                    "Chemistry",
-                    chemistry
-                )}
-
-                ${courseProgress(
-                    "Coding",
-                    data.progress.Coding || 0
-                )}
-
-                ${courseProgress(
-                    "English",
-                    data.progress.English || 0
-                )}
-
-            </div>
-
-
-            <div class="card">
-
-                <h3>
-                    🎯 Daily Goal
-                </h3>
-
-                <div class="goal-number">
-                    ${data.dailyGoal}
-                    /
-                    ${data.dailyGoalTarget}
-                </div>
-
-                <div class="goal-label">
-                    activities today
-                </div>
-
-                <div class="goal-progress">
-
-                    ${createGoalDots()}
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="streak-banner">
-
-            <div class="streak-left">
-
-                <div class="streak-icon">
-                    🔥
-                </div>
-
-                <div>
-
-                    <strong>
-                        ${data.streak} day learning streak!
-                    </strong>
+                    <h2>
+                        🎯 Today's Goal
+                    </h2>
 
                     <p>
-                        Keep learning every day.
+                        Complete activities to keep learning.
+                    </p>
+
+                </div>
+
+                <strong>
+                    ${Math.min(
+                        data.dailyGoal || 0,
+                        data.dailyGoalTarget || 5
+                    )}
+                    /
+                    ${data.dailyGoalTarget || 5}
+                </strong>
+
+            </div>
+
+            <div class="goal-bar">
+
+                <div
+                    style="
+                        width:${Math.min(
+                            100,
+                            (
+                                (data.dailyGoal || 0) /
+                                (data.dailyGoalTarget || 5)
+                            ) * 100
+                        )}%;
+                    ">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="card">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <h2>
+                        🚀 Continue Learning
+                    </h2>
+
+                    <p>
+                        Pick a subject and continue your lessons.
                     </p>
 
                 </div>
 
             </div>
 
-        </div>
+            <div class="grid-3">
+
+                ${Object.keys(
+                    lessonData
+                ).map(
+                    subject => {
+
+                        const p =
+                            calculateLessonProgress(
+                                subject
+                            );
+
+                        return `
+
+                            <button
+                                class="subject-card"
+                                data-home-subject="${escapeHTML(
+                                    subject
+                                )}"
+                                type="button">
+
+                                <span class="subject-icon">
+
+                                    ${
+                                        subject === "Physics"
+                                            ? "⚡"
+                                            : subject === "Mathematics"
+                                                ? "📐"
+                                                : subject === "Chemistry"
+                                                    ? "🧪"
+                                                    : subject === "Computer Science"
+                                                        ? "💻"
+                                                        : "🇬🇧"
+                                    }
+
+                                </span>
+
+                                <strong>
+                                    ${escapeHTML(
+                                        subject
+                                    )}
+                                </strong>
+
+                                <small>
+                                    ${p}% complete
+                                </small>
+
+                            </button>
+
+                        `;
+
+                    }
+                ).join("")}
+
+            </div>
+
+        </section>
 
     `;
-
 
     attachHomeEvents();
 
 }
 
 
-function courseProgress(
-    subject,
-    value
-) {
-
-    return `
-
-        <div class="course-item">
-
-            <div class="course-top">
-
-                <strong>
-                    ${escapeHTML(subject)}
-                </strong>
-
-                <span>
-                    ${Number(value) || 0}%
-                </span>
-
-            </div>
-
-            <div class="progress">
-
-                <div
-                    class="progress-bar"
-                    style="width:${Math.min(
-                        100,
-                        Number(value) || 0
-                    )}%">
-                </div>
-
-            </div>
-
-        </div>
-
-    `;
-
-}
-
-
-function createGoalDots() {
-
-    let html = "";
-
-    for (
-        let i = 1;
-        i <= data.dailyGoalTarget;
-        i++
-    ) {
-
-        html += `
-
-            <span
-                class="goal-dot ${
-                    i <= data.dailyGoal
-                        ? "done"
-                        : ""
-                }">
-            </span>
-
-        `;
-
-    }
-
-    return html;
-
-}
-
-
 function attachHomeEvents() {
 
-    const input =
+    const studyBtn =
         document.getElementById(
-            "homeAIInput"
+            "homeStudyBtn"
         );
 
-    const button =
-        document.getElementById(
-            "homeAISend"
-        );
+    if (studyBtn) {
 
-
-    if (button) {
-
-        button.addEventListener(
+        studyBtn.addEventListener(
             "click",
-            askHomeAI
+            () => {
+
+                openPage(
+                    "study"
+                );
+
+            }
         );
 
     }
 
 
-    if (input) {
+    const tutorBtn =
+        document.getElementById(
+            "homeTutorBtn"
+        );
 
-        input.addEventListener(
-            "keydown",
-            event => {
+    if (tutorBtn) {
 
-                if (
-                    event.key ===
-                    "Enter"
-                ) {
+        tutorBtn.addEventListener(
+            "click",
+            () => {
 
-                    askHomeAI();
-
-                }
+                openPage(
+                    "tutor"
+                );
 
             }
         );
@@ -2915,170 +2931,39 @@ function attachHomeEvents() {
 
     document
         .querySelectorAll(
-            ".quick-prompt"
+            "[data-home-subject]"
         )
         .forEach(
-            item => {
+            button => {
 
-                item.addEventListener(
+                button.addEventListener(
                     "click",
                     () => {
 
-                        if (input) {
+                        studyState.subject =
+                            button.dataset.homeSubject;
 
-                            input.value =
-                                item.dataset.prompt;
+                        const chapters =
+                            getCurriculumChapters(
+                                studyState.subject
+                            );
 
-                            input.focus();
+                        studyState.chapter =
+                            chapters[0] ||
+                            "";
 
-                        }
+                        studyState.lessonIndex =
+                            0;
+
+                        openPage(
+                            "study"
+                        );
 
                     }
                 );
 
             }
         );
-
-
-    document
-        .querySelectorAll(
-            ".feature-card, .hero-btn"
-        )
-        .forEach(
-            item => {
-
-                item.addEventListener(
-                    "click",
-                    () => {
-
-                        const page =
-                            item.dataset.page;
-
-                        if (page) {
-
-                            openPage(page);
-
-                        }
-
-                    }
-                );
-
-            }
-        );
-
-}
-
-
-async function askHomeAI() {
-
-    const input =
-        document.getElementById(
-            "homeAIInput"
-        );
-
-    const button =
-        document.getElementById(
-            "homeAISend"
-        );
-
-
-    if (!input) return;
-
-
-    const message =
-        input.value.trim();
-
-
-    if (!message) {
-
-        showToast(
-            "Apna question likho."
-        );
-
-        return;
-
-    }
-
-
-    if (button) {
-
-        button.disabled = true;
-
-        button.textContent =
-            "Thinking...";
-
-    }
-
-
-    try {
-
-        const answer =
-            await askAI(
-                message
-            );
-
-
-        data.chatHistory.push({
-
-            role: "user",
-
-            content: message,
-
-            date:
-                new Date().toISOString()
-
-        });
-
-
-        data.chatHistory.push({
-
-            role: "assistant",
-
-            content: answer,
-
-            date:
-                new Date().toISOString()
-
-        });
-
-
-        data.chatHistory =
-            data.chatHistory.slice(
-                -100
-            );
-
-
-        updateStats(
-            "questions"
-        );
-
-
-        saveData();
-
-
-        openPage(
-            "tutor"
-        );
-
-
-    } catch (error) {
-
-        showToast(
-            error.message
-        );
-
-    } finally {
-
-        if (button) {
-
-            button.disabled = false;
-
-            button.textContent =
-                "Ask";
-
-        }
-
-    }
 
 }
 
@@ -3087,12 +2972,15 @@ async function askHomeAI() {
    AI API
    ============================================================ */
 
-async function askAI(message) {
+async function askAI(
+    message
+) {
 
     const response =
         await fetch(
             "https://bharatbuddy-ai-36i4.onrender.com/api/chat",
             {
+
                 method: "POST",
 
                 headers: {
@@ -3104,12 +2992,11 @@ async function askAI(message) {
                     JSON.stringify({
                         message
                     })
+
             }
         );
 
-
     let result = {};
-
 
     try {
 
@@ -3124,8 +3011,7 @@ async function askAI(message) {
 
 
     if (
-        response.status ===
-        429
+        response.status === 429
     ) {
 
         throw new Error(
@@ -3151,7 +3037,6 @@ async function askAI(message) {
         result.output_text ||
         "";
 
-
     if (!answer) {
 
         throw new Error(
@@ -3159,7 +3044,6 @@ async function askAI(message) {
         );
 
     }
-
 
     return answer;
 
@@ -3174,89 +3058,84 @@ function renderTutor() {
 
     pageContent.innerHTML = `
 
-        <div class="page-header">
+        <section class="page-header">
 
             <h1>
                 🤖 AI Tutor
             </h1>
 
             <p>
-                Ask doubts and learn concepts step by step.
+                Ask BharatBuddy anything about your studies.
             </p>
 
-        </div>
+        </section>
 
 
-        <div class="chat-container">
+        <section class="chat-card">
 
             <div
-                class="chat-messages"
-                id="chatMessages">
+                id="chatMessages"
+                class="chat-messages">
 
             </div>
 
 
-            <div class="chat-input-area">
+            <form
+                id="tutorForm"
+                class="chat-input-area">
 
                 <input
                     id="tutorInput"
-                    class="chat-input"
-                    placeholder="Ask your doubt..."
+                    type="text"
+                    autocomplete="off"
+                    placeholder="Ask your question..."
                 >
 
                 <button
-                    id="tutorSend"
-                    class="chat-send">
+                    class="btn btn-primary"
+                    type="submit">
 
-                    ➤
+                    Send
 
                 </button>
 
-            </div>
+            </form>
 
-        </div>
+        </section>
 
     `;
 
-
     renderChatMessages();
 
+
+    const form =
+        document.getElementById(
+            "tutorForm"
+        );
 
     const input =
         document.getElementById(
             "tutorInput"
         );
 
-    const button =
-        document.getElementById(
-            "tutorSend"
-        );
+    if (form) {
 
+        form.addEventListener(
+            "submit",
+            async event => {
 
-    if (button) {
+                event.preventDefault();
 
-        button.addEventListener(
-            "click",
-            sendTutorMessage
-        );
+                const message =
+                    input.value.trim();
 
-    }
+                if (!message) return;
 
+                input.value = "";
 
-    if (input) {
-
-        input.addEventListener(
-            "keydown",
-            event => {
-
-                if (
-                    event.key ===
-                    "Enter"
-                ) {
-
-                    sendTutorMessage();
-
-                }
+                await sendTutorMessage(
+                    message
+                );
 
             }
         );
@@ -3268,39 +3147,33 @@ function renderTutor() {
 
 function renderChatMessages() {
 
-    const container =
+    const box =
         document.getElementById(
             "chatMessages"
         );
 
-
-    if (!container) return;
+    if (!box) return;
 
 
     if (
         !data.chatHistory.length
     ) {
 
-        container.innerHTML = `
+        box.innerHTML = `
 
-            <div class="chat-message">
+            <div class="empty-state">
 
-                <div class="chat-avatar">
+                <div>
                     🤖
                 </div>
 
-                <div class="chat-bubble">
+                <h3>
+                    Hi! I'm BharatBuddy AI
+                </h3>
 
-                    <strong>
-                        Namaste! 👋
-                    </strong>
-
-                    <p>
-                        Main BharatBuddy AI Tutor hoon.
-                        Tum apna study doubt pooch sakte ho.
-                    </p>
-
-                </div>
+                <p>
+                    Ask me a question about any subject.
+                </p>
 
             </div>
 
@@ -3311,7 +3184,7 @@ function renderChatMessages() {
     }
 
 
-    container.innerHTML =
+    box.innerHTML =
         data.chatHistory
             .map(
                 item => `
@@ -3320,24 +3193,20 @@ function renderChatMessages() {
                         class="chat-message ${
                             item.role === "user"
                                 ? "user"
-                                : ""
+                                : "assistant"
                         }">
-
-                        <div class="chat-avatar">
-
-                            ${
-                                item.role === "user"
-                                    ? "👤"
-                                    : "🤖"
-                            }
-
-                        </div>
 
                         <div class="chat-bubble">
 
-                            ${formatAIText(
-                                item.content
-                            )}
+                            ${
+                                item.role === "assistant"
+                                    ? formatAIText(
+                                        item.content
+                                    )
+                                    : escapeHTML(
+                                        item.content
+                                    )
+                            }
 
                         </div>
 
@@ -3347,60 +3216,25 @@ function renderChatMessages() {
             )
             .join("");
 
-
-    container.scrollTop =
-        container.scrollHeight;
+    box.scrollTop =
+        box.scrollHeight;
 
 }
 
 
-async function sendTutorMessage() {
-
-    const input =
-        document.getElementById(
-            "tutorInput"
-        );
-
-    const button =
-        document.getElementById(
-            "tutorSend"
-        );
-
-
-    if (!input) return;
-
-
-    const message =
-        input.value.trim();
-
-
-    if (!message) return;
-
-
-    input.disabled = true;
-
-
-    if (button) {
-
-        button.disabled = true;
-
-    }
-
+async function sendTutorMessage(
+    message
+) {
 
     data.chatHistory.push({
 
         role: "user",
 
-        content: message,
-
-        date:
-            new Date().toISOString()
+        content: message
 
     });
 
-
     saveData();
-
 
     renderChatMessages();
 
@@ -3412,32 +3246,31 @@ async function sendTutorMessage() {
                 message
             );
 
-
         data.chatHistory.push({
 
             role: "assistant",
 
-            content: answer,
-
-            date:
-                new Date().toISOString()
+            content: answer
 
         });
 
+        if (
+            data.chatHistory.length >
+            100
+        ) {
 
-        data.chatHistory =
-            data.chatHistory.slice(
-                -100
-            );
+            data.chatHistory =
+                data.chatHistory.slice(
+                    -100
+                );
 
+        }
 
         updateStats(
             "questions"
         );
 
-
         saveData();
-
 
         renderChatMessages();
 
@@ -3448,260 +3281,36 @@ async function sendTutorMessage() {
             role: "assistant",
 
             content:
-                `❌ ${error.message}`,
-
-            date:
-                new Date().toISOString()
+                error.message ||
+                "AI temporarily unavailable."
 
         });
 
+        saveData();
 
         renderChatMessages();
 
-    } finally {
-
-        input.disabled = false;
-
-
-        if (button) {
-
-            button.disabled = false;
-
-        }
-
-
-        input.value = "";
-
-        input.focus();
-
     }
-
-}
-
-
-/* ============================================================
-   STUDY HELPERS
-   ============================================================ */
-
-function getAllLessons(subject) {
-
-    const curriculumChapters =
-        getCurriculumChapters(subject);
-
-    const lessons = [];
-
-    curriculumChapters.forEach(
-        (chapter, chapterIndex) => {
-
-            const chapterLessons =
-                getChapterLessons(
-                    subject,
-                    chapter
-                );
-
-            chapterLessons.forEach(
-                (lesson, lessonIndex) => {
-
-                    lessons.push({
-
-                        id:
-                            `${studyState.board}-${studyState.className}-${studyState.stream}-${subject}-${chapterIndex}-${lessonIndex}`,
-
-                        subject,
-
-                        chapter,
-
-                        chapterIndex,
-
-                        lessonIndex,
-
-                        title:
-                            lesson.title,
-
-                        content:
-                            lesson.content
-
-                    });
-
-                }
-            );
-
-        }
-    );
-
-    return lessons;
-}
-function getChapterLessons(
-    subject,
-    chapter
-) {
-
-    // Existing lessonData me chapter hai
-    // to uska original content use karo.
-    if (
-        lessonData[subject]?.[chapter]
-    ) {
-
-        return lessonData[
-            subject
-        ][
-            chapter
-        ];
-
-    }
-
-    // Curriculum me chapter hai,
-    // lekin lessonData me content nahi hai.
-    // Filhaal chapter ko ek lesson ke roop me show karo.
-    if (
-        getCurriculumChapters(
-            subject
-        ).includes(
-            chapter
-        )
-    ) {
-
-        return [
-            {
-                title: chapter,
-
-                content: `
-                    <h3>
-                        📚 ${escapeHTML(chapter)}
-                    </h3>
-
-                    <p>
-                        Ye chapter
-                        <strong>
-                            ${escapeHTML(
-                                studyState.board
-                            )}
-                        </strong>
-                        curriculum ke according hai.
-                    </p>
-
-                    <p>
-                        🎓 ${escapeHTML(
-                            studyState.className
-                        )}
-                        ${
-                            studyState.stream
-                                ? `• ${escapeHTML(
-                                    studyState.stream
-                                )}`
-                                : ""
-                        }
-                    </p>
-
-                    <p>
-                        🤖 BharatBuddy is chapter ke
-                        detailed learning content ko
-                        prepare karega.
-                    </p>
-                `
-            }
-        ];
-
-    }
-
-    return [];
-
-
-
-}
-
-
-function ensureStudyProgress() {
-
-    Object.keys(
-        lessonData
-    )
-    .forEach(
-        subject => {
-
-            if (
-                !Array.isArray(
-                    data.lessonProgress[subject]
-                )
-            ) {
-
-                data.lessonProgress[subject] = [];
-
-            }
-
-
-            const progress =
-                calculateLessonProgress(
-                    subject
-                );
-
-
-            const progressSubject =
-                normalizeProgressSubject(
-                    subject
-                );
-
-
-            if (
-                progressSubject in
-                data.progress
-            ) {
-
-                data.progress[
-                    progressSubject
-                ] = progress;
-
-            }
-
-        }
-    );
-
-
-    saveData();
 
 }
 
 
 /* ============================================================
    STUDY PAGE
-   CBSE + BSEB CURRICULUM
    ============================================================ */
 
 function renderStudy() {
 
     ensureStudyProgress();
 
-    /* --------------------------------------------------------
-       CURRICULUM DATA
-    -------------------------------------------------------- */
-
     const subjects =
         getCurriculumSubjects();
 
 
-    if (!subjects.length) {
-
-        pageContent.innerHTML = `
-            <div class="card">
-                <h2>📚 Curriculum Not Found</h2>
-                <p style="margin-top:10px;">
-                    Please select a valid Board, Class and Stream.
-                </p>
-            </div>
-        `;
-
-        return;
-    }
-
-
-    /* --------------------------------------------------------
-       DEFAULT SUBJECT
-    -------------------------------------------------------- */
-
     if (
-        !subjects.includes(
+        !lessonData[
             studyState.subject
-        )
+        ]
     ) {
 
         studyState.subject =
@@ -3710,34 +3319,11 @@ function renderStudy() {
     }
 
 
-    /* --------------------------------------------------------
-       CURRICULUM CHAPTERS
-    -------------------------------------------------------- */
-
     const chapters =
         getCurriculumChapters(
             studyState.subject
         );
 
-
-    if (!chapters.length) {
-
-        pageContent.innerHTML = `
-            <div class="card">
-                <h2>📖 Chapters Not Found</h2>
-                <p style="margin-top:10px;">
-                    Is subject ke chapters curriculum me available nahi hain.
-                </p>
-            </div>
-        `;
-
-        return;
-    }
-
-
-    /* --------------------------------------------------------
-       DEFAULT CHAPTER
-    -------------------------------------------------------- */
 
     if (
         !chapters.includes(
@@ -3751,10 +3337,6 @@ function renderStudy() {
     }
 
 
-    /* --------------------------------------------------------
-       CHAPTER LESSONS
-    -------------------------------------------------------- */
-
     const chapterLessons =
         getChapterLessons(
             studyState.subject,
@@ -3767,25 +3349,10 @@ function renderStudy() {
         chapterLessons.length
     ) {
 
-        studyState.lessonIndex = 0;
+        studyState.lessonIndex =
+            0;
 
     }
-
-
-    /* --------------------------------------------------------
-       ALL LESSONS
-    -------------------------------------------------------- */
-
-    const allLessons =
-        getAllLessons(
-            studyState.subject
-        );
-
-
-    const completed =
-        data.lessonProgress[
-            studyState.subject
-        ] || [];
 
 
     const subjectProgress =
@@ -3794,125 +3361,38 @@ function renderStudy() {
         );
 
 
-    /* --------------------------------------------------------
-       SUBJECT ICON
-    -------------------------------------------------------- */
-
-    function getSubjectIcon(subject) {
-
-        if (subject === "Physics")
-            return "⚡";
-
-        if (subject === "Mathematics")
-            return "📐";
-
-        if (subject === "Chemistry")
-            return "🧪";
-
-        if (subject === "Biology")
-            return "🧬";
-
-        if (subject === "Computer Science")
-            return "💻";
-
-        if (subject === "Accountancy")
-            return "📊";
-
-        if (subject === "Economics")
-            return "💰";
-
-        if (subject === "Business Studies")
-            return "💼";
-
-        if (subject === "History")
-            return "🏛️";
-
-        if (subject === "Geography")
-            return "🌍";
-
-        if (subject === "Political Science")
-            return "⚖️";
-
-        if (subject === "Sociology")
-            return "👥";
-
-        if (subject === "Science")
-            return "🔬";
-
-        if (subject === "English")
-            return "🇬🇧";
-
-        if (subject === "Hindi")
-            return "🇮🇳";
-
-        if (subject === "Social Science")
-            return "🌏";
-
-        return "📚";
-    }
-
-
-    /* ========================================================
-       PAGE
-       ======================================================== */
-
     pageContent.innerHTML = `
 
-        <div class="page-header">
+        <section class="page-header">
 
             <h1>
                 📚 Study
             </h1>
 
             <p>
-                ${escapeHTML(
-                    studyState.board
-                )}
-                •
-                ${escapeHTML(
-                    studyState.className
-                )}
-                ${
-                    studyState.stream
-                        ? `• ${escapeHTML(
-                            studyState.stream
-                        )}`
-                        : ""
-                }
+                Learn chapter by chapter with BharatBuddy.
             </p>
 
-        </div>
+        </section>
 
 
-        <!-- ==================================================
-             CURRICULUM SELECTOR
-        ================================================== -->
+        <section class="card">
 
-        <div class="card">
+            <div class="study-select-grid">
 
-            <h3>
-                🎓 Curriculum
-            </h3>
+                <label>
 
-            <div
-                class="grid-3"
-                style="margin-top:15px;"
-            >
-
-                <div class="form-group">
-
-                    <label class="form-label">
+                    <span>
                         Board
-                    </label>
+                    </span>
 
-                    <select
-                        id="studyBoard"
-                        class="form-select">
+                    <select id="studyBoard">
 
                         <option
                             value="CBSE"
                             ${
-                                studyState.board === "CBSE"
+                                studyState.board ===
+                                "CBSE"
                                     ? "selected"
                                     : ""
                             }>
@@ -3922,7 +3402,8 @@ function renderStudy() {
                         <option
                             value="BSEB"
                             ${
-                                studyState.board === "BSEB"
+                                studyState.board ===
+                                "BSEB"
                                     ? "selected"
                                     : ""
                             }>
@@ -3931,110 +3412,82 @@ function renderStudy() {
 
                     </select>
 
-                </div>
+                </label>
 
 
-                <div class="form-group">
+                <label>
 
-                    <label class="form-label">
+                    <span>
                         Class
-                    </label>
+                    </span>
 
-                    <select
-                        id="studyClass"
-                        class="form-select">
+                    <select id="studyClass">
 
-                        ${
-                            Object.keys(
-                                boardCurriculum[
-                                    studyState.board
-                                ] || {}
-                            )
-                            .map(
-                                className => `
-                                    <option
-                                        value="${escapeHTML(
-                                            className
-                                        )}"
-                                        ${
-                                            className ===
-                                            studyState.className
-                                                ? "selected"
-                                                : ""
-                                        }>
-                                        ${escapeHTML(
-                                            className
-                                        )}
-                                    </option>
-                                `
-                            )
-                            .join("")
-                        }
+                        <option
+                            value="Class 9">
+                            Class 9
+                        </option>
+
+                        <option
+                            value="Class 10">
+                            Class 10
+                        </option>
+
+                        <option
+                            value="Class 11">
+                            Class 11
+                        </option>
+
+                        <option
+                            value="Class 12">
+                            Class 12
+                        </option>
 
                     </select>
 
-                </div>
+                </label>
 
 
-                <div class="form-group">
+                <label>
 
-                    <label class="form-label">
+                    <span>
                         Stream
-                    </label>
+                    </span>
 
-                    <select
-                        id="studyStream"
-                        class="form-select">
+                    <select id="studyStream">
 
-                        ${
-                            Object.keys(
-                                boardCurriculum[
-                                    studyState.board
-                                ]?.[
-                                    studyState.className
-                                ]?.streams || {}
-                            )
-                            .map(
-                                stream => `
-                                    <option
-                                        value="${escapeHTML(
-                                            stream
-                                        )}"
-                                        ${
-                                            stream ===
-                                            studyState.stream
-                                                ? "selected"
-                                                : ""
-                                        }>
-                                        ${escapeHTML(
-                                            stream
-                                        )}
-                                    </option>
-                                `
-                            )
-                            .join("")
-                        }
+                        <option value="General">
+                            General
+                        </option>
+
+                        <option value="PCM">
+                            PCM
+                        </option>
+
+                        <option value="PCB">
+                            PCB
+                        </option>
+
+                        <option value="Commerce">
+                            Commerce
+                        </option>
+
+                        <option value="Arts">
+                            Arts
+                        </option>
 
                     </select>
 
-                </div>
+                </label>
 
             </div>
 
-        </div>
+        </section>
 
 
-        <br>
+        <section class="grid-3">
 
-
-        <!-- ==================================================
-             SUBJECTS
-        ================================================== -->
-
-        <div class="grid-3">
-
-            ${
-                subjects
+            ${subjects
                 .map(
                     subject => {
 
@@ -4046,21 +3499,34 @@ function renderStudy() {
                         return `
 
                             <button
-                                class="subject-card"
+                                class="
+                                    subject-card
+                                    ${
+                                        studyState.subject ===
+                                        subject
+                                            ? "active"
+                                            : ""
+                                    }
+                                "
                                 data-subject="${escapeHTML(
                                     subject
                                 )}"
                                 type="button">
 
                                 <div
-                                    style="
-                                        font-size:32px;
-                                        margin-bottom:10px;
-                                    ">
+                                    class="subject-icon">
 
-                                    ${getSubjectIcon(
-                                        subject
-                                    )}
+                                    ${
+                                        subject === "Physics"
+                                            ? "⚡"
+                                            : subject === "Mathematics"
+                                                ? "📐"
+                                                : subject === "Chemistry"
+                                                    ? "🧪"
+                                                    : subject === "Computer Science"
+                                                        ? "💻"
+                                                        : "🇬🇧"
+                                    }
 
                                 </div>
 
@@ -4080,22 +3546,14 @@ function renderStudy() {
 
                     }
                 )
-                .join("")
-            }
+                .join("")}
 
-        </div>
-
-
-        <br>
+        </section>
 
 
-        <!-- ==================================================
-             COURSE PROGRESS
-        ================================================== -->
+        <section class="card">
 
-        <div class="card">
-
-            <div class="course-top">
+            <div class="section-heading">
 
                 <div>
 
@@ -4106,7 +3564,7 @@ function renderStudy() {
                     </h2>
 
                     <p>
-                        Overall course progress
+                        ${subjectProgress}% complete
                     </p>
 
                 </div>
@@ -4117,213 +3575,139 @@ function renderStudy() {
 
             </div>
 
-
-            <div class="progress">
+            <div class="goal-bar">
 
                 <div
-                    class="progress-bar"
                     style="
-                        width:${subjectProgress}%
+                        width:${subjectProgress}%;
                     ">
                 </div>
 
             </div>
 
-        </div>
+        </section>
 
 
-        <br>
+        <section class="card">
 
+            <div class="study-select-grid">
 
-        <!-- ==================================================
-             CHAPTER
-        ================================================== -->
+                <label>
 
-        <div class="card">
+                    <span>
+                        Chapter
+                    </span>
 
-            <div class="form-group">
+                    <select id="studyChapter">
 
-                <label class="form-label">
-                    📖 Select Chapter
+                        ${chapters
+                            .map(
+                                chapter => `
+
+                                    <option
+                                        value="${escapeHTML(
+                                            chapter
+                                        )}"
+                                        ${
+                                            chapter ===
+                                            studyState.chapter
+                                                ? "selected"
+                                                : ""
+                                        }>
+
+                                        ${escapeHTML(
+                                            chapter
+                                        )}
+
+                                    </option>
+
+                                `
+                            )
+                            .join("")}
+
+                    </select>
+
                 </label>
 
-                <select
-                    id="studyChapter"
-                    class="form-select">
+            </div>
 
-                    ${
-                        chapters
-                        .map(
-                            (chapter, index) => `
 
-                                <option
-                                    value="${escapeHTML(
-                                        chapter
-                                    )}"
+            <div class="chapter-list">
+
+                ${chapters
+                    .map(
+                        (chapter, index) => `
+
+                            <button
+                                type="button"
+                                class="
+                                    chapter-item
                                     ${
                                         chapter ===
                                         studyState.chapter
-                                            ? "selected"
+                                            ? "active"
                                             : ""
-                                    }>
+                                    }
+                                "
+                                data-chapter="${escapeHTML(
+                                    chapter
+                                )}">
 
-                                    Chapter ${
-                                        index + 1
-                                    } — 
+                                <span>
+                                    Chapter ${index + 1}
+                                </span>
+
+                                <strong>
                                     ${escapeHTML(
                                         chapter
                                     )}
+                                </strong>
 
-                                </option>
+                            </button>
 
-                            `
-                        )
-                        .join("")
-                    }
-
-                </select>
+                        `
+                    )
+                    .join("")}
 
             </div>
 
-
-            <div class="grid-2">
-
-                <!-- CHAPTER TOPICS -->
-
-                <div>
-
-                    <h3>
-                        📖 Chapter Topics
-                    </h3>
-
-                    <div
-                        style="
-                            margin-top:12px;
-                            display:flex;
-                            flex-direction:column;
-                            gap:8px;
-                        "
-                    >
-
-                        ${
-                            chapterLessons.length
-                                ? chapterLessons
-                                    .map(
-                                        (
-                                            lesson,
-                                            index
-                                        ) => {
-
-                                            const allLesson =
-                                                allLessons.find(
-                                                    item =>
-                                                        item.subject ===
-                                                            studyState.subject &&
-                                                        item.chapter ===
-                                                            studyState.chapter &&
-                                                        item.lessonIndex ===
-                                                            index
-                                                );
+        </section>
 
 
-                                            const done =
-                                                allLesson &&
-                                                completed.includes(
-                                                    allLesson.id
-                                                );
+        <section
+            id="currentLessonArea"
+            class="card">
 
-
-                                            return `
-
-                                                <button
-                                                    type="button"
-                                                    class="btn ${
-                                                        index ===
-                                                        studyState.lessonIndex
-                                                            ? "btn-primary"
-                                                            : "btn-secondary"
-                                                    } study-lesson-btn"
-                                                    data-lesson-index="${index}"
-                                                    style="text-align:left;">
-
-                                                    ${
-                                                        done
-                                                            ? "✅"
-                                                            : "📖"
-                                                    }
-
-                                                    ${index + 1}.
-                                                    ${escapeHTML(
-                                                        lesson.title
-                                                    )}
-
-                                                </button>
-
-                                            `;
-
-                                        }
-                                    )
-                                    .join("")
-                                : `
-                                    <p>
-                                        Is chapter ka lesson abhi available nahi hai.
-                                    </p>
-                                `
-                        }
-
-                    </div>
-
-                </div>
-
-
-                <!-- CHAPTER TEST -->
-
-                <div>
-
-                    <h3>
-                        📝 Chapter Exercise
-                    </h3>
-
-                    <p
-                        style="
-                            margin-top:10px;
-                            opacity:.75;
-                        "
-                    >
-
-                        Chapter ke lessons complete karne ke
-                        baad isi chapter ke questions attempt karo.
-
-                    </p>
-
-
-                    <button
-                        class="btn btn-primary"
-                        id="chapterTestButton"
-                        style="margin-top:14px;">
-
-                        📝 Start Chapter Test
-
-                    </button>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <br>
-
-
-        <div id="currentLessonArea"></div>
+        </section>
 
     `;
 
 
-    /* ========================================================
-       EVENTS
-    ======================================================== */
+    const classSelect =
+        document.getElementById(
+            "studyClass"
+        );
+
+    if (classSelect) {
+
+        classSelect.value =
+            studyState.className;
+
+    }
+
+
+    const streamSelect =
+        document.getElementById(
+            "studyStream"
+        );
+
+    if (streamSelect) {
+
+        streamSelect.value =
+            studyState.stream;
+
+    }
+
 
     attachStudyEvents();
 
@@ -4331,68 +3715,24 @@ function renderStudy() {
 
 }
 
-/* ============================================================
-   STUDY EVENTS
-   CBSE + BSEB CURRICULUM
-   ============================================================ */
 
 function attachStudyEvents() {
 
-    /* --------------------------------------------------------
-       BOARD
-    -------------------------------------------------------- */
+    const boardSelect =
+        document.getElementById(
+            "studyBoard"
+        );
 
-    const board =
-        document.getElementById("studyBoard");
+    if (boardSelect) {
 
-    if (board) {
-
-        board.addEventListener(
+        boardSelect.addEventListener(
             "change",
             () => {
 
                 studyState.board =
-                    board.value;
+                    boardSelect.value;
 
-                const classes =
-                    Object.keys(
-                        boardCurriculum[
-                            studyState.board
-                        ] || {}
-                    );
-
-                studyState.className =
-                    classes[0] || "Class 11";
-
-                const streams =
-                    Object.keys(
-                        boardCurriculum[
-                            studyState.board
-                        ]?.[
-                            studyState.className
-                        ]?.streams || {}
-                    );
-
-                studyState.stream =
-                    streams[0] || "";
-
-                const subjects =
-                    getCurriculumSubjects();
-
-                studyState.subject =
-                    subjects[0] || "";
-
-                const chapters =
-                    getCurriculumChapters(
-                        studyState.subject
-                    );
-
-                studyState.chapter =
-                    chapters[0] || "";
-
-                studyState.lessonIndex = 0;
-
-                renderStudy();
+                saveStudyState();
 
             }
         );
@@ -4400,12 +3740,10 @@ function attachStudyEvents() {
     }
 
 
-    /* --------------------------------------------------------
-       CLASS
-    -------------------------------------------------------- */
-
     const classSelect =
-        document.getElementById("studyClass");
+        document.getElementById(
+            "studyClass"
+        );
 
     if (classSelect) {
 
@@ -4416,33 +3754,10 @@ function attachStudyEvents() {
                 studyState.className =
                     classSelect.value;
 
-                const streams =
-                    Object.keys(
-                        boardCurriculum[
-                            studyState.board
-                        ]?.[
-                            studyState.className
-                        ]?.streams || {}
-                    );
+                studyState.lessonIndex =
+                    0;
 
-                studyState.stream =
-                    streams[0] || "";
-
-                const subjects =
-                    getCurriculumSubjects();
-
-                studyState.subject =
-                    subjects[0] || "";
-
-                const chapters =
-                    getCurriculumChapters(
-                        studyState.subject
-                    );
-
-                studyState.chapter =
-                    chapters[0] || "";
-
-                studyState.lessonIndex = 0;
+                saveStudyState();
 
                 renderStudy();
 
@@ -4452,39 +3767,24 @@ function attachStudyEvents() {
     }
 
 
-    /* --------------------------------------------------------
-       STREAM
-    -------------------------------------------------------- */
+    const streamSelect =
+        document.getElementById(
+            "studyStream"
+        );
 
-    const stream =
-        document.getElementById("studyStream");
+    if (streamSelect) {
 
-    if (stream) {
-
-        stream.addEventListener(
+        streamSelect.addEventListener(
             "change",
             () => {
 
                 studyState.stream =
-                    stream.value;
+                    streamSelect.value;
 
-                const subjects =
-                    getCurriculumSubjects();
+                studyState.lessonIndex =
+                    0;
 
-                studyState.subject =
-                    subjects[0] || "";
-
-                const chapters =
-                    getCurriculumChapters(
-                        studyState.subject
-                    );
-
-                studyState.chapter =
-                    chapters[0] || "";
-
-                studyState.lessonIndex = 0;
-
-                renderStudy();
+                saveStudyState();
 
             }
         );
@@ -4492,58 +3792,61 @@ function attachStudyEvents() {
     }
 
 
-    /* --------------------------------------------------------
-       SUBJECT
-    -------------------------------------------------------- */
-
     document
-        .querySelectorAll("[data-subject]")
-        .forEach(button => {
+        .querySelectorAll(
+            "[data-subject]"
+        )
+        .forEach(
+            button => {
 
-            button.addEventListener(
-                "click",
-                () => {
+                button.addEventListener(
+                    "click",
+                    () => {
 
-                    studyState.subject =
-                        button.dataset.subject;
+                        studyState.subject =
+                            button.dataset.subject;
 
-                    const chapters =
-                        getCurriculumChapters(
-                            studyState.subject
-                        );
+                        const chapters =
+                            getCurriculumChapters(
+                                studyState.subject
+                            );
 
-                    studyState.chapter =
-                        chapters[0] || "";
+                        studyState.chapter =
+                            chapters[0] ||
+                            "";
 
-                    studyState.lessonIndex = 0;
+                        studyState.lessonIndex =
+                            0;
 
-                    renderStudy();
+                        saveStudyState();
 
-                }
-            );
+                        renderStudy();
 
-        });
+                    }
+                );
+
+            }
+        );
 
 
-    /* --------------------------------------------------------
-       CHAPTER
-    -------------------------------------------------------- */
-
-    const chapter =
+    const chapterSelect =
         document.getElementById(
             "studyChapter"
         );
 
-    if (chapter) {
+    if (chapterSelect) {
 
-        chapter.addEventListener(
+        chapterSelect.addEventListener(
             "change",
             () => {
 
                 studyState.chapter =
-                    chapter.value;
+                    chapterSelect.value;
 
-                studyState.lessonIndex = 0;
+                studyState.lessonIndex =
+                    0;
+
+                saveStudyState();
 
                 renderStudy();
 
@@ -4553,52 +3856,534 @@ function attachStudyEvents() {
     }
 
 
-    /* --------------------------------------------------------
-       LESSON
-    -------------------------------------------------------- */
-
     document
-        .querySelectorAll(".study-lesson-btn")
-        .forEach(button => {
+        .querySelectorAll(
+            "[data-chapter]"
+        )
+        .forEach(
+            button => {
 
-            button.addEventListener(
-                "click",
-                () => {
+                button.addEventListener(
+                    "click",
+                    () => {
 
-                    studyState.lessonIndex =
-                        Number(
-                            button.dataset.lessonIndex
-                        );
+                        studyState.chapter =
+                            button.dataset.chapter;
 
-                    renderCurrentLesson();
+                        studyState.lessonIndex =
+                            0;
 
-                    scrollToCurrentLesson();
+                        saveStudyState();
 
-                }
-            );
+                        renderStudy();
 
-        });
+                    }
+                );
 
-
-    /* --------------------------------------------------------
-       CHAPTER TEST
-    -------------------------------------------------------- */
-
-    const testButton =
-        document.getElementById(
-            "chapterTestButton"
+            }
         );
 
-    if (testButton) {
+}
 
-        testButton.addEventListener(
+
+function saveStudyState() {
+
+    try {
+
+        localStorage.setItem(
+            "bharatbuddy_study_state",
+            JSON.stringify(
+                studyState
+            )
+        );
+
+    } catch {
+
+        // Ignore storage errors.
+
+    }
+
+}
+
+
+/* ============================================================
+   CURRENT LESSON
+   ============================================================ */
+
+function renderCurrentLesson() {
+
+    const area =
+        document.getElementById(
+            "currentLessonArea"
+        );
+
+    if (
+        !area
+    ) {
+
+        return;
+
+    }
+
+
+    const lessons =
+        getChapterLessons(
+            studyState.subject,
+            studyState.chapter
+        );
+
+
+    if (
+        !lessons.length
+    ) {
+
+        area.innerHTML = `
+
+            <div class="empty-state">
+
+                <h3>
+                    No lesson available
+                </h3>
+
+                <p>
+                    AI Study Notes se is chapter ko generate
+                    kar sakte ho.
+                </p>
+
+                <button
+                    id="generateCurrentAIStudy"
+                    class="btn btn-primary"
+                    type="button">
+
+                    🤖 Generate AI Study
+
+                </button>
+
+            </div>
+
+        `;
+
+        const generate =
+            document.getElementById(
+                "generateCurrentAIStudy"
+            );
+
+        if (generate) {
+
+            generate.addEventListener(
+                "click",
+                generateCurrentAIStudy
+            );
+
+        }
+
+        return;
+
+    }
+
+
+    if (
+        studyState.lessonIndex < 0
+    ) {
+
+        studyState.lessonIndex =
+            0;
+
+    }
+
+
+    if (
+        studyState.lessonIndex >=
+        lessons.length
+    ) {
+
+        studyState.lessonIndex =
+            lessons.length - 1;
+
+    }
+
+
+    const lesson =
+        lessons[
+            studyState.lessonIndex
+        ];
+
+
+    const chapterIndex =
+        getCurriculumChapters(
+            studyState.subject
+        ).indexOf(
+            studyState.chapter
+        );
+
+
+    const lessonId =
+        `${studyState.subject}-${chapterIndex}-${studyState.lessonIndex}`;
+
+
+    const completed =
+        Array.isArray(
+            data.lessonProgress[
+                studyState.subject
+            ]
+        )
+            ? data.lessonProgress[
+                studyState.subject
+            ].includes(
+                lessonId
+            )
+            : false;
+
+
+    const isFirst =
+        studyState.lessonIndex === 0;
+
+    const isLast =
+        studyState.lessonIndex ===
+        lessons.length - 1;
+
+
+    area.innerHTML = `
+
+        <div class="lesson-header">
+
+            <div>
+
+                <span class="lesson-label">
+                    ${escapeHTML(
+                        studyState.chapter
+                    )}
+                </span>
+
+                <h2>
+                    ${escapeHTML(
+                        lesson.title
+                    )}
+                </h2>
+
+                <p>
+                    Topic ${studyState.lessonIndex + 1}
+                    of ${lessons.length}
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="lesson-content">
+
+            ${
+                lesson.content ||
+                `
+                    <p>
+                        No lesson content available.
+                    </p>
+                `
+            }
+
+        </div>
+
+
+        <div class="lesson-actions">
+
+            <button
+                class="btn btn-secondary"
+                id="previousLesson"
+                type="button"
+                ${isFirst ? "disabled" : ""}>
+
+                ← Previous
+
+            </button>
+
+
+            <button
+                class="btn btn-primary"
+                id="completeLesson"
+                type="button">
+
+                ${
+                    completed
+                        ? "✅ Completed"
+                        : "✅ Mark Lesson Complete"
+                }
+
+            </button>
+
+
+            <button
+                class="btn btn-primary"
+                id="nextLesson"
+                type="button">
+
+                ${
+                    isLast
+                        ? "Chapter Exercise →"
+                        : "Next Topic →"
+                }
+
+            </button>
+
+        </div>
+
+    `;
+
+
+    const previous =
+        document.getElementById(
+            "previousLesson"
+        );
+
+    const complete =
+        document.getElementById(
+            "completeLesson"
+        );
+
+    const next =
+        document.getElementById(
+            "nextLesson"
+        );
+
+
+    if (previous) {
+
+        previous.addEventListener(
             "click",
-            startChapterTest
+            () => {
+
+                if (
+                    studyState.lessonIndex >
+                    0
+                ) {
+
+                    studyState.lessonIndex--;
+
+                    saveStudyState();
+
+                    renderStudy();
+
+                    setTimeout(
+                        scrollToCurrentLesson,
+                        100
+                    );
+
+                }
+
+            }
+        );
+
+    }
+
+
+    if (complete) {
+
+        complete.addEventListener(
+            "click",
+            () => {
+
+                completeCurrentLesson();
+
+            }
+        );
+
+    }
+
+
+    if (next) {
+
+        next.addEventListener(
+            "click",
+            () => {
+
+                if (isLast) {
+
+                    startChapterTest();
+
+                } else {
+
+                    completeCurrentLesson(
+                        false,
+                        true
+                    );
+
+                }
+
+            }
         );
 
     }
 
 }
+
+
+function completeCurrentLesson(
+    finishCourse = false,
+    goNext = false
+) {
+
+    const subject =
+        studyState.subject;
+
+
+    const lessons =
+        getChapterLessons(
+            subject,
+            studyState.chapter
+        );
+
+
+    const chapters =
+        getCurriculumChapters(
+            subject
+        );
+
+
+    const chapterIndex =
+        chapters.indexOf(
+            studyState.chapter
+        );
+
+
+    const lessonId =
+        `${subject}-${chapterIndex}-${studyState.lessonIndex}`;
+
+
+    if (
+        !Array.isArray(
+            data.lessonProgress[
+                subject
+            ]
+        )
+    ) {
+
+        data.lessonProgress[
+            subject
+        ] = [];
+
+    }
+
+
+    if (
+        !data.lessonProgress[
+            subject
+        ].includes(
+            lessonId
+        )
+    ) {
+
+        data.lessonProgress[
+            subject
+        ].push(
+            lessonId
+        );
+
+        data.stats.lessons =
+            Number(
+                data.stats.lessons || 0
+            ) + 1;
+
+        data.dailyGoal =
+            Math.min(
+                data.dailyGoalTarget || 5,
+                Number(
+                    data.dailyGoal || 0
+                ) + 1
+            );
+
+        showToast(
+            "Lesson complete! 🎉"
+        );
+
+    }
+
+
+    data.progress[
+        normalizeProgressSubject(
+            subject
+        )
+    ] =
+        calculateLessonProgress(
+            subject
+        );
+
+
+    saveData();
+
+
+    if (
+        goNext &&
+        studyState.lessonIndex <
+        lessons.length - 1
+    ) {
+
+        studyState.lessonIndex++;
+
+        saveStudyState();
+
+        renderStudy();
+
+        setTimeout(
+            scrollToCurrentLesson,
+            100
+        );
+
+        return;
+
+    }
+
+
+    if (
+        studyState.lessonIndex >=
+        lessons.length - 1
+    ) {
+
+        showToast(
+            "Chapter lessons complete! 🎯"
+        );
+
+        setTimeout(
+            () => {
+
+                startChapterTest();
+
+            },
+            300
+        );
+
+        return;
+
+    }
+
+
+    renderStudy();
+
+    setTimeout(
+        scrollToCurrentLesson,
+        100
+    );
+
+}
+
+
+function scrollToCurrentLesson() {
+
+    const area =
+        document.getElementById(
+            "currentLessonArea"
+        );
+
+    if (area) {
+
+        area.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
+    }
+
+}
+
 
 /* ============================================================
    CHAPTER TEST
@@ -4609,19 +4394,15 @@ function getChapterQuestions() {
     const key =
         `${studyState.subject}|${studyState.chapter}`;
 
-    /* Existing chapter questions */
 
-    if (chapterQuestions[key]) {
+    if (
+        chapterQuestions[key]
+    ) {
+
         return chapterQuestions[key];
+
     }
 
-    /* Curriculum chapter ke liye fallback */
-
-    const chapter =
-        studyState.chapter;
-
-    const subject =
-        studyState.subject;
 
     return [
 
@@ -4629,66 +4410,83 @@ function getChapterQuestions() {
             type: "MCQ",
 
             question:
-                `Which of the following is an important concept in "${chapter}"?`,
+                `What is the main idea of ${studyState.chapter}?`,
 
             options: [
-                `Understanding the concepts of ${chapter}`,
-                "Ignoring the chapter",
-                "Skipping all examples",
-                "Memorising without understanding"
+
+                "Understanding the chapter concepts",
+
+                "Ignoring definitions",
+
+                "Only memorising answers",
+
+                "Skipping practice"
+
             ],
 
             answer: 0
+
         },
 
         {
             type: "MCQ",
 
             question:
-                `What should a student focus on while studying "${chapter}"?`,
+                "Which is the best way to learn a difficult concept?",
 
             options: [
-                "Concepts, definitions and examples",
-                "Only the chapter name",
-                "Skipping practice",
-                "Only memorising random answers"
+
+                "Understand it step by step",
+
+                "Skip it",
+
+                "Only memorise the title",
+
+                "Never practise"
+
             ],
 
             answer: 0
+
         },
 
         {
             type: "SHORT",
 
             question:
-                `Write one important concept that you learned from "${chapter}".`,
+                "Write one important concept from this chapter.",
 
             answer:
-                `The student should identify and explain an important concept related to ${chapter}.`
+                "Students should identify and explain a relevant concept from the chapter."
+
         },
 
         {
             type: "SHORT",
 
             question:
-                `Why is "${chapter}" important in ${subject}?`,
+                "Why is practice important?",
 
             answer:
-                `${chapter} is important because it develops understanding of important concepts in ${subject}.`
+                "Practice helps strengthen understanding and reveals areas that need revision."
+
         },
 
         {
             type: "LONG",
 
             question:
-                `Explain the main concepts of "${chapter}" in your own words.`,
+                "Summarise what you learned from this chapter.",
 
             answer:
-                `A good answer should explain the important concepts, definitions, examples and applications related to ${chapter}.`
+                "A good summary should mention the key definitions, concepts, examples and important relationships covered in the chapter."
+
         }
 
     ];
+
 }
+
 
 function startChapterTest() {
 
@@ -4729,8 +4527,10 @@ function renderChapterTest() {
             "currentLessonArea"
         );
 
-
-    if (!area || !activeChapterTest) {
+    if (
+        !area ||
+        !activeChapterTest
+    ) {
 
         return;
 
@@ -4741,13 +4541,10 @@ function renderChapterTest() {
         activeChapterTest;
 
 
-    const q =
-        test.questions[
-            test.current
-        ];
-
-
-    if (!q) {
+    if (
+        test.current >=
+        test.questions.length
+    ) {
 
         finishChapterTest();
 
@@ -4756,70 +4553,151 @@ function renderChapterTest() {
     }
 
 
-    if (
-        q.type ===
-        "MCQ"
-    ) {
-
-        area.innerHTML = `
-
-            <div class="quiz-card">
-
-                <div class="quiz-progress">
-
-                    Chapter Test:
-                    Question
-                    ${test.current + 1}
-                    /
-                    ${test.questions.length}
-
-                </div>
+    const question =
+        test.questions[
+            test.current
+        ];
 
 
-                <h2
-                    style="margin:18px 0;">
+    const progress =
+        Math.round(
+            (
+                test.current /
+                test.questions.length
+            ) * 100
+        );
 
+
+    area.innerHTML = `
+
+        <div class="quiz-header">
+
+            <div>
+
+                <span class="lesson-label">
+                    Chapter Test
+                </span>
+
+                <h2>
                     ${escapeHTML(
-                        q.question
+                        test.chapter
                     )}
-
                 </h2>
-
-
-                <div class="quiz-options">
-
-                    ${q.options
-                        .map(
-                            (
-                                option,
-                                index
-                            ) => `
-
-                                <button
-                                    class="quiz-option chapter-option"
-                                    data-index="${index}"
-                                    type="button">
-
-                                    ${escapeHTML(
-                                        option
-                                    )}
-
-                                </button>
-
-                            `
-                        )
-                        .join("")}
-
-                </div>
 
             </div>
 
-        `;
+            <strong>
+                ${test.current + 1}
+                /
+                ${test.questions.length}
+            </strong>
 
+        </div>
+
+
+        <div class="goal-bar">
+
+            <div
+                style="
+                    width:${progress}%;
+                ">
+            </div>
+
+        </div>
+
+
+        <div class="quiz-question-card">
+
+            <span class="question-type">
+                ${escapeHTML(
+                    question.type
+                )}
+            </span>
+
+            <h3>
+                ${escapeHTML(
+                    question.question
+                )}
+            </h3>
+
+
+            ${
+                question.type === "MCQ"
+
+                    ? `
+
+                        <div class="quiz-options">
+
+                            ${question.options
+                                .map(
+                                    (
+                                        option,
+                                        index
+                                    ) => `
+
+                                        <button
+                                            type="button"
+                                            class="quiz-option"
+                                            data-answer="${index}">
+
+                                            <span>
+                                                ${
+                                                    String.fromCharCode(
+                                                        65 +
+                                                        index
+                                                    )
+                                                }
+                                            </span>
+
+                                            ${escapeHTML(
+                                                option
+                                            )}
+
+                                        </button>
+
+                                    `
+                                )
+                                .join("")}
+
+                        </div>
+
+                    `
+
+                    : `
+
+                        <textarea
+                            id="chapterTextAnswer"
+                            class="quiz-textarea"
+                            rows="6"
+                            placeholder="Write your answer here...">
+                        </textarea>
+
+                        <button
+                            id="submitTextAnswer"
+                            class="btn btn-primary"
+                            type="button">
+
+                            Submit Answer
+
+                        </button>
+
+                    `
+
+            }
+
+        </div>
+
+    `;
+
+
+    if (
+        question.type ===
+        "MCQ"
+    ) {
 
         document
             .querySelectorAll(
-                ".chapter-option"
+                "[data-answer]"
             )
             .forEach(
                 button => {
@@ -4830,30 +4708,12 @@ function renderChapterTest() {
 
                             const selected =
                                 Number(
-                                    button.dataset.index
+                                    button.dataset.answer
                                 );
-
-
-                            if (
-                                test.answers[
-                                    test.current
-                                ] !== undefined
-                            ) {
-
-                                return;
-
-                            }
-
-
-                            test.answers[
-                                test.current
-                            ] =
-                                selected;
-
 
                             if (
                                 selected ===
-                                q.answer
+                                question.answer
                             ) {
 
                                 test.score++;
@@ -4868,36 +4728,38 @@ function renderChapterTest() {
                                     "wrong"
                                 );
 
-
-                                document
-                                    .querySelectorAll(
-                                        ".chapter-option"
-                                    )
-                                    .forEach(
-                                        item => {
-
-                                            if (
-                                                Number(
-                                                    item.dataset.index
-                                                ) ===
-                                                q.answer
-                                            ) {
-
-                                                item.classList.add(
-                                                    "correct"
-                                                );
-
-                                            }
-
-                                        }
+                                const correct =
+                                    document.querySelector(
+                                        `[data-answer="${question.answer}"]`
                                     );
+
+                                if (correct) {
+
+                                    correct.classList.add(
+                                        "correct"
+                                    );
+
+                                }
 
                             }
 
 
+                            test.answers.push({
+
+                                question:
+                                    question.question,
+
+                                selected,
+
+                                correct:
+                                    question.answer
+
+                            });
+
+
                             document
                                 .querySelectorAll(
-                                    ".chapter-option"
+                                    "[data-answer]"
                                 )
                                 .forEach(
                                     item => {
@@ -4914,7 +4776,6 @@ function renderChapterTest() {
 
                                     test.current++;
 
-
                                     renderChapterTest();
 
                                 },
@@ -4929,58 +4790,10 @@ function renderChapterTest() {
 
     } else {
 
-        area.innerHTML = `
-
-            <div class="quiz-card">
-
-                <div class="quiz-progress">
-
-                    Chapter Test:
-                    Question
-                    ${test.current + 1}
-                    /
-                    ${test.questions.length}
-
-                </div>
-
-
-                <h2
-                    style="margin:18px 0;">
-
-                    ${escapeHTML(
-                        q.question
-                    )}
-
-                </h2>
-
-
-                <textarea
-                    id="chapterAnswer"
-                    class="form-textarea"
-                    rows="6"
-                    placeholder="Apna answer yahan likho...">
-                </textarea>
-
-
-                <button
-                    class="btn btn-primary"
-                    id="submitChapterAnswer"
-                    style="margin-top:12px;">
-
-                    Submit Answer
-
-                </button>
-
-            </div>
-
-        `;
-
-
         const submit =
             document.getElementById(
-                "submitChapterAnswer"
+                "submitTextAnswer"
             );
-
 
         if (submit) {
 
@@ -4988,19 +4801,20 @@ function renderChapterTest() {
                 "click",
                 () => {
 
-                    const answer =
-                        document
-                            .getElementById(
-                                "chapterAnswer"
-                            )
-                            ?.value
-                            .trim();
+                    const textarea =
+                        document.getElementById(
+                            "chapterTextAnswer"
+                        );
 
+                    const answer =
+                        textarea
+                            ? textarea.value.trim()
+                            : "";
 
                     if (!answer) {
 
                         showToast(
-                            "Answer likho."
+                            "Pehle answer likho."
                         );
 
                         return;
@@ -5008,17 +4822,30 @@ function renderChapterTest() {
                     }
 
 
-                    test.answers[
-                        test.current
-                    ] =
-                        answer;
-
-
-                    test.score +=
+                    const correct =
                         evaluateTextAnswer(
                             answer,
-                            q.answer
+                            question.answer
                         );
+
+
+                    if (correct) {
+
+                        test.score++;
+
+                    }
+
+
+                    test.answers.push({
+
+                        question:
+                            question.question,
+
+                        answer,
+
+                        correct
+
+                    });
 
 
                     test.current++;
@@ -5040,25 +4867,45 @@ function evaluateTextAnswer(
     expectedAnswer
 ) {
 
-    const words =
-        String(
-            expectedAnswer
-        )
-        .toLowerCase()
-        .split(/\W+/)
-        .filter(
-            word =>
-                word.length > 3
-        );
-
-
     const user =
-        userAnswer
-            .toLowerCase();
+        String(
+            userAnswer || ""
+        )
+            .toLowerCase()
+            .split(
+                /[^a-z0-9]+/
+            )
+            .filter(
+                word =>
+                    word.length > 3
+            );
+
+    const expected =
+        String(
+            expectedAnswer || ""
+        )
+            .toLowerCase()
+            .split(
+                /[^a-z0-9]+/
+            )
+            .filter(
+                word =>
+                    word.length > 3
+            );
+
+
+    if (
+        !user.length ||
+        !expected.length
+    ) {
+
+        return false;
+
+    }
 
 
     const matches =
-        words.filter(
+        expected.filter(
             word =>
                 user.includes(
                     word
@@ -5066,30 +4913,26 @@ function evaluateTextAnswer(
         ).length;
 
 
-    return matches >=
-        Math.max(
-            1,
-            Math.ceil(
-                words.length * 0.3
-            )
-        )
-            ? 1
-            : 0;
+    return (
+        matches /
+        expected.length
+    ) >= 0.25;
 
 }
 
 
 function finishChapterTest() {
 
-    if (!activeChapterTest) {
-        return;
-    }
-
     const test =
         activeChapterTest;
 
+
+    if (!test) return;
+
+
     const total =
         test.questions.length;
+
 
     const percentage =
         Math.round(
@@ -5099,10 +4942,17 @@ function finishChapterTest() {
             ) * 100
         );
 
-    const key =
-        `${test.subject}|${test.chapter}`;
 
-    data.chapterTests[key] = {
+    test.finished = true;
+
+
+    const key =
+        `${studyState.board}|${studyState.className}|${studyState.stream}|${test.subject}|${test.chapter}`;
+
+
+    data.chapterTests[
+        key
+    ] = {
 
         score:
             test.score,
@@ -5116,26 +4966,24 @@ function finishChapterTest() {
 
     };
 
-    /*
-     * ========================================================
-     * CHAPTER PASS
-     * ========================================================
-     */
 
-    if (percentage >= 60) {
+    if (
+        percentage >= 60
+    ) {
 
-        const allLessons =
+        const lessons =
             getChapterLessons(
                 test.subject,
                 test.chapter
             );
 
         const chapterIndex =
-    getCurriculumChapters(
-        test.subject
-    ).indexOf(
-        test.chapter
-    );
+            getCurriculumChapters(
+                test.subject
+            ).indexOf(
+                test.chapter
+            );
+
 
         if (
             !Array.isArray(
@@ -5151,34 +4999,35 @@ function finishChapterTest() {
 
         }
 
-        /*
-         * Mark all lessons of this chapter
-         * as completed
-         */
 
-        allLessons.forEach(
+        lessons.forEach(
             (
-                lesson,
+                _lesson,
                 index
             ) => {
 
                 const id =
-                    `${studyState.board}-${studyState.className}-${studyState.stream}-${test.subject}-${chapterIndex}-${index}`;
+                    `${test.subject}-${chapterIndex}-${index}`;
 
                 if (
                     !data.lessonProgress[
                         test.subject
-                    ].includes(id)
+                    ].includes(
+                        id
+                    )
                 ) {
 
                     data.lessonProgress[
                         test.subject
-                    ].push(id);
+                    ].push(
+                        id
+                    );
 
                 }
 
             }
         );
+
 
         data.progress[
             normalizeProgressSubject(
@@ -5191,83 +5040,115 @@ function finishChapterTest() {
 
     }
 
+
     saveData();
+
+
+    const nextChapter =
+        getNextCurriculumChapter();
+
 
     const area =
         document.getElementById(
             "currentLessonArea"
         );
 
-    if (area) {
 
-        const nextChapter =
-            getNextCurriculumChapter();
+    if (area) {
 
         area.innerHTML = `
 
-            <div class="quiz-card quiz-score">
+            <div class="result-card">
 
-                <div style="font-size:48px;">
+                <div class="result-icon">
+
                     ${
                         percentage >= 60
-                            ? "🏆"
+                            ? "🎉"
                             : "📖"
                     }
+
                 </div>
 
                 <h2>
                     Chapter Test Complete
                 </h2>
 
-                <div class="quiz-score-number">
-                    ${test.score}/${total}
-                </div>
-
-                <h3>
-                    ${percentage}%
-                </h3>
-
                 <p>
-                    ${
-                        percentage >= 60
-                            ? "Chapter completed! Excellent work. 🎉"
-                            : "Chapter ko ek baar aur revise karke test try karo. 📚"
-                    }
+                    ${escapeHTML(
+                        test.chapter
+                    )}
                 </p>
 
-                <br>
+                <div class="result-score">
 
-                ${
-                    percentage >= 60 &&
-                    nextChapter
-                        ? `
-                            <button
-                                class="btn btn-primary"
-                                id="nextChapterAfterTest">
+                    <strong>
+                        ${test.score}/${total}
+                    </strong>
 
-                                📖 Next Chapter →
+                    <span>
+                        ${percentage}%
+                    </span>
 
-                            </button>
-                        `
-                        : `
-                            <button
-                                class="btn btn-secondary"
-                                id="backToStudy">
+                </div>
 
-                                ← Back to Study
 
-                            </button>
-                        `
-                }
+                <p>
+
+                    ${
+                        percentage >= 60
+                            ? "Great job! Chapter complete."
+                            : "Revise the chapter and try the test again."
+                    }
+
+                </p>
+
+
+                <div class="lesson-actions">
+
+                    <button
+                        id="backToStudy"
+                        class="btn btn-secondary"
+                        type="button">
+
+                        ← Back to Study
+
+                    </button>
+
+
+                    ${
+                        percentage >= 60 &&
+                        nextChapter
+
+                            ? `
+
+                                <button
+                                    id="nextChapterAfterTest"
+                                    class="btn btn-primary"
+                                    type="button">
+
+                                    Next Chapter →
+
+                                </button>
+
+                            `
+
+                            : ""
+
+                    }
+
+                </div>
 
             </div>
 
         `;
 
+
         const nextButton =
             document.getElementById(
                 "nextChapterAfterTest"
             );
+
 
         if (nextButton) {
 
@@ -5284,6 +5165,8 @@ function finishChapterTest() {
                     activeChapterTest =
                         null;
 
+                    saveStudyState();
+
                     renderStudy();
 
                     setTimeout(
@@ -5295,136 +5178,13 @@ function finishChapterTest() {
             );
 
         }
-       function completeCurrentLesson() {
 
-    const subject =
-        studyState.subject;
-
-    const lessons =
-        getChapterLessons(
-            subject,
-            studyState.chapter
-        );
-
-    if (!lessons.length) {
-        return;
-    }
-
-    const chapterIndex =
-        getCurrentCurriculumChapterIndex();
-
-    const lessonId =
-        `${studyState.board}-${studyState.className}-${studyState.stream}-${subject}-${chapterIndex}-${studyState.lessonIndex}`;
-
-    if (
-        !Array.isArray(
-            data.lessonProgress[subject]
-        )
-    ) {
-        data.lessonProgress[subject] = [];
-    }
-
-    /* Mark current lesson complete */
-
-    if (
-        !data.lessonProgress[subject].includes(
-            lessonId
-        )
-    ) {
-
-        data.lessonProgress[subject].push(
-            lessonId
-        );
-
-        if (
-            typeof showToast === "function"
-        ) {
-            showToast(
-                "✅ Lesson completed!"
-            );
-        }
-    }
-
-    /* Update progress */
-
-    const progress =
-        calculateLessonProgress(
-            subject
-        );
-
-    const progressSubject =
-        normalizeProgressSubject(
-            subject
-        );
-
-    if (
-        progressSubject in data.progress
-    ) {
-        data.progress[
-            progressSubject
-        ] = progress;
-    }
-
-    saveData();
-
-    /* ========================================================
-       MORE LESSONS → NEXT LESSON
-       ======================================================== */
-
-    if (
-        studyState.lessonIndex <
-        lessons.length - 1
-    ) {
-
-        studyState.lessonIndex++;
-
-        renderStudy();
-
-        setTimeout(
-            scrollToCurrentLesson,
-            100
-        );
-
-        return;
-    }
-
-    /* ========================================================
-       LAST LESSON → CHAPTER TEST
-       ======================================================== */
-
-    showToast(
-        "🎯 Chapter ke lessons complete! Ab Chapter Test do."
-    );
-
-    setTimeout(
-        () => {
-            startChapterTest();
-        },
-        300
-    );
-
-    /* ========================================================
-       COURSE COMPLETE
-       ======================================================== */
-
-    renderStudy();
-
-    if (
-        typeof showToast === "function"
-    ) {
-
-        showToast(
-            "🏆 Course completed!"
-        );
-
-    }
-
-}
 
         const backButton =
             document.getElementById(
                 "backToStudy"
             );
+
 
         if (backButton) {
 
@@ -5444,138 +5204,376 @@ function finishChapterTest() {
 
     }
 
-    activeChapterTest =
-        null;
+}
+
+
+/* ============================================================
+   NEXT CHAPTER
+   ============================================================ */
+
+function getNextCurriculumChapter() {
+
+    const chapters =
+        getCurriculumChapters(
+            studyState.subject
+        );
+
+
+    const index =
+        chapters.indexOf(
+            studyState.chapter
+        );
+
+
+    if (
+        index < 0 ||
+        index >=
+        chapters.length - 1
+    ) {
+
+        return null;
+
+    }
+
+
+    return chapters[
+        index + 1
+    ];
 
 }
 
+
 /* ============================================================
-   AI QUIZ
+   AI STUDY GENERATOR
    ============================================================ */
 
-function renderPractice() {
+async function generateCurrentAIStudy() {
 
-    pageContent.innerHTML = `
+    const area =
+        document.getElementById(
+            "currentLessonArea"
+        );
 
-        <div class="page-header">
+    if (!area) return;
 
-            <h1>
-                📝 AI Quiz
-            </h1>
+
+    area.innerHTML = `
+
+        <div class="loading-state">
+
+            <div class="spinner"></div>
+
+            <h3>
+                🤖 BharatBuddy AI is preparing your lesson...
+            </h3>
 
             <p>
-                Generate a 5-question AI quiz and test yourself.
+                Please wait.
             </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="grid-2">
-
-                <div class="form-group">
-
-                    <label class="form-label">
-                        Subject
-                    </label>
-
-                    <select
-                        id="quizSubject"
-                        class="form-select">
-
-                        <option>
-                            Physics
-                        </option>
-
-                        <option>
-                            Mathematics
-                        </option>
-
-                        <option>
-                            Chemistry
-                        </option>
-
-                        <option>
-                            Computer Science
-                        </option>
-
-                        <option>
-                            English
-                        </option>
-
-                    </select>
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label class="form-label">
-                        Difficulty
-                    </label>
-
-                    <select
-                        id="quizDifficulty"
-                        class="form-select">
-
-                        <option>
-                            Easy
-                        </option>
-
-                        <option>
-                            Medium
-                        </option>
-
-                        <option>
-                            Hard
-                        </option>
-
-                    </select>
-
-                </div>
-
-            </div>
-
-
-            <button
-                class="btn btn-primary"
-                id="generateQuiz">
-
-                🤖 Generate AI Quiz
-
-            </button>
-
-        </div>
-
-
-        <div
-            id="quizArea"
-            style="margin-top:18px;">
-
-        </div>
-
-
-        <div
-            id="quizHistoryArea"
-            style="margin-top:18px;">
-
-            ${renderQuizHistoryHTML()}
 
         </div>
 
     `;
 
 
-    const button =
+    try {
+
+        const prompt = `
+
+You are BharatBuddy AI, an Indian school education tutor.
+
+Create a complete study lesson for:
+
+Board: ${studyState.board}
+Class: ${studyState.className}
+Stream: ${studyState.stream}
+Subject: ${studyState.subject}
+Chapter: ${studyState.chapter}
+
+Return clear student-friendly study material with:
+
+1. Chapter overview
+2. Important concepts
+3. Definitions
+4. Detailed explanation
+5. Examples
+6. Important formulas if applicable
+7. Common mistakes
+8. Exam-focused points
+9. Quick revision
+
+Do not invent textbook page numbers.
+Use simple language.
+Keep the content educational and accurate.
+
+        `;
+
+
+        const answer =
+            await askAI(
+                prompt
+            );
+
+
+        area.innerHTML = `
+
+            <div class="ai-study-result">
+
+                <div class="lesson-header">
+
+                    <div>
+
+                        <span class="lesson-label">
+                            AI Generated Study
+                        </span>
+
+                        <h2>
+                            ${escapeHTML(
+                                studyState.chapter
+                            )}
+                        </h2>
+
+                    </div>
+
+                </div>
+
+                <div class="lesson-content">
+
+                    ${formatAIText(
+                        answer
+                    )}
+
+                </div>
+
+                <div class="lesson-actions">
+
+                    <button
+                        id="backGeneratedStudy"
+                        class="btn btn-secondary"
+                        type="button">
+
+                        ← Back to Lesson
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        `;
+
+
+        const back =
+            document.getElementById(
+                "backGeneratedStudy"
+            );
+
+        if (back) {
+
+            back.addEventListener(
+                "click",
+                renderCurrentLesson
+            );
+
+        }
+
+
+    } catch (error) {
+
+        area.innerHTML = `
+
+            <div class="empty-state">
+
+                <h3>
+                    ⚠️ AI Study unavailable
+                </h3>
+
+                <p>
+                    ${escapeHTML(
+                        error.message
+                    )}
+                </p>
+
+                <button
+                    id="retryAIStudy"
+                    class="btn btn-primary"
+                    type="button">
+
+                    Try Again
+
+                </button>
+
+            </div>
+
+        `;
+
+
+        const retry =
+            document.getElementById(
+                "retryAIStudy"
+            );
+
+        if (retry) {
+
+            retry.addEventListener(
+                "click",
+                generateCurrentAIStudy
+            );
+
+        }
+
+    }
+
+}
+
+
+/* ============================================================
+   PRACTICE
+   ============================================================ */
+
+function renderPractice() {
+
+    pageContent.innerHTML = `
+
+        <section class="page-header">
+
+            <h1>
+                🧠 Practice
+            </h1>
+
+            <p>
+                Generate AI-powered quizzes and test yourself.
+            </p>
+
+        </section>
+
+
+        <section class="card">
+
+            <div class="study-select-grid">
+
+                <label>
+
+                    <span>
+                        Subject
+                    </span>
+
+                    <select id="quizSubject">
+
+                        ${Object.keys(
+                            lessonData
+                        )
+                            .map(
+                                subject => `
+
+                                    <option value="${escapeHTML(
+                                        subject
+                                    )}">
+
+                                        ${escapeHTML(
+                                            subject
+                                        )}
+
+                                    </option>
+
+                                `
+                            )
+                            .join("")}
+
+                    </select>
+
+                </label>
+
+
+                <label>
+
+                    <span>
+                        Difficulty
+                    </span>
+
+                    <select id="quizDifficulty">
+
+                        <option value="easy">
+                            Easy
+                        </option>
+
+                        <option value="medium" selected>
+                            Medium
+                        </option>
+
+                        <option value="hard">
+                            Hard
+                        </option>
+
+                    </select>
+
+                </label>
+
+            </div>
+
+
+            <button
+                id="generateQuizBtn"
+                class="btn btn-primary"
+                type="button">
+
+                🤖 Generate AI Quiz
+
+            </button>
+
+        </section>
+
+
+        <section
+            id="quizArea"
+            class="card">
+
+            <div class="empty-state">
+
+                <div>
+                    📝
+                </div>
+
+                <h3>
+                    Ready for a challenge?
+                </h3>
+
+                <p>
+                    Generate a quiz to begin.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="card">
+
+            <div class="section-heading">
+
+                <h2>
+                    📜 Quiz History
+                </h2>
+
+            </div>
+
+            <div id="quizHistory">
+
+            </div>
+
+        </section>
+
+    `;
+
+
+    const generate =
         document.getElementById(
-            "generateQuiz"
+            "generateQuizBtn"
         );
 
+    if (generate) {
 
-    if (button) {
-
-        button.addEventListener(
+        generate.addEventListener(
             "click",
             generateQuiz
         );
@@ -5583,7 +5581,7 @@ function renderPractice() {
     }
 
 
-    attachQuizHistoryEvents();
+    renderQuizHistory();
 
 }
 
@@ -5596,12 +5594,599 @@ async function generateQuiz() {
         )?.value ||
         "Physics";
 
-
     const difficulty =
         document.getElementById(
             "quizDifficulty"
         )?.value ||
-        "Easy";
+        "medium";
+
+
+    const area =
+        document.getElementById(
+            "quizArea"
+        );
+
+    if (!area) return;
+
+
+    area.innerHTML = `
+
+        <div class="loading-state">
+
+            <div class="spinner"></div>
+
+            <h3>
+                🤖 Creating your quiz...
+            </h3>
+
+        </div>
+
+    `;
+
+
+    try {
+
+        const prompt = `
+
+Create exactly 5 multiple-choice questions for a school student.
+
+Subject: ${subject}
+Difficulty: ${difficulty}
+
+Return ONLY valid JSON in this format:
+
+[
+  {
+    "question": "Question",
+    "options": ["A","B","C","D"],
+    "answer": 0
+  }
+]
+
+Rules:
+- exactly 5 questions
+- exactly 4 options each
+- answer must be 0, 1, 2 or 3
+- no markdown
+- no explanation outside JSON
+
+        `;
+
+
+        const answer =
+            await askAI(
+                prompt
+            );
+
+
+        const questions =
+            parseQuizJSON(
+                answer
+            );
+
+
+        validateQuiz(
+            questions
+        );
+
+
+        startQuiz(
+            questions,
+            subject,
+            difficulty
+        );
+
+
+    } catch (error) {
+
+        area.innerHTML = `
+
+            <div class="empty-state">
+
+                <h3>
+                    ⚠️ Quiz generation failed
+                </h3>
+
+                <p>
+                    ${escapeHTML(
+                        error.message
+                    )}
+                </p>
+
+            </div>
+
+        `;
+
+    }
+
+}
+
+
+function parseQuizJSON(
+    text
+) {
+
+    let clean =
+        String(
+            text || ""
+        ).trim();
+
+
+    clean =
+        clean.replace(
+            /^```json/i,
+            ""
+        )
+        .replace(
+            /^```/i,
+            ""
+        )
+        .replace(
+            /```$/i,
+            ""
+        )
+        .trim();
+
+
+    const first =
+        clean.indexOf(
+            "["
+        );
+
+    const last =
+        clean.lastIndexOf(
+            "]"
+        );
+
+
+    if (
+        first >= 0 &&
+        last > first
+    ) {
+
+        clean =
+            clean.slice(
+                first,
+                last + 1
+            );
+
+    }
+
+
+    return JSON.parse(
+        clean
+    );
+
+}
+
+
+function validateQuiz(
+    questions
+) {
+
+    if (
+        !Array.isArray(
+            questions
+        ) ||
+        questions.length !== 5
+    ) {
+
+        throw new Error(
+            "AI quiz format invalid."
+        );
+
+    }
+
+
+    questions.forEach(
+        question => {
+
+            if (
+                !question ||
+                typeof question.question !==
+                "string" ||
+                !Array.isArray(
+                    question.options
+                ) ||
+                question.options.length !==
+                4 ||
+                !Number.isInteger(
+                    question.answer
+                ) ||
+                question.answer < 0 ||
+                question.answer > 3
+            ) {
+
+                throw new Error(
+                    "AI quiz question format invalid."
+                );
+
+            }
+
+        }
+    );
+
+}
+
+
+function startQuiz(
+    questions,
+    subject,
+    difficulty
+) {
+
+    activeQuiz = {
+
+        questions,
+
+        subject,
+
+        difficulty,
+
+        current: 0,
+
+        score: 0,
+
+        answers: [],
+
+        remaining:
+            QUIZ_TIME
+
+    };
+
+
+    renderQuizQuestion();
+
+    startQuizTimer();
+
+}
+
+
+function startQuizTimer() {
+
+    clearInterval(
+        quizTimer
+    );
+
+
+    quizTimer =
+        setInterval(
+            () => {
+
+                if (!activeQuiz) {
+
+                    clearInterval(
+                        quizTimer
+                    );
+
+                    return;
+
+                }
+
+
+                activeQuiz.remaining--;
+
+
+                const timer =
+                    document.getElementById(
+                        "quizTimer"
+                    );
+
+                if (timer) {
+
+                    timer.textContent =
+                        formatQuizTime(
+                            activeQuiz.remaining
+                        );
+
+                }
+
+
+                if (
+                    activeQuiz.remaining <=
+                    0
+                ) {
+
+                    clearInterval(
+                        quizTimer
+                    );
+
+                    finishQuiz();
+
+                }
+
+            },
+            1000
+        );
+
+}
+
+
+function formatQuizTime(
+    seconds
+) {
+
+    const mins =
+        Math.floor(
+            seconds / 60
+        );
+
+    const secs =
+        seconds % 60;
+
+    return `${String(
+        mins
+    ).padStart(
+        2,
+        "0"
+    )}:${String(
+        secs
+    ).padStart(
+        2,
+        "0"
+    )}`;
+
+}
+
+
+function renderQuizQuestion() {
+
+    const area =
+        document.getElementById(
+            "quizArea"
+        );
+
+
+    if (
+        !area ||
+        !activeQuiz
+    ) {
+
+        return;
+
+    }
+
+
+    if (
+        activeQuiz.current >=
+        activeQuiz.questions.length
+    ) {
+
+        finishQuiz();
+
+        return;
+
+    }
+
+
+    const question =
+        activeQuiz.questions[
+            activeQuiz.current
+        ];
+
+
+    area.innerHTML = `
+
+        <div class="quiz-top">
+
+            <div>
+
+                <span>
+                    Question
+                    ${activeQuiz.current + 1}
+                    /
+                    ${activeQuiz.questions.length}
+                </span>
+
+                <h2>
+                    ${escapeHTML(
+                        question.question
+                    )}
+                </h2>
+
+            </div>
+
+            <strong id="quizTimer">
+                ${formatQuizTime(
+                    activeQuiz.remaining
+                )}
+            </strong>
+
+        </div>
+
+
+        <div class="quiz-options">
+
+            ${question.options
+                .map(
+                    (
+                        option,
+                        index
+                    ) => `
+
+                        <button
+                            type="button"
+                            class="quiz-option"
+                            data-quiz-answer="${index}">
+
+                            <span>
+                                ${
+                                    String.fromCharCode(
+                                        65 +
+                                        index
+                                    )
+                                }
+                            </span>
+
+                            ${escapeHTML(
+                                option
+                            )}
+
+                        </button>
+
+                    `
+                )
+                .join("")}
+
+        </div>
+
+    `;
+
+
+    document
+        .querySelectorAll(
+            "[data-quiz-answer]"
+        )
+        .forEach(
+            button => {
+
+                button.addEventListener(
+                    "click",
+                    () => {
+
+                        handleQuizAnswer(
+                            Number(
+                                button.dataset.quizAnswer
+                            )
+                        );
+
+                    }
+                );
+
+            }
+        );
+
+}
+
+
+function handleQuizAnswer(
+    selected
+) {
+
+    if (
+        !activeQuiz
+    ) {
+
+        return;
+
+    }
+
+
+    const question =
+        activeQuiz.questions[
+            activeQuiz.current
+        ];
+
+
+    const correct =
+        selected ===
+        question.answer;
+
+
+    if (correct) {
+
+        activeQuiz.score++;
+
+    }
+
+
+    activeQuiz.answers.push({
+
+        question:
+            question.question,
+
+        selected,
+
+        correct:
+            question.answer
+
+    });
+
+
+    activeQuiz.current++;
+
+    renderQuizQuestion();
+
+}
+
+
+function finishQuiz() {
+
+    if (
+        !activeQuiz
+    ) {
+
+        return;
+
+    }
+
+
+    clearInterval(
+        quizTimer
+    );
+
+
+    const quiz =
+        activeQuiz;
+
+
+    const total =
+        quiz.questions.length;
+
+
+    const percentage =
+        Math.round(
+            (
+                quiz.score /
+                total
+            ) * 100
+        );
+
+
+    data.quizHistory.unshift({
+
+        subject:
+            quiz.subject,
+
+        difficulty:
+            quiz.difficulty,
+
+        score:
+            quiz.score,
+
+        total,
+
+        percentage,
+
+        date:
+            new Date().toISOString()
+
+    });
+
+
+    data.quizHistory =
+        data.quizHistory.slice(
+            0,
+            50
+        );
+
+
+    data.stats.quizzes =
+        Number(
+            data.stats.quizzes || 0
+        ) + 1;
+
+
+    data.dailyGoal =
+        Math.min(
+            data.dailyGoalTarget || 5,
+            Number(
+                data.dailyGoal || 0
+            ) + 1
+        );
+
+
+    saveData();
 
 
     const area =
@@ -5610,13 +6195,1565 @@ async function generateQuiz() {
         );
 
 
-    const button =
+    if (area) {
+
+        area.innerHTML = `
+
+            <div class="result-card">
+
+                <div class="result-icon">
+                    ${
+                        percentage >= 80
+                            ? "🏆"
+                            : percentage >= 60
+                                ? "🎉"
+                                : "📚"
+                    }
+                </div>
+
+                <h2>
+                    Quiz Complete
+                </h2>
+
+                <div class="result-score">
+
+                    <strong>
+                        ${quiz.score}/${total}
+                    </strong>
+
+                    <span>
+                        ${percentage}%
+                    </span>
+
+                </div>
+
+                <p>
+                    ${
+                        percentage >= 80
+                            ? "Excellent work!"
+                            : percentage >= 60
+                                ? "Good job! Keep practising."
+                                : "Revise the topic and try again."
+                    }
+                </p>
+
+                <button
+                    id="newQuizBtn"
+                    class="btn btn-primary"
+                    type="button">
+
+                    🔄 New Quiz
+
+                </button>
+
+            </div>
+
+        `;
+
+
+        const newQuiz =
+            document.getElementById(
+                "newQuizBtn"
+            );
+
+        if (newQuiz) {
+
+            newQuiz.addEventListener(
+                "click",
+                generateQuiz
+            );
+
+        }
+
+    }
+
+
+    activeQuiz =
+        null;
+
+    renderQuizHistory();
+
+}
+
+
+function renderQuizHistory() {
+
+    const box =
         document.getElementById(
-            "generateQuiz"
+            "quizHistory"
         );
 
 
-    if (!area) return;
+    if (!box) return;
+
+
+    if (
+        !data.quizHistory.length
+    ) {
+
+        box.innerHTML = `
+
+            <div class="empty-state">
+
+                <p>
+                    No quiz attempts yet.
+                </p>
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    box.innerHTML =
+        data.quizHistory
+            .map(
+                quiz => `
+
+                    <div class="history-item">
+
+                        <div>
+
+                            <strong>
+                                ${escapeHTML(
+                                    quiz.subject
+                                )}
+                            </strong>
+
+                            <small>
+                                ${escapeHTML(
+                                    quiz.difficulty
+                                )}
+                            </small>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                ${quiz.score}/${quiz.total}
+                            </strong>
+
+                            <small>
+                                ${quiz.percentage}%
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                `
+            )
+            .join("");
+
+}
+
+
+/* ============================================================
+   END PART 1
+   ============================================================ */
+   function evaluateTextAnswer(
+    userAnswer,
+    expectedAnswer
+) {
+
+    const userWords =
+        String(userAnswer)
+            .toLowerCase()
+            .split(/\W+/)
+            .filter(word => word.length > 3);
+
+    const expectedWords =
+        String(expectedAnswer)
+            .toLowerCase()
+            .split(/\W+/)
+            .filter(word => word.length > 3);
+
+    if (
+        !userWords.length ||
+        !expectedWords.length
+    ) {
+        return 0;
+    }
+
+    let matches = 0;
+
+    userWords.forEach(word => {
+
+        if (
+            expectedWords.includes(word)
+        ) {
+            matches++;
+        }
+
+    });
+
+    const ratio =
+        matches /
+        Math.min(
+            userWords.length,
+            expectedWords.length
+        );
+
+    return ratio >= 0.25 ? 1 : 0;
+
+}
+
+
+/* ============================================================
+   FINISH CHAPTER TEST
+   ============================================================ */
+
+function finishChapterTest() {
+
+    const test =
+        activeChapterTest;
+
+    if (!test) {
+        return;
+    }
+
+    test.finished = true;
+
+    const total =
+        test.questions.length;
+
+    const percentage =
+        total > 0
+            ? Math.round(
+                (test.score / total) * 100
+            )
+            : 0;
+
+
+    /*
+     * Save chapter test result
+     */
+
+    if (!Array.isArray(
+        data.chapterTests
+    )) {
+
+        data.chapterTests = [];
+
+    }
+
+
+    data.chapterTests.push({
+
+        board:
+            studyState.board,
+
+        className:
+            studyState.className,
+
+        stream:
+            studyState.stream,
+
+        subject:
+            test.subject,
+
+        chapter:
+            test.chapter,
+
+        score:
+            test.score,
+
+        total,
+
+        percentage,
+
+        date:
+            new Date().toISOString()
+
+    });
+
+
+    /*
+     * Keep history manageable
+     */
+
+    data.chapterTests =
+        data.chapterTests.slice(-100);
+
+
+    /*
+     * If student gets 60% or more,
+     * complete the chapter lessons.
+     */
+
+    if (percentage >= 60) {
+
+        const lessons =
+            getChapterLessons(
+                test.subject,
+                test.chapter
+            );
+
+
+        const chapterIndex =
+            getCurriculumChapters(
+                test.subject
+            ).indexOf(
+                test.chapter
+            );
+
+
+        if (!Array.isArray(
+            data.lessonProgress[
+                test.subject
+            ]
+        )) {
+
+            data.lessonProgress[
+                test.subject
+            ] = [];
+
+        }
+
+
+        lessons.forEach(
+            (lesson, index) => {
+
+                const lessonId =
+                    `${studyState.board}-${studyState.className}-${studyState.stream}-${test.subject}-${chapterIndex}-${index}`;
+
+
+                if (
+                    !data.lessonProgress[
+                        test.subject
+                    ].includes(
+                        lessonId
+                    )
+                ) {
+
+                    data.lessonProgress[
+                        test.subject
+                    ].push(
+                        lessonId
+                    );
+
+                }
+
+            }
+        );
+
+
+        data.progress[
+            normalizeProgressSubject(
+                test.subject
+            )
+        ] =
+            calculateLessonProgress(
+                test.subject
+            );
+
+    }
+
+
+    saveData();
+
+
+    /*
+     * Render result
+     */
+
+    const area =
+        document.getElementById(
+            "currentLessonArea"
+        );
+
+
+    if (!area) {
+
+        activeChapterTest = null;
+
+        return;
+
+    }
+
+
+    const nextChapter =
+        getNextCurriculumChapter();
+
+
+    const hasNextChapter =
+        Boolean(nextChapter);
+
+
+    area.innerHTML = `
+
+        <div class="card chapter-result-card">
+
+            <div
+                style="
+                    text-align:center;
+                    padding:20px;
+                ">
+
+                <div
+                    style="
+                        font-size:52px;
+                        margin-bottom:10px;
+                    ">
+
+                    ${
+                        percentage >= 60
+                            ? "🎉"
+                            : "📖"
+                    }
+
+                </div>
+
+
+                <h2>
+                    Chapter Test Complete
+                </h2>
+
+
+                <p
+                    style="
+                        font-size:18px;
+                        margin:12px 0;
+                    ">
+
+                    ${escapeHTML(
+                        test.chapter
+                    )}
+
+                </p>
+
+
+                <div
+                    style="
+                        font-size:32px;
+                        font-weight:700;
+                        margin:18px 0;
+                    ">
+
+                    ${test.score}
+                    /
+                    ${total}
+
+                </div>
+
+
+                <p>
+
+                    Score:
+                    <strong>
+                        ${percentage}%
+                    </strong>
+
+                </p>
+
+
+                ${
+                    percentage >= 60
+
+                        ? `
+                            <div
+                                class="success-message"
+                                style="
+                                    margin-top:16px;
+                                ">
+
+                                ✅ Chapter completed!
+                                Great work.
+
+                            </div>
+                        `
+
+                        : `
+                            <div
+                                class="warning-message"
+                                style="
+                                    margin-top:16px;
+                                ">
+
+                                📚 Score 60% se kam hai.
+                                Chapter ko revise karke
+                                dobara test do.
+
+                            </div>
+                        `
+                }
+
+
+                <div
+                    style="
+                        display:flex;
+                        gap:10px;
+                        justify-content:center;
+                        flex-wrap:wrap;
+                        margin-top:22px;
+                    ">
+
+
+                    ${
+                        percentage >= 60 &&
+                        hasNextChapter
+
+                            ? `
+                                <button
+                                    class="btn btn-primary"
+                                    id="nextChapterAfterTest"
+                                    type="button">
+
+                                    Next Chapter →
+
+                                </button>
+                            `
+
+                            : ""
+                    }
+
+
+                    ${
+                        percentage < 60
+
+                            ? `
+                                <button
+                                    class="btn btn-primary"
+                                    id="retryChapterTest"
+                                    type="button">
+
+                                    🔄 Retry Test
+
+                                </button>
+                            `
+
+                            : ""
+                    }
+
+
+                    <button
+                        class="btn btn-secondary"
+                        id="backToStudy"
+                        type="button">
+
+                        ← Back to Study
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    `;
+
+
+    /*
+     * Next chapter
+     */
+
+    const nextButton =
+        document.getElementById(
+            "nextChapterAfterTest"
+        );
+
+
+    if (nextButton) {
+
+        nextButton.addEventListener(
+            "click",
+            () => {
+
+                studyState.chapter =
+                    nextChapter;
+
+                studyState.lessonIndex =
+                    0;
+
+                activeChapterTest =
+                    null;
+
+                renderStudy();
+
+                setTimeout(
+                    scrollToCurrentLesson,
+                    100
+                );
+
+            }
+        );
+
+    }
+
+
+    /*
+     * Retry test
+     */
+
+    const retryButton =
+        document.getElementById(
+            "retryChapterTest"
+        );
+
+
+    if (retryButton) {
+
+        retryButton.addEventListener(
+            "click",
+            () => {
+
+                activeChapterTest =
+                    null;
+
+                startChapterTest();
+
+            }
+        );
+
+    }
+
+
+    /*
+     * Back to study
+     */
+
+    const backButton =
+        document.getElementById(
+            "backToStudy"
+        );
+
+
+    if (backButton) {
+
+        backButton.addEventListener(
+            "click",
+            () => {
+
+                activeChapterTest =
+                    null;
+
+                renderStudy();
+
+            }
+        );
+
+    }
+
+
+    /*
+     * Update general statistics
+     */
+
+    updateStats(
+        "chapterTests"
+    );
+
+    saveData();
+
+}
+
+
+/* ============================================================
+   COMPLETE CURRENT LESSON
+   ============================================================ */
+
+function completeCurrentLesson() {
+
+    const subject =
+        studyState.subject;
+
+    const chapter =
+        studyState.chapter;
+
+    const lessons =
+        getChapterLessons(
+            subject,
+            chapter
+        );
+
+
+    if (!lessons.length) {
+
+        showToast(
+            "Is chapter me koi lesson nahi mila."
+        );
+
+        return;
+
+    }
+
+
+    const lessonIndex =
+        Math.max(
+            0,
+            Math.min(
+                studyState.lessonIndex,
+                lessons.length - 1
+            )
+        );
+
+
+    const chapterIndex =
+        getCurriculumChapters(
+            subject
+        ).indexOf(
+            chapter
+        );
+
+
+    const lessonId =
+        `${studyState.board}-${studyState.className}-${studyState.stream}-${subject}-${chapterIndex}-${lessonIndex}`;
+
+
+    if (!Array.isArray(
+        data.lessonProgress[subject]
+    )) {
+
+        data.lessonProgress[subject] =
+            [];
+
+    }
+
+
+    /*
+     * Mark current lesson complete
+     */
+
+    if (
+        !data.lessonProgress[
+            subject
+        ].includes(
+            lessonId
+        )
+    ) {
+
+        data.lessonProgress[
+            subject
+        ].push(
+            lessonId
+        );
+
+        updateStats(
+            "lessons"
+        );
+
+        showToast(
+            "✅ Lesson complete!"
+        );
+
+    } else {
+
+        showToast(
+            "Ye lesson already complete hai."
+        );
+
+    }
+
+
+    /*
+     * Update subject progress
+     */
+
+    data.progress[
+        normalizeProgressSubject(
+            subject
+        )
+    ] =
+        calculateLessonProgress(
+            subject
+        );
+
+
+    saveData();
+
+
+    /*
+     * More lessons available
+     */
+
+    if (
+        lessonIndex <
+        lessons.length - 1
+    ) {
+
+        studyState.lessonIndex =
+            lessonIndex + 1;
+
+        renderStudy();
+
+        setTimeout(
+            scrollToCurrentLesson,
+            100
+        );
+
+        return;
+
+    }
+
+
+    /*
+     * Last lesson of chapter
+     */
+
+    showToast(
+        "🎯 Chapter lessons complete! Ab Chapter Test do."
+    );
+
+
+    setTimeout(
+        () => {
+
+            startChapterTest();
+
+        },
+        300
+    );
+
+}
+
+
+/* ============================================================
+   CURRENT LESSON RENDER
+   ============================================================ */
+
+function renderCurrentLesson() {
+
+    const area =
+        document.getElementById(
+            "currentLessonArea"
+        );
+
+
+    if (!area) {
+        return;
+    }
+
+
+    /*
+     * If chapter test is active,
+     * don't replace its UI.
+     */
+
+    if (activeChapterTest) {
+
+        renderChapterTest();
+
+        return;
+
+    }
+
+
+    const subject =
+        studyState.subject;
+
+    const chapter =
+        studyState.chapter;
+
+
+    if (!subject || !chapter) {
+
+        area.innerHTML = `
+
+            <div class="card">
+
+                <h3>
+                    📚 Select a chapter
+                </h3>
+
+                <p>
+                    Subject aur chapter select
+                    karke learning start karo.
+                </p>
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    const lessons =
+        getChapterLessons(
+            subject,
+            chapter
+        );
+
+
+    if (!lessons.length) {
+
+        area.innerHTML = `
+
+            <div class="card">
+
+                <h3>
+                    Lesson unavailable
+                </h3>
+
+                <p>
+                    Is chapter ka lesson
+                    abhi available nahi hai.
+                </p>
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    const index =
+        Math.max(
+            0,
+            Math.min(
+                studyState.lessonIndex,
+                lessons.length - 1
+            )
+        );
+
+
+    studyState.lessonIndex =
+        index;
+
+
+    const lesson =
+        lessons[index];
+
+
+    const chapterIndex =
+        getCurriculumChapters(
+            subject
+        ).indexOf(
+            chapter
+        );
+
+
+    const lessonId =
+        `${studyState.board}-${studyState.className}-${studyState.stream}-${subject}-${chapterIndex}-${index}`;
+
+
+    const completed =
+        Array.isArray(
+            data.lessonProgress[
+                subject
+            ]
+        )
+            ? data.lessonProgress[
+                subject
+            ].includes(
+                lessonId
+            )
+            : false;
+
+
+    const progress =
+        lessons.length
+            ? Math.round(
+                (
+                    lessons.filter(
+                        (_, lessonNo) =>
+                            Array.isArray(
+                                data.lessonProgress[
+                                    subject
+                                ]
+                            ) &&
+                            data.lessonProgress[
+                                subject
+                            ].includes(
+                                `${studyState.board}-${studyState.className}-${studyState.stream}-${subject}-${chapterIndex}-${lessonNo}`
+                            )
+                    ).length /
+                    lessons.length
+                ) * 100
+            )
+            : 0;
+
+
+    area.innerHTML = `
+
+        <div class="lesson-card">
+
+            <div
+                class="lesson-header">
+
+                <div>
+
+                    <span
+                        class="lesson-label">
+
+                        Lesson
+                        ${index + 1}
+                        /
+                        ${lessons.length}
+
+                    </span>
+
+
+                    <h2>
+                        ${escapeHTML(
+                            lesson.title ||
+                            `Lesson ${index + 1}`
+                        )}
+                    </h2>
+
+                </div>
+
+
+                <div
+                    class="lesson-status">
+
+                    ${
+                        completed
+                            ? "✅ Completed"
+                            : `${progress}% complete`
+                    }
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="lesson-progress">
+
+                <div
+                    class="progress">
+
+                    <div
+                        class="progress-bar"
+                        style="
+                            width:${progress}%;
+                        ">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="lesson-content">
+
+                ${formatAIText(
+                    lesson.content ||
+                    "Lesson content available soon."
+                )}
+
+            </div>
+
+
+            ${
+                lesson.example
+
+                    ? `
+                        <div
+                            class="lesson-example">
+
+                            <h3>
+                                💡 Example
+                            </h3>
+
+                            <div>
+
+                                ${formatAIText(
+                                    lesson.example
+                                )}
+
+                            </div>
+
+                        </div>
+                    `
+
+                    : ""
+            }
+
+
+            <div
+                class="lesson-actions">
+
+                <button
+                    class="btn btn-secondary"
+                    id="previousLesson"
+                    type="button"
+                    ${
+                        index === 0
+                            ? "disabled"
+                            : ""
+                    }>
+
+                    ← Previous
+
+                </button>
+
+
+                <button
+                    class="btn btn-primary"
+                    id="completeLessonBtn"
+                    type="button">
+
+                    ${
+                        completed
+                            ? "✓ Completed"
+                            : "Mark Lesson Complete"
+                    }
+
+                </button>
+
+
+                <button
+                    class="btn btn-secondary"
+                    id="nextLesson"
+                    type="button"
+                    ${
+                        index >=
+                        lessons.length - 1
+                            ? "disabled"
+                            : ""
+                    }>
+
+                    Next →
+
+                </button>
+
+            </div>
+
+
+            <div
+                class="lesson-footer">
+
+                <span>
+                    Chapter:
+                    ${escapeHTML(
+                        chapter
+                    )}
+                </span>
+
+                <button
+                    class="btn btn-outline"
+                    id="chapterTestBtn"
+                    type="button">
+
+                    📝 Chapter Test
+
+                </button>
+
+            </div>
+
+        </div>
+
+    `;
+
+
+    const completeButton =
+        document.getElementById(
+            "completeLessonBtn"
+        );
+
+
+    if (completeButton) {
+
+        completeButton.addEventListener(
+            "click",
+            () => {
+
+                completeCurrentLesson();
+
+            }
+        );
+
+    }
+
+
+    const previousButton =
+        document.getElementById(
+            "previousLesson"
+        );
+
+
+    if (previousButton) {
+
+        previousButton.addEventListener(
+            "click",
+            () => {
+
+                if (
+                    studyState.lessonIndex >
+                    0
+                ) {
+
+                    studyState.lessonIndex--;
+
+                    renderCurrentLesson();
+
+                    scrollToCurrentLesson();
+
+                }
+
+            }
+        );
+
+    }
+
+
+    const nextButton =
+        document.getElementById(
+            "nextLesson"
+        );
+
+
+    if (nextButton) {
+
+        nextButton.addEventListener(
+            "click",
+            () => {
+
+                if (
+                    studyState.lessonIndex <
+                    lessons.length - 1
+                ) {
+
+                    studyState.lessonIndex++;
+
+                    renderCurrentLesson();
+
+                    scrollToCurrentLesson();
+
+                }
+
+            }
+        );
+
+    }
+
+
+    const testButton =
+        document.getElementById(
+            "chapterTestBtn"
+        );
+
+
+    if (testButton) {
+
+        testButton.addEventListener(
+            "click",
+            () => {
+
+                startChapterTest();
+
+            }
+        );
+
+    }
+
+}
+
+
+/* ============================================================
+   AI PRACTICE / QUIZ
+   ============================================================ */
+
+function renderPractice() {
+
+    const content =
+        document.getElementById(
+            "pageContent"
+        );
+
+
+    if (!content) {
+        return;
+    }
+
+
+    const history =
+        Array.isArray(
+            data.quizHistory
+        )
+            ? data.quizHistory
+            : [];
+
+
+    content.innerHTML = `
+
+        <section class="page-section">
+
+            <div class="section-header">
+
+                <div>
+
+                    <span
+                        class="eyebrow">
+
+                        PRACTICE
+
+                    </span>
+
+                    <h1>
+                        AI Quiz
+                    </h1>
+
+                    <p>
+                        Apne level ke questions
+                        generate karke practice karo.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="card quiz-generator">
+
+                <div
+                    class="form-grid">
+
+                    <div
+                        class="form-group">
+
+                        <label>
+                            Subject
+                        </label>
+
+                        <select
+                            id="quizSubject"
+                            class="form-select">
+
+                            ${getCurriculumSubjects()
+                                .map(
+                                    subject => `
+
+                                        <option
+                                            value="${escapeHTML(
+                                                subject
+                                            )}"
+                                            ${
+                                                subject ===
+                                                studyState.subject
+                                                    ? "selected"
+                                                    : ""
+                                            }>
+
+                                            ${escapeHTML(
+                                                subject
+                                            )}
+
+                                        </option>
+
+                                    `
+                                )
+                                .join("")}
+
+                        </select>
+
+                    </div>
+
+
+                    <div
+                        class="form-group">
+
+                        <label>
+                            Difficulty
+                        </label>
+
+                        <select
+                            id="quizDifficulty"
+                            class="form-select">
+
+                            <option value="easy">
+                                Easy
+                            </option>
+
+                            <option
+                                value="medium"
+                                selected>
+
+                                Medium
+
+                            </option>
+
+                            <option value="hard">
+                                Hard
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="btn btn-primary"
+                    id="generateQuizBtn"
+                    type="button">
+
+                    🤖 Generate AI Quiz
+
+                </button>
+
+
+                <div
+                    id="quizArea"
+                    style="margin-top:20px;">
+
+                    ${
+                        activeQuiz
+                            ? ""
+                            : `
+                                <div
+                                    class="empty-state">
+
+                                    <div
+                                        class="empty-icon">
+
+                                        📝
+
+                                    </div>
+
+                                    <h3>
+                                        Ready to Practice?
+                                    </h3>
+
+                                    <p>
+                                        Generate a 5-question
+                                        AI quiz.
+                                    </p>
+
+                                </div>
+                            `
+                    }
+
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3>
+                            📚 Quiz History
+                        </h3>
+
+                        <p>
+                            Tumhare previous quiz results.
+                        </p>
+
+                    </div>
+
+
+                    ${
+                        history.length
+                            ? `
+                                <button
+                                    class="btn btn-secondary"
+                                    id="clearQuizHistoryBtn"
+                                    type="button">
+
+                                    Clear History
+
+                                </button>
+                            `
+                            : ""
+                    }
+
+                </div>
+
+
+                <div
+                    id="quizHistoryList">
+
+                    ${renderQuizHistoryHTML(
+                        history
+                    )}
+
+                </div>
+
+            </div>
+
+        </section>
+
+    `;
+
+
+    attachQuizEvents();
+
+
+    if (activeQuiz) {
+
+        renderQuizQuestion();
+
+    }
+
+}
+
+
+/* ============================================================
+   QUIZ EVENTS
+   ============================================================ */
+
+function attachQuizEvents() {
+
+    const generateButton =
+        document.getElementById(
+            "generateQuizBtn"
+        );
+
+
+    if (generateButton) {
+
+        generateButton.addEventListener(
+            "click",
+            generateQuiz
+        );
+
+    }
+
+
+    const clearButton =
+        document.getElementById(
+            "clearQuizHistoryBtn"
+        );
+
+
+    if (clearButton) {
+
+        clearButton.addEventListener(
+            "click",
+            clearQuizHistory
+        );
+
+    }
+
+}
+
+
+async function generateQuiz() {
+
+    const subject =
+        document.getElementById(
+            "quizSubject"
+        )?.value ||
+        studyState.subject;
+
+
+    const difficulty =
+        document.getElementById(
+            "quizDifficulty"
+        )?.value ||
+        "medium";
+
+
+    const button =
+        document.getElementById(
+            "generateQuizBtn"
+        );
 
 
     if (button) {
@@ -5629,24 +7766,28 @@ async function generateQuiz() {
     }
 
 
-    area.innerHTML = `
-
-        <div class="card">
-
-            🤖 AI is creating your quiz...
-
-        </div>
-
-    `;
-
-
     try {
 
         const prompt = `
 
-Create a Class 11 ${subject} multiple choice quiz.
+Create a school-level multiple choice quiz.
 
-Difficulty: ${difficulty}
+Subject:
+${subject}
+
+Class:
+${studyState.className}
+
+Board:
+${studyState.board}
+
+Stream:
+${studyState.stream}
+
+Difficulty:
+${difficulty}
+
+Create exactly 5 questions.
 
 Return ONLY valid JSON.
 
@@ -5655,76 +7796,68 @@ Format:
 {
   "questions": [
     {
-      "question": "Question text",
+      "question": "Question",
       "options": [
         "Option A",
         "Option B",
         "Option C",
         "Option D"
       ],
-      "answer": 0,
-      "explanation": "Short explanation"
+      "answer": 0
     }
   ]
 }
 
 Rules:
 
-- Exactly 5 questions.
-- Exactly 4 options per question.
-- answer must be 0, 1, 2 or 3.
-- Questions must be educational and factually correct.
-- Use Class 11 level concepts.
-- Do not include markdown.
-- Do not include extra text outside JSON.
+- answer must be 0, 1, 2 or 3
+- exactly four options
+- no markdown
+- no explanation outside JSON
+- questions must match the class level
 
 `;
 
 
-        const answer =
+        const response =
             await askAI(
                 prompt
             );
 
 
-        const quiz =
+        const parsed =
             parseQuizJSON(
-                answer
+                response
             );
 
 
-        validateQuiz(
-            quiz
-        );
+        if (
+            !validateQuiz(
+                parsed
+            )
+        ) {
+
+            throw new Error(
+                "AI ne valid quiz format nahi diya."
+            );
+
+        }
 
 
         startQuiz(
-            quiz.questions,
+            parsed.questions,
             subject,
             difficulty
         );
 
+
     } catch (error) {
 
-        area.innerHTML = `
+        showToast(
+            error.message ||
+            "Quiz generate nahi ho saka."
+        );
 
-            <div class="card">
-
-                ❌ Quiz generate nahi ho paya.
-
-                <br><br>
-
-                ${escapeHTML(
-                    error.message
-                )}
-
-                <br><br>
-
-                Please try again.
-
-            </div>
-
-        `;
 
     } finally {
 
@@ -5742,25 +7875,13 @@ Rules:
 }
 
 
-/* ============================================================
-   QUIZ JSON PARSER
-   ============================================================ */
-
 function parseQuizJSON(
     text
 ) {
 
-    if (!text) {
-
-        throw new Error(
-            "AI ne quiz response nahi diya."
-        );
-
-    }
-
-
     let clean =
-        String(text).trim();
+        String(text)
+            .trim();
 
 
     clean =
@@ -5784,10 +7905,6 @@ function parseQuizJSON(
         );
 
 
-    clean =
-        clean.trim();
-
-
     try {
 
         return JSON.parse(
@@ -5800,7 +7917,6 @@ function parseQuizJSON(
             clean.indexOf(
                 "{"
             );
-
 
         const end =
             clean.lastIndexOf(
@@ -5815,7 +7931,7 @@ function parseQuizJSON(
         ) {
 
             return JSON.parse(
-                clean.substring(
+                clean.slice(
                     start,
                     end + 1
                 )
@@ -5823,19 +7939,14 @@ function parseQuizJSON(
 
         }
 
-
         throw new Error(
-            "AI quiz JSON invalid hai."
+            "Quiz JSON parse nahi hua."
         );
 
     }
 
 }
 
-
-/* ============================================================
-   QUIZ VALIDATION
-   ============================================================ */
 
 function validateQuiz(
     quiz
@@ -5848,100 +7959,48 @@ function validateQuiz(
         )
     ) {
 
-        throw new Error(
-            "Quiz questions missing hain."
-        );
+        return false;
 
     }
 
 
     if (
-        quiz.questions.length !==
-        5
+        quiz.questions.length !== 5
     ) {
 
-        throw new Error(
-            "AI ne exactly 5 questions generate nahi kiye."
-        );
+        return false;
 
     }
 
 
-    quiz.questions.forEach(
-        (
-            question,
-            index
-        ) => {
+    return quiz.questions.every(
+        question => {
 
-            if (
-                !question ||
-                typeof question.question !==
-                    "string" ||
-                !question.question.trim()
-            ) {
+            return (
+                typeof question.question ===
+                    "string" &&
 
-                throw new Error(
-                    `Question ${index + 1} invalid hai.`
-                );
-
-            }
-
-
-            if (
-                !Array.isArray(
+                Array.isArray(
                     question.options
-                ) ||
-                question.options.length !==
-                    4
-            ) {
+                ) &&
 
-                throw new Error(
-                    `Question ${index + 1} me exactly 4 options hone chahiye.`
-                );
+                question.options.length ===
+                    4 &&
 
-            }
-
-
-            question.options =
-                question.options.map(
+                question.options.every(
                     option =>
-                        String(option)
-                );
+                        typeof option ===
+                        "string"
+                ) &&
 
-
-            const answer =
-                Number(
+                Number.isInteger(
                     question.answer
-                );
+                ) &&
 
+                question.answer >= 0 &&
+                question.answer <= 3
 
-            if (
-                !Number.isInteger(
-                    answer
-                ) ||
-                answer < 0 ||
-                answer > 3
-            ) {
-
-                throw new Error(
-                    `Question ${index + 1} ka correct answer invalid hai.`
-                );
-
-            }
-
-
-            question.answer =
-                answer;
-
-
-            if (
-                !question.explanation
-            ) {
-
-                question.explanation =
-                    "Correct answer selected according to the AI-generated quiz.";
-
-            }
+            );
 
         }
     );
@@ -5949,18 +8008,11 @@ function validateQuiz(
 }
 
 
-/* ============================================================
-   START QUIZ
-   ============================================================ */
-
 function startQuiz(
     questions,
     subject,
     difficulty
 ) {
-
-    stopQuizTimer();
-
 
     activeQuiz = {
 
@@ -5974,14 +8026,13 @@ function startQuiz(
 
         score: 0,
 
-        answered: 0,
+        answers: [],
+
+        startedAt:
+            Date.now(),
 
         timeLeft:
-            QUIZ_TIME,
-
-        selectedAnswers: [],
-
-        finished: false
+            QUIZ_TIME
 
     };
 
@@ -5993,25 +8044,24 @@ function startQuiz(
 }
 
 
-/* ============================================================
-   QUIZ TIMER
-   ============================================================ */
-
 function startQuizTimer() {
 
-    stopQuizTimer();
-
-
-    updateQuizTimerUI();
+    clearInterval(
+        quizTimer
+    );
 
 
     quizTimer =
         setInterval(
             () => {
 
-                if (!activeQuiz) {
+                if (
+                    !activeQuiz
+                ) {
 
-                    stopQuizTimer();
+                    clearInterval(
+                        quizTimer
+                    );
 
                     return;
 
@@ -6021,7 +8071,20 @@ function startQuizTimer() {
                 activeQuiz.timeLeft--;
 
 
-                updateQuizTimerUI();
+                const timer =
+                    document.getElementById(
+                        "quizTimer"
+                    );
+
+
+                if (timer) {
+
+                    timer.textContent =
+                        formatTime(
+                            activeQuiz.timeLeft
+                        );
+
+                }
 
 
                 if (
@@ -6029,17 +8092,11 @@ function startQuizTimer() {
                     0
                 ) {
 
-                    stopQuizTimer();
-
-
-                    showToast(
-                        "⏰ Time up! Quiz submit ho raha hai."
+                    clearInterval(
+                        quizTimer
                     );
 
-
-                    finishQuiz(
-                        true
-                    );
+                    finishQuiz();
 
                 }
 
@@ -6050,50 +8107,34 @@ function startQuizTimer() {
 }
 
 
-function stopQuizTimer() {
-
-    if (quizTimer) {
-
-        clearInterval(
-            quizTimer
-        );
-
-        quizTimer = null;
-
-    }
-
-}
-
-
 function formatTime(
     seconds
 ) {
 
-    const minutes =
-        Math.floor(
-            seconds / 60
+    const safe =
+        Math.max(
+            0,
+            Number(seconds) || 0
         );
 
 
-    const remaining =
-        seconds % 60;
+    const minutes =
+        Math.floor(
+            safe / 60
+        );
+
+
+    const secs =
+        safe % 60;
 
 
     return `${String(
         minutes
-    ).padStart(
-        2,
-        "0"
-    )}:${String(
-        remaining
-    ).padStart(
-        2,
-        "0"
-    )}`;
+    ).padStart(2, "0")}:${String(
+        secs
+    ).padStart(2, "0")}`;
 
 }
-
-
 function updateQuizTimerUI() {
 
     const timer =
@@ -6101,29 +8142,22 @@ function updateQuizTimerUI() {
             "quizTimer"
         );
 
-
     if (
         !timer ||
         !activeQuiz
     ) {
-
         return;
-
     }
-
 
     timer.textContent =
         `⏱️ ${formatTime(
             activeQuiz.timeLeft
         )}`;
 
-
     timer.style.fontWeight =
-        activeQuiz.timeLeft <=
-            10
+        activeQuiz.timeLeft <= 10
             ? "800"
             : "700";
-
 }
 
 
@@ -6133,25 +8167,24 @@ function updateQuizTimerUI() {
 
 function renderQuizQuestion() {
 
-    if (!activeQuiz) return;
-
+    if (!activeQuiz) {
+        return;
+    }
 
     const area =
         document.getElementById(
             "quizArea"
         );
 
-
-    if (!area) return;
-
+    if (!area) {
+        return;
+    }
 
     const questions =
         activeQuiz.questions;
 
-
     const current =
         activeQuiz.current;
-
 
     if (
         current >=
@@ -6161,13 +8194,10 @@ function renderQuizQuestion() {
         finishQuiz();
 
         return;
-
     }
-
 
     const q =
         questions[current];
-
 
     const progress =
         (
@@ -6176,7 +8206,6 @@ function renderQuizQuestion() {
             ) /
             questions.length
         ) * 100;
-
 
     area.innerHTML = `
 
@@ -6192,8 +8221,7 @@ function renderQuizQuestion() {
                     flex-wrap:wrap;
                 ">
 
-                <div
-                    class="quiz-progress">
+                <div class="quiz-progress">
 
                     Question
                     ${current + 1}
@@ -6201,7 +8229,6 @@ function renderQuizQuestion() {
                     ${questions.length}
 
                 </div>
-
 
                 <div
                     id="quizTimer"
@@ -6221,7 +8248,6 @@ function renderQuizQuestion() {
 
             </div>
 
-
             <div class="progress">
 
                 <div
@@ -6230,7 +8256,6 @@ function renderQuizQuestion() {
                 </div>
 
             </div>
-
 
             <div
                 style="
@@ -6255,7 +8280,6 @@ function renderQuizQuestion() {
 
             </div>
 
-
             <div class="quiz-question">
 
                 ${escapeHTML(
@@ -6263,7 +8287,6 @@ function renderQuizQuestion() {
                 )}
 
             </div>
-
 
             <div class="quiz-options">
 
@@ -6291,7 +8314,6 @@ function renderQuizQuestion() {
 
             </div>
 
-
             <div
                 id="quizExplanation"
                 style="margin-top:16px;">
@@ -6301,7 +8323,6 @@ function renderQuizQuestion() {
         </div>
 
     `;
-
 
     document
         .querySelectorAll(
@@ -6326,11 +8347,14 @@ function renderQuizQuestion() {
             }
         );
 
-
     updateQuizTimerUI();
 
 }
 
+
+/* ============================================================
+   HANDLE QUIZ ANSWER
+   ============================================================ */
 
 function handleQuizAnswer(
     selected
@@ -6340,56 +8364,45 @@ function handleQuizAnswer(
         !activeQuiz ||
         activeQuiz.finished
     ) {
-
         return;
-
     }
-
 
     const current =
         activeQuiz.current;
-
 
     const q =
         activeQuiz.questions[
             current
         ];
 
-
-    if (!q) return;
-
+    if (!q) {
+        return;
+    }
 
     if (
         activeQuiz.selectedAnswers[
             current
         ] !== undefined
     ) {
-
         return;
-
     }
-
 
     const correct =
         Number(
             q.answer
         );
 
-
     activeQuiz.selectedAnswers[
         current
     ] =
         selected;
 
-
     activeQuiz.answered++;
-
 
     const buttons =
         document.querySelectorAll(
             ".quiz-option"
         );
-
 
     buttons.forEach(
         button => {
@@ -6397,12 +8410,10 @@ function handleQuizAnswer(
             button.disabled =
                 true;
 
-
             const index =
                 Number(
                     button.dataset.index
                 );
-
 
             if (
                 index ===
@@ -6415,12 +8426,9 @@ function handleQuizAnswer(
 
             }
 
-
             if (
-                index ===
-                    selected &&
-                index !==
-                    correct
+                index === selected &&
+                index !== correct
             ) {
 
                 button.classList.add(
@@ -6432,16 +8440,13 @@ function handleQuizAnswer(
         }
     );
 
-
     const isCorrect =
         selected ===
         correct;
 
-
     if (isCorrect) {
 
         activeQuiz.score++;
-
 
         showToast(
             "✅ Correct answer!"
@@ -6455,44 +8460,39 @@ function handleQuizAnswer(
 
     }
 
-
     const explanation =
         document.getElementById(
             "quizExplanation"
         );
-
 
     if (explanation) {
 
         explanation.innerHTML = `
 
             <div
-                class="card"
-                style="margin-top:10px;">
+                style="
+                    padding:12px;
+                    border-radius:10px;
+                    background:rgba(
+                        37,
+                        99,
+                        235,
+                        .08
+                    );
+                ">
 
-                <strong>
-
-                    ${
-                        isCorrect
-                            ? "✅ Correct!"
-                            : "❌ Not quite!"
-                    }
-
-                </strong>
-
-
-                <p
-                    style="margin-top:8px;">
-
-                    <strong>
-                        Explanation:
-                    </strong>
-
-                    ${escapeHTML(
-                        q.explanation
-                    )}
-
-                </p>
+                ${
+                    isCorrect
+                        ? "🎯 Excellent! Correct answer."
+                        : `Correct answer:
+                           <strong>
+                               ${escapeHTML(
+                                   q.options[
+                                       correct
+                                   ]
+                               )}
+                           </strong>`
+                }
 
             </div>
 
@@ -6500,98 +8500,70 @@ function handleQuizAnswer(
 
     }
 
-
     setTimeout(
         () => {
 
-            if (!activeQuiz) return;
-
-            if (
-                activeQuiz.finished
-            ) return;
-
+            if (!activeQuiz) {
+                return;
+            }
 
             activeQuiz.current++;
 
-
-            if (
-                activeQuiz.current >=
-                activeQuiz.questions.length
-            ) {
-
-                finishQuiz();
-
-            } else {
-
-                activeQuiz.timeLeft =
-                    QUIZ_TIME;
-
-                renderQuizQuestion();
-
-            }
+            renderQuizQuestion();
 
         },
-        1100
+        800
     );
 
 }
 
 
 /* ============================================================
-   FINISH QUIZ
+   FINISH AI QUIZ
    ============================================================ */
 
-function finishQuiz(
-    timeUp = false
-) {
+function finishQuiz() {
 
-    if (
-        !activeQuiz ||
-        activeQuiz.finished
-    ) {
-
+    if (!activeQuiz) {
         return;
-
     }
 
+    clearInterval(
+        quizTimer
+    );
+
+    quizTimer = null;
 
     activeQuiz.finished =
         true;
 
-
-    stopQuizTimer();
-
-
     const quiz =
         activeQuiz;
-
 
     const total =
         quiz.questions.length;
 
-
-    const score =
-        quiz.score;
-
-
     const percentage =
-        Math.round(
-            (
-                score /
-                total
-            ) * 100
-        );
+        total
+            ? Math.round(
+                (
+                    quiz.score /
+                    total
+                ) * 100
+            )
+            : 0;
 
 
-    const unanswered =
-        total -
-        quiz.answered;
+    if (!Array.isArray(
+        data.quizHistory
+    )) {
+
+        data.quizHistory = [];
+
+    }
 
 
-    data.quizHistory.unshift({
-
-        id:
-            Date.now(),
+    data.quizHistory.push({
 
         subject:
             quiz.subject,
@@ -6599,15 +8571,12 @@ function finishQuiz(
         difficulty:
             quiz.difficulty,
 
-        score,
+        score:
+            quiz.score,
 
         total,
 
         percentage,
-
-        unanswered,
-
-        timeUp,
 
         date:
             new Date().toISOString()
@@ -6617,19 +8586,32 @@ function finishQuiz(
 
     data.quizHistory =
         data.quizHistory.slice(
-            0,
-            30
+            -100
         );
 
 
-    data.stats.quizzes++;
+    updateStats(
+        "quizzes"
+    );
 
 
-    data.dailyGoal =
-        Math.min(
-            data.dailyGoalTarget,
-            data.dailyGoal + 1
-        );
+    /*
+     * Daily goal
+     */
+
+    if (
+        data.dailyGoals &&
+        typeof data.dailyGoals ===
+            "object"
+    ) {
+
+        data.dailyGoals.quizzes =
+            Number(
+                data.dailyGoals.quizzes ||
+                0
+            ) + 1;
+
+    }
 
 
     updateQuizSubjectProgress(
@@ -6647,252 +8629,116 @@ function finishQuiz(
         );
 
 
-    if (!area) {
+    if (area) {
 
-        activeQuiz = null;
-
-        return;
-
-    }
-
-
-    let resultMessage =
-        "Good attempt! Keep practicing. 📚";
-
-
-    if (
-        percentage ===
-        100
-    ) {
-
-        resultMessage =
-            "Perfect score! Outstanding! 🔥";
-
-    } else if (
-        percentage >=
-        80
-    ) {
-
-        resultMessage =
-            "Excellent work! Keep it up! 🚀";
-
-    } else if (
-        percentage >=
-        60
-    ) {
-
-        resultMessage =
-            "Great work! A little more practice and you'll improve further. 💪";
-
-    } else if (
-        percentage >=
-        40
-    ) {
-
-        resultMessage =
-            "Nice attempt! Review the explanations and try again. 📖";
-
-    }
-
-
-    const progressSubject =
-        normalizeProgressSubject(
-            quiz.subject
-        );
-
-
-    const currentProgress =
-        data.progress[
-            progressSubject
-        ] || 0;
-
-
-    area.innerHTML = `
-
-        <div class="quiz-card quiz-score">
-
-            <div style="font-size:48px;">
-                🏆
-            </div>
-
-
-            <h2>
-                Quiz Complete!
-            </h2>
-
-
-            ${
-                timeUp
-                    ? `
-                        <p>
-                            ⏰ Time was up.
-                        </p>
-                    `
-                    : ""
-            }
-
-
-            <div class="quiz-score-number">
-                ${score}/${total}
-            </div>
-
-
-            <h3>
-                ${percentage}%
-            </h3>
-
-
-            <p>
-                ${escapeHTML(
-                    resultMessage
-                )}
-            </p>
-
+        area.innerHTML = `
 
             <div
-                class="grid-3"
-                style="margin-top:20px;">
+                class="quiz-result"
+                style="
+                    text-align:center;
+                    padding:25px;
+                ">
 
-                <div class="card">
+                <div
+                    style="
+                        font-size:54px;
+                        margin-bottom:10px;
+                    ">
 
-                    <strong>
-                        ${score}
-                    </strong>
-
-                    <small>
-                        Correct
-                    </small>
-
-                </div>
-
-
-                <div class="card">
-
-                    <strong>
-                        ${total - score}
-                    </strong>
-
-                    <small>
-                        Incorrect
-                    </small>
+                    ${
+                        percentage >= 80
+                            ? "🏆"
+                            : percentage >= 60
+                                ? "🎉"
+                                : "📚"
+                    }
 
                 </div>
 
+                <h2>
+                    Quiz Complete!
+                </h2>
 
-                <div class="card">
+                <p>
 
-                    <strong>
-                        ${unanswered}
-                    </strong>
-
-                    <small>
-                        Unanswered
-                    </small>
-
-                </div>
-
-            </div>
-
-
-            <br>
-
-
-            <div class="card">
-
-                <strong>
-                    📈 ${escapeHTML(
+                    ${escapeHTML(
                         quiz.subject
-                    )} Progress Updated
-                </strong>
+                    )}
 
+                </p>
 
-                <p
-                    style="margin-top:8px;">
+                <div
+                    style="
+                        font-size:34px;
+                        font-weight:800;
+                        margin:18px 0;
+                    ">
 
-                    Current progress:
+                    ${quiz.score}
+                    /
+                    ${total}
+
+                </div>
+
+                <p>
+
+                    Score:
                     <strong>
-                        ${currentProgress}%
+                        ${percentage}%
                     </strong>
 
                 </p>
 
+                <button
+                    class="btn btn-primary"
+                    id="newQuizBtn"
+                    type="button"
+                    style="margin-top:18px;">
+
+                    🔄 New Quiz
+
+                </button>
+
             </div>
 
-
-            <br>
-
-
-            <button
-                class="btn btn-primary"
-                id="newQuiz">
-
-                🔄 Try Another Quiz
-
-            </button>
+        `;
 
 
-            <button
-                class="btn btn-secondary"
-                id="viewQuizHistory"
-                style="margin-left:8px;">
-
-                🏆 View History
-
-            </button>
-
-        </div>
-
-    `;
+        const newQuizButton =
+            document.getElementById(
+                "newQuizBtn"
+            );
 
 
-    document
-        .getElementById(
-            "newQuiz"
-        )
-        ?.addEventListener(
-            "click",
-            renderPractice
-        );
+        if (newQuizButton) {
+
+            newQuizButton.addEventListener(
+                "click",
+                () => {
+
+                    activeQuiz =
+                        null;
+
+                    renderPractice();
+
+                }
+            );
+
+        }
+
+    }
 
 
-    document
-        .getElementById(
-            "viewQuizHistory"
-        )
-        ?.addEventListener(
-            "click",
-            () => {
+    activeQuiz = null;
 
-                renderPractice();
-
-                setTimeout(
-                    () => {
-
-                        document
-                            .getElementById(
-                                "quizHistoryArea"
-                            )
-                            ?.scrollIntoView({
-                                behavior:
-                                    "smooth"
-                            });
-
-                    },
-                    100
-                );
-
-            }
-        );
-
-
-    activeQuiz =
-        null;
+    updateStats();
 
 }
 
 
 /* ============================================================
-   QUIZ PROGRESS
+   QUIZ SUBJECT PROGRESS
    ============================================================ */
 
 function updateQuizSubjectProgress(
@@ -6900,82 +8746,90 @@ function updateQuizSubjectProgress(
     percentage
 ) {
 
-    const progressSubject =
+    if (!data.quizSubjectProgress) {
+
+        data.quizSubjectProgress =
+            {};
+
+    }
+
+
+    const current =
+        Number(
+            data.quizSubjectProgress[
+                subject
+            ] || 0
+        );
+
+
+    data.quizSubjectProgress[
+        subject
+    ] =
+        Math.max(
+            current,
+            percentage
+        );
+
+
+    /*
+     * Also update normal progress
+     */
+
+    const normalized =
         normalizeProgressSubject(
             subject
         );
 
 
-    const oldProgress =
-        Number(
-            data.progress[
-                progressSubject
-            ] || 0
-        );
+    if (!data.progress) {
 
-
-    let increase = 1;
-
-
-    if (
-        percentage >=
-        80
-    ) {
-
-        increase = 4;
-
-    } else if (
-        percentage >=
-        60
-    ) {
-
-        increase = 3;
-
-    } else if (
-        percentage >=
-        40
-    ) {
-
-        increase = 2;
+        data.progress = {};
 
     }
 
 
-    data.progress[
-        progressSubject
-    ] =
-        Math.min(
-            100,
-            oldProgress +
-            increase
-        );
+    if (
+        data.progress[
+            normalized
+        ] === undefined
+    ) {
+
+        data.progress[
+            normalized
+        ] = 0;
+
+    }
 
 }
 
 
 /* ============================================================
-   QUIZ HISTORY
+   QUIZ HISTORY HTML
    ============================================================ */
 
-function renderQuizHistoryHTML() {
+function renderQuizHistoryHTML(
+    history
+) {
 
     if (
-        !Array.isArray(
-            data.quizHistory
-        ) ||
-        !data.quizHistory.length
+        !Array.isArray(history) ||
+        !history.length
     ) {
 
         return `
 
-            <div class="card">
+            <div class="empty-state">
+
+                <div class="empty-icon">
+                    📝
+                </div>
 
                 <h3>
-                    🏆 Quiz History
+                    No quiz history yet
                 </h3>
 
                 <p>
-                    Abhi tak koi completed quiz nahi hai.
+                    Apna pehla AI quiz generate karo.
                 </p>
 
             </div>
@@ -6985,127 +8839,89 @@ function renderQuizHistoryHTML() {
     }
 
 
-    const history =
-        data.quizHistory.slice(
-            0,
-            10
-        );
-
-
     return `
 
-        <div class="card">
+        <div class="quiz-history-list">
 
-            <div
-                style="
-                    display:flex;
-                    justify-content:space-between;
-                    align-items:center;
-                    gap:10px;
-                    flex-wrap:wrap;
-                ">
+            ${history
+                .slice()
+                .reverse()
+                .map(
+                    item => `
 
-                <div>
+                        <div
+                            class="history-item">
 
-                    <h3>
-                        🏆 Quiz History
-                    </h3>
+                            <div>
 
-                    <p>
-                        Your latest quiz attempts.
-                    </p>
-
-                </div>
-
-
-                <button
-                    class="btn btn-danger"
-                    id="clearQuizHistory">
-
-                    Clear History
-
-                </button>
-
-            </div>
-
-
-            <div
-                style="
-                    margin-top:15px;
-                    display:flex;
-                    flex-direction:column;
-                    gap:10px;
-                ">
-
-                ${history
-                    .map(
-                        item => `
-
-                            <div
-                                style="
-                                    padding:14px;
-                                    border:1px solid var(--border);
-                                    border-radius:12px;
-                                ">
+                                <strong>
+                                    ${escapeHTML(
+                                        item.subject ||
+                                        "Quiz"
+                                    )}
+                                </strong>
 
                                 <div
                                     style="
-                                        display:flex;
-                                        justify-content:space-between;
-                                        gap:10px;
-                                        align-items:center;
-                                        flex-wrap:wrap;
-                                    ">
-
-                                    <strong>
-                                        ${escapeHTML(
-                                            item.subject
-                                        )}
-                                    </strong>
-
-
-                                    <strong>
-                                        ${item.score}/${item.total}
-                                        (${item.percentage}%)
-                                    </strong>
-
-                                </div>
-
-
-                                <div
-                                    style="
-                                        margin-top:7px;
                                         font-size:13px;
                                         opacity:.7;
+                                        margin-top:4px;
                                     ">
 
                                     ${escapeHTML(
-                                        item.difficulty
+                                        item.difficulty ||
+                                        "medium"
                                     )}
 
                                     •
-
-                                    ${escapeHTML(
-                                        formatQuizDate(
-                                            item.date
-                                        )
+                                    ${formatQuizDate(
+                                        item.date
                                     )}
-
-                                    ${
-                                        item.timeUp
-                                            ? " • ⏰ Time Up"
-                                            : ""
-                                    }
 
                                 </div>
 
                             </div>
 
-                        `
-                    )
-                    .join("")}
 
-            </div>
+                            <div
+                                style="
+                                    text-align:right;
+                                ">
+
+                                <strong>
+                                    ${
+                                        Number(
+                                            item.score
+                                        ) || 0
+                                    }/
+                                    ${
+                                        Number(
+                                            item.total
+                                        ) || 0
+                                    }
+                                </strong>
+
+                                <div
+                                    style="
+                                        font-size:13px;
+                                        opacity:.7;
+                                    ">
+
+                                    ${
+                                        Number(
+                                            item.percentage
+                                        ) || 0
+                                    }%
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    `
+                )
+                .join("")}
 
         </div>
 
@@ -7114,57 +8930,52 @@ function renderQuizHistoryHTML() {
 }
 
 
+/* ============================================================
+   QUIZ DATE
+   ============================================================ */
+
 function formatQuizDate(
-    date
+    value
 ) {
 
-    try {
+    if (!value) {
+        return "Unknown date";
+    }
 
-        return new Date(
-            date
-        ).toLocaleString();
+    const date =
+        new Date(value);
 
-    } catch {
+    if (
+        Number.isNaN(
+            date.getTime()
+        )
+    ) {
 
         return "Unknown date";
 
     }
 
-}
-
-
-function attachQuizHistoryEvents() {
-
-    document
-        .getElementById(
-            "clearQuizHistory"
-        )
-        ?.addEventListener(
-            "click",
-            clearQuizHistory
-        );
+    return date.toLocaleDateString(
+        "en-IN",
+        {
+            day: "2-digit",
+            month: "short",
+            year: "numeric"
+        }
+    );
 
 }
 
+
+/* ============================================================
+   CLEAR QUIZ HISTORY
+   ============================================================ */
 
 function clearQuizHistory() {
 
     if (
-        !data.quizHistory.length
-    ) {
-
-        showToast(
-            "Quiz history already empty."
-        );
-
-        return;
-
-    }
-
-
-    if (
         !confirm(
-            "Quiz history delete karni hai?"
+            "Kya tum quiz history clear karna chahte ho?"
         )
     ) {
 
@@ -7179,17 +8990,14 @@ function clearQuizHistory() {
 
     saveData();
 
-
     showToast(
-        "Quiz history cleared."
+        "🗑️ Quiz history cleared."
     );
 
 
     renderPractice();
 
 }
-
-
 /* ============================================================
    CODING LAB
    ============================================================ */
@@ -7200,9 +9008,7 @@ function renderCoding() {
 
         <div class="page-header">
 
-            <h1>
-                💻 Coding Lab
-            </h1>
+            <h1>💻 Coding Lab</h1>
 
             <p>
                 Write HTML, CSS and JavaScript
@@ -7210,7 +9016,6 @@ function renderCoding() {
             </p>
 
         </div>
-
 
         <div class="code-editor">
 
@@ -7224,7 +9029,6 @@ function renderCoding() {
 
                 </button>
 
-
                 <button
                     class="code-tab"
                     data-code-tab="css">
@@ -7232,7 +9036,6 @@ function renderCoding() {
                     CSS
 
                 </button>
-
 
                 <button
                     class="code-tab"
@@ -7244,14 +9047,12 @@ function renderCoding() {
 
             </div>
 
-
             <textarea
                 id="codeEditor"
                 class="code-textarea"
                 spellcheck="false"></textarea>
 
         </div>
-
 
         <div class="code-actions">
 
@@ -7263,7 +9064,6 @@ function renderCoding() {
 
             </button>
 
-
             <button
                 class="btn btn-secondary"
                 id="saveCode">
@@ -7271,7 +9071,6 @@ function renderCoding() {
                 💾 Save
 
             </button>
-
 
             <button
                 class="btn btn-secondary"
@@ -7282,7 +9081,6 @@ function renderCoding() {
             </button>
 
         </div>
-
 
         <div class="code-output">
 
@@ -7295,10 +9093,7 @@ function renderCoding() {
 
     `;
 
-
-    currentCodeTab =
-        "html";
-
+    currentCodeTab = "html";
 
     loadCodeEditor();
 
@@ -7314,9 +9109,9 @@ function loadCodeEditor() {
             "codeEditor"
         );
 
-
-    if (!editor) return;
-
+    if (!editor) {
+        return;
+    }
 
     editor.value =
         data.coding[
@@ -7344,7 +9139,6 @@ function attachCodingEvents() {
                                 "codeEditor"
                             );
 
-
                         if (editor) {
 
                             data.coding[
@@ -7354,10 +9148,8 @@ function attachCodingEvents() {
 
                         }
 
-
                         currentCodeTab =
                             tab.dataset.codeTab;
-
 
                         document
                             .querySelectorAll(
@@ -7373,7 +9165,6 @@ function attachCodingEvents() {
 
                                 }
                             );
-
 
                         loadCodeEditor();
 
@@ -7419,7 +9210,6 @@ function attachCodingEvents() {
             "codeEditor"
         );
 
-
     if (editor) {
 
         editor.addEventListener(
@@ -7446,42 +9236,34 @@ function runCode() {
             "codeEditor"
         );
 
-
-    if (!editor) return;
-
+    if (!editor) {
+        return;
+    }
 
     data.coding[
         currentCodeTab
     ] =
         editor.value;
 
-
     saveData();
 
-
     const html =
-        data.coding.html ||
-        "";
-
+        data.coding.html || "";
 
     const css =
-        data.coding.css ||
-        "";
-
+        data.coding.css || "";
 
     const js =
-        data.coding.js ||
-        "";
-
+        data.coding.js || "";
 
     const output =
         document.getElementById(
             "codeOutput"
         );
 
-
-    if (!output) return;
-
+    if (!output) {
+        return;
+    }
 
     output.srcdoc = `
 
@@ -7513,11 +9295,9 @@ function runCode() {
 
     `;
 
-
     updateStats(
         "codingProjects"
     );
-
 
     showToast(
         "Code run successfully ▶️"
@@ -7533,18 +9313,16 @@ function saveCode() {
             "codeEditor"
         );
 
-
-    if (!editor) return;
-
+    if (!editor) {
+        return;
+    }
 
     data.coding[
         currentCodeTab
     ] =
         editor.value;
 
-
     saveData();
-
 
     showToast(
         "Code saved 💾"
@@ -7560,27 +9338,20 @@ function resetCode() {
             "Current coding project reset karna hai?"
         )
     ) {
-
         return;
-
     }
-
 
     data.coding =
         structuredClone(
             defaultData.coding
         );
 
-
     saveData();
-
 
     currentCodeTab =
         "html";
 
-
     renderCoding();
-
 
     showToast(
         "Coding project reset ho gaya."
@@ -7599,9 +9370,7 @@ function renderCareer() {
 
         <div class="page-header">
 
-            <h1>
-                🎯 Career Roadmap
-            </h1>
+            <h1>🎯 Career Roadmap</h1>
 
             <p>
                 Tell BharatBuddy what you want
@@ -7609,7 +9378,6 @@ function renderCareer() {
             </p>
 
         </div>
-
 
         <div class="card">
 
@@ -7622,11 +9390,9 @@ function renderCareer() {
                 <input
                     id="careerGoal"
                     class="form-input"
-                    placeholder="Example: Software Developer"
-                >
+                    placeholder="Example: Software Developer">
 
             </div>
-
 
             <div class="form-group">
 
@@ -7654,7 +9420,6 @@ function renderCareer() {
 
             </div>
 
-
             <button
                 class="btn btn-primary"
                 id="careerGenerate">
@@ -7665,15 +9430,12 @@ function renderCareer() {
 
         </div>
 
-
         <div
             id="careerResult"
             style="margin-top:18px;">
-
         </div>
 
     `;
-
 
     document
         .getElementById(
@@ -7694,24 +9456,20 @@ async function generateCareerRoadmap() {
             "careerGoal"
         );
 
-
     const levelInput =
         document.getElementById(
             "careerLevel"
         );
-
 
     const result =
         document.getElementById(
             "careerResult"
         );
 
-
     const button =
         document.getElementById(
             "careerGenerate"
         );
-
 
     if (
         !goalInput ||
@@ -7719,19 +9477,14 @@ async function generateCareerRoadmap() {
         !result ||
         !button
     ) {
-
         return;
-
     }
-
 
     const goal =
         goalInput.value.trim();
 
-
     const level =
         levelInput.value;
-
 
     if (!goal) {
 
@@ -7743,14 +9496,10 @@ async function generateCareerRoadmap() {
 
     }
 
-
-    button.disabled =
-        true;
-
+    button.disabled = true;
 
     button.textContent =
         "Creating roadmap...";
-
 
     result.innerHTML = `
 
@@ -7761,7 +9510,6 @@ async function generateCareerRoadmap() {
         </div>
 
     `;
-
 
     try {
 
@@ -7788,12 +9536,10 @@ Use simple language.
 
 `;
 
-
         const answer =
             await askAI(
                 prompt
             );
-
 
         result.innerHTML = `
 
@@ -7838,8 +9584,7 @@ Use simple language.
 
     } finally {
 
-        button.disabled =
-            false;
+        button.disabled = false;
 
         button.textContent =
             "🤖 Generate My Roadmap";
@@ -7859,9 +9604,7 @@ function renderEnglish() {
 
         <div class="page-header">
 
-            <h1>
-                🗣️ English Practice
-            </h1>
+            <h1>🗣️ English Practice</h1>
 
             <p>
                 Improve grammar, vocabulary,
@@ -7869,7 +9612,6 @@ function renderEnglish() {
             </p>
 
         </div>
-
 
         <div class="practice-panel">
 
@@ -7889,7 +9631,6 @@ function renderEnglish() {
 
                 </button>
 
-
                 <button
                     class="practice-btn"
                     data-english="grammar">
@@ -7904,13 +9645,12 @@ function renderEnglish() {
 
                 </button>
 
-
                 <button
                     class="practice-btn"
                     data-english="vocabulary">
 
                     <strong>
-                        🧠 Vocabulary
+                        📚 Vocabulary
                     </strong>
 
                     <small>
@@ -7918,7 +9658,6 @@ function renderEnglish() {
                     </small>
 
                 </button>
-
 
                 <button
                     class="practice-btn"
@@ -7929,7 +9668,7 @@ function renderEnglish() {
                     </strong>
 
                     <small>
-                        Practice interview questions.
+                        Practice interview communication.
                     </small>
 
                 </button>
@@ -7938,19 +9677,16 @@ function renderEnglish() {
 
         </div>
 
-
         <div
             id="englishResult"
             style="margin-top:18px;">
-
         </div>
 
     `;
 
-
     document
         .querySelectorAll(
-            "[data-english]"
+            ".practice-btn"
         )
         .forEach(
             button => {
@@ -7981,74 +9717,53 @@ async function startEnglishPractice(
             "englishResult"
         );
 
+    if (!result) {
+        return;
+    }
 
-    if (!result) return;
-
-
-    const topics = {
+    const prompts = {
 
         conversation:
-            "Start a friendly English conversation with a student. Ask one simple question at a time and correct grammar politely.",
+            "Create a simple English conversation practice for a school student. Give one question at a time and encourage the student to answer in English.",
 
         grammar:
-            "Create a simple English grammar practice exercise for a student. Give questions one by one and explain mistakes.",
+            "Create a short English grammar practice exercise for a school student. Give 5 questions and explain the answers simply.",
 
         vocabulary:
-            "Teach 10 useful English vocabulary words with simple meanings, examples and a short practice exercise.",
+            "Create a useful English vocabulary practice for a school student. Give 10 words with simple meanings, examples and a short quiz.",
 
         interview:
-            "Start a beginner-friendly English interview practice session. Ask one question at a time and provide feedback."
+            "Create a beginner-friendly interview practice for a student. Ask common questions one at a time and give useful feedback."
 
     };
 
+    const prompt =
+        prompts[type] ||
+        prompts.conversation;
 
     result.innerHTML = `
 
         <div class="card">
 
-            🤖 Preparing practice...
+            🤖 Preparing English practice...
 
         </div>
 
     `;
 
-
     try {
 
         const answer =
             await askAI(
-                topics[type]
+                prompt
             );
-
-
-        updateStats(
-            "englishSessions"
-        );
-
-
-        data.progress.English =
-            Math.min(
-                100,
-                (
-                    data.progress.English ||
-                    0
-                ) + 2
-            );
-
-
-        saveData();
-
 
         result.innerHTML = `
 
-            <div class="career-card">
-
-                <h3>
-                    🗣️ Practice Session
-                </h3>
+            <div class="english-result card">
 
                 <div
-                    style="margin-top:12px;">
+                    class="ai-response">
 
                     ${formatAIText(
                         answer
@@ -8060,13 +9775,19 @@ async function startEnglishPractice(
 
         `;
 
+        updateStats(
+            "englishPractice"
+        );
+
+        saveData();
+
     } catch (error) {
 
         result.innerHTML = `
 
             <div class="card">
 
-                ❌ Practice unavailable.
+                ❌ Practice load nahi ho payi.
 
                 <br><br>
 
@@ -8084,277 +9805,218 @@ async function startEnglishPractice(
 
 
 /* ============================================================
-   PROGRESS
+   PROGRESS PAGE
    ============================================================ */
 
 function renderProgress() {
-
-    ensureStudyProgress();
-
-
-    const totalActivities =
-
-        data.stats.questions +
-
-        data.stats.quizzes +
-
-        data.stats.lessons +
-
-        data.stats.codingProjects +
-
-        data.stats.englishSessions;
-
-
-    const subjectStats =
-        Object.entries(
-            data.progress
-        );
-
 
     pageContent.innerHTML = `
 
         <div class="page-header">
 
-            <h1>
-                📊 Your Progress
-            </h1>
+            <h1>📊 Your Progress</h1>
 
             <p>
-                Track your complete learning journey.
+                Track your learning progress
+                across BharatBuddy.
             </p>
 
         </div>
 
-
-        <div class="grid-3">
-
-            <div class="stat-card">
-
-                <div class="stat-icon">
-                    🤖
-                </div>
-
-                <div class="stat-value">
-                    ${data.stats.questions}
-                </div>
-
-                <div class="stat-label">
-                    AI Questions
-                </div>
-
-            </div>
-
+        <div
+            class="stats-grid">
 
             <div class="stat-card">
 
-                <div class="stat-icon">
-                    📝
-                </div>
-
-                <div class="stat-value">
-                    ${data.stats.quizzes}
-                </div>
-
-                <div class="stat-label">
-                    Quizzes
-                </div>
-
-            </div>
-
-
-            <div class="stat-card">
-
-                <div class="stat-icon">
+                <span class="stat-icon">
                     📚
-                </div>
+                </span>
 
-                <div class="stat-value">
-                    ${data.stats.lessons}
-                </div>
-
-                <div class="stat-label">
-                    Lessons
-                </div>
-
-            </div>
-
-
-            <div class="stat-card">
-
-                <div class="stat-icon">
-                    💻
-                </div>
-
-                <div class="stat-value">
-                    ${data.stats.codingProjects}
-                </div>
-
-                <div class="stat-label">
-                    Coding Runs
-                </div>
-
-            </div>
-
-
-            <div class="stat-card">
-
-                <div class="stat-icon">
-                    🗣️
-                </div>
-
-                <div class="stat-value">
-                    ${data.stats.englishSessions}
-                </div>
-
-                <div class="stat-label">
-                    English Sessions
-                </div>
-
-            </div>
-
-
-            <div class="stat-card">
-
-                <div class="stat-icon">
-                    🔥
-                </div>
-
-                <div class="stat-value">
-                    ${data.streak}
-                </div>
-
-                <div class="stat-label">
-                    Day Streak
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <br>
-
-
-        <div class="card">
-
-            <h3>
-                📚 Subject Progress
-            </h3>
-
-
-            ${subjectStats
-                .map(
-                    (
-                        [
-                            subject,
-                            value
-                        ]
-                    ) =>
-                        courseProgress(
-                            subject,
-                            value
+                <strong>
+                    ${
+                        Number(
+                            data.stats.lessons || 0
                         )
-                )
-                .join("")}
+                    }
+                </strong>
+
+                <span>
+                    Lessons
+                </span>
+
+            </div>
+
+            <div class="stat-card">
+
+                <span class="stat-icon">
+                    📝
+                </span>
+
+                <strong>
+                    ${
+                        Number(
+                            data.stats.quizzes || 0
+                        )
+                    }
+                </strong>
+
+                <span>
+                    Quizzes
+                </span>
+
+            </div>
+
+            <div class="stat-card">
+
+                <span class="stat-icon">
+                    ❓
+                </span>
+
+                <strong>
+                    ${
+                        Number(
+                            data.stats.questions || 0
+                        )
+                    }
+                </strong>
+
+                <span>
+                    AI Questions
+                </span>
+
+            </div>
+
+            <div class="stat-card">
+
+                <span class="stat-icon">
+                    💻
+                </span>
+
+                <strong>
+                    ${
+                        Number(
+                            data.stats.codingProjects || 0
+                        )
+                    }
+                </strong>
+
+                <span>
+                    Coding Runs
+                </span>
+
+            </div>
 
         </div>
 
 
-        <br>
-
-
         <div class="card">
 
-            <h3>
-                📖 Course Completion
-            </h3>
+            <div class="card-header">
 
+                <div>
 
-            ${Object.keys(
-                lessonData
-            )
-            .map(
-                subject => {
+                    <h3>
+                        📚 Subject Progress
+                    </h3>
 
-                    const lessons =
-                        getAllLessons(
-                            subject
-                        );
+                    <p>
+                        Your current course completion.
+                    </p>
 
+                </div>
 
-                    const completed =
-                        (
-                            data.lessonProgress[
-                                subject
-                            ] || []
-                        ).length;
+            </div>
 
+            <div
+                class="subject-progress-list">
 
-                    const progress =
-                        calculateLessonProgress(
-                            subject
-                        );
+                ${getCurriculumSubjects()
+                    .map(
+                        subject => {
 
+                            const progress =
+                                calculateLessonProgress(
+                                    subject
+                                );
 
-                    return `
-
-                        <div
-                            style="
-                                margin-top:18px;
-                            ">
-
-                            <div
-                                class="course-top">
-
-                                <strong>
-                                    ${escapeHTML(
-                                        subject
-                                    )}
-                                </strong>
-
-                                <span>
-                                    ${completed}/${lessons.length}
-                                    lessons
-                                </span>
-
-                            </div>
-
-
-                            <div class="progress">
+                            return `
 
                                 <div
-                                    class="progress-bar"
-                                    style="width:${progress}%">
+                                    class="subject-progress-item">
+
+                                    <div
+                                        style="
+                                            display:flex;
+                                            justify-content:space-between;
+                                            gap:10px;
+                                        ">
+
+                                        <strong>
+                                            ${escapeHTML(
+                                                subject
+                                            )}
+                                        </strong>
+
+                                        <span>
+                                            ${progress}%
+                                        </span>
+
+                                    </div>
+
+                                    <div
+                                        class="progress"
+                                        style="
+                                            margin-top:8px;
+                                        ">
+
+                                        <div
+                                            class="progress-bar"
+                                            style="
+                                                width:${progress}%;
+                                            ">
+                                        </div>
+
+                                    </div>
+
                                 </div>
 
-                            </div>
+                            `;
 
-                        </div>
+                        }
+                    )
+                    .join("")}
 
-                    `;
-
-                }
-            )
-            .join("")}
+            </div>
 
         </div>
-
-
-        <br>
 
 
         <div class="card">
 
             <h3>
-                🎯 Total Activities
+                🎯 Overall Course Completion
             </h3>
 
-            <div class="goal-number">
-                ${totalActivities}
+            <div
+                style="
+                    font-size:32px;
+                    font-weight:800;
+                    margin:15px 0;
+                ">
+
+                ${calculateOverallProgress()}%
+
             </div>
 
-            <div class="goal-label">
-                activities completed
+            <div class="progress">
+
+                <div
+                    class="progress-bar"
+                    style="
+                        width:${calculateOverallProgress()}%;
+                    ">
+                </div>
+
             </div>
 
         </div>
@@ -8364,30 +10026,106 @@ function renderProgress() {
 }
 
 
+function calculateOverallProgress() {
+
+    const subjects =
+        getCurriculumSubjects();
+
+    if (!subjects.length) {
+        return 0;
+    }
+
+    const values =
+        subjects.map(
+            subject =>
+                calculateLessonProgress(
+                    subject
+                )
+        );
+
+    const total =
+        values.reduce(
+            (
+                sum,
+                value
+            ) =>
+                sum + value,
+            0
+        );
+
+    return Math.round(
+        total /
+        values.length
+    );
+
+}
 /* ============================================================
    ACHIEVEMENTS
    ============================================================ */
 
 function renderAchievements() {
 
+    const stats =
+        data.stats || {};
+
+    const lessons =
+        Number(
+            stats.lessons || 0
+        );
+
+    const quizzes =
+        Number(
+            stats.quizzes || 0
+        );
+
+    const questions =
+        Number(
+            stats.questions || 0
+        );
+
+    const codingProjects =
+        Number(
+            stats.codingProjects || 0
+        );
+
+    const englishPractice =
+        Number(
+            stats.englishPractice || 0
+        );
+
+    const streak =
+        Number(
+            data.streak || 0
+        );
+
+
     const achievements = [
+
+        {
+            icon: "🔥",
+            title: "First Streak",
+            description:
+                "Start your learning streak.",
+            unlocked:
+                streak >= 1
+        },
 
         {
             icon: "🔥",
             title: "7 Day Streak",
             description:
-                "Maintain a 7 day learning streak.",
+                "Study for 7 days.",
             unlocked:
-                data.streak >= 7
+                streak >= 7
         },
 
         {
-            icon: "🤖",
+            icon: "❓",
             title: "AI Explorer",
             description:
-                "Ask 10 questions to AI Tutor.",
+                "Ask 10 AI questions.",
             unlocked:
-                data.stats.questions >= 10
+                questions >= 10
         },
 
         {
@@ -8396,43 +10134,7 @@ function renderAchievements() {
             description:
                 "Complete your first quiz.",
             unlocked:
-                data.stats.quizzes >= 1
-        },
-
-        {
-            icon: "📚",
-            title: "First Lesson",
-            description:
-                "Complete your first lesson.",
-            unlocked:
-                data.stats.lessons >= 1
-        },
-
-        {
-            icon: "💻",
-            title: "Code Builder",
-            description:
-                "Run your first coding project.",
-            unlocked:
-                data.stats.codingProjects >= 1
-        },
-
-        {
-            icon: "🗣️",
-            title: "English Starter",
-            description:
-                "Complete an English session.",
-            unlocked:
-                data.stats.englishSessions >= 1
-        },
-
-        {
-            icon: "📚",
-            title: "Study Explorer",
-            description:
-                "Complete 10 lessons.",
-            unlocked:
-                data.stats.lessons >= 10
+                quizzes >= 1
         },
 
         {
@@ -8441,43 +10143,52 @@ function renderAchievements() {
             description:
                 "Complete 10 quizzes.",
             unlocked:
-                data.stats.quizzes >= 10
+                quizzes >= 10
         },
 
         {
-            icon: "⚡",
-            title: "Physics Master",
+            icon: "📚",
+            title: "Lesson Starter",
             description:
-                "Complete the Physics course.",
+                "Complete your first lesson.",
             unlocked:
-                data.progress.Physics >= 100
+                lessons >= 1
         },
 
         {
-            icon: "📐",
-            title: "Math Explorer",
+            icon: "📖",
+            title: "10 Lessons",
             description:
-                "Reach 50% Mathematics progress.",
+                "Complete 10 lessons.",
             unlocked:
-                data.progress.Mathematics >= 50
-        },
-
-        {
-            icon: "🧪",
-            title: "Chemistry Explorer",
-            description:
-                "Reach 50% Chemistry progress.",
-            unlocked:
-                data.progress.Chemistry >= 50
+                lessons >= 10
         },
 
         {
             icon: "💻",
-            title: "Coding Explorer",
+            title: "Coder",
             description:
-                "Reach 50% Coding progress.",
+                "Run your first coding project.",
             unlocked:
-                data.progress.Coding >= 50
+                codingProjects >= 1
+        },
+
+        {
+            icon: "🗣️",
+            title: "English Learner",
+            description:
+                "Complete English practice.",
+            unlocked:
+                englishPractice >= 1
+        },
+
+        {
+            icon: "🚀",
+            title: "Learning Machine",
+            description:
+                "Complete 25 lessons.",
+            unlocked:
+                lessons >= 25
         }
 
     ];
@@ -8492,56 +10203,56 @@ function renderAchievements() {
             </h1>
 
             <p>
-                Complete activities and unlock
+                Keep learning and unlock
                 new achievements.
             </p>
 
         </div>
 
 
-        <div class="grid-3">
+        <div
+            class="achievement-grid">
 
             ${achievements
                 .map(
-                    item => `
+                    achievement => `
 
                         <div
-                            class="achievement-card ${
-                                item.unlocked
-                                    ? "unlocked"
-                                    : ""
-                            }">
+                            class="
+                                achievement-card
+                                ${
+                                    achievement.unlocked
+                                        ? "unlocked"
+                                        : "locked"
+                                }
+                            ">
 
                             <div
                                 class="achievement-icon">
 
-                                ${item.icon}
+                                ${
+                                    achievement.unlocked
+                                        ? achievement.icon
+                                        : "🔒"
+                                }
 
                             </div>
 
-                            <h3>
-                                ${escapeHTML(
-                                    item.title
-                                )}
-                            </h3>
+                            <div>
 
-                            <p>
-                                ${escapeHTML(
-                                    item.description
-                                )}
-                            </p>
+                                <h3>
+                                    ${escapeHTML(
+                                        achievement.title
+                                    )}
+                                </h3>
 
-                            <br>
+                                <p>
+                                    ${escapeHTML(
+                                        achievement.description
+                                    )}
+                                </p>
 
-                            <small>
-
-                                ${
-                                    item.unlocked
-                                        ? "✅ Unlocked"
-                                        : "🔒 Locked"
-                                }
-
-                            </small>
+                            </div>
 
                         </div>
 
@@ -8562,6 +10273,10 @@ function renderAchievements() {
 
 function renderProfile() {
 
+    const profile =
+        data.profile || {};
+
+
     pageContent.innerHTML = `
 
         <div class="page-header">
@@ -8571,49 +10286,64 @@ function renderProfile() {
             </h1>
 
             <p>
-                Manage your BharatBuddy learning profile.
+                Apni learning profile update karo.
             </p>
 
         </div>
 
 
-        <div class="profile-card">
+        <div class="card profile-card">
 
-            <div class="profile-large-avatar">
+            <div
+                class="profile-avatar-large">
 
                 ${
                     escapeHTML(
-                        data.profile.name
+                        (
+                            profile.name ||
+                            "Student"
+                        )
                             .charAt(0)
-                    ).toUpperCase()
+                            .toUpperCase()
+                    )
                 }
 
             </div>
 
 
-            <div class="form-group">
+            <div
+                class="form-grid">
 
-                <label class="form-label">
-                    Name
-                </label>
+                <div
+                    class="form-group">
 
-                <input
-                    id="profileName"
-                    class="form-input"
-                    value="${escapeHTML(
-                        data.profile.name
-                    )}"
-                >
+                    <label
+                        class="form-label">
 
-            </div>
+                        Name
+
+                    </label>
+
+                    <input
+                        id="profileName"
+                        class="form-input"
+                        value="${escapeHTML(
+                            profile.name ||
+                            ""
+                        )}"
+                        placeholder="Your name">
+
+                </div>
 
 
-            <div class="grid-2">
+                <div
+                    class="form-group">
 
-                <div class="form-group">
+                    <label
+                        class="form-label">
 
-                    <label class="form-label">
                         Class
+
                     </label>
 
                     <select
@@ -8624,97 +10354,132 @@ function renderProfile() {
                             "Class 9",
                             "Class 10",
                             "Class 11",
-                            "Class 12",
-                            "College"
+                            "Class 12"
                         ]
-                        .map(
-                            value => `
+                            .map(
+                                className => `
 
-                                <option
-                                    ${
-                                        data.profile.className ===
-                                        value
-                                            ? "selected"
-                                            : ""
-                                    }>
+                                    <option
+                                        value="${className}"
+                                        ${
+                                            profile.className ===
+                                            className
+                                                ? "selected"
+                                                : ""
+                                        }>
 
-                                    ${value}
+                                        ${className}
 
-                                </option>
+                                    </option>
 
-                            `
-                        )
-                        .join("")}
+                                `
+                            )
+                            .join("")}
 
                     </select>
 
                 </div>
 
 
-                <div class="form-group">
+                <div
+                    class="form-group">
 
-                    <label class="form-label">
+                    <label
+                        class="form-label">
+
                         Stream
+
                     </label>
 
                     <select
                         id="profileStream"
                         class="form-select">
 
-                        ${[
-                            "PCM",
-                            "PCB",
-                            "Commerce",
-                            "Arts",
-                            "Computer Science",
-                            "Other"
-                        ]
-                        .map(
-                            value => `
+                        <option
+                            value="PCM"
+                            ${
+                                profile.stream ===
+                                "PCM"
+                                    ? "selected"
+                                    : ""
+                            }>
 
-                                <option
-                                    ${
-                                        data.profile.stream ===
-                                        value
-                                            ? "selected"
-                                            : ""
-                                    }>
+                            Science - PCM
 
-                                    ${value}
+                        </option>
 
-                                </option>
+                        <option
+                            value="PCB"
+                            ${
+                                profile.stream ===
+                                "PCB"
+                                    ? "selected"
+                                    : ""
+                            }>
 
-                            `
-                        )
-                        .join("")}
+                            Science - PCB
+
+                        </option>
+
+                        <option
+                            value="Commerce"
+                            ${
+                                profile.stream ===
+                                "Commerce"
+                                    ? "selected"
+                                    : ""
+                            }>
+
+                            Commerce
+
+                        </option>
+
+                        <option
+                            value="Arts"
+                            ${
+                                profile.stream ===
+                                "Arts"
+                                    ? "selected"
+                                    : ""
+                            }>
+
+                            Arts
+
+                        </option>
 
                     </select>
+
+                </div>
+
+
+                <div
+                    class="form-group">
+
+                    <label
+                        class="form-label">
+
+                        Career Goal
+
+                    </label>
+
+                    <input
+                        id="profileCareer"
+                        class="form-input"
+                        value="${escapeHTML(
+                            profile.careerGoal ||
+                            ""
+                        )}"
+                        placeholder="Example: Software Developer">
 
                 </div>
 
             </div>
 
 
-            <div class="form-group">
-
-                <label class="form-label">
-                    Career Goal
-                </label>
-
-                <input
-                    id="profileGoal"
-                    class="form-input"
-                    value="${escapeHTML(
-                        data.profile.goal
-                    )}"
-                >
-
-            </div>
-
-
             <button
                 class="btn btn-primary"
-                id="saveProfile">
+                id="saveProfileBtn"
+                type="button">
 
                 💾 Save Profile
 
@@ -8727,7 +10492,7 @@ function renderProfile() {
 
     document
         .getElementById(
-            "saveProfile"
+            "saveProfileBtn"
         )
         ?.addEventListener(
             "click",
@@ -8742,59 +10507,86 @@ function saveProfile() {
     const name =
         document.getElementById(
             "profileName"
-        );
+        )?.value.trim();
 
 
     const className =
         document.getElementById(
             "profileClass"
-        );
+        )?.value ||
+        "Class 11";
 
 
     const stream =
         document.getElementById(
             "profileStream"
-        );
-
-
-    const goal =
-        document.getElementById(
-            "profileGoal"
-        );
-
-
-    data.profile.name =
-        name?.value.trim() ||
-        "Student";
-
-
-    data.profile.className =
-        className?.value ||
-        "Class 11";
-
-
-    data.profile.stream =
-        stream?.value ||
+        )?.value ||
         "PCM";
 
 
-    data.profile.goal =
-        goal?.value.trim() ||
-        "Learn, build and grow";
+    const careerGoal =
+        document.getElementById(
+            "profileCareer"
+        )?.value.trim();
+
+
+    data.profile = {
+
+        ...data.profile,
+
+        name:
+            name ||
+            "Student",
+
+        className,
+
+        stream,
+
+        careerGoal
+
+    };
+
+
+    studyState.className =
+        className;
+
+    studyState.stream =
+        stream;
 
 
     saveData();
 
-
     updateProfileUI();
 
-
     showToast(
-        "Profile saved successfully ✅"
+        "✅ Profile updated!"
     );
 
 
-    renderProfile();
+    /*
+     * Re-render study curriculum
+     * according to new profile.
+     */
+
+    setTimeout(
+        () => {
+
+            try {
+
+                applyFinalCurriculum();
+
+            } catch (error) {
+
+                console.warn(
+                    "Curriculum refresh error:",
+                    error
+                );
+
+            }
+
+        },
+        50
+    );
 
 }
 
@@ -8805,6 +10597,10 @@ function saveProfile() {
 
 function renderSettings() {
 
+    const settings =
+        data.settings || {};
+
+
     pageContent.innerHTML = `
 
         <div class="page-header">
@@ -8814,171 +10610,138 @@ function renderSettings() {
             </h1>
 
             <p>
-                Customize your BharatBuddy experience.
+                BharatBuddy ko apni preference
+                ke according customize karo.
             </p>
+
+        </div>
+
+
+        <div class="card settings-card">
+
+            <div
+                class="setting-row">
+
+                <div>
+
+                    <strong>
+                        🌙 Dark Mode
+                    </strong>
+
+                    <p>
+                        Dark theme enable/disable karo.
+                    </p>
+
+                </div>
+
+                <label
+                    class="switch">
+
+                    <input
+                        type="checkbox"
+                        id="darkModeToggle"
+                        ${
+                            settings.darkMode
+                                ? "checked"
+                                : ""
+                        }>
+
+                    <span
+                        class="slider">
+                    </span>
+
+                </label>
+
+            </div>
+
+
+            <div
+                class="setting-row">
+
+                <div>
+
+                    <strong>
+                        📐 Compact Mode
+                    </strong>
+
+                    <p>
+                        Interface ko compact banao.
+                    </p>
+
+                </div>
+
+                <label
+                    class="switch">
+
+                    <input
+                        type="checkbox"
+                        id="compactModeToggle"
+                        ${
+                            settings.compactMode
+                                ? "checked"
+                                : ""
+                        }>
+
+                    <span
+                        class="slider">
+                    </span>
+
+                </label>
+
+            </div>
+
+
+            <div
+                class="settings-actions">
+
+                <button
+                    class="btn btn-secondary"
+                    id="clearChatBtn">
+
+                    🗑️ Clear Chat
+
+                </button>
+
+                <button
+                    class="btn btn-secondary"
+                    id="clearQuizBtn">
+
+                    🗑️ Clear Quiz History
+
+                </button>
+
+                <button
+                    class="btn btn-danger"
+                    id="resetAppBtn">
+
+                    ⚠️ Reset App Data
+
+                </button>
+
+            </div>
 
         </div>
 
 
         <div class="card">
 
-            <div class="setting-item">
+            <h3>
+                ✨ BharatBuddy
+            </h3>
 
-                <div class="setting-info">
+            <p>
+                Study smarter, practice better
+                and build your future.
+            </p>
 
-                    <strong>
-                        🌙 Dark Mode
-                    </strong>
+            <button
+                class="btn btn-primary"
+                id="premiumBtn"
+                type="button">
 
-                    <small>
-                        Use a darker interface.
-                    </small>
+                ⭐ Explore Premium
 
-                </div>
-
-
-                <button
-                    class="toggle ${
-                        data.settings.darkMode
-                            ? "active"
-                            : ""
-                    }"
-                    id="darkToggle">
-                </button>
-
-            </div>
-
-
-            <div class="setting-item">
-
-                <div class="setting-info">
-
-                    <strong>
-                        📱 Compact Mode
-                    </strong>
-
-                    <small>
-                        Reduce spacing in the interface.
-                    </small>
-
-                </div>
-
-
-                <button
-                    class="toggle ${
-                        data.settings.compactMode
-                            ? "active"
-                            : ""
-                    }"
-                    id="compactToggle">
-                </button>
-
-            </div>
-
-
-            <div class="setting-item">
-
-                <div class="setting-info">
-
-                    <strong>
-                        🗑️ Clear Chat History
-                    </strong>
-
-                    <small>
-                        Delete saved AI conversations.
-                    </small>
-
-                </div>
-
-
-                <button
-                    class="btn btn-danger"
-                    id="clearChat">
-
-                    Clear
-
-                </button>
-
-            </div>
-
-
-            <div class="setting-item">
-
-                <div class="setting-info">
-
-                    <strong>
-                        🏆 Clear Quiz History
-                    </strong>
-
-                    <small>
-                        Delete all saved quiz attempts.
-                    </small>
-
-                </div>
-
-
-                <button
-                    class="btn btn-danger"
-                    id="clearQuizHistorySettings">
-
-                    Clear
-
-                </button>
-
-            </div>
-
-
-            <div class="setting-item">
-
-                <div class="setting-info">
-
-                    <strong>
-                        🔄 Reset App Data
-                    </strong>
-
-                    <small>
-                        Reset local profile and progress.
-                    </small>
-
-                </div>
-
-
-                <button
-                    class="btn btn-danger"
-                    id="resetApp">
-
-                    Reset
-
-                </button>
-
-            </div>
-
-
-            <div class="setting-item">
-
-                <div class="setting-info">
-
-                    <strong>
-                        ✨ Premium
-                    </strong>
-
-                    <small>
-                        Advanced learning tools and
-                        career features.
-                    </small>
-
-                </div>
-
-
-                <button
-                    class="btn btn-primary"
-                    id="premiumButton">
-
-                    Explore
-
-                </button>
-
-            </div>
+            </button>
 
         </div>
 
@@ -8987,27 +10750,27 @@ function renderSettings() {
 
     document
         .getElementById(
-            "darkToggle"
+            "darkModeToggle"
         )
         ?.addEventListener(
-            "click",
+            "change",
             toggleDarkMode
         );
 
 
     document
         .getElementById(
-            "compactToggle"
+            "compactModeToggle"
         )
         ?.addEventListener(
-            "click",
+            "change",
             toggleCompactMode
         );
 
 
     document
         .getElementById(
-            "clearChat"
+            "clearChatBtn"
         )
         ?.addEventListener(
             "click",
@@ -9017,7 +10780,7 @@ function renderSettings() {
 
     document
         .getElementById(
-            "clearQuizHistorySettings"
+            "clearQuizBtn"
         )
         ?.addEventListener(
             "click",
@@ -9027,7 +10790,7 @@ function renderSettings() {
 
     document
         .getElementById(
-            "resetApp"
+            "resetAppBtn"
         )
         ?.addEventListener(
             "click",
@@ -9037,14 +10800,14 @@ function renderSettings() {
 
     document
         .getElementById(
-            "premiumButton"
+            "premiumBtn"
         )
         ?.addEventListener(
             "click",
             () => {
 
                 showToast(
-                    "✨ Premium payment system can be connected with a real payment provider."
+                    "⭐ Premium features coming soon!"
                 );
 
             }
@@ -9053,42 +10816,58 @@ function renderSettings() {
 }
 
 
-function toggleDarkMode() {
+function toggleDarkMode(
+    event
+) {
+
+    if (!data.settings) {
+
+        data.settings = {};
+
+    }
+
 
     data.settings.darkMode =
-        !data.settings.darkMode;
+        Boolean(
+            event.target.checked
+        );
 
 
     document.body.classList.toggle(
-        "dark",
+        "dark-mode",
         data.settings.darkMode
     );
 
 
     saveData();
 
-
-    renderSettings();
-
 }
 
 
-function toggleCompactMode() {
+function toggleCompactMode(
+    event
+) {
+
+    if (!data.settings) {
+
+        data.settings = {};
+
+    }
+
 
     data.settings.compactMode =
-        !data.settings.compactMode;
+        Boolean(
+            event.target.checked
+        );
 
 
     document.body.classList.toggle(
-        "compact",
+        "compact-mode",
         data.settings.compactMode
     );
 
 
     saveData();
-
-
-    renderSettings();
 
 }
 
@@ -9097,7 +10876,7 @@ function clearChat() {
 
     if (
         !confirm(
-            "AI chat history delete karni hai?"
+            "Kya tum AI chat history clear karna chahte ho?"
         )
     ) {
 
@@ -9112,22 +10891,22 @@ function clearChat() {
 
     saveData();
 
-
     showToast(
-        "Chat history cleared."
+        "🗑️ Chat history cleared."
     );
-
-
-    renderSettings();
 
 }
 
+
+/* ============================================================
+   RESET APP
+   ============================================================ */
 
 function resetApp() {
 
     if (
         !confirm(
-            "All local BharatBuddy data reset karna hai?"
+            "WARNING: Isse BharatBuddy ka saved app data reset ho jayega. Continue?"
         )
     ) {
 
@@ -9136,82 +10915,291 @@ function resetApp() {
     }
 
 
-    stopQuizTimer();
-
-
-    activeQuiz =
-        null;
-
-
-    activeChapterTest =
-        null;
-
-
-    studyState = {
-
-        subject:
-            "Physics",
-
-        chapter:
-            "Units & Measurements",
-
-        lessonIndex:
-            0
-
-    };
-
-
-    data =
-        structuredClone(
-            defaultData
-        );
-
-
-    saveData();
-
-
-    updateProfileUI();
-
-
-    document.body.classList.remove(
-        "dark",
-        "compact"
+    localStorage.removeItem(
+        STORAGE_KEY
     );
 
 
-    showToast(
-        "App data reset ho gaya."
-    );
+    /*
+     * Reloading is safer than trying
+     * to manually rebuild every state.
+     */
 
-
-    renderHome();
+    location.reload();
 
 }
 
 
 /* ============================================================
-   INITIALIZATION
+   APPLY SAVED SETTINGS
+   ============================================================ */
+
+function applySavedSettings() {
+
+    const settings =
+        data.settings || {};
+
+
+    document.body.classList.toggle(
+        "dark-mode",
+        Boolean(
+            settings.darkMode
+        )
+    );
+
+
+    document.body.classList.toggle(
+        "compact-mode",
+        Boolean(
+            settings.compactMode
+        )
+    );
+
+}
+
+
+/* ============================================================
+   DAILY STREAK
+   ============================================================ */
+
+function updateDailyStreak() {
+
+    const today =
+        new Date()
+            .toISOString()
+            .slice(
+                0,
+                10
+            );
+
+
+    const lastActive =
+        data.lastActiveDate ||
+        "";
+
+
+    if (
+        lastActive ===
+        today
+    ) {
+
+        return;
+
+    }
+
+
+    if (!lastActive) {
+
+        data.streak =
+            1;
+
+    } else {
+
+        const previous =
+            new Date(
+                `${lastActive}T00:00:00`
+            );
+
+
+        const current =
+            new Date(
+                `${today}T00:00:00`
+            );
+
+
+        const diff =
+            Math.round(
+                (
+                    current -
+                    previous
+                ) /
+                (
+                    1000 *
+                    60 *
+                    60 *
+                    24
+                )
+            );
+
+
+        if (
+            diff === 1
+        ) {
+
+            data.streak =
+                Number(
+                    data.streak || 0
+                ) + 1;
+
+        } else {
+
+            data.streak =
+                1;
+
+        }
+
+    }
+
+
+    data.lastActiveDate =
+        today;
+
+
+    saveData();
+
+}
+
+
+/* ============================================================
+   GLOBAL CLICK HELPERS
+   ============================================================ */
+
+document.addEventListener(
+    "click",
+    event => {
+
+        const target =
+            event.target.closest(
+                "[data-action]"
+            );
+
+
+        if (!target) {
+            return;
+        }
+
+
+        const action =
+            target.dataset.action;
+
+
+        if (
+            action ===
+            "open-study"
+        ) {
+
+            openPage(
+                "study"
+            );
+
+        }
+
+
+        if (
+            action ===
+            "open-practice"
+        ) {
+
+            openPage(
+                "practice"
+            );
+
+        }
+
+
+        if (
+            action ===
+            "open-tutor"
+        ) {
+
+            openPage(
+                "tutor"
+            );
+
+        }
+
+
+        if (
+            action ===
+            "open-coding"
+        ) {
+
+            openPage(
+                "coding"
+            );
+
+        }
+
+    }
+);
+
+
+/* ============================================================
+   KEYBOARD SHORTCUTS
+   ============================================================ */
+
+document.addEventListener(
+    "keydown",
+    event => {
+
+        /*
+         * Ctrl + K
+         * opens AI Tutor.
+         */
+
+        if (
+            event.ctrlKey &&
+            event.key.toLowerCase() ===
+                "k"
+        ) {
+
+            event.preventDefault();
+
+            openPage(
+                "tutor"
+            );
+
+            setTimeout(
+                () => {
+
+                    document
+                        .getElementById(
+                            "tutorInput"
+                        )
+                        ?.focus();
+
+                },
+                100
+            );
+
+        }
+
+    }
+);
+
+
+/* ============================================================
+   FINAL INITIALIZATION
    ============================================================ */
 
 function initializeApp() {
 
-    ensureStudyProgress();
+    try {
+
+        ensureStudyProgress();
+
+    } catch (error) {
+
+        console.warn(
+            "Study progress initialization failed:",
+            error
+        );
+
+    }
 
 
-    document.body.classList.toggle(
-        "dark",
-        data.settings.darkMode
-    );
+    applySavedSettings();
 
-
-    document.body.classList.toggle(
-        "compact",
-        data.settings.compactMode
-    );
-
+    updateDailyStreak();
 
     updateProfileUI();
 
+    updateStats();
+
+    /*
+     * Open home page only after
+     * all base state has loaded.
+     */
 
     openPage(
         "home"
@@ -9220,3285 +11208,794 @@ function initializeApp() {
 }
 
 
+/*
+ * Start application.
+ */
+
 initializeApp();
 
 
 /* ============================================================
-   END OF BHARATBUDDY SCRIPT
-   ============================================================ */
-   /* ============================================================
-   BHARATBUDDY — ADVANCED LESSON SYSTEM
-   PASTE THIS ENTIRE BLOCK AT THE VERY END OF script.js
+   FINAL CLASS-AWARE STUDY PATCH
    ============================================================ */
 
 (function () {
 
     "use strict";
 
-    /* ---------------------------------------------------------
-       LESSON SYSTEM STATE
-       --------------------------------------------------------- */
-
-    const BB_LESSON_STATE_KEY = "bharatbuddy_lesson_state";
-
-    let bbLessonState = {
-        subject: null,
-        chapter: null,
-        lessonIndex: 0
-    };
-
-
-    /* ---------------------------------------------------------
-       LOAD SAVED LESSON STATE
-       --------------------------------------------------------- */
-
-    try {
-
-        const saved =
-            localStorage.getItem(
-                BB_LESSON_STATE_KEY
-            );
-
-        if (saved) {
-
-            const parsed =
-                JSON.parse(saved);
-
-            if (parsed && typeof parsed === "object") {
-
-                bbLessonState = {
-                    subject:
-                        parsed.subject || null,
-
-                    chapter:
-                        parsed.chapter || null,
-
-                    lessonIndex:
-                        Number(
-                            parsed.lessonIndex || 0
-                        )
-                };
-
-            }
-
-        }
-
-    } catch (error) {
-
-        console.warn(
-            "BharatBuddy lesson state could not be loaded.",
-            error
-        );
-
-    }
-
-
-    /* ---------------------------------------------------------
-       SAVE LESSON STATE
-       --------------------------------------------------------- */
-
-    function bbSaveLessonState() {
-
-        try {
-
-            localStorage.setItem(
-                BB_LESSON_STATE_KEY,
-                JSON.stringify(
-                    bbLessonState
-                )
-            );
-
-        } catch (error) {
-
-            console.warn(
-                "Lesson state could not be saved.",
-                error
-            );
-
-        }
-
-    }
-
-
-    /* ---------------------------------------------------------
-       SAFE HTML
-       --------------------------------------------------------- */
-
-    function bbEscape(value) {
-
-        const text =
-            String(
-                value == null
-                    ? ""
-                    : value
-            );
-
-        return text
-            .replaceAll("&", "&amp;")
-            .replaceAll("<", "&lt;")
-            .replaceAll(">", "&gt;")
-            .replaceAll('"', "&quot;")
-            .replaceAll("'", "&#039;");
-
-    }
-
-
-    /* ---------------------------------------------------------
-       GET ALL SUBJECTS
-       --------------------------------------------------------- */
-
-    function bbGetSubjects() {
-
-        if (
-            typeof lessonData !== "object" ||
-            lessonData === null
-        ) {
-
-            return [];
-
-        }
-
-        return Object.keys(
-            lessonData
-        );
-
-    }
-
-
-    /* ---------------------------------------------------------
-       GET CHAPTERS
-       --------------------------------------------------------- */
-
-    function bbGetChapters(subject) {
-
-        if (
-            !lessonData ||
-            !lessonData[subject]
-        ) {
-
-            return [];
-
-        }
-
-        return Object.keys(
-            lessonData[subject]
-        );
-
-    }
-
-
-    /* ---------------------------------------------------------
-       GET LESSONS
-       --------------------------------------------------------- */
-
-    function bbGetLessons(
-        subject,
-        chapter
-    ) {
-
-        if (
-            !lessonData ||
-            !lessonData[subject] ||
-            !lessonData[subject][chapter]
-        ) {
-
-            return [];
-
-        }
-
-        return Array.isArray(
-            lessonData[subject][chapter]
-        )
-            ? lessonData[subject][chapter]
-            : [];
-
-    }
-
-
-    /* ---------------------------------------------------------
-       LESSON PROGRESS STORAGE
-       --------------------------------------------------------- */
-
-    function bbEnsureProgress() {
-
-        if (
-            typeof data === "undefined" ||
-            !data
-        ) {
-
-            return;
-
-        }
-
-        if (
-            !data.lessonProgress ||
-            typeof data.lessonProgress !== "object"
-        ) {
-
-            data.lessonProgress = {};
-
-        }
-
-    }
-
-
-    function bbChapterProgress(
-        subject,
-        chapter
-    ) {
-
-        bbEnsureProgress();
-
-        const lessons =
-            bbGetLessons(
-                subject,
-                chapter
-            );
-
-        if (!lessons.length) {
-
-            return 0;
-
-        }
-
-        const completed =
-            lessons.filter(
-                (_, index) =>
-                    bbIsLessonCompleted(
-                        subject,
-                        chapter,
-                        index
-                    )
-            ).length;
-
-        return Math.round(
-            (
-                completed /
-                lessons.length
-            ) * 100
-        );
-
-    }
-
-
-    function bbIsLessonCompleted(
-        subject,
-        chapter,
-        index
-    ) {
-
-        bbEnsureProgress();
-
-        const key =
-            subject +
-            "::" +
-            chapter;
-
-        const stored =
-            data.lessonProgress[key];
-
-        if (Array.isArray(stored)) {
-
-            return stored.includes(
-                Number(index)
-            );
-
-        }
-
-        return false;
-
-    }
-
-
-    function bbMarkLessonComplete(
-        subject,
-        chapter,
-        index
-    ) {
-
-        bbEnsureProgress();
-
-        const key =
-            subject +
-            "::" +
-            chapter;
-
-        if (
-            !Array.isArray(
-                data.lessonProgress[key]
-            )
-        ) {
-
-            data.lessonProgress[key] = [];
-
-        }
-
-        if (
-            !data.lessonProgress[key]
-                .includes(
-                    Number(index)
-                )
-        ) {
-
-            data.lessonProgress[key].push(
-                Number(index)
-            );
-
-            data.lessonProgress[key].sort(
-                (a, b) => a - b
-            );
-
-            if (
-                data.stats &&
-                typeof data.stats.lessons === "number"
-            ) {
-
-                data.stats.lessons++;
-
-            }
-
-        }
-
-        saveData();
-
-    }
-
-
-    /* ---------------------------------------------------------
-       TOTAL SUBJECT PROGRESS
-       --------------------------------------------------------- */
-
-    function bbSubjectProgress(
-        subject
-    ) {
-
-        const chapters =
-            bbGetChapters(
-                subject
-            );
-
-        let total = 0;
-        let completed = 0;
-
-        chapters.forEach(
-            chapter => {
-
-                const lessons =
-                    bbGetLessons(
-                        subject,
-                        chapter
-                    );
-
-                total +=
-                    lessons.length;
-
-                lessons.forEach(
-                    (_, index) => {
-
-                        if (
-                            bbIsLessonCompleted(
-                                subject,
-                                chapter,
-                                index
-                            )
-                        ) {
-
-                            completed++;
-
-                        }
-
-                    }
-                );
-
-            }
-        );
-
-        if (!total) {
-
-            return 0;
-
-        }
-
-        return Math.round(
-            (
-                completed /
-                total
-            ) * 100
-        );
-
-    }
-
-
-    /* ---------------------------------------------------------
-       MAIN STUDY HOME
-       --------------------------------------------------------- */
-
-    function bbRenderStudyHome() {
-
-        const page =
-            document.getElementById(
-                "pageContent"
-            );
-
-        if (!page) return;
-
-
-        const subjects =
-            bbGetSubjects();
-
-
-        page.innerHTML = `
-
-            <div class="page-header">
-
-                <h1>
-                    📚 Study
-                </h1>
-
-                <p>
-                    Learn step-by-step with structured
-                    lessons, examples and practice.
-                </p>
-
-            </div>
-
-
-            <div
-                class="grid-3"
-                id="bbSubjectGrid">
-
-                ${
-                    subjects.length
-                        ? subjects
-                            .map(
-                                subject => {
-
-                                    const chapters =
-                                        bbGetChapters(
-                                            subject
-                                        );
-
-                                    const lessonCount =
-                                        chapters.reduce(
-                                            (
-                                                total,
-                                                chapter
-                                            ) =>
-                                                total +
-                                                bbGetLessons(
-                                                    subject,
-                                                    chapter
-                                                ).length,
-                                            0
-                                        );
-
-                                    const progress =
-                                        bbSubjectProgress(
-                                            subject
-                                        );
-
-                                    const icon =
-                                        subject === "Physics"
-                                            ? "⚡"
-                                            : subject === "Mathematics"
-                                                ? "📐"
-                                                : subject === "Chemistry"
-                                                    ? "🧪"
-                                                    : subject === "Computer Science"
-                                                        ? "💻"
-                                                        : subject === "English"
-                                                            ? "📖"
-                                                            : "📚";
-
-                                    return `
-
-                                        <div
-                                            class="subject-card"
-                                            data-bb-subject="${bbEscape(subject)}"
-                                            style="cursor:pointer;">
-
-                                            <div
-                                                style="
-                                                    font-size:42px;
-                                                    margin-bottom:12px;
-                                                ">
-
-                                                ${icon}
-
-                                            </div>
-
-                                            <h3>
-                                                ${bbEscape(subject)}
-                                            </h3>
-
-                                            <p>
-                                                ${chapters.length}
-                                                chapters •
-                                                ${lessonCount}
-                                                lessons
-                                            </p>
-
-                                            <div
-                                                class="progress"
-                                                style="margin-top:14px;">
-
-                                                <div
-                                                    class="progress-bar"
-                                                    style="
-                                                        width:${progress}%;
-                                                    ">
-                                                </div>
-
-                                            </div>
-
-                                            <small
-                                                style="
-                                                    display:block;
-                                                    margin-top:8px;
-                                                ">
-
-                                                ${progress}% complete
-
-                                            </small>
-
-                                            <button
-                                                class="btn btn-primary"
-                                                data-bb-open-subject="${bbEscape(subject)}"
-                                                style="
-                                                    width:100%;
-                                                    margin-top:14px;
-                                                ">
-
-                                                📖 Start Learning
-
-                                            </button>
-
-                                        </div>
-
-                                    `;
-
-                                }
-                            )
-                            .join("")
-                        : `
-
-                            <div class="card">
-
-                                <h3>
-                                    📚 No Study Content
-                                </h3>
-
-                                <p>
-                                    Add lessons to lessonData
-                                    to start learning.
-                                </p>
-
-                            </div>
-
-                        `
-                }
-
-            </div>
-
-        `;
-
-
-        page
-            .querySelectorAll(
-                "[data-bb-open-subject]"
-            )
-            .forEach(
-                button => {
-
-                    button.addEventListener(
-                        "click",
-                        event => {
-
-                            event.stopPropagation();
-
-                            bbRenderChapters(
-                                button.dataset.bbOpenSubject
-                            );
-
-                        }
-                    );
-
-                }
-            );
-
-
-        page
-            .querySelectorAll(
-                "[data-bb-subject]"
-            )
-            .forEach(
-                card => {
-
-                    card.addEventListener(
-                        "click",
-                        () => {
-
-                            bbRenderChapters(
-                                card.dataset.bbSubject
-                            );
-
-                        }
-                    );
-
-                }
-            );
-
-    }
-
-
-    /* ---------------------------------------------------------
-       CHAPTER SCREEN
-       --------------------------------------------------------- */
-
-    function bbRenderChapters(
-        subject
-    ) {
-
-        const page =
-            document.getElementById(
-                "pageContent"
-            );
-
-        if (!page) return;
-
-
-        const chapters =
-            bbGetChapters(
-                subject
-            );
-
-
-        page.innerHTML = `
-
-            <div class="page-header">
-
-                <button
-                    class="btn btn-secondary"
-                    id="bbBackSubjects">
-
-                    ← All Subjects
-
-                </button>
-
-                <br><br>
-
-                <h1>
-                    ${bbEscape(subject)}
-                </h1>
-
-                <p>
-                    Choose a chapter to begin learning.
-                </p>
-
-            </div>
-
-
-            <div
-                style="
-                    display:flex;
-                    flex-direction:column;
-                    gap:14px;
-                ">
-
-                ${
-                    chapters
-                        .map(
-                            (
-                                chapter,
-                                chapterIndex
-                            ) => {
-
-                                const lessons =
-                                    bbGetLessons(
-                                        subject,
-                                        chapter
-                                    );
-
-                                const progress =
-                                    bbChapterProgress(
-                                        subject,
-                                        chapter
-                                    );
-
-                                return `
-
-                                    <div
-                                        class="card"
-                                        style="cursor:pointer;"
-                                        data-bb-chapter="${bbEscape(chapter)}">
-
-                                        <div
-                                            style="
-                                                display:flex;
-                                                justify-content:space-between;
-                                                align-items:center;
-                                                gap:15px;
-                                                flex-wrap:wrap;
-                                            ">
-
-                                            <div>
-
-                                                <small>
-                                                    Chapter ${chapterIndex + 1}
-                                                </small>
-
-                                                <h3
-                                                    style="
-                                                        margin-top:5px;
-                                                    ">
-
-                                                    ${bbEscape(chapter)}
-
-                                                </h3>
-
-                                                <p>
-                                                    ${lessons.length}
-                                                    lessons
-                                                </p>
-
-                                            </div>
-
-                                            <div
-                                                style="
-                                                    font-size:28px;
-                                                ">
-
-                                                ${
-                                                    progress >= 100
-                                                        ? "✅"
-                                                        : "📖"
-                                                }
-
-                                            </div>
-
-                                        </div>
-
-                                        <div
-                                            class="progress"
-                                            style="margin-top:12px;">
-
-                                            <div
-                                                class="progress-bar"
-                                                style="
-                                                    width:${progress}%;
-                                                ">
-                                            </div>
-
-                                        </div>
-
-                                        <div
-                                            style="
-                                                margin-top:8px;
-                                                font-size:13px;
-                                                opacity:.75;
-                                            ">
-
-                                            ${progress}% complete
-
-                                        </div>
-
-                                    </div>
-
-                                `;
-
-                            }
-                        )
-                        .join("")
-                }
-
-            </div>
-
-        `;
-
-
-        document
-            .getElementById(
-                "bbBackSubjects"
-            )
-            ?.addEventListener(
-                "click",
-                bbRenderStudyHome
-            );
-
-
-        page
-            .querySelectorAll(
-                "[data-bb-chapter]"
-            )
-            .forEach(
-                card => {
-
-                    card.addEventListener(
-                        "click",
-                        () => {
-
-                            bbRenderLessonList(
-                                subject,
-                                card.dataset.bbChapter
-                            );
-
-                        }
-                    );
-
-                }
-            );
-
-    }
-
-
-    /* ---------------------------------------------------------
-       LESSON LIST
-       --------------------------------------------------------- */
-
-    function bbRenderLessonList(
-        subject,
-        chapter
-    ) {
-
-        const page =
-            document.getElementById(
-                "pageContent"
-            );
-
-        if (!page) return;
-
-
-        const lessons =
-            bbGetLessons(
-                subject,
-                chapter
-            );
-
-
-        page.innerHTML = `
-
-            <div class="page-header">
-
-                <button
-                    class="btn btn-secondary"
-                    id="bbBackChapters">
-
-                    ← Chapters
-
-                </button>
-
-                <br><br>
-
-                <h1>
-                    ${bbEscape(chapter)}
-                </h1>
-
-                <p>
-                    Complete the lessons in order.
-                </p>
-
-            </div>
-
-
-            <div
-                style="
-                    display:flex;
-                    flex-direction:column;
-                    gap:12px;
-                ">
-
-                ${
-                    lessons
-                        .map(
-                            (
-                                lesson,
-                                index
-                            ) => {
-
-                                const completed =
-                                    bbIsLessonCompleted(
-                                        subject,
-                                        chapter,
-                                        index
-                                    );
-
-                                const locked =
-                                    index > 0 &&
-                                    !bbIsLessonCompleted(
-                                        subject,
-                                        chapter,
-                                        index - 1
-                                    );
-
-                                return `
-
-                                    <div
-                                        class="card"
-                                        data-bb-lesson-index="${index}"
-                                        style="
-                                            cursor:${
-                                                locked
-                                                    ? "not-allowed"
-                                                    : "pointer"
-                                            };
-                                            opacity:${
-                                                locked
-                                                    ? ".6"
-                                                    : "1"
-                                            };
-                                        ">
-
-                                        <div
-                                            style="
-                                                display:flex;
-                                                align-items:center;
-                                                gap:14px;
-                                            ">
-
-                                            <div
-                                                style="
-                                                    min-width:42px;
-                                                    width:42px;
-                                                    height:42px;
-                                                    border-radius:50%;
-                                                    display:flex;
-                                                    align-items:center;
-                                                    justify-content:center;
-                                                    background:${
-                                                        completed
-                                                            ? "rgba(22,163,74,.15)"
-                                                            : "rgba(37,99,235,.12)"
-                                                    };
-                                                    font-weight:700;
-                                                ">
-
-                                                ${
-                                                    completed
-                                                        ? "✓"
-                                                        : index + 1
-                                                }
-
-                                            </div>
-
-                                            <div
-                                                style="flex:1;">
-
-                                                <small>
-                                                    Lesson ${index + 1}
-                                                </small>
-
-                                                <h3
-                                                    style="
-                                                        margin-top:4px;
-                                                    ">
-
-                                                    ${bbEscape(
-                                                        lesson.title ||
-                                                        "Lesson " +
-                                                        (index + 1)
-                                                    )}
-
-                                                </h3>
-
-                                            </div>
-
-                                            <div>
-
-                                                ${
-                                                    completed
-                                                        ? "✅"
-                                                        : locked
-                                                            ? "🔒"
-                                                            : "▶️"
-                                                }
-
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-
-                                `;
-
-                            }
-                        )
-                        .join("")
-                }
-
-            </div>
-
-        `;
-
-
-        document
-            .getElementById(
-                "bbBackChapters"
-            )
-            ?.addEventListener(
-                "click",
-                () => {
-
-                    bbRenderChapters(
-                        subject
-                    );
-
-                }
-            );
-
-
-        page
-            .querySelectorAll(
-                "[data-bb-lesson-index]"
-            )
-            .forEach(
-                card => {
-
-                    card.addEventListener(
-                        "click",
-                        () => {
-
-                            const index =
-                                Number(
-                                    card.dataset.bbLessonIndex
-                                );
-
-                            if (
-                                index > 0 &&
-                                !bbIsLessonCompleted(
-                                    subject,
-                                    chapter,
-                                    index - 1
-                                )
-                            ) {
-
-                                if (
-                                    typeof showToast ===
-                                    "function"
-                                ) {
-
-                                    showToast(
-                                        "Pehle previous lesson complete karo 🔒"
-                                    );
-
-                                }
-
-                                return;
-
-                            }
-
-                            bbOpenLesson(
-                                subject,
-                                chapter,
-                                index
-                            );
-
-                        }
-                    );
-
-                }
-            );
-
-    }
-
-
-    /* ---------------------------------------------------------
-       OPEN LESSON
-       --------------------------------------------------------- */
-
-    function bbOpenLesson(
-        subject,
-        chapter,
-        index
-    ) {
-
-        const lessons =
-            bbGetLessons(
-                subject,
-                chapter
-            );
-
-        if (!lessons.length) return;
-
-
-        if (
-            index < 0
-        ) {
-
-            index = 0;
-
-        }
-
-
-        if (
-            index >= lessons.length
-        ) {
-
-            index =
-                lessons.length - 1;
-
-        }
-
-
-        bbLessonState = {
-
-            subject,
-            chapter,
-            lessonIndex: index
-
-        };
-
-
-        bbSaveLessonState();
-
-
-        bbRenderLesson(
-            subject,
-            chapter,
-            index
-        );
-
-    }
-
-
-    /* ---------------------------------------------------------
-       LESSON VIEW
-       --------------------------------------------------------- */
-
-    function bbRenderLesson(
-        subject,
-        chapter,
-        index
-    ) {
-
-        const page =
-            document.getElementById(
-                "pageContent"
-            );
-
-        if (!page) return;
-
-
-        const lessons =
-            bbGetLessons(
-                subject,
-                chapter
-            );
-
-
-        const lesson =
-            lessons[index];
-
-        if (!lesson) return;
-
-
-        const completed =
-            bbIsLessonCompleted(
-                subject,
-                chapter,
-                index
-            );
-
-
-        const progress =
-            Math.round(
-                (
-                    (
-                        index + 1
-                    ) /
-                    lessons.length
-                ) * 100
-            );
-
-
-        const lessonContent =
-            lesson.content ||
-            `
-                <h3>
-                    ${bbEscape(
-                        lesson.title ||
-                        "Lesson"
-                    )}
-                </h3>
-
-                <p>
-                    Is lesson ka detailed content
-                    jaldi add kiya jayega.
-                </p>
-            `;
-
-
-        page.innerHTML = `
-
-            <div
-                style="
-                    max-width:900px;
-                    margin:0 auto;
-                ">
-
-                <div
-                    style="
-                        display:flex;
-                        justify-content:space-between;
-                        align-items:center;
-                        gap:10px;
-                        flex-wrap:wrap;
-                        margin-bottom:18px;
-                    ">
-
-                    <button
-                        class="btn btn-secondary"
-                        id="bbLessonBack">
-
-                        ← Lessons
-
-                    </button>
-
-                    <div
-                        style="
-                            font-size:13px;
-                            opacity:.75;
-                        ">
-
-                        ${bbEscape(subject)}
-                        •
-                        ${bbEscape(chapter)}
-
-                    </div>
-
-                </div>
-
-
-                <div
-                    class="card"
-                    style="
-                        padding:22px;
-                        margin-bottom:18px;
-                    ">
-
-                    <div
-                        style="
-                            display:flex;
-                            justify-content:space-between;
-                            align-items:center;
-                            gap:12px;
-                        ">
-
-                        <div>
-
-                            <small>
-                                Lesson ${index + 1}
-                                of ${lessons.length}
-                            </small>
-
-                            <h1
-                                style="
-                                    margin-top:7px;
-                                ">
-
-                                ${bbEscape(
-                                    lesson.title ||
-                                    "Lesson"
-                                )}
-
-                            </h1>
-
-                        </div>
-
-                        <div
-                            style="
-                                font-size:32px;
-                            ">
-
-                            ${
-                                completed
-                                    ? "✅"
-                                    : "📖"
-                            }
-
-                        </div>
-
-                    </div>
-
-
-                    <div
-                        class="progress"
-                        style="
-                            margin-top:18px;
-                        ">
-
-                        <div
-                            class="progress-bar"
-                            style="
-                                width:${progress}%;
-                            ">
-                        </div>
-
-                    </div>
-
-
-                    <small
-                        style="
-                            display:block;
-                            margin-top:7px;
-                            opacity:.7;
-                        ">
-
-                        Lesson ${index + 1}
-                        / ${lessons.length}
-                        • ${progress}%
-
-                    </small>
-
-                </div>
-
-
-                <article
-                    class="card"
-                    style="
-                        line-height:1.8;
-                        font-size:16px;
-                    ">
-
-                    ${lessonContent}
-
-                </article>
-
-
-                <div
-                    class="card"
-                    style="
-                        margin-top:18px;
-                        padding:18px;
-                    ">
-
-                    <h3>
-                        🎯 Lesson Check
-                    </h3>
-
-                    <p
-                        style="
-                            margin-top:7px;
-                            opacity:.8;
-                        ">
-
-                        Lesson ko complete mark karne ke
-                        baad next lesson unlock hoga.
-
-                    </p>
-
-
-                    <button
-                        class="btn ${
-                            completed
-                                ? "btn-secondary"
-                                : "btn-primary"
-                        }"
-                        id="bbCompleteLesson"
-                        style="
-                            margin-top:12px;
-                        ">
-
-                        ${
-                            completed
-                                ? "✅ Completed"
-                                : "✓ Mark Lesson Complete"
-                        }
-
-                    </button>
-
-                </div>
-
-
-                <div
-                    style="
-                        display:flex;
-                        justify-content:space-between;
-                        gap:10px;
-                        margin-top:18px;
-                    ">
-
-                    <button
-                        class="btn btn-secondary"
-                        id="bbPreviousLesson"
-                        ${
-                            index === 0
-                                ? "disabled"
-                                : ""
-                        }>
-
-                        ← Previous
-
-                    </button>
-
-
-                    <button
-                        class="btn btn-primary"
-                        id="bbNextLesson">
-
-                        ${
-                            index === lessons.length - 1
-                                ? "🏆 Finish Chapter"
-                                : "Next Lesson →"
-                        }
-
-                    </button>
-
-                </div>
-
-            </div>
-
-        `;
-
-
-        document
-            .getElementById(
-                "bbLessonBack"
-            )
-            ?.addEventListener(
-                "click",
-                () => {
-
-                    bbRenderLessonList(
-                        subject,
-                        chapter
-                    );
-
-                }
-            );
-
-
-        document
-            .getElementById(
-                "bbPreviousLesson"
-            )
-            ?.addEventListener(
-                "click",
-                () => {
-
-                    if (index > 0) {
-
-                        bbOpenLesson(
-                            subject,
-                            chapter,
-                            index - 1
-                        );
-
-                    }
-
-                }
-            );
-
-
-        document
-            .getElementById(
-                "bbCompleteLesson"
-            )
-            ?.addEventListener(
-                "click",
-                () => {
-
-                    if (!completed) {
-
-                        bbMarkLessonComplete(
-                            subject,
-                            chapter,
-                            index
-                        );
-
-                        if (
-                            typeof showToast ===
-                            "function"
-                        ) {
-
-                            showToast(
-                                "Lesson completed! 🎉"
-                            );
-
-                        }
-
-                        bbRenderLesson(
-                            subject,
-                            chapter,
-                            index
-                        );
-
-                    }
-
-                }
-            );
-
-
-        document
-            .getElementById(
-                "bbNextLesson"
-            )
-            ?.addEventListener(
-                "click",
-                () => {
-
-                    if (!bbIsLessonCompleted(
-                        subject,
-                        chapter,
-                        index
-                    )) {
-
-                        if (
-                            typeof showToast ===
-                            "function"
-                        ) {
-
-                            showToast(
-                                "Pehle lesson complete karo ✓"
-                            );
-
-                        }
-
-                        return;
-
-                    }
-
-
-                    if (
-                        index <
-                        lessons.length - 1
-                    ) {
-
-                        bbOpenLesson(
-                            subject,
-                            chapter,
-                            index + 1
-                        );
-
-                    } else {
-
-                        bbShowChapterComplete(
-                            subject,
-                            chapter
-                        );
-
-                    }
-
-                }
-            );
-
-    }
-
-
-    /* ---------------------------------------------------------
-       CHAPTER COMPLETE
-       --------------------------------------------------------- */
-
-    function bbShowChapterComplete(
-        subject,
-        chapter
-    ) {
-
-        const page =
-            document.getElementById(
-                "pageContent"
-            );
-
-        if (!page) return;
-
-
-        page.innerHTML = `
-
-            <div
-                class="card"
-                style="
-                    max-width:750px;
-                    margin:40px auto;
-                    text-align:center;
-                    padding:40px 25px;
-                ">
-
-                <div
-                    style="
-                        font-size:70px;
-                    ">
-
-                    🏆
-
-                </div>
-
-                <h1
-                    style="
-                        margin-top:12px;
-                    ">
-
-                    Chapter Complete!
-
-                </h1>
-
-                <p
-                    style="
-                        margin-top:10px;
-                        font-size:17px;
-                    ">
-
-                    Tumne
-                    <strong>
-                        ${bbEscape(chapter)}
-                    </strong>
-                    complete kar liya! 🎉
-
-                </p>
-
-
-                <div
-                    style="
-                        margin-top:22px;
-                    ">
-
-                    <div
-                        class="progress">
-
-                        <div
-                            class="progress-bar"
-                            style="width:100%;">
-                        </div>
-
-                    </div>
-
-                    <strong
-                        style="
-                            display:block;
-                            margin-top:8px;
-                        ">
-
-                        100% Complete
-
-                    </strong>
-
-                </div>
-
-
-                <div
-                    style="
-                        display:flex;
-                        justify-content:center;
-                        gap:10px;
-                        flex-wrap:wrap;
-                        margin-top:25px;
-                    ">
-
-                    <button
-                        class="btn btn-primary"
-                        id="bbChapterLessons">
-
-                        📖 Review Lessons
-
-                    </button>
-
-                    <button
-                        class="btn btn-secondary"
-                        id="bbChapterList">
-
-                        📚 Back to Chapters
-
-                    </button>
-
-                </div>
-
-            </div>
-
-        `;
-
-
-        document
-            .getElementById(
-                "bbChapterLessons"
-            )
-            ?.addEventListener(
-                "click",
-                () => {
-
-                    bbRenderLessonList(
-                        subject,
-                        chapter
-                    );
-
-                }
-            );
-
-
-        document
-            .getElementById(
-                "bbChapterList"
-            )
-            ?.addEventListener(
-                "click",
-                () => {
-
-                    bbRenderChapters(
-                        subject
-                    );
-
-                }
-            );
-
-    }
-
-
-    /* ---------------------------------------------------------
-       CONTINUE LEARNING
-       --------------------------------------------------------- */
-
-    function bbContinueLearning() {
-
-        if (
-            bbLessonState.subject &&
-            bbLessonState.chapter
-        ) {
-
-            const lessons =
-                bbGetLessons(
-                    bbLessonState.subject,
-                    bbLessonState.chapter
-                );
-
-            if (lessons.length) {
-
-                let index =
-                    Number(
-                        bbLessonState.lessonIndex || 0
-                    );
-
-                while (
-                    index < lessons.length &&
-                    bbIsLessonCompleted(
-                        bbLessonState.subject,
-                        bbLessonState.chapter,
-                        index
-                    )
-                ) {
-
-                    index++;
-
-                }
-
-                if (
-                    index >= lessons.length
-                ) {
-
-                    index =
-                        lessons.length - 1;
-
-                }
-
-                bbOpenLesson(
-                    bbLessonState.subject,
-                    bbLessonState.chapter,
-                    index
-                );
-
-                return;
-
-            }
-
-        }
-
-
-        const subjects =
-            bbGetSubjects();
-
-
-        if (subjects.length) {
-
-            const firstSubject =
-                subjects[0];
-
-            const chapters =
-                bbGetChapters(
-                    firstSubject
-                );
-
-            if (chapters.length) {
-
-                bbOpenLesson(
-                    firstSubject,
-                    chapters[0],
-                    0
-                );
-
-                return;
-
-            }
-
-        }
-
-
-        bbRenderStudyHome();
-
-    }
-
-
-    /* ---------------------------------------------------------
-       EXPOSE FUNCTIONS
-       --------------------------------------------------------- */
-
-    window.BharatBuddyLessons = {
-
-        open:
-            bbOpenLesson,
-
-        study:
-            bbRenderStudyHome,
-
-        chapters:
-            bbRenderChapters,
-
-        lessons:
-            bbRenderLessonList,
-
-        continue:
-            bbContinueLearning,
-
-        progress:
-            bbSubjectProgress
-
-    };
-
-
-    /* ---------------------------------------------------------
-       OPTIONAL STUDY NAVIGATION CONNECTION
-       --------------------------------------------------------- */
-
-    function bbConnectStudyNavigation() {
-
-        const possibleButtons =
-            document.querySelectorAll(
-                "a, button, [data-page], [data-nav]"
-            );
-
-
-        possibleButtons.forEach(
-            element => {
-
-                const text =
-                    (
-                        element.textContent ||
-                        ""
-                    )
-                    .trim()
-                    .toLowerCase();
-
-
-                const page =
-                    (
-                        element.dataset.page ||
-                        element.dataset.nav ||
-                        ""
-                    )
-                    .toLowerCase();
-
-
-                if (
-                    text === "study" ||
-                    text.includes("📚 study") ||
-                    page === "study"
-                ) {
-
-                    if (
-                        !element.dataset.bbLessonConnected
-                    ) {
-
-                        element.dataset.bbLessonConnected =
-                            "true";
-
-
-                        element.addEventListener(
-                            "click",
-                            event => {
-
-                                event.preventDefault();
-
-                                bbRenderStudyHome();
-
-                            }
-                        );
-
-                    }
-
-                }
-
-            }
-        );
-
-    }
-
-
-    /* ---------------------------------------------------------
-       START CONNECTION
-       --------------------------------------------------------- */
-
-    if (
-        document.readyState ===
-        "loading"
-    ) {
-
-        document.addEventListener(
-            "DOMContentLoaded",
-            bbConnectStudyNavigation
-        );
-
-    } else {
-
-        bbConnectStudyNavigation();
-
-    }
-
-
-})();
-/* ============================================================
-   BHARATBUDDY AI — SMART NCERT STUDY ADD-ON
-   DO NOT DELETE EXISTING CODE
-   Paste at the VERY END of script.js
-   ============================================================ */
-
-(function () {
-    "use strict";
-
-    const BB_STUDY_API =
-        "https://bharatbuddy-ai-36i4.onrender.com/api/chat";
 
     /*
-       NCERT-ALIGNED CLASS + STREAM SUBJECT MAP
-    */
+     * This is the single final curriculum layer.
+     *
+     * It replaces the older duplicated
+     * NCERT/lesson selector systems.
+     */
 
-    const BB_NCERT = {
+
+    const BB_FINAL_CATALOG = {
 
         "Class 9": {
-            "All": [
-                "Mathematics",
-                "Science",
-                "Social Science",
-                "English"
-            ]
+
+            "PCM": {
+
+                "Science": [
+                    "Matter in Our Surroundings",
+                    "Is Matter Around Us Pure",
+                    "Atoms and Molecules",
+                    "Structure of the Atom",
+                    "The Fundamental Unit of Life",
+                    "Tissues",
+                    "Motion",
+                    "Force and Laws of Motion",
+                    "Gravitation",
+                    "Work and Energy",
+                    "Sound",
+                    "Why Do We Fall Ill",
+                    "Natural Resources",
+                    "Improvement in Food Resources"
+                ],
+
+                "Mathematics": [
+                    "Number Systems",
+                    "Polynomials",
+                    "Coordinate Geometry",
+                    "Linear Equations in Two Variables",
+                    "Introduction to Euclid's Geometry",
+                    "Lines and Angles",
+                    "Triangles",
+                    "Quadrilaterals",
+                    "Areas of Parallelograms and Triangles",
+                    "Circles",
+                    "Constructions",
+                    "Heron's Formula",
+                    "Surface Areas and Volumes",
+                    "Statistics",
+                    "Probability"
+                ],
+
+                "English": [
+                    "The Fun They Had",
+                    "The Sound of Music",
+                    "The Little Girl",
+                    "A Truly Beautiful Mind",
+                    "The Snake and the Mirror",
+                    "My Childhood",
+                    "Reach for the Top",
+                    "Kathmandu",
+                    "If I Were You"
+                ],
+
+                "Social Science": [
+                    "The French Revolution",
+                    "Socialism in Europe and the Russian Revolution",
+                    "Nazism and the Rise of Hitler",
+                    "Forest Society and Colonialism",
+                    "Pastoralists in the Modern World",
+                    "India – Size and Location",
+                    "Physical Features of India",
+                    "Drainage",
+                    "Climate",
+                    "Natural Vegetation and Wildlife",
+                    "Population",
+                    "What is Democracy",
+                    "Constitutional Design",
+                    "Electoral Politics",
+                    "Working of Institutions",
+                    "Democratic Rights",
+                    "The Story of Village Palampur",
+                    "People as Resource",
+                    "Poverty as a Challenge",
+                    "Food Security in India"
+                ]
+
+            },
+
+
+            "PCB": {},
+
+            "Commerce": {},
+
+            "Arts": {}
+
         },
 
+
         "Class 10": {
-            "All": [
-                "Mathematics",
-                "Science",
-                "Social Science",
-                "English"
-            ]
+
+            "PCM": {
+
+                "Science": [
+                    "Chemical Reactions and Equations",
+                    "Acids, Bases and Salts",
+                    "Metals and Non-metals",
+                    "Carbon and Its Compounds",
+                    "Life Processes",
+                    "Control and Coordination",
+                    "How do Organisms Reproduce",
+                    "Heredity",
+                    "Light – Reflection and Refraction",
+                    "Human Eye and Colourful World",
+                    "Electricity",
+                    "Magnetic Effects of Electric Current",
+                    "Our Environment"
+                ],
+
+                "Mathematics": [
+                    "Real Numbers",
+                    "Polynomials",
+                    "Pair of Linear Equations in Two Variables",
+                    "Quadratic Equations",
+                    "Arithmetic Progressions",
+                    "Triangles",
+                    "Coordinate Geometry",
+                    "Introduction to Trigonometry",
+                    "Some Applications of Trigonometry",
+                    "Circles",
+                    "Areas Related to Circles",
+                    "Surface Areas and Volumes",
+                    "Statistics",
+                    "Probability"
+                ],
+
+                "English": [
+                    "A Letter to God",
+                    "Nelson Mandela",
+                    "Two Stories About Flying",
+                    "From the Diary of Anne Frank",
+                    "Glimpses of India",
+                    "Mijbil the Otter",
+                    "Madam Rides the Bus",
+                    "The Sermon at Benares",
+                    "The Proposal"
+                ],
+
+                "Social Science": [
+                    "The Rise of Nationalism in Europe",
+                    "Nationalism in India",
+                    "The Making of a Global World",
+                    "The Age of Industrialisation",
+                    "Print Culture and the Modern World",
+                    "Resources and Development",
+                    "Forest and Wildlife Resources",
+                    "Water Resources",
+                    "Agriculture",
+                    "Minerals and Energy Resources",
+                    "Manufacturing Industries",
+                    "Lifelines of National Economy",
+                    "Power Sharing",
+                    "Federalism",
+                    "Gender, Religion and Caste",
+                    "Political Parties",
+                    "Outcomes of Democracy",
+                    "Development",
+                    "Sectors of the Indian Economy",
+                    "Money and Credit",
+                    "Globalisation and the Indian Economy",
+                    "Consumer Rights"
+                ]
+
+            },
+
+
+            "PCB": {},
+
+            "Commerce": {},
+
+            "Arts": {}
+
         },
+
 
         "Class 11": {
 
-            "PCM": [
-                "Physics",
-                "Chemistry",
-                "Mathematics",
-                "English",
-                "Computer Science"
-            ],
+            "PCM": {
 
-            "PCB": [
-                "Physics",
-                "Chemistry",
-                "Biology",
-                "English",
-                "Computer Science"
-            ],
+                "Physics": [
+                    "Units and Measurements",
+                    "Motion in a Straight Line",
+                    "Motion in a Plane",
+                    "Laws of Motion",
+                    "Work, Energy and Power",
+                    "System of Particles and Rotational Motion",
+                    "Gravitation",
+                    "Mechanical Properties of Solids",
+                    "Mechanical Properties of Fluids",
+                    "Thermal Properties of Matter",
+                    "Thermodynamics",
+                    "Kinetic Theory",
+                    "Oscillations",
+                    "Waves"
+                ],
 
-            "Commerce": [
-                "Accountancy",
-                "Business Studies",
-                "Economics",
-                "English",
-                "Mathematics"
-            ],
+                "Chemistry": [
+                    "Some Basic Concepts of Chemistry",
+                    "Structure of Atom",
+                    "Classification of Elements and Periodicity in Properties",
+                    "Chemical Bonding and Molecular Structure",
+                    "Thermodynamics",
+                    "Equilibrium",
+                    "Redox Reactions",
+                    "Organic Chemistry – Some Basic Principles and Techniques",
+                    "Hydrocarbons"
+                ],
 
-            "Arts": [
-                "History",
-                "Political Science",
-                "Geography",
-                "Economics",
-                "English",
-                "Sociology"
-            ],
+                "Mathematics": [
+                    "Sets",
+                    "Relations and Functions",
+                    "Trigonometric Functions",
+                    "Complex Numbers and Quadratic Equations",
+                    "Linear Inequalities",
+                    "Permutations and Combinations",
+                    "Binomial Theorem",
+                    "Sequences and Series",
+                    "Straight Lines",
+                    "Conic Sections",
+                    "Introduction to Three Dimensional Geometry",
+                    "Limits and Derivatives",
+                    "Statistics",
+                    "Probability"
+                ]
 
-            "Computer Science": [
-                "Computer Science",
-                "Mathematics",
-                "Physics",
-                "English"
-            ],
+            },
 
-            "Other": [
-                "English",
-                "Mathematics",
-                "Computer Science"
-            ]
+
+            "PCB": {
+
+                "Physics": [
+                    "Units and Measurements",
+                    "Motion in a Straight Line",
+                    "Motion in a Plane",
+                    "Laws of Motion",
+                    "Work, Energy and Power",
+                    "System of Particles and Rotational Motion",
+                    "Gravitation",
+                    "Mechanical Properties of Solids",
+                    "Mechanical Properties of Fluids",
+                    "Thermal Properties of Matter",
+                    "Thermodynamics",
+                    "Kinetic Theory",
+                    "Oscillations",
+                    "Waves"
+                ],
+
+                "Chemistry": [
+                    "Some Basic Concepts of Chemistry",
+                    "Structure of Atom",
+                    "Classification of Elements and Periodicity in Properties",
+                    "Chemical Bonding and Molecular Structure",
+                    "Thermodynamics",
+                    "Equilibrium",
+                    "Redox Reactions",
+                    "Organic Chemistry – Some Basic Principles and Techniques",
+                    "Hydrocarbons"
+                ],
+
+                "Biology": [
+                    "The Living World",
+                    "Biological Classification",
+                    "Plant Kingdom",
+                    "Animal Kingdom",
+                    "Morphology of Flowering Plants",
+                    "Anatomy of Flowering Plants",
+                    "Structural Organisation in Animals",
+                    "Cell: The Unit of Life",
+                    "Biomolecules",
+                    "Cell Cycle and Cell Division",
+                    "Transport in Plants",
+                    "Mineral Nutrition",
+                    "Photosynthesis in Higher Plants",
+                    "Respiration in Plants",
+                    "Plant Growth and Development",
+                    "Digestion and Absorption",
+                    "Breathing and Exchange of Gases",
+                    "Body Fluids and Circulation",
+                    "Excretory Products and their Elimination",
+                    "Locomotion and Movement",
+                    "Neural Control and Coordination",
+                    "Chemical Coordination and Integration"
+                ]
+
+            },
+
+
+            "Commerce": {
+
+                "Accountancy": [
+                    "Introduction to Accounting",
+                    "Theory Base of Accounting",
+                    "Recording of Transactions",
+                    "Bank Reconciliation Statement",
+                    "Trial Balance and Rectification of Errors",
+                    "Depreciation, Provisions and Reserves",
+                    "Bills of Exchange",
+                    "Financial Statements",
+                    "Accounts from Incomplete Records"
+                ],
+
+                "Business Studies": [
+                    "Nature and Purpose of Business",
+                    "Forms of Business Organisation",
+                    "Private, Public and Global Enterprises",
+                    "Business Services",
+                    "Emerging Modes of Business",
+                    "Social Responsibility of Business",
+                    "Formation of a Company",
+                    "Sources of Business Finance",
+                    "Small Business",
+                    "Internal Trade",
+                    "International Business"
+                ],
+
+                "Economics": [
+                    "Introduction to Micro Economics",
+                    "Consumer's Equilibrium",
+                    "Demand",
+                    "Elasticity of Demand",
+                    "Production",
+                    "Cost",
+                    "Perfect Competition",
+                    "Market Equilibrium"
+                ],
+
+                "Mathematics": [
+                    "Sets",
+                    "Relations and Functions",
+                    "Trigonometric Functions",
+                    "Complex Numbers and Quadratic Equations",
+                    "Linear Inequalities",
+                    "Permutations and Combinations",
+                    "Binomial Theorem",
+                    "Sequences and Series",
+                    "Straight Lines",
+                    "Conic Sections",
+                    "Limits and Derivatives",
+                    "Statistics",
+                    "Probability"
+                ]
+
+            },
+
+
+            "Arts": {
+
+                "History": [
+                    "Writing and City Life",
+                    "An Empire Across Three Continents",
+                    "Nomadic Empires",
+                    "The Three Orders",
+                    "Changing Cultural Traditions",
+                    "Displacing Indigenous Peoples",
+                    "Paths to Modernisation"
+                ],
+
+                "Political Science": [
+                    "Constitution: Why and How",
+                    "Rights in the Indian Constitution",
+                    "Election and Representation",
+                    "Executive",
+                    "Legislature",
+                    "Judiciary",
+                    "Federalism",
+                    "Local Governments",
+                    "Constitution as a Living Document",
+                    "Philosophy of the Constitution"
+                ],
+
+                "Geography": [
+                    "Geography as a Discipline",
+                    "The Origin and Evolution of the Earth",
+                    "Interior of the Earth",
+                    "Distribution of Oceans and Continents",
+                    "Minerals and Rocks",
+                    "Geomorphic Processes",
+                    "Landforms and their Evolution",
+                    "Composition and Structure of Atmosphere",
+                    "Solar Radiation",
+                    "Water in the Atmosphere",
+                    "World Climate and Climate Change",
+                    "Water",
+                    "Natural Vegetation",
+                    "Natural Hazards and Disasters"
+                ],
+
+                "Economics": [
+                    "Introduction to Economics",
+                    "Theory of Consumer Behaviour",
+                    "Production and Costs",
+                    "The Theory of Firm",
+                    "Market Equilibrium",
+                    "Non-Competitive Markets",
+                    "Statistics for Economics",
+                    "Collection of Data",
+                    "Organisation of Data",
+                    "Presentation of Data",
+                    "Measures of Central Tendency"
+                ]
+
+            }
+
         },
+
 
         "Class 12": {
 
-            "PCM": [
-                "Physics",
-                "Chemistry",
-                "Mathematics",
-                "English",
-                "Computer Science"
-            ],
+            "PCM": {
 
-            "PCB": [
-                "Physics",
-                "Chemistry",
-                "Biology",
-                "English",
-                "Computer Science"
-            ],
+                "Physics": [
+                    "Electric Charges and Fields",
+                    "Electrostatic Potential and Capacitance",
+                    "Current Electricity",
+                    "Moving Charges and Magnetism",
+                    "Magnetism and Matter",
+                    "Electromagnetic Induction",
+                    "Alternating Current",
+                    "Electromagnetic Waves",
+                    "Ray Optics and Optical Instruments",
+                    "Wave Optics",
+                    "Dual Nature of Radiation and Matter",
+                    "Atoms",
+                    "Nuclei",
+                    "Semiconductor Electronics"
+                ],
 
-            "Commerce": [
-                "Accountancy",
-                "Business Studies",
-                "Economics",
-                "English",
-                "Mathematics"
-            ],
+                "Chemistry": [
+                    "Solutions",
+                    "Electrochemistry",
+                    "Chemical Kinetics",
+                    "d and f Block Elements",
+                    "Coordination Compounds",
+                    "Haloalkanes and Haloarenes",
+                    "Alcohols, Phenols and Ethers",
+                    "Aldehydes, Ketones and Carboxylic Acids",
+                    "Amines",
+                    "Biomolecules"
+                ],
 
-            "Arts": [
-                "History",
-                "Political Science",
-                "Geography",
-                "Economics",
-                "English",
-                "Sociology"
-            ],
+                "Mathematics": [
+                    "Relations and Functions",
+                    "Inverse Trigonometric Functions",
+                    "Matrices",
+                    "Determinants",
+                    "Continuity and Differentiability",
+                    "Applications of Derivatives",
+                    "Integrals",
+                    "Applications of Integrals",
+                    "Differential Equations",
+                    "Vector Algebra",
+                    "Three Dimensional Geometry",
+                    "Linear Programming",
+                    "Probability"
+                ]
 
-            "Computer Science": [
-                "Computer Science",
-                "Mathematics",
-                "Physics",
-                "English"
-            ],
+            },
 
-            "Other": [
-                "English",
-                "Mathematics",
-                "Computer Science"
-            ]
+
+            "PCB": {
+
+                "Physics": [
+                    "Electric Charges and Fields",
+                    "Electrostatic Potential and Capacitance",
+                    "Current Electricity",
+                    "Moving Charges and Magnetism",
+                    "Magnetism and Matter",
+                    "Electromagnetic Induction",
+                    "Alternating Current",
+                    "Electromagnetic Waves",
+                    "Ray Optics and Optical Instruments",
+                    "Wave Optics",
+                    "Dual Nature of Radiation and Matter",
+                    "Atoms",
+                    "Nuclei",
+                    "Semiconductor Electronics"
+                ],
+
+                "Chemistry": [
+                    "Solutions",
+                    "Electrochemistry",
+                    "Chemical Kinetics",
+                    "d and f Block Elements",
+                    "Coordination Compounds",
+                    "Haloalkanes and Haloarenes",
+                    "Alcohols, Phenols and Ethers",
+                    "Aldehydes, Ketones and Carboxylic Acids",
+                    "Amines",
+                    "Biomolecules"
+                ],
+
+                "Biology": [
+                    "Sexual Reproduction in Flowering Plants",
+                    "Human Reproduction",
+                    "Reproductive Health",
+                    "Principles of Inheritance and Variation",
+                    "Molecular Basis of Inheritance",
+                    "Evolution",
+                    "Human Health and Disease",
+                    "Microbes in Human Welfare",
+                    "Biotechnology: Principles and Processes",
+                    "Biotechnology and its Applications",
+                    "Organisms and Populations",
+                    "Ecosystem",
+                    "Biodiversity and Conservation",
+                    "Environmental Issues"
+                ]
+
+            },
+
+
+            "Commerce": {
+
+                "Accountancy": [
+                    "Accounting for Partnership Firms",
+                    "Reconstitution of Partnership",
+                    "Dissolution of Partnership Firm",
+                    "Accounting for Share Capital",
+                    "Issue and Redemption of Debentures",
+                    "Financial Statements of Companies",
+                    "Analysis of Financial Statements",
+                    "Cash Flow Statement"
+                ],
+
+                "Business Studies": [
+                    "Nature and Significance of Management",
+                    "Principles of Management",
+                    "Business Environment",
+                    "Planning",
+                    "Organising",
+                    "Staffing",
+                    "Directing",
+                    "Controlling",
+                    "Financial Management",
+                    "Financial Markets",
+                    "Marketing Management",
+                    "Consumer Protection"
+                ],
+
+                "Economics": [
+                    "Introduction to Macroeconomics",
+                    "National Income Accounting",
+                    "Money and Banking",
+                    "Determination of Income and Employment",
+                    "Government Budget",
+                    "Balance of Payments",
+                    "Indian Economy on the Eve of Independence",
+                    "Indian Economy 1950–1990",
+                    "Liberalisation, Privatisation and Globalisation",
+                    "Human Capital Formation",
+                    "Rural Development",
+                    "Employment",
+                    "Infrastructure",
+                    "Environment and Sustainable Development"
+                ],
+
+                "Mathematics": [
+                    "Relations and Functions",
+                    "Inverse Trigonometric Functions",
+                    "Matrices",
+                    "Determinants",
+                    "Continuity and Differentiability",
+                    "Applications of Derivatives",
+                    "Integrals",
+                    "Differential Equations",
+                    "Vector Algebra",
+                    "Three Dimensional Geometry",
+                    "Linear Programming",
+                    "Probability"
+                ]
+
+            },
+
+
+            "Arts": {
+
+                "History": [
+                    "Bricks, Beads and Bones",
+                    "Kings, Farmers and Towns",
+                    "Kinship, Caste and Class",
+                    "Thinkers, Beliefs and Buildings",
+                    "Through the Eyes of Travellers",
+                    "Bhakti-Sufi Traditions",
+                    "An Imperial Capital",
+                    "Peasants, Zamindars and the State",
+                    "Colonialism and the Countryside",
+                    "Rebels and the Raj",
+                    "Mahatma Gandhi and the Nationalist Movement",
+                    "Framing the Constitution"
+                ],
+
+                "Political Science": [
+                    "The End of Bipolarity",
+                    "Contemporary Centres of Power",
+                    "Contemporary South Asia",
+                    "International Organisations",
+                    "Security in the Contemporary World",
+                    "Environment and Natural Resources",
+                    "Globalisation",
+                    "Challenges of Nation-Building",
+                    "Era of One-Party Dominance",
+                    "Politics of Planned Development",
+                    "India's External Relations",
+                    "Challenges to and Restoration of the Congress System",
+                    "The Crisis of Democratic Order",
+                    "Regional Aspirations",
+                    "Recent Developments in Indian Politics"
+                ]
+
+            }
+
         }
+
     };
 
 
-    /* ---------------------------------------------------------
-       GET CURRENT PROFILE
-    --------------------------------------------------------- */
-
-    function bbGetProfile() {
-
-        try {
-
-            return {
-                className:
-                    data?.profile?.className ||
-                    "Class 11",
-
-                stream:
-                    data?.profile?.stream ||
-                    "PCM"
-            };
-
-        } catch {
-
-            return {
-                className: "Class 11",
-                stream: "PCM"
-            };
-        }
-    }
-
-
-    /* ---------------------------------------------------------
-       GET ALLOWED SUBJECTS
-    --------------------------------------------------------- */
-
-    function bbGetSubjects() {
-
-        const profile =
-            bbGetProfile();
-
-        const className =
-            profile.className;
-
-        const stream =
-            profile.stream;
-
-        const classData =
-            BB_NCERT[className];
-
-        if (!classData) {
-
-            return [
-                "Physics",
-                "Chemistry",
-                "Mathematics"
-            ];
-        }
-
-        if (className === "Class 9" ||
-            className === "Class 10") {
-
-            return classData.All || [];
-        }
-
-        return classData[stream] ||
-               classData["Other"] ||
-               [];
-    }
-
-
-    /* ---------------------------------------------------------
-       CREATE REAL AI STUDY REQUEST
-    --------------------------------------------------------- */
-
-    async function bbGenerateStudy(
-        subject,
-        chapter
-    ) {
-
-        const profile =
-            bbGetProfile();
-
-        const prompt = `
-
-You are BharatBuddy AI Study Engine.
-
-Create ORIGINAL NCERT-ALIGNED study material.
-
-Student:
-Class: ${profile.className}
-Stream: ${profile.stream}
-Subject: ${subject}
-Chapter: ${chapter}
-
-IMPORTANT:
-
-1. Follow the NCERT syllabus/chapter structure as closely as possible.
-2. Do NOT copy NCERT textbook wording.
-3. Write completely original explanations.
-4. Do not invent a chapter that does not belong to the selected class and subject.
-5. Keep the level appropriate for the student's class.
-
-Return HTML only.
-
-Required structure:
-
-<h2>Chapter Overview</h2>
-
-<h3>1. Concept Explanation</h3>
-Detailed easy explanation.
-
-<h3>2. Important Definitions</h3>
-Use bullet points.
-
-<h3>3. Important Formulas</h3>
-Only where applicable.
-
-<h3>4. Derivations</h3>
-Explain important derivations step-by-step where applicable.
-
-<h3>5. Examples</h3>
-Give original examples.
-
-<h3>6. Solved Questions</h3>
-Give properly solved questions.
-
-<h3>7. Important Points</h3>
-Give revision points.
-
-<h3>8. MCQs</h3>
-Give 5 MCQs with answers.
-
-<h3>9. Very Short Questions</h3>
-Give 5 questions with answers.
-
-<h3>10. Short Answer Questions</h3>
-Give 5 questions with answers.
-
-<h3>11. Long Answer Questions</h3>
-Give 3 questions with answers.
-
-<h3>12. Numerical Questions</h3>
-For Physics/Maths/Chemistry where applicable,
-give solved numerical questions.
-
-<h3>13. Quick Revision</h3>
-Give a concise revision section.
-
-Use simple student-friendly language.
-Do not mention that this is a demo.
-`;
-
-        const response =
-            await fetch(
-                BB_STUDY_API,
-                {
-                    method: "POST",
-
-                    headers: {
-                        "Content-Type":
-                            "application/json"
-                    },
-
-                    body: JSON.stringify({
-                        message: prompt
-                    })
-                }
-            );
-
-        let result = {};
-
-        try {
-            result =
-                await response.json();
-        } catch {
-            result = {};
-        }
-
-        if (!response.ok) {
-
-            throw new Error(
-                result.error ||
-                "Study AI unavailable."
-            );
-        }
-
-        return (
-            result.reply ||
-            result.answer ||
-            result.output_text ||
-            ""
-        );
-    }
-
-
-    /* ---------------------------------------------------------
-       NCERT SUBJECT FILTER
-       Existing lessonData is NOT modified.
-    --------------------------------------------------------- */
-
-    function bbApplySubjectFilter() {
-
-        const allowed =
-            bbGetSubjects();
-
-        const profile =
-            bbGetProfile();
-
-        const studyContainer =
-            document.querySelector(
-                "#studyPage"
-            ) ||
-            document.querySelector(
-                "[data-page='study']"
-            );
-
-        /*
-          We don't delete existing lessonData.
-          We only hide subjects which don't belong
-          to the selected class/stream.
-        */
-
-        document
-            .querySelectorAll(
-                "[data-subject]"
-            )
-            .forEach(button => {
-
-                const subject =
-                    button.dataset.subject;
-
-                if (!subject) return;
-
-                const shouldShow =
-                    allowed.includes(subject);
-
-                button.style.display =
-                    shouldShow
-                        ? ""
-                        : "none";
-            });
-
-        console.log(
-            "BharatBuddy Study Profile:",
-            profile.className,
-            profile.stream
-        );
-
-        console.log(
-            "Allowed Subjects:",
-            allowed
-        );
-    }
-
-
-    /* ---------------------------------------------------------
-       ADD CLASS / STREAM INFORMATION
-    --------------------------------------------------------- */
-
-    function bbShowStudyProfile() {
-
-        const profile =
-            bbGetProfile();
-
-        const subjects =
-            bbGetSubjects();
-
-        const existing =
-            document.getElementById(
-                "bbStudyProfileInfo"
-            );
-
-        if (existing) {
-
-            existing.innerHTML = `
-                <strong>
-                    ${profile.className}
-                </strong>
-                ${
-                    profile.className === "Class 9" ||
-                    profile.className === "Class 10"
-                        ? ""
-                        : ` • ${profile.stream}`
-                }
-                <br>
-                <small>
-                    Subjects: ${subjects.join(", ")}
-                </small>
-            `;
-
-            return;
-        }
-
-        const studyHeading =
-            document.querySelector(
-                "#studyPage h1"
-            );
-
-        if (!studyHeading) return;
-
-        const box =
-            document.createElement("div");
-
-        box.id =
-            "bbStudyProfileInfo";
-
-        box.style.cssText = `
-            margin:12px 0 18px;
-            padding:14px 16px;
-            border-radius:14px;
-            background:rgba(99,102,241,.10);
-            border:1px solid rgba(99,102,241,.20);
-            line-height:1.6;
-        `;
-
-        box.innerHTML = `
-            <strong>
-                ${profile.className}
-            </strong>
-            ${
-                profile.className === "Class 9" ||
-                profile.className === "Class 10"
-                    ? ""
-                    : ` • ${profile.stream}`
-            }
-            <br>
-
-            <small>
-                Subjects:
-                ${subjects.join(", ")}
-            </small>
-        `;
-
-        studyHeading
-            .parentNode
-            .insertBefore(
-                box,
-                studyHeading.nextSibling
-            );
-    }
-
-
-    /* ---------------------------------------------------------
-       AI CHAPTER CONTENT BUTTON
-    --------------------------------------------------------- */
-
-    window.BharatBuddyStudyAI = {
-
-        generate: async function (
-            subject,
-            chapter
-        ) {
-
-            return await bbGenerateStudy(
-                subject,
-                chapter
-            );
-        },
-
-        subjects: function () {
-
-            return bbGetSubjects();
-        },
-
-        profile: function () {
-
-            return bbGetProfile();
-        }
-    };
-
-
-    /* ---------------------------------------------------------
-       CREATE AI STUDY BUTTON
-    --------------------------------------------------------- */
-
-    function bbAddAIStudyButton() {
-
-        if (
-            document.getElementById(
-                "bbAIStudyButton"
-            )
-        ) return;
-
-        const area =
-            document.getElementById(
-                "currentLessonArea"
-            );
-
-        if (!area) return;
-
-        const button =
-            document.createElement(
-                "button"
-            );
-
-        button.id =
-            "bbAIStudyButton";
-
-        button.className =
-            "btn btn-primary";
-
-        button.style.cssText = `
-            margin-top:15px;
-            width:100%;
-        `;
-
-        button.innerHTML =
-            "🤖 Generate Complete AI Study";
-
-        button.onclick = async function () {
-
-            const profile =
-                bbGetProfile();
-
-            const subject =
-                window.studyState?.subject ||
-                document.querySelector(
-                    "[data-subject].active"
-                )?.dataset.subject;
-
-            const chapter =
-                window.studyState?.chapter ||
-                document.getElementById(
-                    "studyChapter"
-                )?.value;
-
-            if (!subject || !chapter) {
-
-                alert(
-                    "Pehle Subject aur Chapter select karo."
-                );
-
-                return;
-            }
-
-            button.disabled = true;
-
-            button.innerHTML =
-                "⏳ Study material generate ho raha hai...";
-
-            try {
-
-                const html =
-                    await bbGenerateStudy(
-                        subject,
-                        chapter
-                    );
-
-                if (!html) {
-
-                    throw new Error(
-                        "AI ne content nahi diya."
-                    );
-                }
-
-                area.insertAdjacentHTML(
-                    "beforeend",
-                    `
-                    <div
-                        class="card"
-                        id="bbAIStudyContent"
-                        style="
-                            margin-top:20px;
-                            line-height:1.8;
-                        "
-                    >
-                        <div
-                            style="
-                                display:flex;
-                                justify-content:space-between;
-                                gap:10px;
-                                align-items:center;
-                                flex-wrap:wrap;
-                            "
-                        >
-                            <h2>
-                                📚 ${subject}
-                            </h2>
-
-                            <span>
-                                ${profile.className}
-                            </span>
-                        </div>
-
-                        <hr style="margin:15px 0;">
-
-                        <div class="lesson-content">
-                            ${html}
-                        </div>
-                    </div>
-                    `
-                );
-
-                document
-                    .getElementById(
-                        "bbAIStudyContent"
-                    )
-                    ?.scrollIntoView({
-                        behavior: "smooth"
-                    });
-
-            } catch (error) {
-
-                console.error(
-                    "BharatBuddy Study Error:",
-                    error
-                );
-
-                alert(
-                    error.message ||
-                    "Study content generate nahi ho paya."
-                );
-
-            } finally {
-
-                button.disabled = false;
-
-                button.innerHTML =
-                    "🤖 Generate Complete AI Study";
-            }
-        };
-
-        area.appendChild(button);
-    }
-
-
-    /* ---------------------------------------------------------
-       REFRESH STUDY UI
-    --------------------------------------------------------- */
-
-    function bbRefreshStudy() {
-
-        setTimeout(() => {
-
-            bbApplySubjectFilter();
-
-            bbShowStudyProfile();
-
-            bbAddAIStudyButton();
-
-        }, 150);
-    }
-
-
-    /* ---------------------------------------------------------
-       WATCH PROFILE / PAGE CHANGES
-    --------------------------------------------------------- */
-
-    const originalRenderStudy =
-        window.renderStudy;
+    /*
+     * Common subject groups for classes 9 and 10.
+     */
 
     if (
-        typeof originalRenderStudy ===
-        "function"
+        BB_FINAL_CATALOG[
+            "Class 9"
+        ]
     ) {
 
-        window.renderStudy =
-            function () {
+        BB_FINAL_CATALOG[
+            "Class 9"
+        ].PCB =
+            BB_FINAL_CATALOG[
+                "Class 9"
+            ].PCM;
 
-                originalRenderStudy.apply(
-                    this,
-                    arguments
-                );
+        BB_FINAL_CATALOG[
+            "Class 9"
+        ].Commerce =
+            BB_FINAL_CATALOG[
+                "Class 9"
+            ].PCM;
 
-                bbRefreshStudy();
-            };
+        BB_FINAL_CATALOG[
+            "Class 9"
+        ].Arts =
+            BB_FINAL_CATALOG[
+                "Class 9"
+            ].PCM;
+
     }
 
 
-    /* ---------------------------------------------------------
-       PROFILE CHANGE DETECTOR
-    --------------------------------------------------------- */
+    if (
+        BB_FINAL_CATALOG[
+            "Class 10"
+        ]
+    ) {
 
-    let lastProfile =
-        JSON.stringify(
-            bbGetProfile()
-        );
+        BB_FINAL_CATALOG[
+            "Class 10"
+        ].PCB =
+            BB_FINAL_CATALOG[
+                "Class 10"
+            ].PCM;
 
-    setInterval(() => {
+        BB_FINAL_CATALOG[
+            "Class 10"
+        ].Commerce =
+            BB_FINAL_CATALOG[
+                "Class 10"
+            ].PCM;
 
-        const current =
-            JSON.stringify(
-                bbGetProfile()
-            );
+        BB_FINAL_CATALOG[
+            "Class 10"
+        ].Arts =
+            BB_FINAL_CATALOG[
+                "Class 10"
+            ].PCM;
 
-        if (current !== lastProfile) {
-
-            lastProfile =
-                current;
-
-            console.log(
-                "BharatBuddy profile changed."
-            );
-
-            bbRefreshStudy();
-
-            if (
-                typeof window.renderStudy ===
-                "function"
-            ) {
-
-                try {
-
-                    window.renderStudy();
-
-                } catch (error) {
-
-                    console.warn(
-                        "Study refresh warning:",
-                        error
-                    );
-                }
-            }
-        }
-
-    }, 700);
+    }
 
 
-    /* ---------------------------------------------------------
-       INITIAL LOAD
-    --------------------------------------------------------- */
+    /*
+     * Computer Science is available
+     * for senior classes.
+     */
 
-    document.addEventListener(
-        "DOMContentLoaded",
-        function () {
+    BB_FINAL_CATALOG[
+        "Class 11"
+    ].PCM[
+        "Computer Science"
+    ] = [
+        "Computer Systems Overview",
+        "Python Programming Basics",
+        "Data Types and Operators",
+        "Conditional Statements",
+        "Loops",
+        "Strings",
+        "Lists",
+        "Tuples and Dictionaries",
+        "Functions",
+        "Introduction to Data Handling"
+    ];
 
-            setTimeout(
-                bbRefreshStudy,
-                500
-            );
+
+    BB_FINAL_CATALOG[
+        "Class 12"
+    ].PCM[
+        "Computer Science"
+    ] = [
+        "Python Revision Tour",
+        "Functions",
+        "File Handling",
+        "Data Structures",
+        "Computer Networks",
+        "Database Concepts",
+        "SQL",
+        "Cyber Safety"
+    ];
+
+
+    /*
+     * Capture original lesson data before
+     * applying the final catalog.
+     */
+
+    const BB_ORIGINAL_LESSON_DATA = {};
+
+
+    Object.keys(
+        lessonData || {}
+    ).forEach(
+        subject => {
+
+            BB_ORIGINAL_LESSON_DATA[
+                subject
+            ] = {
+                ...lessonData[
+                    subject
+                ]
+            };
 
         }
     );
 
 
-})();
-/* =========================================================
-   BHARATBUDDY AI — PROFILE BASED NCERT STUDY SYSTEM
-   ADD-ON ONLY — EXISTING CODE KO MODIFY NAHI KARTA
-========================================================= */
-
-(function () {
-
-    "use strict";
-
-    /* =====================================================
-       CLASS 9
-    ===================================================== */
-
-    const BB_CLASS_9 = {
-
-        Science: [
-            "Matter in Our Surroundings",
-            "Is Matter Around Us Pure?",
-            "Atoms and Molecules",
-            "Structure of the Atom",
-            "The Fundamental Unit of Life",
-            "Tissues",
-            "Motion",
-            "Force and Laws of Motion",
-            "Gravitation",
-            "Work and Energy",
-            "Sound",
-            "Why Do We Fall Ill?",
-            "Natural Resources",
-            "Improvement in Food Resources"
-        ],
-
-        Mathematics: [
-            "Number Systems",
-            "Polynomials",
-            "Coordinate Geometry",
-            "Linear Equations in Two Variables",
-            "Introduction to Euclid's Geometry",
-            "Lines and Angles",
-            "Triangles",
-            "Quadrilaterals",
-            "Circles",
-            "Heron's Formula",
-            "Surface Areas and Volumes",
-            "Statistics",
-            "Probability"
-        ],
-
-        English: [
-            "The Fun They Had",
-            "The Sound of Music",
-            "The Little Girl",
-            "A Truly Beautiful Mind",
-            "The Snake and the Mirror",
-            "My Childhood",
-            "Reach for the Top",
-            "Kathmandu",
-            "If I Were You"
-        ],
-
-        "Social Science": [
-            "The French Revolution",
-            "Socialism in Europe and the Russian Revolution",
-            "Nazism and the Rise of Hitler",
-            "Forest Society and Colonialism",
-            "Pastoralists in the Modern World",
-            "India – Size and Location",
-            "Physical Features of India",
-            "Drainage",
-            "Climate",
-            "Natural Vegetation and Wildlife",
-            "Population",
-            "What is Democracy? Why Democracy?",
-            "Constitutional Design",
-            "Electoral Politics",
-            "Working of Institutions",
-            "Democratic Rights",
-            "The Story of Village Palampur",
-            "People as Resource",
-            "Poverty as a Challenge",
-            "Food Security in India"
-        ]
-
-    };
-
-
-    /* =====================================================
-       CLASS 10
-    ===================================================== */
-
-    const BB_CLASS_10 = {
-
-        Science: [
-            "Chemical Reactions and Equations",
-            "Acids, Bases and Salts",
-            "Metals and Non-metals",
-            "Carbon and Its Compounds",
-            "Life Processes",
-            "Control and Coordination",
-            "How do Organisms Reproduce?",
-            "Heredity",
-            "Light – Reflection and Refraction",
-            "The Human Eye and the Colourful World",
-            "Electricity",
-            "Magnetic Effects of Electric Current",
-            "Our Environment"
-        ],
-
-        Mathematics: [
-            "Real Numbers",
-            "Polynomials",
-            "Pair of Linear Equations in Two Variables",
-            "Quadratic Equations",
-            "Arithmetic Progressions",
-            "Triangles",
-            "Coordinate Geometry",
-            "Introduction to Trigonometry",
-            "Some Applications of Trigonometry",
-            "Circles",
-            "Areas Related to Circles",
-            "Surface Areas and Volumes",
-            "Statistics",
-            "Probability"
-        ],
-
-        English: [
-            "A Letter to God",
-            "Nelson Mandela – Long Walk to Freedom",
-            "Two Stories about Flying",
-            "From the Diary of Anne Frank",
-            "Glimpses of India",
-            "Mijbil the Otter",
-            "Madam Rides the Bus",
-            "The Sermon at Benares",
-            "The Proposal"
-        ],
-
-        "Social Science": [
-            "The Rise of Nationalism in Europe",
-            "Nationalism in India",
-            "The Making of a Global World",
-            "Print Culture and the Modern World",
-            "Resources and Development",
-            "Forest and Wildlife Resources",
-            "Water Resources",
-            "Agriculture",
-            "Manufacturing Industries",
-            "Lifelines of National Economy",
-            "Power Sharing",
-            "Federalism",
-            "Gender, Religion and Caste",
-            "Political Parties",
-            "Outcomes of Democracy",
-            "Development",
-            "Sectors of the Indian Economy",
-            "Money and Credit",
-            "Globalisation and the Indian Economy",
-            "Consumer Rights"
-        ]
-
-    };
-
-
-    /* =====================================================
-       CLASS 11 — PCM
-    ===================================================== */
-
-    const BB_CLASS_11_PCM = {
-
-        Physics: [
-            "Units and Measurements",
-            "Motion in a Straight Line",
-            "Motion in a Plane",
-            "Laws of Motion",
-            "Work, Energy and Power",
-            "System of Particles and Rotational Motion",
-            "Gravitation",
-            "Mechanical Properties of Solids",
-            "Mechanical Properties of Fluids",
-            "Thermal Properties of Matter",
-            "Thermodynamics",
-            "Kinetic Theory",
-            "Oscillations",
-            "Waves"
-        ],
-
-        Chemistry: [
-            "Some Basic Concepts of Chemistry",
-            "Structure of Atom",
-            "Classification of Elements and Periodicity in Properties",
-            "Chemical Bonding and Molecular Structure",
-            "Thermodynamics",
-            "Equilibrium",
-            "Redox Reactions",
-            "Organic Chemistry – Some Basic Principles and Techniques",
-            "Hydrocarbons"
-        ],
-
-        Mathematics: [
-            "Sets",
-            "Relations and Functions",
-            "Trigonometric Functions",
-            "Principle of Mathematical Induction",
-            "Complex Numbers and Quadratic Equations",
-            "Linear Inequalities",
-            "Permutations and Combinations",
-            "Binomial Theorem",
-            "Sequences and Series",
-            "Straight Lines",
-            "Conic Sections",
-            "Introduction to Three Dimensional Geometry",
-            "Limits and Derivatives",
-            "Statistics",
-            "Probability"
-        ],
-
-        "Computer Science": [
-            "Computer Systems",
-            "Encoding Schemes and Number System",
-            "Emerging Trends",
-            "Introduction to Python",
-            "Getting Started with Python",
-            "Python Programming Fundamentals",
-            "Conditional Statements",
-            "Loops",
-            "Strings",
-            "Lists",
-            "Tuples",
-            "Dictionaries",
-            "Computer Networks",
-            "Societal Impact"
-        ],
-
-        English: [
-            "The Portrait of a Lady",
-            "We're Not Afraid to Die",
-            "Discovering Tut",
-            "Landscape of the Soul",
-            "The Ailing Planet",
-            "The Browning Version",
-            "The Adventure",
-            "Silk Road"
-        ]
-
-    };
-
-
-    /* =====================================================
-       CLASS 11 — PCB
-    ===================================================== */
-
-    const BB_CLASS_11_PCB = {
-
-        Biology: [
-            "The Living World",
-            "Biological Classification",
-            "Plant Kingdom",
-            "Animal Kingdom",
-            "Morphology of Flowering Plants",
-            "Anatomy of Flowering Plants",
-            "Structural Organisation in Animals",
-            "Cell: The Unit of Life",
-            "Biomolecules",
-            "Cell Cycle and Cell Division",
-            "Transport in Plants",
-            "Mineral Nutrition",
-            "Photosynthesis in Higher Plants",
-            "Respiration in Plants",
-            "Plant Growth and Development",
-            "Digestion and Absorption",
-            "Breathing and Exchange of Gases",
-            "Body Fluids and Circulation",
-            "Excretory Products and their Elimination",
-            "Locomotion and Movement",
-            "Neural Control and Coordination",
-            "Chemical Coordination and Integration"
-        ],
-
-        Physics: BB_CLASS_11_PCM.Physics,
-
-        Chemistry: BB_CLASS_11_PCM.Chemistry,
-
-        English: BB_CLASS_11_PCM.English
-
-    };
-
-
-    /* =====================================================
-       CLASS 11 — COMMERCE
-    ===================================================== */
-
-    const BB_CLASS_11_COMMERCE = {
-
-        Accountancy: [
-            "Introduction to Accounting",
-            "Theory Base of Accounting",
-            "Recording of Transactions",
-            "Bank Reconciliation Statement",
-            "Trial Balance and Rectification of Errors",
-            "Depreciation",
-            "Bills of Exchange",
-            "Financial Statements",
-            "Accounts from Incomplete Records"
-        ],
-
-        Economics: [
-            "Introduction to Micro Economics",
-            "Consumer Behaviour",
-            "Production and Costs",
-            "Theory of Firm",
-            "Market",
-            "Statistics for Economics",
-            "Collection of Data",
-            "Organisation of Data",
-            "Presentation of Data",
-            "Measures of Central Tendency",
-            "Measures of Dispersion"
-        ],
-
-        "Business Studies": [
-            "Nature and Purpose of Business",
-            "Forms of Business Organisation",
-            "Private, Public and Global Enterprises",
-            "Business Services",
-            "Emerging Modes of Business",
-            "Social Responsibility of Business",
-            "Formation of a Company",
-            "Sources of Business Finance",
-            "Small Business",
-            "Internal Trade",
-            "International Business"
-        ],
-
-        Mathematics: BB_CLASS_11_PCM.Mathematics,
-
-        English: BB_CLASS_11_PCM.English
-
-    };
-
-
-    /* =====================================================
-       CLASS 11 — ARTS
-    ===================================================== */
-
-    const BB_CLASS_11_ARTS = {
-
-        History: [
-            "From the Beginning of Time",
-            "Writing and City Life",
-            "An Empire Across Three Continents",
-            "Nomadic Empires",
-            "The Three Orders",
-            "Changing Cultural Traditions",
-            "Displacing Indigenous Peoples",
-            "Paths to Modernisation"
-        ],
-
-        Geography: [
-            "Geography as a Discipline",
-            "The Origin and Evolution of the Earth",
-            "Interior of the Earth",
-            "Distribution of Oceans and Continents",
-            "Minerals and Rocks",
-            "Geomorphic Processes",
-            "Landforms and their Evolution",
-            "Composition and Structure of Atmosphere",
-            "Solar Radiation",
-            "Water in the Atmosphere",
-            "World Climate and Climate Change",
-            "Water Resources",
-            "Natural Hazards and Disasters"
-        ],
-
-        PoliticalScience: [
-            "Constitution: Why and How?",
-            "Rights in the Indian Constitution",
-            "Election and Representation",
-            "Executive",
-            "Legislature",
-            "Judiciary",
-            "Federalism",
-            "Local Governments",
-            "Political Theory",
-            "Freedom",
-            "Equality",
-            "Social Justice",
-            "Rights",
-            "Citizenship",
-            "Nationalism",
-            "Secularism"
-        ],
-
-        Sociology: [
-            "Sociology and Society",
-            "Terms, Concepts and their Use in Sociology",
-            "Understanding Social Institutions",
-            "Culture and Socialisation",
-            "Social Structure, Stratification and Social Processes",
-            "Social Change and Social Order",
-            "Introducing Western Sociologists",
-            "Indian Sociologists"
-        ],
-
-        English: BB_CLASS_11_PCM.English
-
-    };
-
-
-    /* =====================================================
-       CLASS 12
-    ===================================================== */
-
-    const BB_CLASS_12 = {
-
-        Physics: [
-            "Electric Charges and Fields",
-            "Electrostatic Potential and Capacitance",
-            "Current Electricity",
-            "Moving Charges and Magnetism",
-            "Magnetism and Matter",
-            "Electromagnetic Induction",
-            "Alternating Current",
-            "Electromagnetic Waves",
-            "Ray Optics and Optical Instruments",
-            "Wave Optics",
-            "Dual Nature of Radiation and Matter",
-            "Atoms",
-            "Nuclei",
-            "Semiconductor Electronics"
-        ],
-
-        Chemistry: [
-            "Solutions",
-            "Electrochemistry",
-            "Chemical Kinetics",
-            "d and f Block Elements",
-            "Coordination Compounds",
-            "Haloalkanes and Haloarenes",
-            "Alcohols, Phenols and Ethers",
-            "Aldehydes, Ketones and Carboxylic Acids",
-            "Amines",
-            "Biomolecules"
-        ],
-
-        Mathematics: [
-            "Relations and Functions",
-            "Inverse Trigonometric Functions",
-            "Matrices",
-            "Determinants",
-            "Continuity and Differentiability",
-            "Application of Derivatives",
-            "Integrals",
-            "Application of Integrals",
-            "Differential Equations",
-            "Vector Algebra",
-            "Three Dimensional Geometry",
-            "Linear Programming",
-            "Probability"
-        ],
-
-        Biology: [
-            "Sexual Reproduction in Flowering Plants",
-            "Human Reproduction",
-            "Reproductive Health",
-            "Principles of Inheritance and Variation",
-            "Molecular Basis of Inheritance",
-            "Evolution",
-            "Human Health and Disease",
-            "Microbes in Human Welfare",
-            "Biotechnology",
-            "Organisms and Populations",
-            "Ecosystem",
-            "Biodiversity and Conservation"
-        ],
-
-        "Computer Science": [
-            "Computer Networking",
-            "Data Communication",
-            "Database Concepts",
-            "Introduction to Python",
-            "Functions",
-            "File Handling",
-            "Data Structures",
-            "Computer Networks",
-            "Cyber Safety"
-        ],
-
-        Economics: [
-            "Introduction to Macroeconomics",
-            "National Income Accounting",
-            "Money and Banking",
-            "Determination of Income and Employment",
-            "Government Budget",
-            "Balance of Payments",
-            "Indian Economy on the Eve of Independence",
-            "Indian Economy 1950–1990",
-            "Liberalisation, Privatisation and Globalisation",
-            "Human Capital Formation",
-            "Rural Development",
-            "Employment",
-            "Environment and Sustainable Development"
-        ],
-
-        "Business Studies": [
-            "Nature and Significance of Management",
-            "Principles of Management",
-            "Business Environment",
-            "Planning",
-            "Organising",
-            "Staffing",
-            "Directing",
-            "Controlling",
-            "Financial Management",
-            "Marketing Management",
-            "Consumer Protection"
-        ],
-
-        English: [
-            "The Last Lesson",
-            "Lost Spring",
-            "Deep Water",
-            "The Rattrap",
-            "Indigo",
-            "Poets and Pancakes",
-            "The Interview",
-            "Going Places"
-        ]
-
-    };
-
-
-    /* =====================================================
-       COMPLETE PROFILE → STUDY CATALOG
-    ===================================================== */
-
-    const BB_NCERT = {
-
-        "Class 9": BB_CLASS_9,
-
-        "Class 10": BB_CLASS_10,
-
-        "Class 11": {
-
-            PCM: BB_CLASS_11_PCM,
-            PCB: BB_CLASS_11_PCB,
-            Commerce: BB_CLASS_11_COMMERCE,
-            Arts: BB_CLASS_11_ARTS,
-            "Computer Science": {
-                ...BB_CLASS_11_PCM
-            }
-
-        },
-
-        "Class 12": BB_CLASS_12
-
-    };
-
-
-    /* =====================================================
-       GET CURRENT PROFILE
-    ===================================================== */
-
-    function bbGetProfile() {
+    function bbProfileFinal() {
 
         const profile =
-            (typeof data !== "undefined" &&
-             data.profile)
-                ? data.profile
-                : {};
+            data.profile || {};
+
 
         return {
 
+            board:
+                profile.board ||
+                studyState.board ||
+                "CBSE",
+
             className:
                 profile.className ||
-                localStorage.getItem("bb_class") ||
+                studyState.className ||
                 "Class 11",
 
             stream:
                 profile.stream ||
-                localStorage.getItem("bb_stream") ||
+                studyState.stream ||
                 "PCM"
 
         };
@@ -12506,1632 +12003,319 @@ Do not mention that this is a demo.
     }
 
 
-    /* =====================================================
-       GET SUBJECTS
-    ===================================================== */
+    function bbCatalogForProfile() {
 
-    function bbGetSubjects() {
+        const profile =
+            bbProfileFinal();
 
-        const profile = bbGetProfile();
 
-        if (
-            profile.className === "Class 11"
-        ) {
-
-            const stream =
-                BB_NCERT["Class 11"]
-                    [profile.stream];
-
-            if (stream) {
-                return stream;
-            }
-
-            return BB_CLASS_11_PCM;
-
-        }
-
-        if (
-            BB_NCERT[profile.className]
-        ) {
-
-            return BB_NCERT[
+        const classCatalog =
+            BB_FINAL_CATALOG[
                 profile.className
             ];
 
-        }
 
-        return BB_CLASS_11_PCM;
+        if (!classCatalog) {
 
-    }
-
-
-    /* =====================================================
-       CHECK SUBJECT
-    ===================================================== */
-
-    function bbSubjectAllowed(subject) {
-
-        const subjects =
-            bbGetSubjects();
-
-        return Boolean(
-            subjects &&
-            subjects[subject]
-        );
-
-    }
-
-
-    /* =====================================================
-       GET CHAPTERS
-    ===================================================== */
-
-    function bbGetChapters(subject) {
-
-        const subjects =
-            bbGetSubjects();
-
-        return subjects[subject] || [];
-
-    }
-
-
-    /* =====================================================
-       SAVE PROFILE
-    ===================================================== */
-
-    function bbSaveProfileCache() {
-
-        const profile =
-            bbGetProfile();
-
-        localStorage.setItem(
-            "bb_class",
-            profile.className
-        );
-
-        localStorage.setItem(
-            "bb_stream",
-            profile.stream
-        );
-
-    }
-
-
-    /* =====================================================
-       BUILD CHAPTER DROPDOWN
-    ===================================================== */
-
-    function bbUpdateChapterDropdown(
-        subject
-    ) {
-
-        const dropdown =
-            document.getElementById(
-                "studyChapter"
-            );
-
-        if (!dropdown) return;
-
-        const chapters =
-            bbGetChapters(subject);
-
-        dropdown.innerHTML = "";
-
-        chapters.forEach(
-            (chapter, index) => {
-
-                const option =
-                    document.createElement(
-                        "option"
-                    );
-
-                option.value = chapter;
-
-                option.textContent =
-                    `${index + 1}. ${chapter}`;
-
-                dropdown.appendChild(
-                    option
-                );
-
-            }
-        );
-
-        if (chapters.length) {
-
-            dropdown.value =
-                chapters[0];
+            return {};
 
         }
 
-    }
 
-
-    /* =====================================================
-       UPDATE SUBJECT BUTTONS
-    ===================================================== */
-
-    function bbUpdateSubjects() {
-
-        const subjects =
-            bbGetSubjects();
-
-        document
-            .querySelectorAll(
-                "[data-subject]"
-            )
-            .forEach(button => {
-
-                const subject =
-                    button.dataset.subject;
-
-                if (
-                    Object.prototype
-                        .hasOwnProperty
-                        .call(
-                            subjects,
-                            subject
-                        )
-                ) {
-
-                    button.style.display =
-                        "";
-
-                    button.disabled =
-                        false;
-
-                } else {
-
-                    button.style.display =
-                        "none";
-
-                    button.disabled =
-                        true;
-
-                }
-
-            });
+        return (
+            classCatalog[
+                profile.stream
+            ] ||
+            classCatalog.PCM ||
+            {}
+        );
 
     }
 
 
-    /* =====================================================
-       ADD PROFILE INFORMATION
-    ===================================================== */
-
-    function bbAddProfileInfo() {
-
-        const study =
-            document.querySelector(
-                "#studySection"
-            ) ||
-            document.querySelector(
-                ".study-section"
-            ) ||
-            document.querySelector(
-                "[data-section='study']"
-            );
-
-        if (!study) return;
-
-        if (
-            document.getElementById(
-                "bbStudyProfileInfo"
-            )
-        ) return;
-
-        const profile =
-            bbGetProfile();
-
-        const box =
-            document.createElement(
-                "div"
-            );
-
-        box.id =
-            "bbStudyProfileInfo";
-
-        box.style.cssText = `
-            padding:14px 16px;
-            margin:12px 0;
-            border-radius:14px;
-            background:rgba(0,120,255,.08);
-            border:1px solid rgba(0,120,255,.18);
-            font-size:14px;
-        `;
-
-        box.innerHTML = `
-            <strong>📚 BharatBuddy Study</strong>
-            <br>
-            Class:
-            <strong>${profile.className}</strong>
-            <br>
-            Stream:
-            <strong>${profile.stream}</strong>
-            <br>
-            <small>
-                NCERT-aligned chapters are shown according
-                to your selected profile.
-            </small>
-        `;
-
-        study.prepend(box);
-
-    }
-
-
-    /* =====================================================
-       AI COMPLETE LESSON GENERATOR
-    ===================================================== */
-
-    async function bbGenerateLesson(
+    function bbChapterAlias(
         subject,
         chapter
     ) {
 
-        const profile =
-            bbGetProfile();
+        const aliases = {
 
-        const prompt = `
+            "Some Basic Concepts of Chemistry":
+                [
+                    "Some Basic Concepts",
+                    "Some Basic Concepts of Chemistry"
+                ],
 
-You are BharatBuddy AI, an Indian education tutor.
+            "Chemical Bonding and Molecular Structure":
+                [
+                    "Chemical Bonding",
+                    "Chemical Bonding and Molecular Structure"
+                ],
 
-Student Profile:
-Class: ${profile.className}
-Stream: ${profile.stream}
-Subject: ${subject}
-Chapter: ${chapter}
+            "Complex Numbers and Quadratic Equations":
+                [
+                    "Complex Numbers",
+                    "Complex Numbers and Quadratic Equations"
+                ],
 
-Create ORIGINAL NCERT-aligned study material.
+            "Work, Energy and Power":
+                [
+                    "Work Energy Power",
+                    "Work, Energy and Power"
+                ]
 
-Do NOT copy textbook wording.
+        };
 
-Create:
 
-1. Chapter introduction
-2. Learning objectives
-3. Important definitions
-4. Detailed concepts
-5. Important formulas
-6. Step-by-step derivations where applicable
-7. Simple examples
-8. Solved numerical problems where applicable
-9. Important points
-10. Common mistakes
-11. Quick revision
-12. 10 MCQs with answers
-13. 5 very short questions
-14. 5 short-answer questions
-15. 5 long-answer questions
-16. 5 practice problems
-17. Chapter test
+        const list =
+            aliases[
+                chapter
+            ] || [];
 
-Use simple student-friendly language.
 
-Do not invent unrelated topics.
+        if (
+            BB_ORIGINAL_LESSON_DATA[
+                subject
+            ]?.[chapter]
+        ) {
 
-Stay focused on the requested chapter.
-
-`;
-
-        const response =
-            await fetch(
-                "https://bharatbuddy-ai-36i4.onrender.com/api/chat",
-                {
-
-                    method: "POST",
-
-                    headers: {
-                        "Content-Type":
-                            "application/json"
-                    },
-
-                    body:
-                        JSON.stringify({
-                            message: prompt
-                        })
-
-                }
-            );
-
-        let result = {};
-
-        try {
-
-            result =
-                await response.json();
-
-        } catch {
-
-            result = {};
+            return chapter;
 
         }
 
-        if (!response.ok) {
 
-            throw new Error(
-                result.error ||
-                "AI lesson generation failed."
-            );
+        for (
+            const candidate of list
+        ) {
+
+            if (
+                BB_ORIGINAL_LESSON_DATA[
+                    subject
+                ]?.[candidate]
+            ) {
+
+                return candidate;
+
+            }
 
         }
 
-        return (
-            result.reply ||
-            result.answer ||
-            result.output_text ||
-            "AI ne response nahi diya."
-        );
+
+        return null;
 
     }
 
 
-    /* =====================================================
-       GLOBAL STUDY API
-    ===================================================== */
-
-    window.BharatBuddyStudy = {
-
-        getProfile:
-            bbGetProfile,
-
-        getSubjects:
-            bbGetSubjects,
-
-        getChapters:
-            bbGetChapters,
-
-        isSubjectAllowed:
-            bbSubjectAllowed,
-
-        updateSubjects:
-            bbUpdateSubjects,
-
-        updateChapters:
-            bbUpdateChapterDropdown,
-
-        generateLesson:
-            bbGenerateLesson
-
-    };
-
-
-    /* =====================================================
-       REFRESH STUDY
-    ===================================================== */
-
-    function bbRefreshStudy() {
-
-        bbSaveProfileCache();
-
-        bbUpdateSubjects();
-
-        bbAddProfileInfo();
-
-        const subjects =
-            bbGetSubjects();
-
-        const firstSubject =
-            Object.keys(subjects)[0];
-
-        if (firstSubject) {
-
-            bbUpdateChapterDropdown(
-                firstSubject
-            );
-
-        }
-
-    }
-
-
-    /* =====================================================
-       PROFILE SAVE HOOK
-    ===================================================== */
-
-    const oldSaveProfile =
-        window.saveProfile;
-
-    if (
-        typeof oldSaveProfile ===
-        "function"
+    function bbMakeLesson(
+        subject,
+        chapter,
+        index
     ) {
 
-        window.saveProfile =
-            function () {
+        const originalChapter =
+            bbChapterAlias(
+                subject,
+                chapter
+            );
 
-                const result =
-                    oldSaveProfile.apply(
-                        this,
-                        arguments
-                    );
 
-                setTimeout(
-                    bbRefreshStudy,
-                    100
-                );
+        const originalLessons =
+            originalChapter
+                ? BB_ORIGINAL_LESSON_DATA[
+                    subject
+                ][
+                    originalChapter
+                ]
+                : null;
 
-                return result;
+
+        if (
+            Array.isArray(
+                originalLessons
+            ) &&
+            originalLessons.length
+        ) {
+
+            const original =
+                originalLessons[
+                    index %
+                    originalLessons.length
+                ];
+
+
+            return {
+
+                title:
+                    original.title ||
+                    `Lesson ${index + 1}`,
+
+                content:
+                    original.content ||
+                    `Study ${chapter}`,
+
+                example:
+                    original.example ||
+                    ""
 
             };
 
+        }
+
+
+        const lessonNumber =
+            index + 1;
+
+
+        return {
+
+            title:
+                `${chapter} — Lesson ${lessonNumber}`,
+
+            content:
+                `
+                <h3>
+                    ${escapeHTML(
+                        chapter
+                    )}
+                </h3>
+
+                <p>
+                    Is lesson me
+                    <strong>
+                        ${escapeHTML(
+                            chapter
+                        )}
+                    </strong>
+                    ke important concepts
+                    systematically cover kiye jayenge.
+                </p>
+
+                <p>
+                    BharatBuddy AI se is chapter
+                    ko simple language me samjho,
+                    examples dekho aur chapter test
+                    ke liye prepare karo.
+                </p>
+
+                <h4>
+                    What to learn
+                </h4>
+
+                <ul>
+                    <li>
+                        Core concepts
+                    </li>
+
+                    <li>
+                        Important definitions
+                    </li>
+
+                    <li>
+                        Examples and applications
+                    </li>
+
+                    <li>
+                        Exam-focused revision
+                    </li>
+                </ul>
+                `,
+
+            example:
+                `Example-based explanation for ${chapter}.`
+
+        };
+
     }
 
 
-    /* =====================================================
-       SUBJECT CLICK
-    ===================================================== */
+    function bbApplyFinalCurriculum() {
 
-    document.addEventListener(
-        "click",
-        function (event) {
-
-            const button =
-                event.target.closest(
-                    "[data-subject]"
-                );
-
-            if (!button) return;
-
-            const subject =
-                button.dataset.subject;
-
-            if (
-                !bbSubjectAllowed(
-                    subject
-                )
-            ) {
-
-                event.preventDefault();
-                event.stopPropagation();
-
-                alert(
-                    "⚠️ Ye subject aapke selected class/stream ke liye available nahi hai."
-                );
-
-                return;
-
-            }
-
-            setTimeout(
-                function () {
-
-                    bbUpdateChapterDropdown(
-                        subject
-                    );
-
-                },
-                50
-            );
-
-        },
-        true
-    );
+        const catalog =
+            bbCatalogForProfile();
 
 
-    /* =====================================================
-       CHAPTER CHANGE
-    ===================================================== */
+        const newLessonData =
+            {};
 
-    document.addEventListener(
-        "change",
-        function (event) {
 
-            if (
-                event.target.id !==
-                "studyChapter"
-            ) return;
+        Object.keys(
+            catalog
+        ).forEach(
+            subject => {
 
-            const subject =
-                event.target
-                    .dataset
-                    .subject ||
-                document
-                    .querySelector(
-                        "[data-subject].active"
+                const chapters =
+                    Array.isArray(
+                        catalog[
+                            subject
+                        ]
                     )
-                    ?.dataset
-                    .subject;
+                        ? catalog[
+                            subject
+                        ]
+                        : [];
 
-            if (subject) {
 
-                bbUpdateChapterDropdown(
+                newLessonData[
                     subject
-                );
-
-            }
-
-        }
-    );
+                ] = {};
 
 
-    /* =====================================================
-       GENERATE BUTTON
-    ===================================================== */
+                chapters.forEach(
+                    (
+                        chapter,
+                        chapterIndex
+                    ) => {
 
-    function bbAddGenerateButton() {
+                        const lessonCount =
+                            3;
 
-        if (
-            document.getElementById(
-                "bbGenerateStudyButton"
-            )
-        ) return;
 
-        const dropdown =
-            document.getElementById(
-                "studyChapter"
-            );
-
-        if (!dropdown) return;
-
-        const button =
-            document.createElement(
-                "button"
-            );
-
-        button.id =
-            "bbGenerateStudyButton";
-
-        button.type =
-            "button";
-
-        button.textContent =
-            "🤖 Generate Complete AI Study";
-
-        button.style.cssText = `
-            margin:12px 0;
-            padding:12px 18px;
-            border:0;
-            border-radius:12px;
-            cursor:pointer;
-            font-weight:600;
-            font-size:14px;
-        `;
-
-        dropdown.parentNode.insertBefore(
-            button,
-            dropdown.nextSibling
-        );
-
-        button.addEventListener(
-            "click",
-            async function () {
-
-                const chapter =
-                    dropdown.value;
-
-                const activeSubject =
-                    document
-                        .querySelector(
-                            "[data-subject].active"
-                        )
-                        ?.dataset
-                        .subject;
-
-                if (
-                    !activeSubject
-                ) {
-
-                    alert(
-                        "Pehle subject select karo."
-                    );
-
-                    return;
-
-                }
-
-                button.disabled =
-                    true;
-
-                button.textContent =
-                    "⏳ AI Study bana raha hai...";
-
-                try {
-
-                    const answer =
-                        await bbGenerateLesson(
-                            activeSubject,
+                        newLessonData[
+                            subject
+                        ][
                             chapter
-                        );
-
-                    let container =
-                        document.getElementById(
-                            "bbAIStudyResult"
-                        );
-
-                    if (!container) {
-
-                        container =
-                            document.createElement(
-                                "div"
-                            );
-
-                        container.id =
-                            "bbAIStudyResult";
-
-                        container.style.cssText = `
-                            margin-top:16px;
-                            padding:18px;
-                            border-radius:16px;
-                            background:rgba(0,0,0,.04);
-                            line-height:1.7;
-                            white-space:pre-wrap;
-                        `;
-
-                        button.parentNode
-                            .appendChild(
-                                container
+                        ] =
+                            Array.from(
+                                {
+                                    length:
+                                        lessonCount
+                                },
+                                (
+                                    _,
+                                    index
+                                ) =>
+                                    bbMakeLesson(
+                                        subject,
+                                        chapter,
+                                        index
+                                    )
                             );
 
                     }
-
-                    container.textContent =
-                        answer;
-
-                    container.scrollIntoView({
-                        behavior:
-                            "smooth",
-                        block:
-                            "start"
-                    });
-
-                } catch (error) {
-
-                    alert(
-                        "❌ " +
-                        error.message
-                    );
-
-                }
-
-                button.disabled =
-                    false;
-
-                button.textContent =
-                    "🤖 Generate Complete AI Study";
-
-            }
-
-        );
-
-    }
-
-
-    /* =====================================================
-       INITIALIZE
-    ===================================================== */
-
-    function bbInitializeStudy() {
-
-        bbSaveProfileCache();
-
-        bbUpdateSubjects();
-
-        bbAddProfileInfo();
-
-        bbAddGenerateButton();
-
-    }
-
-
-    if (
-        document.readyState ===
-        "loading"
-    ) {
-
-        document.addEventListener(
-            "DOMContentLoaded",
-            function () {
-
-                setTimeout(
-                    bbInitializeStudy,
-                    300
                 );
 
             }
         );
 
-    } else {
 
-        setTimeout(
-            bbInitializeStudy,
-            300
-        );
+        lessonData =
+            newLessonData;
 
-    }
-
-
-})();
-/* ============================================================
-   BHARATBUDDY — COMPLETE CLASS 9/10/11/12 STUDY ENGINE
-   CLASS-SAFE VERSION
-   ============================================================ */
-
-(function () {
-    "use strict";
-
-    /* =========================================================
-       1. CURRENT PROFILE
-    ========================================================= */
-
-    function BB_getProfile() {
-        try {
-            return {
-                className: data?.profile?.className || "Class 11",
-                stream: data?.profile?.stream || "PCM"
-            };
-        } catch {
-            return {
-                className: "Class 11",
-                stream: "PCM"
-            };
-        }
-    }
-
-
-    /* =========================================================
-       2. COMPLETE SUBJECT MAP
-    ========================================================= */
-
-    const BB_SUBJECTS = {
-
-        "Class 9": [
-            "Mathematics",
-            "Science",
-            "Social Science",
-            "English"
-        ],
-
-        "Class 10": [
-            "Mathematics",
-            "Science",
-            "Social Science",
-            "English"
-        ],
-
-        "Class 11": {
-            PCM: [
-                "Physics",
-                "Chemistry",
-                "Mathematics",
-                "English",
-                "Computer Science"
-            ],
-
-            PCB: [
-                "Physics",
-                "Chemistry",
-                "Biology",
-                "English",
-                "Computer Science"
-            ],
-
-            Commerce: [
-                "Accountancy",
-                "Business Studies",
-                "Economics",
-                "English",
-                "Mathematics"
-            ],
-
-            Arts: [
-                "History",
-                "Political Science",
-                "Geography",
-                "Economics",
-                "English",
-                "Sociology"
-            ]
-        },
-
-        "Class 12": {
-            PCM: [
-                "Physics",
-                "Chemistry",
-                "Mathematics",
-                "English",
-                "Computer Science"
-            ],
-
-            PCB: [
-                "Physics",
-                "Chemistry",
-                "Biology",
-                "English",
-                "Computer Science"
-            ],
-
-            Commerce: [
-                "Accountancy",
-                "Business Studies",
-                "Economics",
-                "English",
-                "Mathematics"
-            ],
-
-            Arts: [
-                "History",
-                "Political Science",
-                "Geography",
-                "Economics",
-                "English",
-                "Sociology"
-            ]
-        }
-    };
-
-
-    function BB_getSubjects() {
-
-        const profile = BB_getProfile();
-
-        if (
-            profile.className === "Class 9" ||
-            profile.className === "Class 10"
-        ) {
-            return BB_SUBJECTS[profile.className] || [];
-        }
-
-        return (
-            BB_SUBJECTS[profile.className]?.[profile.stream] ||
-            []
-        );
-    }
-
-
-    /* =========================================================
-       3. CLASS 9 CHAPTERS
-    ========================================================= */
-
-    const BB_CLASS_9 = {
-
-        Mathematics: [
-            "Number Systems",
-            "Polynomials",
-            "Coordinate Geometry",
-            "Linear Equations in Two Variables",
-            "Introduction to Euclid's Geometry",
-            "Lines and Angles",
-            "Triangles",
-            "Quadrilaterals",
-            "Circles",
-            "Heron's Formula",
-            "Surface Areas and Volumes",
-            "Statistics",
-            "Probability"
-        ],
-
-        Science: [
-            "Matter in Our Surroundings",
-            "Is Matter Around Us Pure?",
-            "Atoms and Molecules",
-            "Structure of the Atom",
-            "The Fundamental Unit of Life",
-            "Tissues",
-            "Motion",
-            "Force and Laws of Motion",
-            "Gravitation",
-            "Work and Energy",
-            "Sound",
-            "Why Do We Fall Ill?",
-            "Natural Resources",
-            "Improvement in Food Resources"
-        ],
-
-        "Social Science": [
-            "The French Revolution",
-            "Socialism in Europe and the Russian Revolution",
-            "Nazism and the Rise of Hitler",
-            "Forest Society and Colonialism",
-            "Pastoralists in the Modern World",
-            "India — Size and Location",
-            "Physical Features of India",
-            "Drainage",
-            "Climate",
-            "Natural Vegetation and Wildlife",
-            "Population",
-            "What is Democracy? Why Democracy?",
-            "Constitutional Design",
-            "Electoral Politics",
-            "Working of Institutions",
-            "Democratic Rights",
-            "The Story of Village Palampur",
-            "People as Resource",
-            "Poverty as a Challenge",
-            "Food Security in India"
-        ],
-
-        English: [
-            "Reading Skills",
-            "Writing Skills",
-            "Grammar",
-            "Beehive",
-            "Moments"
-        ]
-    };
-
-
-    /* =========================================================
-       4. CLASS 10 CHAPTERS
-    ========================================================= */
-
-    const BB_CLASS_10 = {
-
-        Mathematics: [
-            "Real Numbers",
-            "Polynomials",
-            "Pair of Linear Equations in Two Variables",
-            "Quadratic Equations",
-            "Arithmetic Progressions",
-            "Triangles",
-            "Coordinate Geometry",
-            "Introduction to Trigonometry",
-            "Some Applications of Trigonometry",
-            "Circles",
-            "Areas Related to Circles",
-            "Surface Areas and Volumes",
-            "Statistics",
-            "Probability"
-        ],
-
-        Science: [
-            "Chemical Reactions and Equations",
-            "Acids, Bases and Salts",
-            "Metals and Non-metals",
-            "Carbon and Its Compounds",
-            "Life Processes",
-            "Control and Coordination",
-            "How do Organisms Reproduce?",
-            "Heredity",
-            "Light — Reflection and Refraction",
-            "The Human Eye and the Colourful World",
-            "Electricity",
-            "Magnetic Effects of Electric Current",
-            "Our Environment"
-        ],
-
-        "Social Science": [
-            "The Rise of Nationalism in Europe",
-            "Nationalism in India",
-            "The Making of a Global World",
-            "The Age of Industrialisation",
-            "Print Culture and the Modern World",
-            "Resources and Development",
-            "Forest and Wildlife Resources",
-            "Water Resources",
-            "Agriculture",
-            "Minerals and Energy Resources",
-            "Manufacturing Industries",
-            "Lifelines of National Economy",
-            "Power Sharing",
-            "Federalism",
-            "Gender, Religion and Caste",
-            "Political Parties",
-            "Outcomes of Democracy",
-            "Development",
-            "Sectors of the Indian Economy",
-            "Money and Credit",
-            "Globalisation and the Indian Economy",
-            "Consumer Rights"
-        ],
-
-        English: [
-            "Reading Skills",
-            "Writing Skills",
-            "Grammar",
-            "First Flight",
-            "Footprints Without Feet"
-        ]
-    };
-
-
-    /* =========================================================
-       5. CLASS 11 CHAPTERS
-    ========================================================= */
-
-    const BB_CLASS_11 = {
-
-        Physics: [
-            "Units & Measurements",
-            "Motion in a Straight Line",
-            "Motion in a Plane",
-            "Laws of Motion",
-            "Work, Energy and Power",
-            "System of Particles and Rotational Motion",
-            "Gravitation",
-            "Mechanical Properties of Solids",
-            "Mechanical Properties of Fluids",
-            "Thermal Properties of Matter",
-            "Thermodynamics",
-            "Kinetic Theory",
-            "Oscillations",
-            "Waves"
-        ],
-
-        Chemistry: [
-            "Some Basic Concepts of Chemistry",
-            "Structure of Atom",
-            "Classification of Elements and Periodicity in Properties",
-            "Chemical Bonding and Molecular Structure",
-            "Thermodynamics",
-            "Equilibrium",
-            "Redox Reactions",
-            "Organic Chemistry — Some Basic Principles and Techniques",
-            "Hydrocarbons"
-        ],
-
-        Mathematics: [
-            "Sets",
-            "Relations and Functions",
-            "Trigonometric Functions",
-            "Principle of Mathematical Induction",
-            "Complex Numbers and Quadratic Equations",
-            "Linear Inequalities",
-            "Permutations and Combinations",
-            "Binomial Theorem",
-            "Sequences and Series",
-            "Straight Lines",
-            "Conic Sections",
-            "Introduction to Three Dimensional Geometry",
-            "Limits and Derivatives",
-            "Statistics",
-            "Probability"
-        ],
-
-        "Computer Science": [
-            "Computer Fundamentals",
-            "Computer System Organisation",
-            "Data Representation",
-            "Boolean Logic",
-            "Programming Basics",
-            "Python Programming",
-            "Data Types",
-            "Operators",
-            "Conditional Statements",
-            "Loops",
-            "Strings",
-            "Lists",
-            "Tuples",
-            "Dictionaries"
-        ],
-
-        English: [
-            "Reading Comprehension",
-            "Writing Skills",
-            "Grammar",
-            "Hornbill",
-            "Snapshots"
-        ],
-
-        Biology: [
-            "The Living World",
-            "Biological Classification",
-            "Plant Kingdom",
-            "Animal Kingdom",
-            "Morphology of Flowering Plants",
-            "Anatomy of Flowering Plants",
-            "Structural Organisation in Animals",
-            "Cell — The Unit of Life",
-            "Biomolecules",
-            "Cell Cycle and Cell Division",
-            "Photosynthesis in Plants",
-            "Respiration in Plants",
-            "Plant Growth and Development",
-            "Breathing and Exchange of Gases",
-            "Body Fluids and Circulation",
-            "Excretory Products and their Elimination",
-            "Locomotion and Movement",
-            "Neural Control and Coordination",
-            "Chemical Coordination and Integration"
-        ],
-
-        Accountancy: [
-            "Introduction to Accounting",
-            "Theory Base of Accounting",
-            "Recording of Transactions",
-            "Bank Reconciliation Statement",
-            "Trial Balance and Rectification of Errors",
-            "Depreciation",
-            "Bills of Exchange",
-            "Financial Statements",
-            "Accounts from Incomplete Records"
-        ],
-
-        "Business Studies": [
-            "Nature and Purpose of Business",
-            "Forms of Business Organisation",
-            "Private, Public and Global Enterprises",
-            "Business Services",
-            "Emerging Modes of Business",
-            "Social Responsibility of Business",
-            "Formation of a Company",
-            "Sources of Business Finance",
-            "Small Business",
-            "Internal Trade",
-            "International Business"
-        ],
-
-        Economics: [
-            "Introduction to Economics",
-            "Collection of Data",
-            "Organisation of Data",
-            "Presentation of Data",
-            "Statistical Tools and Interpretation",
-            "Introduction to Microeconomics",
-            "Theory of Consumer Behaviour",
-            "Production and Costs",
-            "The Theory of the Firm",
-            "Market",
-            "Non-Competitive Markets"
-        ],
-
-        History: [
-            "From the Beginning of Time",
-            "Writing and City Life",
-            "An Empire Across Three Continents",
-            "The Central Islamic Lands",
-            "Nomadic Empires",
-            "The Three Orders",
-            "Changing Cultural Traditions",
-            "Confrontation of Cultures",
-            "Displacing Indigenous Peoples",
-            "Paths to Modernisation"
-        ],
-
-        Geography: [
-            "Geography as a Discipline",
-            "The Origin and Evolution of the Earth",
-            "Interior of the Earth",
-            "Distribution of Oceans and Continents",
-            "Minerals and Rocks",
-            "Geomorphic Processes",
-            "Landforms and their Evolution",
-            "Composition and Structure of Atmosphere",
-            "Solar Radiation, Heat Balance and Temperature",
-            "Atmospheric Circulation and Weather Systems",
-            "Water in the Atmosphere",
-            "World Climate and Climate Change",
-            "Water",
-            "Life on the Earth",
-            "Biodiversity and Conservation"
-        ],
-
-        "Political Science": [
-            "Constitution — Why and How?",
-            "Rights in the Indian Constitution",
-            "Election and Representation",
-            "Executive",
-            "Legislature",
-            "Judiciary",
-            "Federalism",
-            "Local Governments",
-            "Constitution as a Living Document",
-            "The Philosophy of the Constitution"
-        ],
-
-        Sociology: [
-            "Sociology and Society",
-            "Terms, Concepts and their Use in Sociology",
-            "Understanding Social Institutions",
-            "Culture and Socialisation",
-            "Social Change and Social Order",
-            "Introducing Western Sociologists",
-            "Indian Sociologists"
-        ]
-    };
-
-
-    /* =========================================================
-       6. CLASS 12 CHAPTERS
-    ========================================================= */
-
-    const BB_CLASS_12 = {
-
-        Physics: [
-            "Electric Charges and Fields",
-            "Electrostatic Potential and Capacitance",
-            "Current Electricity",
-            "Moving Charges and Magnetism",
-            "Magnetism and Matter",
-            "Electromagnetic Induction",
-            "Alternating Current",
-            "Electromagnetic Waves",
-            "Ray Optics and Optical Instruments",
-            "Wave Optics",
-            "Dual Nature of Radiation and Matter",
-            "Atoms",
-            "Nuclei",
-            "Semiconductor Electronics"
-        ],
-
-        Chemistry: [
-            "Solutions",
-            "Electrochemistry",
-            "Chemical Kinetics",
-            "d and f Block Elements",
-            "Coordination Compounds",
-            "Haloalkanes and Haloarenes",
-            "Alcohols, Phenols and Ethers",
-            "Aldehydes, Ketones and Carboxylic Acids",
-            "Amines",
-            "Biomolecules"
-        ],
-
-        Mathematics: [
-            "Relations and Functions",
-            "Inverse Trigonometric Functions",
-            "Matrices",
-            "Determinants",
-            "Continuity and Differentiability",
-            "Applications of Derivatives",
-            "Integrals",
-            "Applications of Integrals",
-            "Differential Equations",
-            "Vector Algebra",
-            "Three Dimensional Geometry",
-            "Linear Programming",
-            "Probability"
-        ],
-
-        "Computer Science": [
-            "Computer Networks",
-            "Database Concepts",
-            "Introduction to Python",
-            "Functions",
-            "File Handling",
-            "Data Structures",
-            "Computer Security",
-            "Societal Impacts"
-        ],
-
-        Biology: [
-            "Sexual Reproduction in Flowering Plants",
-            "Human Reproduction",
-            "Reproductive Health",
-            "Principles of Inheritance and Variation",
-            "Molecular Basis of Inheritance",
-            "Evolution",
-            "Human Health and Disease",
-            "Microbes in Human Welfare",
-            "Biotechnology — Principles and Processes",
-            "Biotechnology and its Applications",
-            "Organisms and Populations",
-            "Ecosystem",
-            "Biodiversity and Conservation"
-        ],
-
-        Accountancy: [
-            "Accounting for Partnership Firms",
-            "Accounting for Companies",
-            "Analysis of Financial Statements",
-            "Cash Flow Statement"
-        ],
-
-        "Business Studies": [
-            "Nature and Significance of Management",
-            "Principles of Management",
-            "Business Environment",
-            "Planning",
-            "Organising",
-            "Staffing",
-            "Directing",
-            "Controlling",
-            "Financial Management",
-            "Financial Markets",
-            "Marketing Management",
-            "Consumer Protection"
-        ],
-
-        Economics: [
-            "National Income Accounting",
-            "Money and Banking",
-            "Determination of Income and Employment",
-            "Government Budget and the Economy",
-            "Balance of Payments",
-            "Development Experience",
-            "Current Challenges Facing Indian Economy",
-            "Development Experience of India"
-        ],
-
-        History: [
-            "Bricks, Beads and Bones",
-            "Kings, Farmers and Towns",
-            "Kinship, Caste and Class",
-            "Thinkers, Beliefs and Buildings",
-            "Through the Eyes of Travellers",
-            "Bhakti-Sufi Traditions",
-            "An Imperial Capital — Vijayanagara",
-            "Peasants, Zamindars and the State",
-            "Kings and Chronicles",
-            "Colonialism and the Countryside",
-            "Rebels and the Raj",
-            "Mahatma Gandhi and the Nationalist Movement",
-            "Framing the Constitution"
-        ],
-
-        Geography: [
-            "Human Geography",
-            "The World Population",
-            "Human Development",
-            "Primary Activities",
-            "Secondary Activities",
-            "Tertiary and Quaternary Activities",
-            "Transport and Communication",
-            "International Trade",
-            "Population Distribution",
-            "Human Settlements",
-            "Land Resources and Agriculture",
-            "Water Resources",
-            "Mineral and Energy Resources",
-            "Manufacturing Industries",
-            "Planning and Sustainable Development",
-            "Transport and Communication",
-            "International Trade"
-        ],
-
-        "Political Science": [
-            "The End of Bipolarity",
-            "Contemporary Centres of Power",
-            "Contemporary South Asia",
-            "International Organizations",
-            "Security in the Contemporary World",
-            "Environment and Natural Resources",
-            "Globalisation",
-            "Challenges of Nation-Building",
-            "Era of One-Party Dominance",
-            "Politics of Planned Development",
-            "India's External Relations",
-            "Challenges to and Restoration of the Congress System",
-            "The Crisis of Democratic Order",
-            "Regional Aspirations",
-            "Recent Developments in Indian Politics"
-        ],
-
-        Sociology: [
-            "Introducing Indian Society",
-            "The Demographic Structure of Indian Society",
-            "Social Institutions — Continuity and Change",
-            "Patterns of Social Inequality and Exclusion",
-            "Cultural Diversity of India",
-            "Structural Change",
-            "Cultural Change",
-            "Change and Development in Rural Society",
-            "Change and Development in Industrial Society",
-            "Social Movements"
-        ],
-
-        English: [
-            "Reading Comprehension",
-            "Writing Skills",
-            "Grammar",
-            "Flamingo",
-            "Vistas"
-        ]
-    };
-
-
-    /* =========================================================
-       7. MASTER CURRICULUM
-    ========================================================= */
-
-    const BB_CURRICULUM = {
-        "Class 9": BB_CLASS_9,
-        "Class 10": BB_CLASS_10,
-        "Class 11": BB_CLASS_11,
-        "Class 12": BB_CLASS_12
-    };
-
-
-    /* =========================================================
-       8. GET CLASS-SPECIFIC CHAPTERS
-    ========================================================= */
-
-    function BB_getChapters(subject) {
-
-        const profile = BB_getProfile();
-
-        const classData =
-            BB_CURRICULUM[profile.className];
-
-        if (!classData) return [];
-
-        return classData[subject] || [];
-    }
-
-
-    /* =========================================================
-       9. CHECK SUBJECT
-    ========================================================= */
-
-    function BB_isValidSubject(subject) {
-        return BB_getSubjects().includes(subject);
-    }
-
-
-    /* =========================================================
-       10. CHECK CHAPTER
-    ========================================================= */
-
-    function BB_isValidChapter(subject, chapter) {
-        return BB_getChapters(subject).includes(chapter);
-    }
-
-
-    /* =========================================================
-       11. CLASS-SAFE KEY
-    ========================================================= */
-
-    function BB_makeKey(subject, chapter) {
-
-        const profile = BB_getProfile();
-
-        return [
-            profile.className,
-            profile.stream,
-            subject,
-            chapter
-        ].join("|");
-    }
-
-
-    /* =========================================================
-       12. CLASS-SAFE QUESTIONS
-    ========================================================= */
-
-    function BB_getQuestions(subject, chapter) {
-
-        const profile = BB_getProfile();
-
-        if (!BB_isValidSubject(subject)) {
-            return [];
-        }
-
-        if (!BB_isValidChapter(subject, chapter)) {
-            return [];
-        }
-
-        /*
-           Existing old questions are used ONLY when they
-           exactly match the selected class/subject/chapter.
-        */
-
-        const oldKey =
-            `${subject}|${chapter}`;
-
-        if (
-            typeof chapterQuestions !== "undefined" &&
-            chapterQuestions[oldKey] &&
-            profile.className === "Class 11"
-        ) {
-            return chapterQuestions[oldKey];
-        }
-
-        /*
-           For other classes, generate class-specific
-           questions using the AI engine.
-        */
-
-        return [
-            {
-                type: "MCQ",
-                question:
-                    `Which class does this chapter belong to?`,
-                options: [
-                    profile.className,
-                    "Class 6",
-                    "Class 7",
-                    "Class 8"
-                ],
-                answer: 0
-            },
-
-            {
-                type: "MCQ",
-                question:
-                    `Which subject is this chapter from?`,
-                options: [
-                    subject,
-                    "Computer Science",
-                    "General Knowledge",
-                    "Art"
-                ],
-                answer: 0
-            },
-
-            {
-                type: "SHORT",
-                question:
-                    `Write one important concept you learned from "${chapter}".`,
-                answer:
-                    `The answer should correctly explain an important concept from ${chapter}.`
-            },
-
-            {
-                type: "SHORT",
-                question:
-                    `Why is "${chapter}" important?`,
-                answer:
-                    `The student should explain the educational importance of ${chapter}.`
-            },
-
-            {
-                type: "LONG",
-                question:
-                    `Explain the major concepts of "${chapter}" in your own words.`,
-                answer:
-                    `A good answer should explain the major concepts, definitions, examples and important points related to ${chapter}.`
-            }
-        ];
-    }
-
-
-    /* =========================================================
-       13. CLASS-SAFE STUDY STATE
-    ========================================================= */
-
-    if (typeof studyState === "object") {
-
-        const profile = BB_getProfile();
-
-        studyState.className =
-            profile.className;
-
-        studyState.stream =
-            profile.stream;
 
         const subjects =
-            BB_getSubjects();
-
-        if (
-            !subjects.includes(
-                studyState.subject
-            )
-        ) {
-            studyState.subject =
-                subjects[0] || null;
-        }
-
-        const chapters =
-            BB_getChapters(
-                studyState.subject
+            Object.keys(
+                lessonData
             );
 
-        if (
-            !chapters.includes(
-                studyState.chapter
-            )
-        ) {
-            studyState.chapter =
-                chapters[0] || null;
-            studyState.lessonIndex = 0;
-        }
-    }
-
-
-    /* =========================================================
-       14. CLASS CHANGE
-    ========================================================= */
-
-    let BB_lastProfile =
-        JSON.stringify(
-            BB_getProfile()
-        );
-
-
-    function BB_handleProfileChange() {
-
-        const profile =
-            BB_getProfile();
-
-        const subjects =
-            BB_getSubjects();
 
         if (
             !subjects.length
         ) {
+
             return;
+
         }
+
 
         if (
             !subjects.includes(
@@ -14142,14 +12326,16 @@ Stay focused on the requested chapter.
             studyState.subject =
                 subjects[0];
 
-            studyState.lessonIndex =
-                0;
         }
 
+
         const chapters =
-            BB_getChapters(
-                studyState.subject
+            Object.keys(
+                lessonData[
+                    studyState.subject
+                ] || {}
             );
+
 
         if (
             !chapters.includes(
@@ -14158,11 +12344,40 @@ Stay focused on the requested chapter.
         ) {
 
             studyState.chapter =
-                chapters[0] || null;
+                chapters[0] ||
+                "";
 
-            studyState.lessonIndex =
-                0;
         }
+
+
+        studyState.lessonIndex =
+            Math.max(
+                0,
+                Math.min(
+                    Number(
+                        studyState.lessonIndex
+                    ) || 0,
+                    Math.max(
+                        0,
+                        (
+                            lessonData[
+                                studyState.subject
+                            ]?.[
+                                studyState.chapter
+                            ]?.length ||
+                            1
+                        ) - 1
+                    )
+                )
+            );
+
+
+        const profile =
+            bbProfileFinal();
+
+
+        studyState.board =
+            profile.board;
 
         studyState.className =
             profile.className;
@@ -14171,4908 +12386,626 @@ Stay focused on the requested chapter.
             profile.stream;
 
 
-        /* Update chapter dropdown */
+        ensureStudyProgress();
 
-        const dropdown =
-            document.getElementById(
-                "studyChapter"
-            );
-
-        if (dropdown) {
-
-            dropdown.innerHTML = "";
-
-            chapters.forEach(
-                (chapter, index) => {
-
-                    const option =
-                        document.createElement(
-                            "option"
-                        );
-
-                    option.value =
-                        chapter;
-
-                    option.textContent =
-                        `${index + 1}. ${chapter}`;
-
-                    dropdown.appendChild(
-                        option
-                    );
-                }
-            );
-
-            if (
-                studyState.chapter &&
-                chapters.includes(
-                    studyState.chapter
-                )
-            ) {
-                dropdown.value =
-                    studyState.chapter;
-            }
-        }
-
-
-        /* Update subject buttons */
-
-        document
-            .querySelectorAll(
-                "[data-subject]"
-            )
-            .forEach(button => {
-
-                const subject =
-                    button.dataset.subject;
-
-                button.style.display =
-                    subjects.includes(subject)
-                        ? ""
-                        : "none";
-            });
-
-
-        console.log(
-            "BharatBuddy Study:",
-            profile.className,
-            profile.stream,
-            studyState.subject,
-            studyState.chapter
-        );
     }
 
 
-    /* =========================================================
-       15. CLASS-SAFE CHAPTER TEST
-    ========================================================= */
+    /*
+     * Expose the catalog for other BharatBuddy
+     * modules without creating another Study system.
+     */
 
-    function BB_startChapterTest() {
+    window.BharatBuddyFinalCatalog =
+        BB_FINAL_CATALOG;
 
-        const subject =
-            studyState.subject;
 
-        const chapter =
-            studyState.chapter;
+    window.BharatBuddyApplyCurriculum =
+        bbApplyFinalCurriculum;
 
-        if (!subject || !chapter) {
 
-            alert(
-                "Pehle Subject aur Chapter select karo."
-            );
+    /*
+     * Keep a safe global alias used by saveProfile().
+     */
 
-            return;
-        }
+    window.applyFinalCurriculum =
+        bbApplyFinalCurriculum;
 
-        const questions =
-            BB_getQuestions(
-                subject,
-                chapter
-            );
 
-        if (!questions.length) {
-
-            alert(
-                "Is chapter ke questions abhi available nahi hain."
-            );
-
-            return;
-        }
-
-        activeChapterTest = {
-
-            className:
-                BB_getProfile().className,
-
-            stream:
-                BB_getProfile().stream,
-
-            subject,
-
-            chapter,
-
-            questions,
-
-            current: 0,
-
-            score: 0,
-
-            answers: [],
-
-            finished: false
-        };
-
-
-        if (
-            typeof renderChapterTest ===
-            "function"
-        ) {
-            renderChapterTest();
-        }
-    }
-
-
-    /* =========================================================
-       16. SAVE CLASS-SAFE TEST RESULT
-    ========================================================= */
-
-    function BB_saveTestResult(
-        test
-    ) {
-
-        if (
-            typeof data === "undefined" ||
-            !data
-        ) {
-            return;
-        }
-
-        if (!data.chapterTests) {
-            data.chapterTests = {};
-        }
-
-        const key =
-            [
-                test.className,
-                test.stream,
-                test.subject,
-                test.chapter
-            ].join("|");
-
-        const total =
-            test.questions.length;
-
-        const percentage =
-            total
-                ? Math.round(
-                    (
-                        test.score /
-                        total
-                    ) * 100
-                )
-                : 0;
-
-        data.chapterTests[key] = {
-
-            className:
-                test.className,
-
-            stream:
-                test.stream,
-
-            subject:
-                test.subject,
-
-            chapter:
-                test.chapter,
-
-            score:
-                test.score,
-
-            total,
-
-            percentage,
-
-            date:
-                new Date().toISOString()
-        };
-
-
-        try {
-
-            localStorage.setItem(
-                STORAGE_KEY,
-                JSON.stringify(data)
-            );
-
-        } catch (error) {
-
-            console.warn(
-                "Could not save test result.",
-                error
-            );
-        }
-    }
-
-
-    /* =========================================================
-       17. AI CLASS-SPECIFIC STUDY
-    ========================================================= */
-
-    async function BB_generateStudy(
-        subject,
-        chapter
-    ) {
-
-        const profile =
-            BB_getProfile();
-
-        if (
-            !BB_isValidSubject(subject)
-        ) {
-            throw new Error(
-                "Selected subject is not available for this class."
-            );
-        }
-
-        if (
-            !BB_isValidChapter(
-                subject,
-                chapter
-            )
-        ) {
-            throw new Error(
-                "Selected chapter is not available for this subject/class."
-            );
-        }
-
-
-        const prompt = `
-
-You are BharatBuddy AI Study Engine.
-
-STUDENT PROFILE
-Class: ${profile.className}
-Stream: ${profile.stream}
-Subject: ${subject}
-Chapter: ${chapter}
-
-STRICT RULES:
-
-1. Create ORIGINAL educational content.
-2. Do NOT copy textbook wording.
-3. Follow the selected class level.
-4. Follow the requested subject.
-5. Follow ONLY the requested chapter.
-6. Never use content from another class.
-7. Never mix Class 9, Class 10, Class 11 or Class 12.
-8. Do not create unrelated chapters.
-9. Keep explanations student-friendly.
-10. For numerical subjects, include solved examples.
-11. For theory subjects, include important concepts and examples.
-
-Return HTML only.
-
-STRUCTURE:
-
-<h2>Chapter Overview</h2>
-
-<h3>Concept Explanation</h3>
-
-<h3>Important Definitions</h3>
-
-<h3>Important Concepts</h3>
-
-<h3>Important Formulas</h3>
-
-<h3>Step-by-Step Examples</h3>
-
-<h3>Solved Questions</h3>
-
-<h3>Important Points</h3>
-
-<h3>Common Mistakes</h3>
-
-<h3>Quick Revision</h3>
-
-<h3>MCQs</h3>
-Create 10 MCQs with answers.
-
-<h3>Very Short Questions</h3>
-Create 5.
-
-<h3>Short Answer Questions</h3>
-Create 5.
-
-<h3>Long Answer Questions</h3>
-Create 5.
-
-<h3>Practice Questions</h3>
-Create 5.
-
-Make the material appropriate for:
-${profile.className}
-
-Do not mention that this is a demo.
-`;
-
-
-        const response =
-            await fetch(
-                "https://bharatbuddy-ai-36i4.onrender.com/api/chat",
-                {
-                    method: "POST",
-
-                    headers: {
-                        "Content-Type":
-                            "application/json"
-                    },
-
-                    body:
-                        JSON.stringify({
-                            message:
-                                prompt
-                        })
-                }
-            );
-
-
-        let result = {};
-
-        try {
-
-            result =
-                await response.json();
-
-        } catch {
-
-            result = {};
-        }
-
-
-        if (!response.ok) {
-
-            throw new Error(
-                result.error ||
-                "AI Study generation failed."
-            );
-        }
-
-
-        return (
-            result.reply ||
-            result.answer ||
-            result.output_text ||
-            ""
-        );
-    }
-
-
-    /* =========================================================
-       18. PUBLIC API
-    ========================================================= */
-
-    window.BharatBuddyCompleteStudy = {
-
-        profile:
-            BB_getProfile,
-
-        subjects:
-            BB_getSubjects,
-
-        chapters:
-            BB_getChapters,
-
-        questions:
-            BB_getQuestions,
-
-        generate:
-            BB_generateStudy,
-
-        startTest:
-            BB_startChapterTest,
-
-        saveTest:
-            BB_saveTestResult,
-
-        key:
-            BB_makeKey
-    };
-
-
-    /* =========================================================
-       19. PROFILE WATCHER
-    ========================================================= */
-
-    setInterval(
-        function () {
-
-            const current =
-                JSON.stringify(
-                    BB_getProfile()
-                );
-
-            if (
-                current !==
-                BB_lastProfile
-            ) {
-
-                BB_lastProfile =
-                    current;
-
-                console.log(
-                    "BharatBuddy class changed."
-                );
-
-                BB_handleProfileChange();
-
-                try {
-
-                    if (
-                        typeof window.renderStudy ===
-                        "function"
-                    ) {
-                        window.renderStudy();
-                    }
-
-                } catch (error) {
-
-                    console.warn(
-                        "Study refresh warning:",
-                        error
-                    );
-                }
-            }
-
-        },
-        500
-    );
-
-
-    /* =========================================================
-       20. INITIALIZE
-    ========================================================= */
-
-    function BB_init() {
-
-        try {
-
-            BB_handleProfileChange();
-
-        } catch (error) {
-
-            console.warn(
-                "BharatBuddy Study initialization error:",
-                error
-            );
-        }
-    }
-
-
-    if (
-        document.readyState ===
-        "loading"
-    ) {
-
-        document.addEventListener(
-            "DOMContentLoaded",
-            BB_init
-        );
-
-    } else {
-
-        BB_init();
-    }
-
-})();
-   
-/* =========================================================
-   BHARATBUDDY BOARD CURRICULUM SYSTEM
-   SAFE ADD-ON
-   Does NOT modify existing lessonData
-========================================================= */
-
-(function () {
-    "use strict";
-
-    const BOARD_STORAGE_KEY = "bharatbuddy_curriculum_v1";
-
-    let curriculumState = {
-        board: "",
-        className: "",
-        stream: "",
-        subject: "",
-        chapter: ""
-    };
-
-    /* =====================================================
-       CURRICULUM DATA
-       This is kept separate from existing lessonData
-    ===================================================== */
-
-    const boardCurriculum = {
-
-        CBSE: {
-
-            "Class 9": {
-                streams: {
-                    "General": {
-
-                        "Mathematics": [
-                            "Number Systems",
-                            "Polynomials",
-                            "Coordinate Geometry",
-                            "Linear Equations in Two Variables",
-                            "Introduction to Euclid's Geometry",
-                            "Lines and Angles",
-                            "Triangles",
-                            "Quadrilaterals",
-                            "Circles",
-                            "Heron's Formula",
-                            "Surface Areas and Volumes",
-                            "Statistics",
-                            "Probability"
-                        ],
-
-                        "Science": [
-                            "Matter in Our Surroundings",
-                            "Is Matter Around Us Pure",
-                            "Atoms and Molecules",
-                            "Structure of the Atom",
-                            "The Fundamental Unit of Life",
-                            "Tissues",
-                            "Motion",
-                            "Force and Laws of Motion",
-                            "Gravitation",
-                            "Work and Energy",
-                            "Sound",
-                            "Why Do We Fall Ill",
-                            "Natural Resources",
-                            "Improvement in Food Resources"
-                        ],
-
-                        "English": [
-                            "Grammar",
-                            "Reading Comprehension",
-                            "Writing Skills",
-                            "Literature"
-                        ],
-
-                        "Social Science": [
-                            "History",
-                            "Geography",
-                            "Political Science",
-                            "Economics"
-                        ]
-                    }
-                }
-            },
-
-            "Class 10": {
-                streams: {
-                    "General": {
-
-                        "Mathematics": [
-                            "Real Numbers",
-                            "Polynomials",
-                            "Pair of Linear Equations in Two Variables",
-                            "Quadratic Equations",
-                            "Arithmetic Progressions",
-                            "Triangles",
-                            "Coordinate Geometry",
-                            "Introduction to Trigonometry",
-                            "Some Applications of Trigonometry",
-                            "Circles",
-                            "Areas Related to Circles",
-                            "Surface Areas and Volumes",
-                            "Statistics",
-                            "Probability"
-                        ],
-
-                        "Science": [
-                            "Chemical Reactions and Equations",
-                            "Acids, Bases and Salts",
-                            "Metals and Non-metals",
-                            "Carbon and Its Compounds",
-                            "Life Processes",
-                            "Control and Coordination",
-                            "How Do Organisms Reproduce",
-                            "Heredity",
-                            "Light",
-                            "Human Eye and Colourful World",
-                            "Electricity",
-                            "Magnetic Effects of Electric Current",
-                            "Our Environment"
-                        ],
-
-                        "English": [
-                            "Grammar",
-                            "Reading Comprehension",
-                            "Writing Skills",
-                            "Literature"
-                        ],
-
-                        "Social Science": [
-                            "History",
-                            "Geography",
-                            "Political Science",
-                            "Economics"
-                        ]
-                    }
-                }
-            },
-
-            "Class 11": {
-                streams: {
-
-                    "PCM": {
-                        "Physics": [
-                            "Units and Measurements",
-                            "Motion in a Straight Line",
-                            "Motion in a Plane",
-                            "Laws of Motion",
-                            "Work, Energy and Power",
-                            "System of Particles and Rotational Motion",
-                            "Gravitation",
-                            "Mechanical Properties of Solids",
-                            "Mechanical Properties of Fluids",
-                            "Thermal Properties of Matter",
-                            "Thermodynamics",
-                            "Kinetic Theory",
-                            "Oscillations",
-                            "Waves"
-                        ],
-
-                        "Chemistry": [
-                            "Some Basic Concepts of Chemistry",
-                            "Structure of Atom",
-                            "Classification of Elements and Periodicity",
-                            "Chemical Bonding and Molecular Structure",
-                            "Thermodynamics",
-                            "Equilibrium",
-                            "Redox Reactions",
-                            "Organic Chemistry",
-                            "Hydrocarbons"
-                        ],
-
-                        "Mathematics": [
-                            "Sets",
-                            "Relations and Functions",
-                            "Trigonometric Functions",
-                            "Complex Numbers",
-                            "Linear Inequalities",
-                            "Permutations and Combinations",
-                            "Binomial Theorem",
-                            "Sequences and Series",
-                            "Straight Lines",
-                            "Conic Sections",
-                            "Introduction to Three Dimensional Geometry",
-                            "Limits and Derivatives",
-                            "Statistics",
-                            "Probability"
-                        ],
-
-                        "Computer Science": [
-                            "Computer Systems",
-                            "Python Programming",
-                            "Data Representation",
-                            "Boolean Logic",
-                            "Data Handling",
-                            "Computer Networks",
-                            "Cyber Safety"
-                        ],
-
-                        "English": [
-                            "Reading Skills",
-                            "Grammar",
-                            "Writing Skills",
-                            "Literature"
-                        ]
-                    },
-
-                    "PCB": {
-                        "Physics": [
-                            "Units and Measurements",
-                            "Motion in a Straight Line",
-                            "Motion in a Plane",
-                            "Laws of Motion",
-                            "Work, Energy and Power",
-                            "System of Particles and Rotational Motion",
-                            "Gravitation",
-                            "Mechanical Properties of Solids",
-                            "Mechanical Properties of Fluids",
-                            "Thermal Properties of Matter",
-                            "Thermodynamics",
-                            "Kinetic Theory",
-                            "Oscillations",
-                            "Waves"
-                        ],
-
-                        "Chemistry": [
-                            "Some Basic Concepts of Chemistry",
-                            "Structure of Atom",
-                            "Classification of Elements and Periodicity",
-                            "Chemical Bonding and Molecular Structure",
-                            "Thermodynamics",
-                            "Equilibrium",
-                            "Redox Reactions",
-                            "Organic Chemistry",
-                            "Hydrocarbons"
-                        ],
-
-                        "Biology": [
-                            "The Living World",
-                            "Biological Classification",
-                            "Plant Kingdom",
-                            "Animal Kingdom",
-                            "Morphology of Flowering Plants",
-                            "Anatomy of Flowering Plants",
-                            "Structural Organisation in Animals",
-                            "Cell: The Unit of Life",
-                            "Biomolecules",
-                            "Cell Cycle and Cell Division",
-                            "Transport in Plants",
-                            "Mineral Nutrition",
-                            "Photosynthesis",
-                            "Respiration in Plants",
-                            "Plant Growth and Development",
-                            "Digestion and Absorption",
-                            "Breathing and Exchange of Gases",
-                            "Body Fluids and Circulation",
-                            "Excretory Products and Their Elimination",
-                            "Locomotion and Movement",
-                            "Neural Control and Coordination",
-                            "Chemical Coordination and Integration"
-                        ],
-
-                        "English": [
-                            "Reading Skills",
-                            "Grammar",
-                            "Writing Skills",
-                            "Literature"
-                        ]
-                    },
-
-                    "Commerce": {
-                        "Accountancy": [
-                            "Introduction to Accounting",
-                            "Theory Base of Accounting",
-                            "Recording of Transactions",
-                            "Bank Reconciliation Statement",
-                            "Trial Balance",
-                            "Depreciation",
-                            "Bills of Exchange",
-                            "Financial Statements",
-                            "Computerised Accounting"
-                        ],
-
-                        "Business Studies": [
-                            "Nature and Purpose of Business",
-                            "Forms of Business Organisation",
-                            "Private, Public and Global Enterprises",
-                            "Business Services",
-                            "Emerging Modes of Business",
-                            "Social Responsibility of Business",
-                            "Formation of a Company",
-                            "Sources of Business Finance",
-                            "Small Business",
-                            "Internal Trade",
-                            "International Business"
-                        ],
-
-                        "Economics": [
-                            "Introduction to Economics",
-                            "Theory of Consumer Behaviour",
-                            "Production and Costs",
-                            "The Theory of Firm",
-                            "Market Equilibrium",
-                            "Statistics for Economics",
-                            "Collection of Data",
-                            "Organisation of Data",
-                            "Presentation of Data",
-                            "Statistical Tools",
-                            "Measures of Central Tendency"
-                        ],
-
-                        "Mathematics": [
-                            "Sets",
-                            "Relations and Functions",
-                            "Trigonometric Functions",
-                            "Complex Numbers",
-                            "Linear Inequalities",
-                            "Permutations and Combinations",
-                            "Binomial Theorem",
-                            "Sequences and Series",
-                            "Straight Lines",
-                            "Statistics",
-                            "Probability"
-                        ],
-
-                        "English": [
-                            "Reading Skills",
-                            "Grammar",
-                            "Writing Skills",
-                            "Literature"
-                        ]
-                    },
-
-                    "Arts": {
-                        "History": [
-                            "Early Societies",
-                            "Writing and City Life",
-                            "An Empire Across Three Continents",
-                            "Nomadic Empires",
-                            "The Three Orders",
-                            "Changing Cultural Traditions",
-                            "Displacing Indigenous Peoples",
-                            "Paths to Modernisation"
-                        ],
-
-                        "Geography": [
-                            "Geography as a Discipline",
-                            "The Earth",
-                            "Landforms",
-                            "Climate",
-                            "Water",
-                            "Natural Vegetation",
-                            "Natural Hazards",
-                            "India: Location",
-                            "Structure and Physiography",
-                            "Drainage",
-                            "Climate",
-                            "Natural Vegetation",
-                            "Natural Hazards"
-                        ],
-
-                        "Political Science": [
-                            "Constitution",
-                            "Rights in the Indian Constitution",
-                            "Election and Representation",
-                            "Executive",
-                            "Legislature",
-                            "Judiciary",
-                            "Federalism",
-                            "Local Governments",
-                            "Constitution as a Living Document",
-                            "Political Philosophy"
-                        ],
-
-                        "Sociology": [
-                            "Sociology and Society",
-                            "Terms, Concepts and their Use",
-                            "Understanding Social Institutions",
-                            "Culture and Socialisation",
-                            "Social Change and Social Order",
-                            "Environment and Society",
-                            "Introducing Western Sociologists",
-                            "Indian Sociologists"
-                        ],
-
-                        "English": [
-                            "Reading Skills",
-                            "Grammar",
-                            "Writing Skills",
-                            "Literature"
-                        ]
-                    }
-                }
-            },
-
-            "Class 12": {
-                streams: {
-
-                    "Science": {
-                        "Physics": [
-                            "Electric Charges and Fields",
-                            "Electrostatic Potential and Capacitance",
-                            "Current Electricity",
-                            "Moving Charges and Magnetism",
-                            "Magnetism and Matter",
-                            "Electromagnetic Induction",
-                            "Alternating Current",
-                            "Electromagnetic Waves",
-                            "Ray Optics",
-                            "Wave Optics",
-                            "Dual Nature of Radiation and Matter",
-                            "Atoms",
-                            "Nuclei",
-                            "Semiconductor Electronics"
-                        ],
-
-                        "Chemistry": [
-                            "Solutions",
-                            "Electrochemistry",
-                            "Chemical Kinetics",
-                            "d and f Block Elements",
-                            "Coordination Compounds",
-                            "Haloalkanes and Haloarenes",
-                            "Alcohols, Phenols and Ethers",
-                            "Aldehydes, Ketones and Carboxylic Acids",
-                            "Amines",
-                            "Biomolecules"
-                        ],
-
-                        "Mathematics": [
-                            "Relations and Functions",
-                            "Inverse Trigonometric Functions",
-                            "Matrices",
-                            "Determinants",
-                            "Continuity and Differentiability",
-                            "Application of Derivatives",
-                            "Integrals",
-                            "Application of Integrals",
-                            "Differential Equations",
-                            "Vector Algebra",
-                            "Three Dimensional Geometry",
-                            "Linear Programming",
-                            "Probability"
-                        ],
-
-                        "Biology": [
-                            "Sexual Reproduction in Flowering Plants",
-                            "Human Reproduction",
-                            "Reproductive Health",
-                            "Principles of Inheritance",
-                            "Molecular Basis of Inheritance",
-                            "Evolution",
-                            "Human Health and Disease",
-                            "Microbes in Human Welfare",
-                            "Biotechnology",
-                            "Organisms and Populations",
-                            "Ecosystem",
-                            "Biodiversity and Conservation"
-                        ],
-
-                        "Computer Science": [
-                            "Python Revision Tour",
-                            "Functions",
-                            "File Handling",
-                            "Data Structures",
-                            "Computer Networks",
-                            "Database Concepts",
-                            "SQL"
-                        ],
-
-                        "English": [
-                            "Reading Skills",
-                            "Grammar",
-                            "Writing Skills",
-                            "Literature"
-                        ]
-                    },
-
-                    "Commerce": {
-                        "Accountancy": [
-                            "Accounting for Partnership Firms",
-                            "Change in Profit Sharing Ratio",
-                            "Admission of a Partner",
-                            "Retirement of a Partner",
-                            "Dissolution of Partnership",
-                            "Accounting for Companies",
-                            "Analysis of Financial Statements",
-                            "Cash Flow Statement"
-                        ],
-
-                        "Business Studies": [
-                            "Nature and Significance of Management",
-                            "Principles of Management",
-                            "Business Environment",
-                            "Planning",
-                            "Organising",
-                            "Staffing",
-                            "Directing",
-                            "Controlling",
-                            "Financial Management",
-                            "Marketing Management",
-                            "Consumer Protection"
-                        ],
-
-                        "Economics": [
-                            "National Income",
-                            "Money and Banking",
-                            "Determination of Income and Employment",
-                            "Government Budget",
-                            "Balance of Payments",
-                            "Indian Economy",
-                            "Economic Reforms",
-                            "Human Capital Formation",
-                            "Rural Development",
-                            "Employment",
-                            "Sustainable Development"
-                        ],
-
-                        "Mathematics": [
-                            "Relations and Functions",
-                            "Matrices",
-                            "Determinants",
-                            "Calculus",
-                            "Vector Algebra",
-                            "Three Dimensional Geometry",
-                            "Linear Programming",
-                            "Probability"
-                        ],
-
-                        "English": [
-                            "Reading Skills",
-                            "Grammar",
-                            "Writing Skills",
-                            "Literature"
-                        ]
-                    },
-
-                    "Arts": {
-                        "History": [
-                            "Bricks, Beads and Bones",
-                            "Kings, Farmers and Towns",
-                            "Kinship, Caste and Class",
-                            "Thinkers, Beliefs and Buildings",
-                            "Through the Eyes of Travellers",
-                            "Bhakti-Sufi Traditions",
-                            "An Imperial Capital",
-                            "Peasants, Zamindars and the State",
-                            "Colonialism and the Countryside",
-                            "Rebels and the Raj",
-                            "Mahatma Gandhi and the Nationalist Movement",
-                            "Framing the Constitution"
-                        ],
-
-                        "Geography": [
-                            "Human Geography",
-                            "Population",
-                            "Human Development",
-                            "Primary Activities",
-                            "Secondary Activities",
-                            "Tertiary Activities",
-                            "Transport and Communication",
-                            "International Trade",
-                            "Population Distribution",
-                            "Migration",
-                            "Human Settlements",
-                            "Resources",
-                            "Water Resources",
-                            "Mineral Resources",
-                            "Manufacturing Industries",
-                            "Planning and Sustainable Development"
-                        ],
-
-                        "Political Science": [
-                            "The End of Bipolarity",
-                            "Contemporary Centres of Power",
-                            "Challenges of Nation-Building",
-                            "Era of One-Party Dominance",
-                            "Politics of Planned Development",
-                            "Crisis of Democratic Order",
-                            "Regional Aspirations",
-                            "Recent Developments in Indian Politics"
-                        ],
-
-                        "Sociology": [
-                            "Introducing Indian Society",
-                            "Demographic Structure",
-                            "Social Institutions",
-                            "Market as a Social Institution",
-                            "Patterns of Social Inequality",
-                            "Cultural Diversity",
-                            "Structural Change",
-                            "Cultural Change",
-                            "Change and Development in Rural Society",
-                            "Change and Development in Industrial Society"
-                        ],
-
-                        "English": [
-                            "Reading Skills",
-                            "Grammar",
-                            "Writing Skills",
-                            "Literature"
-                        ]
-                    }
-                }
-            }
-        },
-
-        /* =================================================
-           BSEB
-           Separate data so CBSE and BSEB never mix
-        ================================================= */
-
-        BSEB: {
-
-            "Class 9": {
-                streams: {
-                    "General": {
-                        "Mathematics": [
-                            "Number System",
-                            "Polynomials",
-                            "Coordinate Geometry",
-                            "Linear Equations",
-                            "Lines and Angles",
-                            "Triangles",
-                            "Quadrilaterals",
-                            "Circles",
-                            "Heron's Formula",
-                            "Surface Areas and Volumes",
-                            "Statistics",
-                            "Probability"
-                        ],
-
-                        "Science": [
-                            "Matter",
-                            "Atoms and Molecules",
-                            "Structure of Atom",
-                            "Motion",
-                            "Force",
-                            "Gravitation",
-                            "Work and Energy",
-                            "Sound",
-                            "Cell",
-                            "Tissues",
-                            "Health",
-                            "Natural Resources"
-                        ],
-
-                        "English": [
-                            "Reading",
-                            "Grammar",
-                            "Writing",
-                            "Literature"
-                        ],
-
-                        "Social Science": [
-                            "History",
-                            "Geography",
-                            "Civics",
-                            "Economics"
-                        ],
-
-                        "Hindi": [
-                            "गद्य",
-                            "पद्य",
-                            "व्याकरण",
-                            "लेखन"
-                        ]
-                    }
-                }
-            },
-
-            "Class 10": {
-                streams: {
-                    "General": {
-                        "Mathematics": [
-                            "Real Numbers",
-                            "Polynomials",
-                            "Linear Equations",
-                            "Quadratic Equations",
-                            "Arithmetic Progressions",
-                            "Triangles",
-                            "Coordinate Geometry",
-                            "Trigonometry",
-                            "Circles",
-                            "Areas",
-                            "Surface Areas and Volumes",
-                            "Statistics",
-                            "Probability"
-                        ],
-
-                        "Science": [
-                            "Chemical Reactions",
-                            "Acids Bases and Salts",
-                            "Metals and Non-metals",
-                            "Carbon Compounds",
-                            "Life Processes",
-                            "Control and Coordination",
-                            "Reproduction",
-                            "Heredity",
-                            "Light",
-                            "Electricity",
-                            "Magnetic Effects",
-                            "Environment"
-                        ],
-
-                        "English": [
-                            "Reading",
-                            "Grammar",
-                            "Writing",
-                            "Literature"
-                        ],
-
-                        "Social Science": [
-                            "History",
-                            "Geography",
-                            "Civics",
-                            "Economics"
-                        ],
-
-                        "Hindi": [
-                            "गद्य",
-                            "पद्य",
-                            "व्याकरण",
-                            "लेखन"
-                        ]
-                    }
-                }
-            },
-
-            "Class 11": {
-                streams: {
-
-                    "Science": {
-                        "Physics": [
-                            "Units and Measurements",
-                            "Motion",
-                            "Laws of Motion",
-                            "Work Energy and Power",
-                            "Rotational Motion",
-                            "Gravitation",
-                            "Properties of Matter",
-                            "Thermodynamics",
-                            "Kinetic Theory",
-                            "Oscillations",
-                            "Waves"
-                        ],
-
-                        "Chemistry": [
-                            "Basic Concepts",
-                            "Structure of Atom",
-                            "Periodic Classification",
-                            "Chemical Bonding",
-                            "Thermodynamics",
-                            "Equilibrium",
-                            "Redox Reactions",
-                            "Organic Chemistry",
-                            "Hydrocarbons"
-                        ],
-
-                        "Mathematics": [
-                            "Sets",
-                            "Relations and Functions",
-                            "Trigonometry",
-                            "Complex Numbers",
-                            "Permutations and Combinations",
-                            "Binomial Theorem",
-                            "Sequences and Series",
-                            "Coordinate Geometry",
-                            "Limits",
-                            "Statistics",
-                            "Probability"
-                        ],
-
-                        "Biology": [
-                            "Living World",
-                            "Biological Classification",
-                            "Plant Kingdom",
-                            "Animal Kingdom",
-                            "Cell",
-                            "Biomolecules",
-                            "Plant Physiology",
-                            "Human Physiology"
-                        ],
-
-                        "English": [
-                            "Reading",
-                            "Grammar",
-                            "Writing",
-                            "Literature"
-                        ]
-                    },
-
-                    "Commerce": {
-                        "Accountancy": [
-                            "Introduction to Accounting",
-                            "Theory Base",
-                            "Recording Transactions",
-                            "Trial Balance",
-                            "Depreciation",
-                            "Financial Statements"
-                        ],
-
-                        "Business Studies": [
-                            "Nature of Business",
-                            "Forms of Organisation",
-                            "Business Services",
-                            "Emerging Business",
-                            "Social Responsibility",
-                            "Business Finance",
-                            "Internal Trade"
-                        ],
-
-                        "Economics": [
-                            "Introduction",
-                            "Consumer Behaviour",
-                            "Production",
-                            "Market",
-                            "Statistics",
-                            "Data Collection",
-                            "Data Presentation",
-                            "Statistical Tools"
-                        ],
-
-                        "Mathematics": [
-                            "Sets",
-                            "Relations and Functions",
-                            "Trigonometry",
-                            "Complex Numbers",
-                            "Permutations",
-                            "Binomial Theorem",
-                            "Sequences",
-                            "Statistics",
-                            "Probability"
-                        ],
-
-                        "English": [
-                            "Reading",
-                            "Grammar",
-                            "Writing",
-                            "Literature"
-                        ]
-                    },
-
-                    "Arts": {
-                        "History": [
-                            "Ancient Societies",
-                            "Early Civilisations",
-                            "Empires",
-                            "Medieval Society",
-                            "Cultural Traditions",
-                            "Modernisation"
-                        ],
-
-                        "Geography": [
-                            "Geography as a Discipline",
-                            "Earth",
-                            "Landforms",
-                            "Climate",
-                            "Water",
-                            "Natural Vegetation",
-                            "India"
-                        ],
-
-                        "Political Science": [
-                            "Constitution",
-                            "Rights",
-                            "Election",
-                            "Executive",
-                            "Legislature",
-                            "Judiciary",
-                            "Federalism"
-                        ],
-
-                        "Sociology": [
-                            "Society",
-                            "Social Institutions",
-                            "Culture",
-                            "Socialisation",
-                            "Social Change"
-                        ],
-
-                        "English": [
-                            "Reading",
-                            "Grammar",
-                            "Writing",
-                            "Literature"
-                        ]
-                    }
-                }
-            },
-
-            "Class 12": {
-                streams: {
-
-                    "Science": {
-                        "Physics": [
-                            "Electric Charges and Fields",
-                            "Electrostatic Potential",
-                            "Current Electricity",
-                            "Moving Charges and Magnetism",
-                            "Magnetism",
-                            "Electromagnetic Induction",
-                            "Alternating Current",
-                            "Electromagnetic Waves",
-                            "Ray Optics",
-                            "Wave Optics",
-                            "Dual Nature",
-                            "Atoms",
-                            "Nuclei",
-                            "Semiconductor Electronics"
-                        ],
-
-                        "Chemistry": [
-                            "Solutions",
-                            "Electrochemistry",
-                            "Chemical Kinetics",
-                            "d and f Block",
-                            "Coordination Compounds",
-                            "Haloalkanes",
-                            "Alcohols Phenols and Ethers",
-                            "Aldehydes Ketones",
-                            "Amines",
-                            "Biomolecules"
-                        ],
-
-                        "Mathematics": [
-                            "Relations and Functions",
-                            "Matrices",
-                            "Determinants",
-                            "Continuity",
-                            "Derivatives",
-                            "Integrals",
-                            "Differential Equations",
-                            "Vectors",
-                            "Three Dimensional Geometry",
-                            "Probability"
-                        ],
-
-                        "Biology": [
-                            "Reproduction",
-                            "Genetics",
-                            "Evolution",
-                            "Human Health",
-                            "Biotechnology",
-                            "Ecology",
-                            "Biodiversity"
-                        ],
-
-                        "English": [
-                            "Reading",
-                            "Grammar",
-                            "Writing",
-                            "Literature"
-                        ]
-                    },
-
-                    "Commerce": {
-                        "Accountancy": [
-                            "Partnership Accounts",
-                            "Admission",
-                            "Retirement",
-                            "Dissolution",
-                            "Company Accounts",
-                            "Financial Statements",
-                            "Cash Flow"
-                        ],
-
-                        "Business Studies": [
-                            "Management",
-                            "Planning",
-                            "Organising",
-                            "Staffing",
-                            "Directing",
-                            "Controlling",
-                            "Financial Management",
-                            "Marketing",
-                            "Consumer Protection"
-                        ],
-
-                        "Economics": [
-                            "National Income",
-                            "Money and Banking",
-                            "Income and Employment",
-                            "Government Budget",
-                            "Balance of Payments",
-                            "Indian Economy",
-                            "Economic Reforms",
-                            "Employment",
-                            "Sustainable Development"
-                        ],
-
-                        "Mathematics": [
-                            "Relations and Functions",
-                            "Matrices",
-                            "Determinants",
-                            "Calculus",
-                            "Vectors",
-                            "Three Dimensional Geometry",
-                            "Probability"
-                        ],
-
-                        "English": [
-                            "Reading",
-                            "Grammar",
-                            "Writing",
-                            "Literature"
-                        ]
-                    },
-
-                    "Arts": {
-                        "History": [
-                            "Ancient India",
-                            "Medieval India",
-                            "Colonial India",
-                            "National Movement",
-                            "Constitution"
-                        ],
-
-                        "Geography": [
-                            "Human Geography",
-                            "Population",
-                            "Human Development",
-                            "Resources",
-                            "Agriculture",
-                            "Industries",
-                            "Transport",
-                            "India"
-                        ],
-
-                        "Political Science": [
-                            "Political Theory",
-                            "Indian Constitution",
-                            "Democracy",
-                            "Federalism",
-                            "International Politics",
-                            "Indian Politics"
-                        ],
-
-                        "Sociology": [
-                            "Indian Society",
-                            "Demography",
-                            "Social Institutions",
-                            "Inequality",
-                            "Cultural Diversity",
-                            "Social Change"
-                        ],
-
-                        "English": [
-                            "Reading",
-                            "Grammar",
-                            "Writing",
-                            "Literature"
-                        ]
-                    }
-                }
-            }
-        }
-    };
-
-
-    /* =====================================================
-       STORAGE
-    ===================================================== */
-
-    function loadCurriculumState() {
-        try {
-            const saved = localStorage.getItem(BOARD_STORAGE_KEY);
-
-            if (saved) {
-                curriculumState = {
-                    ...curriculumState,
-                    ...JSON.parse(saved)
-                };
-            }
-        } catch (error) {
-            console.warn("Curriculum storage error:", error);
-        }
-    }
-
-    function saveCurriculumState() {
-        try {
-            localStorage.setItem(
-                BOARD_STORAGE_KEY,
-                JSON.stringify(curriculumState)
-            );
-        } catch (error) {
-            console.warn("Curriculum save error:", error);
-        }
-    }
-
-
-    /* =====================================================
-       HELPERS
-    ===================================================== */
-
-    function getClasses(board) {
-        if (!boardCurriculum[board]) return [];
-        return Object.keys(boardCurriculum[board]);
-    }
-
-    function getStreams(board, className) {
-        if (
-            !boardCurriculum[board] ||
-            !boardCurriculum[board][className]
-        ) {
-            return [];
-        }
-
-        return Object.keys(
-            boardCurriculum[board][className].streams
-        );
-    }
-
-    function getSubjects(board, className, stream) {
-        try {
-            return Object.keys(
-                boardCurriculum[board][className]
-                    .streams[stream]
-            );
-        } catch {
-            return [];
-        }
-    }
-
-    function getChapters(board, className, stream, subject) {
-        try {
-            return boardCurriculum[board][className]
-                .streams[stream][subject] || [];
-        } catch {
-            return [];
-        }
-    }
-
-
-    /* =====================================================
-       UI
-    ===================================================== */
-
-    function createBoardSystem() {
-
-        const pageContent = document.getElementById("pageContent");
-
-        if (!pageContent) return;
-
-        if (document.getElementById("bharatBuddyBoardSystem")) {
-            return;
-        }
-
-        const wrapper = document.createElement("div");
-
-        wrapper.id = "bharatBuddyBoardSystem";
-
-        wrapper.innerHTML = `
-            <div style="
-                margin-bottom:25px;
-                padding:22px;
-                border-radius:18px;
-                background:linear-gradient(135deg,#eef4ff,#ffffff);
-                border:1px solid #dce5f5;
-                box-shadow:0 8px 30px rgba(0,0,0,.06);
-            ">
-
-                <div style="margin-bottom:18px;">
-                    <h2 style="margin:0 0 6px;">
-                        📚 Board Study
-                    </h2>
-
-                    <p style="margin:0;opacity:.7;">
-                        Apna Board, Class, Stream, Subject aur Chapter select karo.
-                    </p>
-                </div>
-
-
-                <div style="
-                    display:grid;
-                    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-                    gap:14px;
-                ">
-
-                    <div>
-                        <label>Board</label>
-                        <select id="bbBoardSelect"
-                            style="width:100%;padding:12px;border-radius:10px;">
-                            <option value="">Select Board</option>
-                            <option value="CBSE">CBSE</option>
-                            <option value="BSEB">BSEB</option>
-                        </select>
-                    </div>
-
-
-                    <div>
-                        <label>Class</label>
-                        <select id="bbClassSelect"
-                            style="width:100%;padding:12px;border-radius:10px;"
-                            disabled>
-                            <option value="">Select Class</option>
-                        </select>
-                    </div>
-
-
-                    <div id="bbStreamBox">
-                        <label>Stream</label>
-                        <select id="bbStreamSelect"
-                            style="width:100%;padding:12px;border-radius:10px;"
-                            disabled>
-                            <option value="">Select Stream</option>
-                        </select>
-                    </div>
-
-
-                    <div>
-                        <label>Subject</label>
-                        <select id="bbSubjectSelect"
-                            style="width:100%;padding:12px;border-radius:10px;"
-                            disabled>
-                            <option value="">Select Subject</option>
-                        </select>
-                    </div>
-
-
-                    <div>
-                        <label>Chapter</label>
-                        <select id="bbChapterSelect"
-                            style="width:100%;padding:12px;border-radius:10px;"
-                            disabled>
-                            <option value="">Select Chapter</option>
-                        </select>
-                    </div>
-
-                </div>
-
-
-                <div style="
-                    display:flex;
-                    flex-wrap:wrap;
-                    gap:10px;
-                    margin-top:18px;
-                ">
-
-                    <button id="bbStudyBtn"
-                        style="
-                            padding:12px 18px;
-                            border:0;
-                            border-radius:10px;
-                            cursor:pointer;
-                            font-weight:600;
-                        ">
-                        🤖 AI Study Notes
-                    </button>
-
-                    <button id="bbTestBtn"
-                        style="
-                            padding:12px 18px;
-                            border:0;
-                            border-radius:10px;
-                            cursor:pointer;
-                            font-weight:600;
-                        ">
-                        📝 Chapter Test
-                    </button>
-
-                </div>
-
-
-                <div id="bbSelectionInfo"
-                    style="
-                        margin-top:18px;
-                        padding:14px;
-                        border-radius:12px;
-                        background:rgba(255,255,255,.8);
-                        display:none;
-                    ">
-                </div>
-
-            </div>
-        `;
-
-        pageContent.prepend(wrapper);
-
-        loadCurriculumState();
-
-        setupBoardEvents();
-
-        restoreBoardSelection();
-    }
-
-
-    /* =====================================================
-       EVENTS
-    ===================================================== */
-
-    function setupBoardEvents() {
-
-        const board = document.getElementById("bbBoardSelect");
-        const classSelect = document.getElementById("bbClassSelect");
-        const stream = document.getElementById("bbStreamSelect");
-        const subject = document.getElementById("bbSubjectSelect");
-        const chapter = document.getElementById("bbChapterSelect");
-
-        if (!board) return;
-
-
-        board.addEventListener("change", function () {
-
-            curriculumState.board = this.value;
-            curriculumState.className = "";
-            curriculumState.stream = "";
-            curriculumState.subject = "";
-            curriculumState.chapter = "";
-
-            saveCurriculumState();
-
-            fillClasses();
-            clearSelect(stream, "Select Stream");
-            clearSelect(subject, "Select Subject");
-            clearSelect(chapter, "Select Chapter");
-        });
-
-
-        classSelect.addEventListener("change", function () {
-
-            curriculumState.className = this.value;
-            curriculumState.stream = "";
-            curriculumState.subject = "";
-            curriculumState.chapter = "";
-
-            saveCurriculumState();
-
-            fillStreams();
-            clearSelect(subject, "Select Subject");
-            clearSelect(chapter, "Select Chapter");
-        });
-
-
-        stream.addEventListener("change", function () {
-
-            curriculumState.stream = this.value;
-            curriculumState.subject = "";
-            curriculumState.chapter = "";
-
-            saveCurriculumState();
-
-            fillSubjects();
-            clearSelect(chapter, "Select Chapter");
-        });
-
-
-        subject.addEventListener("change", function () {
-
-            curriculumState.subject = this.value;
-            curriculumState.chapter = "";
-
-            saveCurriculumState();
-
-            fillChapters();
-        });
-
-
-        chapter.addEventListener("change", function () {
-
-            curriculumState.chapter = this.value;
-
-            saveCurriculumState();
-
-            showSelection();
-        });
-
-
-        document.getElementById("bbStudyBtn")
-            .addEventListener("click", generateStudyNotes);
-
-
-        document.getElementById("bbTestBtn")
-            .addEventListener("click", generateChapterTest);
-    }
-
-
-    /* =====================================================
-       SELECT HELPERS
-    ===================================================== */
-
-    function clearSelect(select, text) {
-
-        if (!select) return;
-
-        select.innerHTML =
-            `<option value="">${text}</option>`;
-
-        select.disabled = true;
-    }
-
-
-    function fillClasses() {
-
-        const select =
-            document.getElementById("bbClassSelect");
-
-        const classes =
-            getClasses(curriculumState.board);
-
-        select.innerHTML =
-            `<option value="">Select Class</option>`;
-
-        classes.forEach(className => {
-
-            const option =
-                document.createElement("option");
-
-            option.value = className;
-            option.textContent = className;
-
-            select.appendChild(option);
-        });
-
-        select.disabled = classes.length === 0;
-    }
-
-
-    function fillStreams() {
-
-        const select =
-            document.getElementById("bbStreamSelect");
-
-        const streams =
-            getStreams(
-                curriculumState.board,
-                curriculumState.className
-            );
-
-        select.innerHTML =
-            `<option value="">Select Stream</option>`;
-
-        streams.forEach(streamName => {
-
-            const option =
-                document.createElement("option");
-
-            option.value = streamName;
-            option.textContent = streamName;
-
-            select.appendChild(option);
-        });
-
-        select.disabled = streams.length === 0;
-
-        const streamBox =
-            document.getElementById("bbStreamBox");
-
-        /*
-          Class 9/10 has General.
-          We still keep it simple for the user.
-        */
-
-        if (
-            streams.length === 1 &&
-            streams[0] === "General"
-        ) {
-            select.value = "General";
-            curriculumState.stream = "General";
-
-            saveCurriculumState();
-
-            fillSubjects();
-        }
-    }
-
-
-    function fillSubjects() {
-
-        const select =
-            document.getElementById("bbSubjectSelect");
-
-        const subjects =
-            getSubjects(
-                curriculumState.board,
-                curriculumState.className,
-                curriculumState.stream
-            );
-
-        select.innerHTML =
-            `<option value="">Select Subject</option>`;
-
-        subjects.forEach(subjectName => {
-
-            const option =
-                document.createElement("option");
-
-            option.value = subjectName;
-            option.textContent = subjectName;
-
-            select.appendChild(option);
-        });
-
-        select.disabled = subjects.length === 0;
-    }
-
-
-    function fillChapters() {
-
-        const select =
-            document.getElementById("bbChapterSelect");
-
-        const chapters =
-            getChapters(
-                curriculumState.board,
-                curriculumState.className,
-                curriculumState.stream,
-                curriculumState.subject
-            );
-
-        select.innerHTML =
-            `<option value="">Select Chapter</option>`;
-
-        chapters.forEach((chapterName, index) => {
-
-            const option =
-                document.createElement("option");
-
-            option.value = chapterName;
-
-            option.textContent =
-                `${index + 1}. ${chapterName}`;
-
-            select.appendChild(option);
-        });
-
-        select.disabled = chapters.length === 0;
-    }
-
-
-    /* =====================================================
-       RESTORE
-    ===================================================== */
-
-    function restoreBoardSelection() {
-
-        if (!curriculumState.board) return;
-
-        const board =
-            document.getElementById("bbBoardSelect");
-
-        board.value =
-            curriculumState.board;
-
-        fillClasses();
-
-        const classSelect =
-            document.getElementById("bbClassSelect");
-
-        classSelect.value =
-            curriculumState.className;
-
-        if (curriculumState.className) {
-
-            fillStreams();
-
-            const stream =
-                document.getElementById("bbStreamSelect");
-
-            stream.value =
-                curriculumState.stream;
-
-            if (curriculumState.stream) {
-
-                fillSubjects();
-
-                const subject =
-                    document.getElementById("bbSubjectSelect");
-
-                subject.value =
-                    curriculumState.subject;
-
-                if (curriculumState.subject) {
-
-                    fillChapters();
-
-                    const chapter =
-                        document.getElementById("bbChapterSelect");
-
-                    chapter.value =
-                        curriculumState.chapter;
-
-                    showSelection();
-                }
-            }
-        }
-    }
-
-
-    /* =====================================================
-       SELECTION INFO
-    ===================================================== */
-
-    function showSelection() {
-
-        const info =
-            document.getElementById("bbSelectionInfo");
-
-        if (
-            !curriculumState.board ||
-            !curriculumState.className ||
-            !curriculumState.subject ||
-            !curriculumState.chapter
-        ) {
-            info.style.display = "none";
-            return;
-        }
-
-        info.style.display = "block";
-
-        info.innerHTML = `
-            <strong>Current Selection</strong><br>
-            🏫 ${curriculumState.board}
-            &nbsp; | &nbsp;
-            🎓 ${curriculumState.className}
-            &nbsp; | &nbsp;
-            📖 ${curriculumState.subject}
-            &nbsp; | &nbsp;
-            📚 ${curriculumState.chapter}
-        `;
-    }
-
-
-    /* =====================================================
-       AI STUDY NOTES
-    ===================================================== */
-
-    async function generateStudyNotes() {
-
-    if (
-        !curriculumState.board ||
-        !curriculumState.className ||
-        !curriculumState.subject ||
-        !curriculumState.chapter
-    ) {
-        alert(
-            "Pehle Board, Class, Stream, Subject aur Chapter select karo."
-        );
-        return;
-    }
-
-    const btn = document.getElementById("bbStudyBtn");
-
-    if (!btn) return;
-
-    const originalText = btn.innerHTML;
-
-    btn.disabled = true;
-    btn.innerHTML = "⏳ BharatBuddy notes bana raha hai...";
+    /*
+     * Apply once immediately.
+     */
 
     try {
 
-        const prompt = `
-You are BharatBuddy AI, a premium student learning assistant.
+        bbApplyFinalCurriculum();
 
-Create ORIGINAL, accurate and student-friendly study notes for EXACTLY this selection:
+    } catch (error) {
 
-Board: ${curriculumState.board}
-Class: ${curriculumState.className}
-Stream: ${curriculumState.stream || "General"}
-Subject: ${curriculumState.subject}
-Chapter: ${curriculumState.chapter}
+        console.warn(
+            "Final curriculum initialization failed:",
+            error
+        );
 
-IMPORTANT:
-- Follow ONLY the selected Board, Class, Subject and Chapter.
-- Do not mix another class, board or chapter.
-- Do not reproduce textbook paragraphs.
-- Create original explanations.
-- Use simple language suitable for students.
-- If Hindi terms are useful, include them naturally.
-- Do not invent syllabus-specific facts.
-- If a formula is not relevant, do not force one.
+    }
 
-STRUCTURE YOUR RESPONSE EXACTLY LIKE THIS:
+})();
+/* ============================================================
+   END OF FINAL CURRICULUM PATCH
+   ============================================================ */
 
-# 📚 ${curriculumState.chapter}
 
-## 🎯 Chapter Overview
-Give a short and easy introduction.
+/*
+ * Safety helpers for pages that may be opened
+ * before the final curriculum is applied.
+ */
 
-## 💡 Core Concepts
-Explain the most important concepts one by one.
+function refreshCurrentStudyPage() {
 
-## 📖 Important Definitions
-Give important definitions in simple language.
-
-## 🧮 Important Formulas
-Give only relevant formulas.
-For every formula, explain what the symbols mean.
-
-## 🔍 Easy Examples
-Give 2-4 simple examples related to the chapter.
-
-## ⚠️ Common Mistakes
-Give common mistakes students should avoid.
-
-## 📝 Exam Focus
-Give important points that students should remember for board exams.
-
-## ⚡ Quick Revision
-Give exactly 5 short revision points.
-
-## 🎯 Final Tip
-Give one useful study tip for this chapter.
-
-FORMATTING RULES:
-- Use Markdown headings with # and ##.
-- Use bullet points with -.
-- Use **bold** for important words.
-- Put mathematical formulas inside $$formula$$.
-- Keep paragraphs short.
-- Do not write unnecessary greetings or long introductions.
-- Do not mention that you are an AI.
-`;
-
-        if (typeof askAI !== "function") {
-            alert(
-                "AI function available nahi hai. Existing askAI() function check karo."
-            );
-            return;
-        }
-
-        const response = await askAI(prompt);
-
-        /*
-         * Premium Study Notes Renderer
-         */
+    try {
 
         if (
-            typeof window.BharatBuddyPremiumNotes === "function"
+            typeof applyFinalCurriculum ===
+            "function"
         ) {
 
-            const formattedHTML =
-                window.BharatBuddyPremiumNotes(
-                    response,
-                    curriculumState.subject,
-                    curriculumState.chapter
-                );
+            applyFinalCurriculum();
 
-            showBoardAIResult(
-                formattedHTML,
-                "📚 AI Study Notes"
-            );
+        }
 
-        } else {
+        if (
+            typeof renderStudy ===
+            "function"
+        ) {
 
-            showBoardAIResult(
-                response,
-                "📚 AI Study Notes"
-            );
+            renderStudy();
 
         }
 
     } catch (error) {
 
-        console.error(
-            "Board AI Error:",
+        console.warn(
+            "Study page refresh failed:",
             error
         );
 
-        alert(
-            "AI Notes generate nahi ho paaye. Internet/API check karo."
-        );
-
-    } finally {
-
-        btn.disabled = false;
-        btn.innerHTML = originalText;
     }
+
 }
 
-    
-    /* =====================================================
-       CHAPTER TEST
-    ===================================================== */
 
-    async function generateChapterTest() {
-
-        if (
-            !curriculumState.board ||
-            !curriculumState.className ||
-            !curriculumState.subject ||
-            !curriculumState.chapter
-        ) {
-
-            alert(
-                "Pehle Board, Class, Stream, Subject aur Chapter select karo."
-            );
-
-            return;
-        }
-
-        const btn =
-            document.getElementById("bbTestBtn");
-
-        const originalText =
-            btn.innerHTML;
-
-        btn.disabled = true;
-        btn.innerHTML = "⏳ Test prepare ho raha hai...";
-
-        try {
-
-            const prompt = `
-Create a chapter test for BharatBuddy AI.
-
-Board: ${curriculumState.board}
-Class: ${curriculumState.className}
-Stream: ${curriculumState.stream || "General"}
-Subject: ${curriculumState.subject}
-Chapter: ${curriculumState.chapter}
-
-Create:
-- 5 MCQ questions
-- 4 options for each MCQ
-- correct answer
-- short explanation
-
-Questions must be specifically related to the selected chapter.
-Do not mix other classes, boards or chapters.
-
-Return clean readable text.
-`;
-
-            if (typeof askAI === "function") {
-
-                const response =
-                    await askAI(prompt);
-
-                showBoardAIResult(
-                    response,
-                    "📝 Chapter Test"
-                );
-
-            } else {
-
-                alert(
-                    "AI function available nahi hai."
-                );
-            }
-
-        } catch (error) {
-
-            console.error(
-                "Chapter Test Error:",
-                error
-            );
-
-            alert(
-                "Chapter test generate nahi ho paaya."
-            );
-
-        } finally {
-
-            btn.disabled = false;
-            btn.innerHTML = originalText;
-        }
-    }
-
-
-    /* =====================================================
-       AI RESULT DISPLAY
-    ===================================================== */
-
-    function showBoardAIResult(text, title) {
-
-    const pageContent =
-        document.getElementById("pageContent");
-
-    if (!pageContent) return;
-
-    const old =
-        document.getElementById("bbBoardAIResult");
-
-    if (old) old.remove();
-
-    const result =
-        document.createElement("div");
-
-    result.id = "bbBoardAIResult";
-
-    result.style.cssText = `
-        margin-top:20px;
-        padding:24px;
-        border-radius:20px;
-        background:var(--card-bg, #ffffff);
-        border:1px solid var(--border-color, #e1e7f0);
-        box-shadow:0 10px 35px rgba(0,0,0,.08);
-        line-height:1.75;
-        overflow:hidden;
-    `;
-
-    let formattedContent = String(
-        text || "No response"
-    );
-
-    /* Agar Premium Notes formatter available hai */
-    if (
-        typeof window.BharatBuddyPremiumNotes ===
-        "function"
-    ) {
-
-        formattedContent =
-            window.BharatBuddyPremiumNotes(
-                formattedContent,
-                curriculumState?.subject || "",
-                curriculumState?.chapter || ""
-            );
-
-    } else {
-
-        /* Basic Markdown fallback */
-
-        formattedContent =
-            formattedContent
-                .replace(
-                    /&/g,
-                    "&amp;"
-                )
-                .replace(
-                    /</g,
-                    "&lt;"
-                )
-                .replace(
-                    />/g,
-                    "&gt;"
-                );
-
-        formattedContent =
-            formattedContent
-                .replace(
-                    /^### (.*)$/gm,
-                    "<h4>$1</h4>"
-                )
-                .replace(
-                    /^## (.*)$/gm,
-                    "<h3>$1</h3>"
-                )
-                .replace(
-                    /^# (.*)$/gm,
-                    "<h2>$1</h2>"
-                )
-                .replace(
-                    /\*\*(.*?)\*\*/g,
-                    "<strong>$1</strong>"
-                )
-                .replace(
-                    /`([^`]+)`/g,
-                    "<code>$1</code>"
-                )
-                .replace(
-                    /^\s*[-•]\s+(.*)$/gm,
-                    "<li>$1</li>"
-                )
-                .replace(
-                    /\n{2,}/g,
-                    "<br><br>"
-                )
-                .replace(
-                    /\n/g,
-                    "<br>"
-                );
-    }
-
-    result.innerHTML = `
-
-        <div style="
-            margin-bottom:22px;
-            padding-bottom:16px;
-            border-bottom:1px solid var(--border-color, #e5e7eb);
-        ">
-
-            <div style="
-                font-size:13px;
-                font-weight:700;
-                opacity:.65;
-                margin-bottom:5px;
-            ">
-                BHARATBUDDY AI
-            </div>
-
-            <h2 style="
-                margin:0;
-                font-size:26px;
-            ">
-                ${escapeHTML(String(title || "AI Result"))}
-            </h2>
-
-        </div>
-
-        <div class="bb-ai-result-content">
-            ${formattedContent}
-        </div>
-    `;
-
-    pageContent.appendChild(result);
-
-    result.scrollIntoView({
-        behavior:"smooth",
-        block:"start"
-    });
-}
-
-    /* =====================================================
-       SAFE STUDY PAGE INTEGRATION
-       Existing openPage/renderStudy remains untouched
-    ===================================================== */
-
-    function tryInjectBoardSystem() {
-
-        const pageContent =
-            document.getElementById("pageContent");
-
-        if (!pageContent) return;
-
-        /*
-          Only add the system when Study page is active.
-        */
-
-        const studyButton =
-            document.querySelector(
-                '[data-page="study"]'
-            );
-
-        if (!studyButton) return;
-
-        const isStudyPage =
-            studyButton.classList.contains("active") ||
-            document.body.dataset.currentPage === "study";
-
-        /*
-          If current app does not expose active state,
-          we still check the page title.
-        */
-
-        const pageTitle =
-            document.getElementById("pageTitle");
-
-        const titleText =
-            pageTitle
-                ? pageTitle.textContent.toLowerCase()
-                : "";
-
-        if (
-            titleText.includes("study") ||
-            titleText.includes("ncert") ||
-            titleText.includes("lesson")
-        ) {
-            createBoardSystem();
-        }
-    }
-
-
-    /* =====================================================
-       INITIALIZATION
-    ===================================================== */
-
-    document.addEventListener(
-        "DOMContentLoaded",
-        function () {
-
-            /*
-              Wait for existing BharatBuddy
-              JavaScript to finish rendering.
-            */
-
-            setTimeout(
-                tryInjectBoardSystem,
-                700
-            );
-
-
-            /*
-              Study button click
-            */
-
-            document.addEventListener(
-                "click",
-                function (event) {
-
-                    const studyButton =
-                        event.target.closest(
-                            '[data-page="study"]'
-                        );
-
-                    if (!studyButton) return;
-
-                    setTimeout(
-                        createBoardSystem,
-                        500
-                    );
-                }
-            );
-
-        }
-    );
-
-
-    /*
-      Public debugging object.
-      Does not interfere with existing BharatBuddyStudy.
-    */
-
-    window.BharatBuddyBoardSystem = {
-        getState: function () {
-            return { ...curriculumState };
-        },
-
-        reset: function () {
-
-            curriculumState = {
-                board: "",
-                className: "",
-                stream: "",
-                subject: "",
-                chapter: ""
-            };
-
-            localStorage.removeItem(
-                BOARD_STORAGE_KEY
-            );
-
-            const system =
-                document.getElementById(
-                    "bharatBuddyBoardSystem"
-                );
-
-            if (system) system.remove();
-        },
-
-        data: boardCurriculum
-    };
-
-})();
 /* ============================================================
-   BHARATBUDDY - PREMIUM AI STUDY NOTES UI
-   SAFE ADD-ON
+   PROFILE CHANGE WATCHER
    ============================================================ */
 
-(function () {
-    "use strict";
+(function setupProfileWatcher() {
 
-    /* ---------- PREMIUM STUDY PAGE CSS ---------- */
-
-    const style = document.createElement("style");
-
-    style.textContent = `
-    .bb-study-wrapper {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 10px 4px 50px;
-    }
-
-    .bb-study-hero {
-        background: linear-gradient(135deg, #eef4ff, #f8fbff);
-        border: 1px solid #dbe6ff;
-        border-radius: 24px;
-        padding: 28px;
-        margin-bottom: 22px;
-        box-shadow: 0 10px 30px rgba(40, 80, 160, 0.08);
-    }
-
-    .bb-study-hero .bb-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 7px;
-        background: #ffffff;
-        border: 1px solid #dce5ff;
-        border-radius: 999px;
-        padding: 7px 13px;
-        font-size: 13px;
-        font-weight: 700;
-        margin-bottom: 14px;
-    }
-
-    .bb-study-hero h1 {
-        margin: 0 0 10px;
-        font-size: clamp(25px, 4vw, 38px);
-        line-height: 1.2;
-    }
-
-    .bb-study-hero p {
-        margin: 0;
-        color: #5d6878;
-        line-height: 1.7;
-        font-size: 15px;
-    }
-
-    .bb-note-card {
-        background: #ffffff;
-        border: 1px solid #e5e9f0;
-        border-radius: 20px;
-        padding: 23px;
-        margin: 16px 0;
-        box-shadow: 0 7px 25px rgba(0, 0, 0, 0.045);
-    }
-
-    .bb-note-card h2 {
-        margin-top: 0;
-        font-size: 22px;
-    }
-
-    .bb-note-card h3 {
-        margin-top: 24px;
-        font-size: 18px;
-    }
-
-    .bb-note-card p,
-    .bb-note-card li {
-        line-height: 1.75;
-        color: #394454;
-    }
-
-    .bb-note-card strong {
-        font-weight: 800;
-    }
-
-    .bb-important {
-        border-left: 5px solid #4f7cff;
-        background: #f4f7ff;
-        border-radius: 14px;
-        padding: 16px 18px;
-        margin: 18px 0;
-    }
-
-    .bb-formula {
-        background: #f8f5ff;
-        border: 1px solid #e5dcff;
-        border-radius: 16px;
-        padding: 18px;
-        margin: 18px 0;
-        overflow-x: auto;
-        text-align: center;
-        font-size: 17px;
-        font-weight: 700;
-    }
-
-    .bb-quick {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-        gap: 14px;
-        margin: 20px 0;
-    }
-
-    .bb-quick-item {
-        background: #fff;
-        border: 1px solid #e7eaf0;
-        border-radius: 16px;
-        padding: 17px;
-    }
-
-    .bb-quick-item strong {
-        display: block;
-        margin-bottom: 7px;
-    }
-
-    .bb-study-footer {
-        margin-top: 25px;
-        padding: 20px;
-        border-radius: 18px;
-        background: #f8fafc;
-        border: 1px dashed #d8dee8;
-        text-align: center;
-    }
-
-    .bb-study-footer strong {
-        display: block;
-        margin-bottom: 6px;
-    }
-
-    @media (max-width: 700px) {
-        .bb-study-wrapper {
-            padding: 5px 0 35px;
-        }
-
-        .bb-study-hero,
-        .bb-note-card {
-            border-radius: 17px;
-            padding: 18px;
-        }
-
-        .bb-study-hero h1 {
-            font-size: 26px;
-        }
-
-        .bb-note-card h2 {
-            font-size: 20px;
-        }
-    }
-
-    /* DARK MODE */
-
-    body.dark-mode .bb-study-hero,
-    body.dark .bb-study-hero {
-        background: #171b24;
-        border-color: #293142;
-    }
-
-    body.dark-mode .bb-study-hero p,
-    body.dark .bb-study-hero p {
-        color: #b8c0ce;
-    }
-
-    body.dark-mode .bb-note-card,
-    body.dark .bb-note-card,
-    body.dark-mode .bb-quick-item,
-    body.dark .bb-quick-item {
-        background: #171b24;
-        border-color: #293142;
-    }
-
-    body.dark-mode .bb-note-card p,
-    body.dark .bb-note-card p,
-    body.dark-mode .bb-note-card li,
-    body.dark .bb-note-card li {
-        color: #d1d7e0;
-    }
-
-    body.dark-mode .bb-important,
-    body.dark .bb-important {
-        background: #1b2232;
-    }
-
-    body.dark-mode .bb-formula,
-    body.dark .bb-formula {
-        background: #211d31;
-        border-color: #3b3455;
-    }
-
-    body.dark-mode .bb-study-footer,
-    body.dark .bb-study-footer {
-        background: #171b24;
-        border-color: #343b49;
-    }
-    `;
-
-    document.head.appendChild(style);
-
-
-    /* ---------- MARKDOWN CLEANER ---------- */
-
-    function cleanMarkdown(text) {
-
-        if (!text) return "";
-
-        let html = String(text);
-
-        /* headings */
-
-        html = html.replace(
-            /^###\s+(.+)$/gm,
-            '<h3>$1</h3>'
+    let lastProfile =
+        JSON.stringify(
+            data.profile || {}
         );
 
-        html = html.replace(
-            /^##\s+(.+)$/gm,
-            '<h2>$1</h2>'
-        );
 
-        html = html.replace(
-            /^#\s+(.+)$/gm,
-            '<h2>$1</h2>'
-        );
+    setInterval(
+        () => {
 
-        /* bold */
-
-        html = html.replace(
-            /\*\*(.*?)\*\*/g,
-            '<strong>$1</strong>'
-        );
-
-        /* italic */
-
-        html = html.replace(
-            /(?<!\*)\*([^*\n]+)\*(?!\*)/g,
-            '<em>$1</em>'
-        );
-
-        /* horizontal line */
-
-        html = html.replace(
-            /^\s*---+\s*$/gm,
-            '<hr>'
-        );
-
-        /* formulas */
-
-        html = html.replace(
-            /\$\$(.*?)\$\$/gs,
-            '<div class="bb-formula">$1</div>'
-        );
-
-        html = html.replace(
-            /\\\((.*?)\\\)/gs,
-            '<span class="bb-formula">$1</span>'
-        );
-
-        /* bullet points */
-
-        html = html.replace(
-            /^[ \t]*[-*]\s+(.+)$/gm,
-            '<li>$1</li>'
-        );
-
-        /* numbered points */
-
-        html = html.replace(
-            /^[ \t]*\d+\.\s+(.+)$/gm,
-            '<li>$1</li>'
-        );
-
-        /* group consecutive li */
-
-        html = html.replace(
-            /((?:<li>.*?<\/li>\s*)+)/gs,
-            '<ul>$1</ul>'
-        );
-
-        /* paragraphs */
-
-        html = html.replace(
-            /\n{2,}/g,
-            '</p><p>'
-        );
-
-        html = '<p>' + html + '</p>';
-
-        /* remove paragraph around block elements */
-
-        html = html.replace(
-            /<p>\s*(<h[23]>)/g,
-            '$1'
-        );
-
-        html = html.replace(
-            /(<\/h[23]>)\s*<\/p>/g,
-            '$1'
-        );
-
-        html = html.replace(
-            /<p>\s*(<ul>)/g,
-            '$1'
-        );
-
-        html = html.replace(
-            /(<\/ul>)\s*<\/p>/g,
-            '$1'
-        );
-
-        html = html.replace(
-            /<p>\s*(<div class="bb-formula">)/g,
-            '$1'
-        );
-
-        html = html.replace(
-            /(<\/div>)\s*<\/p>/g,
-            '$1'
-        );
-
-        return html;
-    }
-
-
-    /* ---------- MAKE AI NOTES BEAUTIFUL ---------- */
-
-    window.BharatBuddyPremiumNotes = function (rawText, subject, chapter) {
-
-        const safeSubject = subject || "Subject";
-        const safeChapter = chapter || "Chapter";
-
-        const formatted = cleanMarkdown(rawText);
-
-        return `
-            <div class="bb-study-wrapper">
-
-                <div class="bb-study-hero">
-
-                    <div class="bb-badge">
-                        🤖 BharatBuddy AI
-                    </div>
-
-                    <h1>📚 ${safeChapter}</h1>
-
-                    <p>
-                        ${safeSubject} • Smart Study Notes
-                    </p>
-
-                    <p style="margin-top:10px;">
-                        Easy explanation, important concepts,
-                        formulas and quick revision — all in one place.
-                    </p>
-
-                </div>
-
-                <div class="bb-note-card">
-
-                    ${formatted}
-
-                </div>
-
-                <div class="bb-study-footer">
-
-                    <strong>🎯 Quick Study Tip</strong>
-
-                    Read one concept, understand the example,
-                    then try a question without looking at the answer.
-
-                </div>
-
-            </div>
-        `;
-    };
-
-
-    /* ---------- GLOBAL HELPER ---------- */
-
-    window.BharatBuddyFormatNotes = function (element, subject, chapter) {
-
-        if (!element) return;
-
-        const originalText = element.innerText || element.textContent || "";
-
-        if (!originalText.trim()) return;
-
-        element.innerHTML =
-            window.BharatBuddyPremiumNotes(
-                originalText,
-                subject,
-                chapter
-            );
-    };
-
-
-    console.log("BharatBuddy Premium Study Notes UI loaded");
-
-})();
-/* =========================================================
-   BHARATBUDDY - TODAY'S MISSION
-   SAFE ADD-ON
-========================================================= */
-
-(function () {
-
-    "use strict";
-
-    function getTodayKey() {
-        const d = new Date();
-        return (
-            d.getFullYear() +
-            "-" +
-            String(d.getMonth() + 1).padStart(2, "0") +
-            "-" +
-            String(d.getDate()).padStart(2, "0")
-        );
-    }
-
-    function getMissionData() {
-
-        const key = "bharatbuddy_today_mission";
-
-        let data;
-
-        try {
-            data = JSON.parse(
-                localStorage.getItem(key)
-            );
-        } catch (e) {
-            data = null;
-        }
-
-        if (
-            !data ||
-            data.date !== getTodayKey()
-        ) {
-
-            data = {
-                date: getTodayKey(),
-                completed: [],
-                xp: 0
-            };
-
-            localStorage.setItem(
-                key,
-                JSON.stringify(data)
-            );
-        }
-
-        return data;
-    }
-
-    function saveMissionData(data) {
-
-        localStorage.setItem(
-            "bharatbuddy_today_mission",
-            JSON.stringify(data)
-        );
-    }
-
-    function completeMission(id, xp) {
-
-        const data = getMissionData();
-
-        if (data.completed.includes(id)) {
-            return;
-        }
-
-        data.completed.push(id);
-        data.xp += xp;
-
-        saveMissionData(data);
-
-        renderMission();
-
-        if (
-            typeof showToast === "function"
-        ) {
-            showToast(
-                `🎉 Mission complete! +${xp} XP`
-            );
-        }
-    }
-
-    function renderMission() {
-
-        const pageContent =
-            document.getElementById(
-                "pageContent"
-            );
-
-        if (!pageContent) return;
-
-        const data = getMissionData();
-
-        const missions = [
-
-            {
-                id: "learn",
-                icon: "📚",
-                title: "Learn Something",
-                description:
-                    "Study one lesson for 10 minutes.",
-                xp: 20
-            },
-
-            {
-                id: "quiz",
-                icon: "🧠",
-                title: "Quick Quiz",
-                description:
-                    "Answer 5 practice questions.",
-                xp: 30
-            },
-
-            {
-                id: "explore",
-                icon: "💡",
-                title: "Explore",
-                description:
-                    "Ask BharatBuddy one useful doubt.",
-                xp: 20
-            }
-
-        ];
-
-        const completedCount =
-            data.completed.length;
-
-        const progress =
-            Math.round(
-                (completedCount / missions.length) *
-                100
-            );
-
-        const cards =
-            missions.map(function (mission) {
-
-                const completed =
-                    data.completed.includes(
-                        mission.id
-                    );
-
-                return `
-
-                    <div
-                        class="bb-mission-card
-                        ${completed ? "completed" : ""}"
-                        data-mission-id="${mission.id}"
-                        data-mission-xp="${mission.xp}"
-                    >
-
-                        <div class="bb-mission-icon">
-                            ${mission.icon}
-                        </div>
-
-                        <div class="bb-mission-info">
-
-                            <div class="bb-mission-title">
-                                ${mission.title}
-                            </div>
-
-                            <div class="bb-mission-description">
-                                ${mission.description}
-                            </div>
-
-                        </div>
-
-                        <div class="bb-mission-xp">
-                            ${completed
-                                ? "✓ Done"
-                                : "+" + mission.xp + " XP"}
-                        </div>
-
-                    </div>
-                `;
-            }).join("");
-
-        const existing =
-            document.getElementById(
-                "bbTodayMission"
-            );
-
-        if (existing) {
-            existing.remove();
-        }
-
-        const section =
-            document.createElement("div");
-
-        section.id =
-            "bbTodayMission";
-
-        section.innerHTML = `
-
-            <div class="bb-mission-header">
-
-                <div>
-
-                    <div class="bb-mission-label">
-                        🎯 TODAY'S MISSION
-                    </div>
-
-                    <h2>
-                        Aaj kya seekhenge?
-                    </h2>
-
-                    <p>
-                        Chhote steps. Better learning. 🚀
-                    </p>
-
-                </div>
-
-                <div class="bb-xp-box">
-
-                    <strong>
-                        ${data.xp}
-                    </strong>
-
-                    <span>XP</span>
-
-                </div>
-
-            </div>
-
-            <div class="bb-mission-progress">
-
-                <div class="bb-progress-top">
-
-                    <span>
-                        Daily Progress
-                    </span>
-
-                    <strong>
-                        ${progress}%
-                    </strong>
-
-                </div>
-
-                <div class="bb-progress-bar">
-
-                    <div
-                        style="width:${progress}%"
-                    ></div>
-
-                </div>
-
-            </div>
-
-            <div class="bb-mission-list">
-
-                ${cards}
-
-            </div>
-
-            ${
-                completedCount === missions.length
-                    ? `
-                        <div class="bb-mission-complete">
-                            🏆 Amazing! Aaj ke saare missions complete!
-                        </div>
-                    `
-                    : ""
-            }
-
-        `;
-
-        pageContent.prepend(section);
-
-        section
-            .querySelectorAll(
-                ".bb-mission-card"
-            )
-            .forEach(function (card) {
-
-                card.addEventListener(
-                    "click",
-                    function () {
-
-                        const id =
-                            this.dataset.missionId;
-
-                        const xp =
-                            Number(
-                                this.dataset.missionXp
-                            );
-
-                        completeMission(
-                            id,
-                            xp
-                        );
-
-                    }
+            const currentProfile =
+                JSON.stringify(
+                    data.profile || {}
                 );
-
-            });
-    }
-
-    function addMissionCSS() {
-
-        if (
-            document.getElementById(
-                "bbMissionCSS"
-            )
-        ) return;
-
-        const style =
-            document.createElement("style");
-
-        style.id =
-            "bbMissionCSS";
-
-        style.textContent = `
-
-            #bbTodayMission {
-                margin-bottom:24px;
-            }
-
-            .bb-mission-header {
-                display:flex;
-                justify-content:space-between;
-                align-items:center;
-                gap:20px;
-                padding:26px;
-                border-radius:24px;
-                background:
-                    linear-gradient(
-                        135deg,
-                        #eef4ff,
-                        #f8fbff
-                    );
-                border:1px solid #dce6f5;
-                margin-bottom:16px;
-            }
-
-            .bb-mission-label {
-                font-size:12px;
-                font-weight:800;
-                letter-spacing:1px;
-                color:#4169e1;
-                margin-bottom:7px;
-            }
-
-            .bb-mission-header h2 {
-                margin:0;
-                font-size:28px;
-            }
-
-            .bb-mission-header p {
-                margin:6px 0 0;
-                opacity:.7;
-            }
-
-            .bb-xp-box {
-                min-width:75px;
-                text-align:center;
-                padding:14px;
-                border-radius:18px;
-                background:#ffffff;
-                box-shadow:0 8px 25px rgba(0,0,0,.07);
-            }
-
-            .bb-xp-box strong {
-                display:block;
-                font-size:26px;
-            }
-
-            .bb-xp-box span {
-                font-size:12px;
-                font-weight:700;
-                opacity:.6;
-            }
-
-            .bb-mission-progress {
-                padding:18px;
-                border-radius:18px;
-                background:#ffffff;
-                border:1px solid #e4e9f1;
-                margin-bottom:16px;
-            }
-
-            .bb-progress-top {
-                display:flex;
-                justify-content:space-between;
-                margin-bottom:10px;
-                font-size:14px;
-            }
-
-            .bb-progress-bar {
-                height:10px;
-                background:#e9edf3;
-                border-radius:20px;
-                overflow:hidden;
-            }
-
-            .bb-progress-bar div {
-                height:100%;
-                background:linear-gradient(
-                    90deg,
-                    #4169e1,
-                    #7c5cff
-                );
-                border-radius:20px;
-                transition:width .4s ease;
-            }
-
-            .bb-mission-list {
-                display:grid;
-                gap:12px;
-            }
-
-            .bb-mission-card {
-                display:flex;
-                align-items:center;
-                gap:15px;
-                padding:18px;
-                border-radius:18px;
-                background:#ffffff;
-                border:1px solid #e3e8f0;
-                cursor:pointer;
-                transition:
-                    transform .2s ease,
-                    box-shadow .2s ease;
-            }
-
-            .bb-mission-card:hover {
-                transform:translateY(-2px);
-                box-shadow:
-                    0 10px 25px rgba(0,0,0,.08);
-            }
-
-            .bb-mission-card.completed {
-                opacity:.65;
-                cursor:default;
-            }
-
-            .bb-mission-icon {
-                width:48px;
-                height:48px;
-                display:flex;
-                align-items:center;
-                justify-content:center;
-                border-radius:15px;
-                background:#f0f4ff;
-                font-size:23px;
-                flex-shrink:0;
-            }
-
-            .bb-mission-info {
-                flex:1;
-            }
-
-            .bb-mission-title {
-                font-weight:800;
-                margin-bottom:3px;
-            }
-
-            .bb-mission-description {
-                font-size:13px;
-                opacity:.65;
-            }
-
-            .bb-mission-xp {
-                font-size:13px;
-                font-weight:800;
-                white-space:nowrap;
-            }
-
-            .bb-mission-complete {
-                margin-top:16px;
-                padding:18px;
-                text-align:center;
-                border-radius:18px;
-                background:#eefaf1;
-                border:1px solid #ccebd3;
-                font-weight:800;
-            }
-
-            @media (max-width:600px) {
-
-                .bb-mission-header {
-                    padding:20px;
-                }
-
-                .bb-mission-header h2 {
-                    font-size:22px;
-                }
-
-                .bb-mission-card {
-                    padding:14px;
-                }
-
-                .bb-mission-xp {
-                    font-size:11px;
-                }
-
-            }
-
-        `;
-
-        document.head.appendChild(style);
-    }
-
-    function initMission() {
-
-    addMissionCSS();
-
-    setTimeout(function () {
-
-        const pageContent =
-            document.getElementById("pageContent");
-
-        if (
-            pageContent &&
-            typeof renderMission === "function"
-        ) {
-            renderMission();
-        }
-
-    }, 300);
-}
-
-        }
-    );
-
-/* =========================================================
-   BHARATBUDDY - XP + DAILY STREAK
-   SAFE ADD-ON
-========================================================= */
-
-(function () {
-
-    "use strict";
-
-    const XP_KEY = "bharatbuddy_xp_system";
-
-    function getXPData() {
-
-        let data = null;
-
-        try {
-            data = JSON.parse(
-                localStorage.getItem(XP_KEY)
-            );
-        } catch (error) {
-            data = null;
-        }
-
-        if (!data) {
-
-            data = {
-                xp: 0,
-                streak: 0,
-                lastActiveDate: ""
-            };
-
-            localStorage.setItem(
-                XP_KEY,
-                JSON.stringify(data)
-            );
-        }
-
-        return data;
-    }
-
-    function saveXPData(data) {
-
-        localStorage.setItem(
-            XP_KEY,
-            JSON.stringify(data)
-        );
-    }
-
-    function today() {
-
-        const d = new Date();
-
-        return (
-            d.getFullYear() +
-            "-" +
-            String(d.getMonth() + 1).padStart(2, "0") +
-            "-" +
-            String(d.getDate()).padStart(2, "0")
-        );
-    }
-
-    function yesterday() {
-
-        const d = new Date();
-
-        d.setDate(
-            d.getDate() - 1
-        );
-
-        return (
-            d.getFullYear() +
-            "-" +
-            String(d.getMonth() + 1).padStart(2, "0") +
-            "-" +
-            String(d.getDate()).padStart(2, "0")
-        );
-    }
-
-    function updateStreak() {
-
-        const data = getXPData();
-
-        const current =
-            today();
-
-        if (
-            data.lastActiveDate === current
-        ) {
-            return data;
-        }
-
-        if (
-            data.lastActiveDate === yesterday()
-        ) {
-
-            data.streak =
-                Math.max(
-                    1,
-                    data.streak + 1
-                );
-
-        } else {
-
-            data.streak = 1;
-        }
-
-        data.lastActiveDate =
-            current;
-
-        saveXPData(data);
-
-        return data;
-    }
-
-    function addXP(amount) {
-
-        const data =
-            updateStreak();
-
-        data.xp += Number(amount) || 0;
-
-        saveXPData(data);
-
-        return data;
-    }
-
-    function createXPCard() {
-
-        const home =
-            document.getElementById(
-                "pageContent"
-            );
-
-        if (!home) return;
-
-        const old =
-            document.getElementById(
-                "bbXPCard"
-            );
-
-        if (old) old.remove();
-
-        const data =
-            updateStreak();
-
-        const card =
-            document.createElement("div");
-
-        card.id =
-            "bbXPCard";
-
-        card.innerHTML = `
-
-            <div class="bb-xp-main">
-
-                <div class="bb-xp-icon">
-                    ⚡
-                </div>
-
-                <div>
-
-                    <div class="bb-xp-label">
-                        YOUR LEARNING XP
-                    </div>
-
-                    <div class="bb-xp-number">
-                        ${data.xp} XP
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="bb-streak-box">
-
-                <div class="bb-fire">
-                    🔥
-                </div>
-
-                <div>
-
-                    <strong>
-                        ${data.streak}
-                    </strong>
-
-                    <span>
-                        Day Streak
-                    </span>
-
-                </div>
-
-            </div>
-        `;
-
-        home.prepend(card);
-    }
-
-    function addXPStyle() {
-
-        if (
-            document.getElementById(
-                "bbXPStyle"
-            )
-        ) return;
-
-        const style =
-            document.createElement("style");
-
-        style.id =
-            "bbXPStyle";
-
-        style.textContent = `
-
-            #bbXPCard {
-                display:flex;
-                justify-content:space-between;
-                align-items:center;
-                gap:20px;
-                padding:20px;
-                margin-bottom:18px;
-                border-radius:22px;
-                background:
-                    linear-gradient(
-                        135deg,
-                        #fff7e6,
-                        #ffffff
-                    );
-                border:1px solid #f0dfb8;
-                box-shadow:
-                    0 8px 28px rgba(0,0,0,.06);
-            }
-
-            .bb-xp-main {
-                display:flex;
-                align-items:center;
-                gap:14px;
-            }
-
-            .bb-xp-icon {
-                width:52px;
-                height:52px;
-                display:flex;
-                align-items:center;
-                justify-content:center;
-                border-radius:16px;
-                background:#fff0c7;
-                font-size:25px;
-            }
-
-            .bb-xp-label {
-                font-size:11px;
-                font-weight:800;
-                letter-spacing:1px;
-                opacity:.55;
-            }
-
-            .bb-xp-number {
-                font-size:24px;
-                font-weight:900;
-                margin-top:3px;
-            }
-
-            .bb-streak-box {
-                display:flex;
-                align-items:center;
-                gap:10px;
-                padding:10px 16px;
-                border-radius:16px;
-                background:#fff;
-                border:1px solid #eee4d0;
-            }
-
-            .bb-fire {
-                font-size:25px;
-            }
-
-            .bb-streak-box strong {
-                display:block;
-                font-size:20px;
-            }
-
-            .bb-streak-box span {
-                display:block;
-                font-size:11px;
-                opacity:.6;
-                font-weight:700;
-            }
-
-            @media (max-width:600px) {
-
-                #bbXPCard {
-                    padding:16px;
-                }
-
-                .bb-xp-number {
-                    font-size:20px;
-                }
-
-                .bb-streak-box {
-                    padding:8px 10px;
-                }
-
-            }
-
-        `;
-
-        document.head.appendChild(style);
-    }
-
-    function initXPSystem() {
-
-        addXPStyle();
-
-        setTimeout(
-            createXPCard,
-            500
-        );
-    }
-
-    document.addEventListener(
-        "DOMContentLoaded",
-        initXPSystem
-    );
-
-    document.addEventListener(
-        "click",
-        function (event) {
-
-            const homeButton =
-                event.target.closest(
-                    '[data-page="home"]'
-                );
-
-            if (homeButton) {
-
-                setTimeout(
-                    createXPCard,
-                    400
-                );
-            }
-
-        }
-    );
-
-    window.BharatBuddyXP = {
-        getData: getXPData,
-        addXP: addXP,
-        updateStreak: updateStreak
-    };
-
-})();
-/* =========================================================
-   BHARATBUDDY CLASS 9-10 CURRICULUM ENGINE
-   CBSE + BSEB
-   Science / Social Science
-========================================================= */
-
-(function () {
-    "use strict";
-
-    const BB_CLASS9_10_CURRICULUM = {
-
-        CBSE: {
-
-            "9": {
-
-                "Science": {
-
-                    "Physics": {
-                        chapters: [
-                            "Motion",
-                            "Force and Laws of Motion",
-                            "Gravitation",
-                            "Work and Energy",
-                            "Sound"
-                        ]
-                    },
-
-                    "Chemistry": {
-                        chapters: [
-                            "Matter in Our Surroundings",
-                            "Is Matter Around Us Pure",
-                            "Atoms and Molecules",
-                            "Structure of the Atom"
-                        ]
-                    },
-
-                    "Biology": {
-                        chapters: [
-                            "The Fundamental Unit of Life",
-                            "Tissues",
-                            "Diversity in Living Organisms",
-                            "Why Do We Fall Ill",
-                            "Natural Resources",
-                            "Improvement in Food Resources"
-                        ]
-                    }
-
-                },
-
-                "Social Science": {
-
-                    "History": {
-                        chapters: [
-                            "The French Revolution",
-                            "Socialism in Europe and the Russian Revolution",
-                            "Nazism and the Rise of Hitler",
-                            "Forest Society and Colonialism",
-                            "Pastoralists in the Modern World"
-                        ]
-                    },
-
-                    "Geography": {
-                        chapters: [
-                            "India – Size and Location",
-                            "Physical Features of India",
-                            "Drainage",
-                            "Climate",
-                            "Natural Vegetation and Wildlife",
-                            "Population"
-                        ]
-                    },
-
-                    "Political Science": {
-                        chapters: [
-                            "What is Democracy? Why Democracy?",
-                            "Constitutional Design",
-                            "Electoral Politics",
-                            "Working of Institutions",
-                            "Democratic Rights"
-                        ]
-                    },
-
-                    "Economics": {
-                        chapters: [
-                            "The Story of Village Palampur",
-                            "People as Resource",
-                            "Poverty as a Challenge",
-                            "Food Security in India"
-                        ]
-                    }
-
-                }
-
-            },
-
-            "10": {
-
-                "Science": {
-
-                    "Physics": {
-                        chapters: [
-                            "Light – Reflection and Refraction",
-                            "The Human Eye and the Colourful World",
-                            "Electricity",
-                            "Magnetic Effects of Electric Current",
-                            "Sources of Energy"
-                        ]
-                    },
-
-                    "Chemistry": {
-                        chapters: [
-                            "Chemical Reactions and Equations",
-                            "Acids, Bases and Salts",
-                            "Metals and Non-metals",
-                            "Carbon and Its Compounds",
-                            "Periodic Classification of Elements"
-                        ]
-                    },
-
-                    "Biology": {
-                        chapters: [
-                            "Life Processes",
-                            "Control and Coordination",
-                            "How Do Organisms Reproduce?",
-                            "Heredity",
-                            "Our Environment",
-                            "Sustainable Management of Natural Resources"
-                        ]
-                    }
-
-                },
-
-                "Social Science": {
-
-                    "History": {
-                        chapters: [
-                            "The Rise of Nationalism in Europe",
-                            "Nationalism in India",
-                            "The Making of a Global World",
-                            "The Age of Industrialisation",
-                            "Print Culture and the Modern World"
-                        ]
-                    },
-
-                    "Geography": {
-                        chapters: [
-                            "Resources and Development",
-                            "Forest and Wildlife Resources",
-                            "Water Resources",
-                            "Agriculture",
-                            "Minerals and Energy Resources",
-                            "Manufacturing Industries",
-                            "Lifelines of National Economy"
-                        ]
-                    },
-
-                    "Political Science": {
-                        chapters: [
-                            "Power Sharing",
-                            "Federalism",
-                            "Gender, Religion and Caste",
-                            "Political Parties",
-                            "Outcomes of Democracy",
-                            "Challenges to Democracy"
-                        ]
-                    },
-
-                    "Economics": {
-                        chapters: [
-                            "Development",
-                            "Sectors of the Indian Economy",
-                            "Money and Credit",
-                            "Globalisation and the Indian Economy",
-                            "Consumer Rights"
-                        ]
-                    }
-
-                }
-
-            }
-
-        },
-
-        /*
-         * BSEB
-         * Official BSEB curriculum availability currently needs
-         * board-year verification before we lock every chapter.
-         * The structure is ready so chapters can be inserted safely.
-         */
-
-        BSEB: {
-
-            "9": {
-                "Science": {
-                    "Physics": { chapters: [] },
-                    "Chemistry": { chapters: [] },
-                    "Biology": { chapters: [] }
-                },
-
-                "Social Science": {
-                    "History": { chapters: [] },
-                    "Geography": { chapters: [] },
-                    "Political Science": { chapters: [] },
-                    "Economics": { chapters: [] }
-                }
-            },
-
-            "10": {
-                "Science": {
-                    "Physics": { chapters: [] },
-                    "Chemistry": { chapters: [] },
-                    "Biology": { chapters: [] }
-                },
-
-                "Social Science": {
-                    "History": { chapters: [] },
-                    "Geography": { chapters: [] },
-                    "Political Science": { chapters: [] },
-                    "Economics": { chapters: [] }
-                }
-            }
-
-        }
-
-    };
-
-
-    /* =========================================================
-       GET CURRICULUM
-    ========================================================= */
-
-    window.BharatBuddyClass9_10 = {
-
-        data: BB_CLASS9_10_CURRICULUM,
-
-        getSubjects: function (board, className) {
-
-            const data =
-                BB_CLASS9_10_CURRICULUM?.[board]?.[className];
-
-            if (!data) return [];
-
-            return Object.keys(data);
-        },
-
-        getBooks: function (board, className, subject) {
-
-            const data =
-                BB_CLASS9_10_CURRICULUM?.[board]?.[className]?.[subject];
-
-            if (!data) return [];
-
-            return Object.keys(data);
-        },
-
-        getChapters: function (
-            board,
-            className,
-            subject,
-            book
-        ) {
-
-            return (
-                BB_CLASS9_10_CURRICULUM
-                    ?.[board]
-                    ?.[className]
-                    ?.[subject]
-                    ?.[book]
-                    ?.chapters || []
-            );
-        }
-
-    };
-
-
-    console.log(
-        "BharatBuddy Class 9-10 Curriculum Engine Loaded"
-    );
-
-})();
-/* =========================================================
-   BHARATBUDDY 9-10 STUDY SELECTOR
-   Board → Class → Subject → Book → Chapter
-========================================================= */
-
-(function () {
-    "use strict";
-
-    function initClass9_10StudySelector() {
-
-        const pageContent = document.getElementById("pageContent");
-
-        if (!pageContent) return;
-
-        const currentClass =
-            window.BharatBuddyBoardSystem?.getState?.()?.className ||
-            window.bharatBuddyData?.profile?.className ||
-            "";
-
-        // Sirf Class 9 aur 10 ke liye
-        if (
-            !String(currentClass).includes("9") &&
-            !String(currentClass).includes("10")
-        ) {
-            return;
-        }
-
-        renderClass9_10Selector(pageContent);
-    }
-
-
-    function renderClass9_10Selector(container) {
-
-        container.innerHTML = `
-            <div class="bb-910-study-box">
-
-                <div class="bb-910-header">
-                    <div>
-                        <span class="bb-910-badge">CLASS 9–10</span>
-                        <h2>📚 Study Center</h2>
-                        <p>
-                            Board, class, subject aur chapter select karke
-                            directly padhna start karo.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="bb-910-select-grid">
-
-                    <div class="bb-910-field">
-                        <label>Board</label>
-                        <select id="bb910Board">
-                            <option value="">Select Board</option>
-                            <option value="CBSE">CBSE</option>
-                            <option value="BSEB">BSEB</option>
-                        </select>
-                    </div>
-
-                    <div class="bb-910-field">
-                        <label>Class</label>
-                        <select id="bb910Class">
-                            <option value="">Select Class</option>
-                            <option value="9">Class 9</option>
-                            <option value="10">Class 10</option>
-                        </select>
-                    </div>
-
-                    <div class="bb-910-field">
-                        <label>Subject</label>
-                        <select id="bb910Subject" disabled>
-                            <option value="">Select Subject</option>
-                        </select>
-                    </div>
-
-                    <div class="bb-910-field">
-                        <label>Book / Section</label>
-                        <select id="bb910Book" disabled>
-                            <option value="">Select Book / Section</option>
-                        </select>
-                    </div>
-
-                    <div class="bb-910-field bb-910-full">
-                        <label>Chapter</label>
-                        <select id="bb910Chapter" disabled>
-                            <option value="">Select Chapter</option>
-                        </select>
-                    </div>
-
-                </div>
-
-                <div id="bb910ChapterArea"></div>
-
-            </div>
-        `;
-
-        addClass910Styles();
-
-        setupClass910Events();
-    }
-
-
-    function setupClass910Events() {
-
-        const board =
-            document.getElementById("bb910Board");
-
-        const classSelect =
-            document.getElementById("bb910Class");
-
-        const subject =
-            document.getElementById("bb910Subject");
-
-        const book =
-            document.getElementById("bb910Book");
-
-        const chapter =
-            document.getElementById("bb910Chapter");
-
-        const chapterArea =
-            document.getElementById("bb910ChapterArea");
-
-
-        function loadSubjects() {
-
-            subject.innerHTML =
-                `<option value="">Select Subject</option>`;
-
-            book.innerHTML =
-                `<option value="">Select Book / Section</option>`;
-
-            chapter.innerHTML =
-                `<option value="">Select Chapter</option>`;
-
-            subject.disabled = true;
-            book.disabled = true;
-            chapter.disabled = true;
-
-            chapterArea.innerHTML = "";
-
-            if (!board.value || !classSelect.value) return;
-
-            const subjects =
-                window.BharatBuddyClass9_10
-                    ?.getSubjects(
-                        board.value,
-                        classSelect.value
-                    ) || [];
-
-            subjects.forEach(function (item) {
-
-                const option =
-                    document.createElement("option");
-
-                option.value = item;
-                option.textContent = item;
-
-                subject.appendChild(option);
-            });
-
-            subject.disabled = subjects.length === 0;
-        }
-
-
-        function loadBooks() {
-
-            book.innerHTML =
-                `<option value="">Select Book / Section</option>`;
-
-            chapter.innerHTML =
-                `<option value="">Select Chapter</option>`;
-
-            book.disabled = true;
-            chapter.disabled = true;
-
-            chapterArea.innerHTML = "";
-
-            if (!board.value ||
-                !classSelect.value ||
-                !subject.value) return;
-
-            const books =
-                window.BharatBuddyClass9_10
-                    ?.getBooks(
-                        board.value,
-                        classSelect.value,
-                        subject.value
-                    ) || [];
-
-            books.forEach(function (item) {
-
-                const option =
-                    document.createElement("option");
-
-                option.value = item;
-                option.textContent = item;
-
-                book.appendChild(option);
-            });
-
-            book.disabled = books.length === 0;
-        }
-
-
-        function loadChapters() {
-
-            chapter.innerHTML =
-                `<option value="">Select Chapter</option>`;
-
-            chapter.disabled = true;
-
-            chapterArea.innerHTML = "";
-
-            if (!board.value ||
-                !classSelect.value ||
-                !subject.value ||
-                !book.value) return;
-
-            const chapters =
-                window.BharatBuddyClass9_10
-                    ?.getChapters(
-                        board.value,
-                        classSelect.value,
-                        subject.value,
-                        book.value
-                    ) || [];
-
-            chapters.forEach(function (item, index) {
-
-                const option =
-                    document.createElement("option");
-
-                option.value = item;
-                option.textContent =
-                    `Chapter ${index + 1}: ${item}`;
-
-                chapter.appendChild(option);
-            });
-
-            chapter.disabled = chapters.length === 0;
-
-            if (chapters.length === 0) {
-
-                chapterArea.innerHTML = `
-                    <div class="bb910-empty">
-                        📚 Is board/class ke chapters abhi
-                        curriculum data mein add nahi hue hain.
-                    </div>
-                `;
-            }
-        }
-
-
-        function showChapter() {
-
-            if (!chapter.value) {
-
-                chapterArea.innerHTML = "";
-
-                return;
-            }
-
-            const chapterName = chapter.value;
-
-            chapterArea.innerHTML = `
-
-                <div class="bb910-chapter-card">
-
-                    <div class="bb910-chapter-icon">
-                        📖
-                    </div>
-
-                    <div class="bb910-chapter-info">
-
-                        <span>
-                            ${board.value} • Class ${classSelect.value}
-                        </span>
-
-                        <h3>${chapterName}</h3>
-
-                        <p>
-                            ${book.value} • ${subject.value}
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="bb910-action-grid">
-
-                    <button
-                        class="bb910-action"
-                        id="bb910StudyBtn"
-                    >
-                        📚 Study Chapter
-                    </button>
-
-                    <button
-                        class="bb910-action"
-                        id="bb910QuestionBtn"
-                    >
-                        📝 Chapter Questions
-                    </button>
-
-                </div>
-            `;
-
-
-            document.getElementById("bb910StudyBtn")
-                ?.addEventListener("click", function () {
-
-                    open910AIStudy(
-                        board.value,
-                        classSelect.value,
-                        subject.value,
-                        book.value,
-                        chapterName
-                    );
-
-                });
-
-
-            document.getElementById("bb910QuestionBtn")
-                ?.addEventListener("click", function () {
-
-                    open910Questions(
-                        board.value,
-                        classSelect.value,
-                        subject.value,
-                        book.value,
-                        chapterName
-                    );
-
-                });
-        }
-
-
-        board.addEventListener("change", loadSubjects);
-
-        classSelect.addEventListener("change", loadSubjects);
-
-        subject.addEventListener("change", loadBooks);
-
-        book.addEventListener("change", loadChapters);
-
-        chapter.addEventListener("change", showChapter);
-    }
-
-
-    async function open910AIStudy(
-        board,
-        className,
-        subject,
-        book,
-        chapter
-    ) {
-
-        const area =
-            document.getElementById("bb910ChapterArea");
-
-        if (!area) return;
-
-        area.innerHTML = `
-            <div class="bb910-loading">
-                🤖 Chapter study material prepare ho raha hai...
-            </div>
-        `;
-
-
-        try {
-
-            const prompt = `
-You are BharatBuddy AI Learning Tutor.
-
-Board: ${board}
-Class: ${className}
-Subject: ${subject}
-Book/Section: ${book}
-Chapter: ${chapter}
-
-Create study material ONLY for this exact chapter.
-
-Include:
-
-1. Chapter Overview
-2. Important Concepts
-3. Important Definitions
-4. Easy Explanation
-5. Examples
-6. Important Points
-7. Exam Focus
-8. Quick Revision
-
-Do not discuss another chapter.
-Do not change the class or subject.
-Use simple student-friendly language.
-`;
-
-
-            const response =
-                await window.askAI?.(prompt);
-
-
-            if (!response) {
-
-                throw new Error(
-                    "AI response unavailable"
-                );
-            }
 
 
             if (
-                window.BharatBuddyPremiumNotes
+                currentProfile ===
+                lastProfile
             ) {
 
-                area.innerHTML =
-                    window.BharatBuddyPremiumNotes(
-                        response,
-                        subject,
-                        chapter
-                    );
+                return;
 
-            } else {
-
-                area.innerHTML = `
-                    <div class="bb910-ai-result">
-                        ${String(response)
-                            .replace(/\n/g, "<br>")}
-                    </div>
-                `;
             }
 
-        } catch (error) {
 
-            console.error(
-                "Class 9-10 Study Error:",
-                error
-            );
-
-            area.innerHTML = `
-                <div class="bb910-empty">
-                    ⚠️ Study material load nahi ho paya.
-                    Please try again.
-                </div>
-            `;
-        }
-
-    }
+            lastProfile =
+                currentProfile;
 
 
-    async function open910Questions(
-        board,
-        className,
-        subject,
-        book,
-        chapter
-    ) {
+            try {
 
-        const area =
-            document.getElementById("bb910ChapterArea");
+                applyFinalCurriculum();
 
-        if (!area) return;
+            } catch (error) {
 
-
-        area.innerHTML = `
-            <div class="bb910-loading">
-                📝 ${chapter} ke questions prepare ho rahe hain...
-            </div>
-        `;
-
-
-        try {
-
-            const prompt = `
-You are BharatBuddy AI Question Generator.
-
-Board: ${board}
-Class: ${className}
-Subject: ${subject}
-Book/Section: ${book}
-Chapter: ${chapter}
-
-Generate questions ONLY from this exact chapter.
-
-Create:
-- 5 MCQs
-- 3 Short Answer Questions
-- 2 Long Answer Questions
-
-Questions must match the selected class and chapter.
-Do not use questions from another chapter.
-Do not change the subject.
-Give answers after the questions.
-`;
-
-
-            const response =
-                await window.askAI?.(prompt);
-
-
-            if (!response) {
-
-                throw new Error(
-                    "Question response unavailable"
+                console.warn(
+                    "Profile curriculum update failed:",
+                    error
                 );
+
             }
 
+        },
+        1000
+    );
 
-            area.innerHTML = `
-                <div class="bb910-question-result">
-
-                    <div class="bb910-question-title">
-                        📝 ${chapter} — Questions
-                    </div>
-
-                    <div class="bb910-question-content">
-                        ${String(response)
-                            .replace(/\n/g, "<br>")}
-                    </div>
-
-                </div>
-            `;
-
-        } catch (error) {
-
-            console.error(
-                "Class 9-10 Question Error:",
-                error
-            );
-
-            area.innerHTML = `
-                <div class="bb910-empty">
-                    ⚠️ Questions load nahi ho paye.
-                    Please try again.
-                </div>
-            `;
-        }
-
-    }
+})();
 
 
-    function addClass910Styles() {
+/* ============================================================
+   FINAL STUDY NAVIGATION PROTECTION
+   ============================================================ */
 
-        if (document.getElementById("bb910Styles")) return;
+document.addEventListener(
+    "click",
+    event => {
 
-        const style =
-            document.createElement("style");
-
-        style.id = "bb910Styles";
-
-        style.textContent = `
-
-            .bb-910-study-box {
-                padding: 24px;
-                border-radius: 22px;
-                background: var(--card-bg, #ffffff);
-                border: 1px solid rgba(0,0,0,.08);
-                margin-bottom: 25px;
-            }
-
-            .bb-910-badge {
-                font-size: 12px;
-                font-weight: 700;
-                letter-spacing: 1px;
-                opacity: .7;
-            }
-
-            .bb-910-header h2 {
-                margin: 7px 0;
-                font-size: 27px;
-            }
-
-            .bb-910-header p {
-                opacity: .7;
-                margin-bottom: 22px;
-            }
-
-            .bb-910-select-grid {
-                display: grid;
-                grid-template-columns:
-                    repeat(2, minmax(0, 1fr));
-                gap: 16px;
-            }
-
-            .bb-910-field {
-                display: flex;
-                flex-direction: column;
-                gap: 7px;
-            }
-
-            .bb-910-field label {
-                font-size: 13px;
-                font-weight: 700;
-            }
-
-            .bb-910-field select {
-                padding: 13px 14px;
-                border-radius: 12px;
-                border: 1px solid rgba(0,0,0,.12);
-                background: var(--bg, #fff);
-                color: inherit;
-                font-size: 14px;
-                outline: none;
-            }
-
-            .bb-910-full {
-                grid-column: 1 / -1;
-            }
-
-            .bb910-chapter-card {
-                display: flex;
-                align-items: center;
-                gap: 16px;
-                margin-top: 22px;
-                padding: 20px;
-                border-radius: 18px;
-                background: rgba(80,120,255,.08);
-            }
-
-            .bb910-chapter-icon {
-                font-size: 34px;
-            }
-
-            .bb910-chapter-info span {
-                font-size: 12px;
-                opacity: .65;
-            }
-
-            .bb910-chapter-info h3 {
-                margin: 5px 0;
-            }
-
-            .bb910-chapter-info p {
-                margin: 0;
-                opacity: .7;
-                font-size: 13px;
-            }
-
-            .bb910-action-grid {
-                display: grid;
-                grid-template-columns:
-                    repeat(2, minmax(0, 1fr));
-                gap: 12px;
-                margin-top: 14px;
-            }
-
-            .bb910-action {
-                border: 0;
-                border-radius: 13px;
-                padding: 14px;
-                cursor: pointer;
-                font-weight: 700;
-                font-size: 14px;
-            }
-
-            .bb910-loading,
-            .bb910-empty,
-            .bb910-ai-result,
-            .bb910-question-result {
-                margin-top: 18px;
-                padding: 20px;
-                border-radius: 16px;
-                background: rgba(0,0,0,.04);
-            }
-
-            .bb910-question-title {
-                font-size: 20px;
-                font-weight: 800;
-                margin-bottom: 15px;
-            }
-
-            @media (max-width: 700px) {
-
-                .bb-910-study-box {
-                    padding: 16px;
-                }
-
-                .bb-910-select-grid,
-                .bb910-action-grid {
-                    grid-template-columns: 1fr;
-                }
-
-                .bb-910-full {
-                    grid-column: auto;
-                }
-
-                .bb910-chapter-card {
-                    align-items: flex-start;
-                }
-            }
-
-        `;
-
-        document.head.appendChild(style);
-    }
-
-
-    // Study button click
-    document.addEventListener("click", function (event) {
-
-        const studyButton =
+        const studyLink =
             event.target.closest(
                 '[data-page="study"]'
             );
 
-        if (!studyButton) return;
+
+        if (!studyLink) {
+            return;
+        }
+
+
+        /*
+         * Let the normal navigation system
+         * handle the page.
+         *
+         * The small delay ensures the final
+         * curriculum has already been applied.
+         */
 
         setTimeout(
-            initClass9_10StudySelector,
-            350
+            () => {
+
+                try {
+
+                    applyFinalCurriculum();
+
+                } catch (error) {
+
+                    console.warn(
+                        "Study curriculum refresh failed:",
+                        error
+                    );
+
+                }
+
+            },
+            50
         );
 
-    });
+    }
+);
 
 
-    console.log(
-        "BharatBuddy Class 9-10 Study Selector Loaded"
-    );
-z
+/* ============================================================
+   SAVE PROFILE COMPATIBILITY
+   ============================================================ */
+
+(function patchProfileSave() {
+
+    const originalSaveProfile =
+        window.saveProfile;
+
+
+    if (
+        typeof originalSaveProfile !==
+        "function"
+    ) {
+
+        return;
+
+    }
+
+
+    /*
+     * Prevent duplicate wrapping.
+     */
+
+    if (
+        originalSaveProfile.__bbPatched
+    ) {
+
+        return;
+
+    }
+
+
+    function patchedSaveProfile() {
+
+        originalSaveProfile.apply(
+            this,
+            arguments
+        );
+
+
+        setTimeout(
+            () => {
+
+                try {
+
+                    applyFinalCurriculum();
+
+                } catch (error) {
+
+                    console.warn(
+                        "Profile curriculum patch failed:",
+                        error
+                    );
+
+                }
+
+            },
+            100
+        );
+
+    }
+
+
+    patchedSaveProfile.__bbPatched =
+        true;
+
+
+    /*
+     * Keep the function globally accessible.
+     */
+
+    window.saveProfile =
+        patchedSaveProfile;
+
 })();
+
+
+/* ============================================================
+   WINDOW ERROR PROTECTION
+   ============================================================ */
+
+window.addEventListener(
+    "error",
+    event => {
+
+        /*
+         * Do not interrupt the entire app
+         * because of a non-critical Study UI error.
+         */
+
+        if (
+            event.error
+        ) {
+
+            console.warn(
+                "BharatBuddy runtime warning:",
+                event.error
+            );
+
+        }
+
+    }
+);
+
+
+/* ============================================================
+   UNHANDLED PROMISE PROTECTION
+   ============================================================ */
+
+window.addEventListener(
+    "unhandledrejection",
+    event => {
+
+        console.warn(
+            "BharatBuddy async warning:",
+            event.reason
+        );
+
+    }
+);
+
+
+/* ============================================================
+   FINAL DATA NORMALIZATION
+   ============================================================ */
+
+(function normalizeAppData() {
+
+    if (
+        !data ||
+        typeof data !==
+            "object"
+    ) {
+
+        return;
+
+    }
+
+
+    if (
+        !data.profile ||
+        typeof data.profile !==
+            "object"
+    ) {
+
+        data.profile = {
+            ...defaultData.profile
+        };
+
+    }
+
+
+    if (
+        !data.settings ||
+        typeof data.settings !==
+            "object"
+    ) {
+
+        data.settings = {
+            ...defaultData.settings
+        };
+
+    }
+
+
+    if (
+        !data.stats ||
+        typeof data.stats !==
+            "object"
+    ) {
+
+        data.stats = {
+            ...defaultData.stats
+        };
+
+    }
+
+
+    if (
+        !data.progress ||
+        typeof data.progress !==
+            "object"
+    ) {
+
+        data.progress = {};
+
+    }
+
+
+    if (
+        !data.lessonProgress ||
+        typeof data.lessonProgress !==
+            "object"
+    ) {
+
+        data.lessonProgress = {};
+
+    }
+
+
+    if (
+        !Array.isArray(
+            data.chatHistory
+        )
+    ) {
+
+        data.chatHistory = [];
+
+    }
+
+
+    if (
+        !Array.isArray(
+            data.quizHistory
+        )
+    ) {
+
+        data.quizHistory = [];
+
+    }
+
+
+    if (
+        !Array.isArray(
+            data.chapterTests
+        )
+    ) {
+
+        data.chapterTests = [];
+
+    }
+
+
+    if (
+        !data.coding ||
+        typeof data.coding !==
+            "object"
+    ) {
+
+        data.coding = {
+            html: "",
+            css: "",
+            js: ""
+        };
+
+    }
+
+
+    if (
+        typeof data.streak !==
+            "number"
+    ) {
+
+        data.streak =
+            Number(
+                data.streak || 0
+            );
+
+    }
+
+
+    saveData();
+
+})();
+
+
+/* ============================================================
+   FINAL PROFILE DEFAULTS
+   ============================================================ */
+
+(function ensureProfileDefaults() {
+
+    if (
+        !data.profile
+    ) {
+
+        data.profile = {};
+
+    }
+
+
+    if (
+        !data.profile.name
+    ) {
+
+        data.profile.name =
+            "Student";
+
+    }
+
+
+    if (
+        !data.profile.className
+    ) {
+
+        data.profile.className =
+            "Class 11";
+
+    }
+
+
+    if (
+        !data.profile.stream
+    ) {
+
+        data.profile.stream =
+            "PCM";
+
+    }
+
+
+    if (
+        !data.profile.board
+    ) {
+
+        data.profile.board =
+            "CBSE";
+
+    }
+
+
+    if (
+        !data.profile.careerGoal
+    ) {
+
+        data.profile.careerGoal =
+            "";
+
+    }
+
+
+    studyState.board =
+        data.profile.board;
+
+    studyState.className =
+        data.profile.className;
+
+    studyState.stream =
+        data.profile.stream;
+
+
+    saveData();
+
+})();
+
+
+/* ============================================================
+   FINAL CURRICULUM RE-APPLY
+   ============================================================ */
+
+setTimeout(
+    () => {
+
+        try {
+
+            applyFinalCurriculum();
+
+        } catch (error) {
+
+            console.warn(
+                "Final curriculum apply error:",
+                error
+            );
+
+        }
+
+    },
+    150
+);
+
+
+/* ============================================================
+   BHARATBUDDY GLOBAL API
+   ============================================================ */
+
+window.BharatBuddy = {
+
+    version:
+        "1.0.0",
+
+    openPage,
+
+    askAI,
+
+    showToast,
+
+    saveData,
+
+    renderStudy,
+
+    renderPractice,
+
+    renderTutor,
+
+    renderCoding,
+
+    renderCareer,
+
+    renderEnglish,
+
+    renderProgress,
+
+    renderAchievements,
+
+    renderProfile,
+
+    renderSettings,
+
+    startChapterTest,
+
+    completeCurrentLesson,
+
+    generateQuiz,
+
+    saveProfile
+
+};
+
+
+/* ============================================================
+   FINAL READY EVENT
+   ============================================================ */
+
+document.dispatchEvent(
+    new CustomEvent(
+        "bharatbuddy:ready"
+    )
+);
